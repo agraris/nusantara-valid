@@ -1,0 +1,22 @@
+{
+  "name": "nusantara-valid",
+  "version": "0.1.0",
+  "description": "Nusantara Valid is a Indonesian civil data validator.",
+  "main": "src/nusantara-valid.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "mocha --require ts-node/register **/*.test.ts"
+  },
+  "author": "magicjar",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "chai": "^4.2.0",
+    "mocha": "^7.2.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  }
+}
