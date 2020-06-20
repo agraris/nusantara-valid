@@ -2,19 +2,19 @@ export const CELLULAR_NUMBER =
 {
     TELKOMSEL: {
         name: 'Telkomsel',
-        prefix: [811-813, 852-853],
+        prefix: [811, 812, 813, 852, 853],
     },
     XL: {
         name: 'XL',
-        prefix: [817-819, 838, 859, 878],
+        prefix: [817, 818, 819, 838, 859, 878],
     },
     INDOSAT: {
         name: 'Indosat',
-        prefix: [814-816, 855-856, 858],
+        prefix: [814, 815, 816, 855, 856, 858],
     },
     TRI: {
         name: 'Tri',
-        prefix: [896-899],
+        prefix: [896, 897, 898, 899],
     },
     SMARTFREN: {
         name: 'Smartfren',
