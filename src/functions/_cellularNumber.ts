@@ -1,8 +1,8 @@
-import { IValid } from '../interface'
+import { IValid, IValidLength } from '../interface'
 import { parseCellularPrefix } from '../helpers'
 import { CELLULAR_NUMBER, CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from '../datas/cellular'
 
-export class MobileNumber implements IValid {
+export class MobileNumber implements IValid, IValidLength {
 
     VALID_CELLULAR_PREFIX = Object.keys(CELLULAR_NUMBER).reduce(
         (a, b) => a.concat((CELLULAR_NUMBER as any)[b].prefix), []
