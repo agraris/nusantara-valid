@@ -1,4 +1,4 @@
-import { numbersOnly } from "."
+import { numbersOnly } from "./index"
 import { CELLULAR_COUNTRY_CODE } from "../datas/cellular"
 
 export function parseCellularPrefix(input: string | number): string {

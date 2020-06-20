@@ -1,5 +1,5 @@
-import { IValid, IValidLength } from '../interface'
-import { parseCellularPrefix } from '../helpers'
+import { IValid, IValidLength } from '../interface/index'
+import { parseCellularPrefix } from '../helpers/index'
 import { CELLULAR_NUMBER, CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from '../datas/cellular'
 
 export class MobileNumber implements IValid, IValidLength {

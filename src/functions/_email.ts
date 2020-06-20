@@ -1,4 +1,4 @@
-import { IValid, IValidLength } from "../interface"
+import { IValid, IValidLength } from "../interface/index"
 import { MAX_EMAIL_LENGTH, EMAIL_REGEX, MAX_LOCALPART_LENGTH } from "../datas/email"
 
 export class Email implements IValid, IValidLength {
