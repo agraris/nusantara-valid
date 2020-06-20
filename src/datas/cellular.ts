@@ -1,20 +1,22 @@
+const range = (start: number, stop: number, step: number) => Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + (i * step))
+
 export const CELLULAR_NUMBER =
 {
     TELKOMSEL: {
         name: 'Telkomsel',
-        prefix: [811, 812, 813, 852, 853],
+        prefix: range(811, 813, 1).concat([852, 853]),
     },
     XL: {
         name: 'XL',
-        prefix: [817, 818, 819, 838, 859, 878],
+        prefix: range(817, 819, 1).concat([838, 859, 878]),
     },
     INDOSAT: {
         name: 'Indosat',
-        prefix: [814, 815, 816, 855, 856, 858],
+        prefix: range(814, 816, 1).concat([855, 856, 858]),
     },
     TRI: {
         name: 'Tri',
-        prefix: [896, 897, 898, 899],
+        prefix: range(896, 899, 1),
     },
     SMARTFREN: {
         name: 'Smartfren',
