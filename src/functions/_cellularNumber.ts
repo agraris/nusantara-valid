@@ -13,7 +13,8 @@ export class MobileNumber implements IValid {
 
         const parsedCellularNumber = parseCellularPrefix(mobile)
 
-        return this.isValidLength(parsedCellularNumber) && this.isValidCellularPrefix(parsedCellularNumber) // Return true if isValidLength and isValidCellularPrefix all true
+        // Return true if isValidLength and isValidCellularPrefix all true
+        return this.isValidLength(parsedCellularNumber) && this.isValidCellularPrefix(parsedCellularNumber)
     }
 
     isValidCellularPrefix(parsedCellularNumber: string): boolean {

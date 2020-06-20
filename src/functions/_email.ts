@@ -1,26 +1,25 @@
-import { IValid } from "../interface";
-import { MAX_EMAIL_LENGTH, EMAIL_REGEX, MAX_LOCALPART_LENGTH } from "../datas/email";
+import { IValid } from "../interface"
+import { MAX_EMAIL_LENGTH, EMAIL_REGEX, MAX_LOCALPART_LENGTH } from "../datas/email"
 
 export class Email implements IValid {
     isValid (email: string): boolean {
-        if (!email || typeof email !== 'string') return false;
+        if (!email || typeof email !== 'string') return false
 
-        if (email.length > MAX_EMAIL_LENGTH) return false;
+        const validEmail = EMAIL_REGEX.exec(email)
 
-        const validEmail = EMAIL_REGEX.exec(email);
+        if (!validEmail) return false
 
-        if (!validEmail) return false;
+        // Return true if validEmail, validEmail length and email local part length is true
+        return validEmail && this.isValidLength(validEmail)
+    }
 
-        const localPart = validEmail[0];
-
-        if (localPart.length > MAX_LOCALPART_LENGTH) return false;
-
-        return true;
+    isValidLength(email: RegExpExecArray): boolean {
+        return email.length <= MAX_EMAIL_LENGTH && email[0].length <= MAX_LOCALPART_LENGTH
     }
 }
 
-const email = new Email();
+const email = new Email()
 
 export function isValid (param: string) {
-    return email.isValid(param);
+    return email.isValid(param)
 }
