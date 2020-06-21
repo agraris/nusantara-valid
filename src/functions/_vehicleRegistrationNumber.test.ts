@@ -55,13 +55,14 @@ describe('VRN', () => {
         })
     })
 
-    describe('is valid if it', () => {
-        it('uses lowercase character, it will be converted to uppercase', () => {
+    describe('is valid', () => {
+        it('even it uses lowercase character', () => {
             expect(isValid('ab1234xyz')).to.be.true
         })
 
-        it('has known Area Code', () => {
+        it('when it has known Area Code', () => {
             expect(isValid('AB123XY')).to.be.true;
+            expect(isValid('B9876ABC')).to.be.true;
         })
     })
 })
