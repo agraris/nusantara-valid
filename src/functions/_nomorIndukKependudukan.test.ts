@@ -1,6 +1,6 @@
 import { expect } from "chai"
 import { isValid } from "./_nomorIndukKependudukan"
-import { NIK_LENGTH } from "../datas/nomorIndukKependudukan"
+import { NIK_LENGTH } from "../datas/nik"
 
 describe('NIK', () => {
     it('cannot be empty', () => {

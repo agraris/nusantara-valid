@@ -1,5 +1,5 @@
 import { IValid, IValidLength } from "../interface/index"
-import { NIK_REGEX, NIK_LENGTH } from "../datas/nomorIndukKependudukan"
+import { NIK_REGEX, NIK_LENGTH } from "../datas/nik"
 import { numbersOnly } from "../helpers/index"
 import { PROVINCES_DATA } from "../datas/province"
 
