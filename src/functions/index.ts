@@ -1,4 +1,5 @@
 export { isValid as isValidEmail } from './_email'
 export { isValid as isValidCellularNumber } from './_cellularNumber'
-export { isValid as IsValidTelephoneNumber } from './_telephoneNumber'
-export { isValid as IsValidVRN } from './_vehicleRegistrationNumber'
+export { isValid as isValidTelephoneNumber } from './_telephoneNumber'
+export { isValid as isValidVRN } from './_vehicleRegistrationNumber'
+export { isValid as isValidNIP } from './_nomorIndukPegawaiNegeriSipil'
