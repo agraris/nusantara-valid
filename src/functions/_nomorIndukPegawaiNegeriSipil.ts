@@ -1,6 +1,6 @@
 import { IValid, IValidLength } from "../interface/index"
 import { NIP_LENGTH, NIP_REGEX } from "../datas/nomorIndukPegawaiNegeriSipil"
-import { numbersOnly, formatDate } from "../helpers/index"
+import { numbersOnly } from "../helpers/index"
 
 export class NomorIndukPegawaiNegeriSipil implements IValid, IValidLength {
 
@@ -10,15 +10,20 @@ export class NomorIndukPegawaiNegeriSipil implements IValid, IValidLength {
         const validNIP = NIP_REGEX.exec(numbersOnly(nip))
 
         if(!validNIP) return false
-
-        const birthday = formatDate(validNIP[1])
-        const recDate = formatDate(validNIP[2])
         
-        return this.isValidLength(validNIP[0].length) && !isNaN(birthday.getTime()) && !isNaN(recDate.getTime())
+        return this.isValidLength(validNIP[0].length) && this.isValidDate(validNIP[1]) && this.isValidDate(validNIP[2])
     }
 
     isValidLength(nip: number): boolean {
         return nip == NIP_LENGTH
+    }
+
+    isValidDate(date: string): boolean {
+        const newDate = date.replace(/(\d{4})(\d{2})(?:(\d{2})?)/, "$1-$2-$3")
+
+        const formatedDate = new Date(newDate)
+
+        return !isNaN(formatedDate.getTime())
     }
 }
 
