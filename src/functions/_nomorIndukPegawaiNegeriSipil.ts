@@ -1,5 +1,5 @@
 import { IValid, IValidLength } from "../interface/index"
-import { NIP_LENGTH, NIP_REGEX } from "../datas/nomorIndukPegawaiNegeriSipil"
+import { NIP_LENGTH, NIP_REGEX } from "../datas/nip"
 import { numbersOnly } from "../helpers/index"
 
 export class NomorIndukPegawaiNegeriSipil implements IValid, IValidLength {
