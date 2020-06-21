@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { isValid } from "./_vehicleRegistrationNumber"
+import { isValid } from "./_tandaNomorKendaraanBermotor"
 
 describe('VRN', () => {
     it('cannot be empty', () => {

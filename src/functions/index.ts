@@ -1,7 +1,7 @@
 export { isValid as isValidEmail } from './_email'
 export { isValid as isValidCellularNumber } from './_cellularNumber'
 export { isValid as isValidTelephoneNumber } from './_telephoneNumber'
-export { isValid as isValidVRN } from './_vehicleRegistrationNumber'
+export { isValid as isValidTNKB } from './_tandaNomorKendaraanBermotor'
 export { isValid as isValidNIP } from './_nomorIndukPegawaiNegeriSipil'
 export { isValid as isValidNIK } from './_nomorIndukKependudukan'
 export { isValid as isValidZIP } from './_zipCode'
