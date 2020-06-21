@@ -1,7 +1,7 @@
 // Vehicle Registration Number (VRN) / Tanda Nomor Kendaraan Bermotor (TNKB)
 
 import { IValid } from "../interface/index"
-import { VRN_REGEX } from "../datas/vehicleRegistrationNumber"
+import { VRN_REGEX } from "../datas/tnkb"
 import { PROVINCES_DATA } from "../datas/province"
 
 export class VehicleRegistrationNumber implements IValid {
