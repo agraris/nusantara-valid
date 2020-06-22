@@ -25,6 +25,7 @@
     "compile": "npm-run-all --sequential clean compile:ts compile:js",
     "compile:js": "rollup --config rollup.config.js --sourcemap",
     "compile:ts": "tsc --module ESNext",
+    "minify:js": "uglifyjs --compress typeofs=false,drop_console=true --mangle --comments \"/^!/\" --source-map \"content=dist/nusantara-valid.js.map,includeSources,url=nusantara-valid.min.js.map\" --output dist/nusantara-valid.min.js dist/nusantara-valid.js",
     "test": "mocha --require ts-node/register **/*.test.ts"
   },
   "author": "magicjar",
@@ -38,6 +39,7 @@
     "rollup": "^2.16.1",
     "shx": "^0.3.2",
     "ts-node": "^8.10.2",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.5",
+    "uglify-js": "^3.9.4"
   }
 }
