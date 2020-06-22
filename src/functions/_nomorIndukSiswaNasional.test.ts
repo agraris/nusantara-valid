@@ -1,6 +1,6 @@
 import { expect } from "chai"
 import { isValid } from "./_nomorIndukSiswaNasional"
-import { NISN_LENGTH } from "../datas/nisn"
+import { NISN_LENGTH, NISN_AGE_VALIDITY } from "../datas/nisn"
 
 describe('NISN', () => {
     it('cannot be empty', () => {
@@ -39,12 +39,27 @@ describe('NISN', () => {
             expect(isValid('0061231234')).to.be.true // Birth year => 2006
             expect(isValid('9991231234')).to.be.true // Birth year => 1999
         })
+
+        it('if it still inside student periode of ' + NISN_AGE_VALIDITY + ' years', () => {
+            expect(isValid('0061231234')).to.be.true // Birth year => 2006
+            expect(isValid('9991231234')).to.be.true // Birth year => 1999
+        })
     })
 
     describe('is invalid', () => {
         it('if it does not match NISN length of ' + NISN_LENGTH + ' digit number', () => {
             expect(isValid('00612312345')).to.be.false // Have 11 digits
             expect(isValid('999123123')).to.be.false // Have 9 digits
+        })
+
+        it('too old to be a student', () => {
+            expect(isValid('9951231234')).to.be.false // Birth year => 1995
+            expect(isValid('9881231234')).to.be.false // Birth year => 1998
+        })
+
+        it('student birth years is surpassing current year', () => {
+            expect(isValid('0341231234')).to.be.false // Birth year => 2034
+            expect(isValid('0991231234')).to.be.false // Birth year => 2099
         })
     })
 })
