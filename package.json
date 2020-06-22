@@ -2,14 +2,14 @@
   "name": "nusantara-valid",
   "version": "0.1.0",
   "description": "Nusantara Valid is a Indonesian civil data validator.",
-  "main": "src/nusantara-valid.ts",
+  "main": "dist/nusantara-valid.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "build": "npm-run-all --sequential ts-compile js-compile",
-    "js-compile": "rollup --config rollup.config.js --sourcemap",
-    "ts-compile": "tsc",
+    "compile": "npm-run-all --sequential compile:ts compile:js",
+    "compile:js": "rollup --config rollup.config.js --sourcemap",
+    "compile:ts": "tsc --module ESNext",
     "test": "mocha --require ts-node/register **/*.test.ts"
   },
   "author": "magicjar",
