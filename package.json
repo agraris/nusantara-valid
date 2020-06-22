@@ -6,6 +6,20 @@
   "directories": {
     "doc": "docs"
   },
+  "keywords": [
+    "validator",
+    "javascript",
+    "indonesia",
+    "nik",
+    "nip",
+    "nisn",
+    "npwp",
+    "tnkb",
+    "postcode",
+    "email",
+    "mobile-number",
+    "telephone-number"
+  ],
   "scripts": {
     "clean": "shx rm -rf dist src/js",
     "compile": "npm-run-all --sequential clean compile:ts compile:js",
