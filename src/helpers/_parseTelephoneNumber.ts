@@ -1,8 +1,6 @@
-import { numbersOnly } from "./index"
-
 export function parseTelephoneAreaCode (input: string | number): string
 {
-    const number = numbersOnly(input)
+    const number = String(input).replace(/[^\d]/g, '');
     let newNumber = number
 
     if (number.charAt(0) != '0')

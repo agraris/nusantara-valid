@@ -1,9 +1,8 @@
-import { numbersOnly } from "./index"
 import { CELLULAR_COUNTRY_CODE } from "../datas/cellular"
 
 export function parseCellularPrefix(input: string | number): string {
     // +62xxx => 62xxx
-    const number = numbersOnly(input)
+    const number = String(input).replace(/[^\d]/g, '');
     let newNumber = ""
 
     // 0xxx => 62xxx
