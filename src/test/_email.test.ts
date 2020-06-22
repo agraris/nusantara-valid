@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { isValid } from "./_email"
+import { isValidEmail as isValid } from "../ts/functions/index"
 
 describe('Email', () => {
     it('cannot be empty', () => {

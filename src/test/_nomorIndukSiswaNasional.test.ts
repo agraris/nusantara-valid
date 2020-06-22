@@ -1,6 +1,6 @@
 import { expect } from "chai"
-import { isValid } from "./_nomorIndukSiswaNasional"
-import { NISN_LENGTH, NISN_AGE_VALIDITY } from "../datas/nisn"
+import { isValidNISN as isValid } from "../ts/functions/index"
+import { NISN_LENGTH, NISN_AGE_VALIDITY } from "../ts/datas/nisn"
 
 describe('NISN', () => {
     it('cannot be empty', () => {

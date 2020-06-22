@@ -1,6 +1,6 @@
 import { expect } from "chai"
-import { isValid } from "./_nomorIndukPegawaiNegeriSipil"
-import { NIP_LENGTH } from "../datas/nip"
+import { isValidNIP as isValid } from "../ts/functions/index"
+import { NIP_LENGTH } from "../ts/datas/nip"
 
 describe('NIP', () => {
     it('cannot be empty', () => {

@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { isValid } from "./_zipCode"
+import { isValidZIP as isValid } from "../ts/functions/index"
 
 describe('ZIP code', () => {
     it('cannot be empty', () => {

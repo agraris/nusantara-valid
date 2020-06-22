@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { isValid } from "./_tandaNomorKendaraanBermotor"
+import { isValidTNKB as isValid } from "../ts/functions/index"
 
 describe('VRN', () => {
     it('cannot be empty', () => {

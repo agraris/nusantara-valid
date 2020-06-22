@@ -1,8 +1,7 @@
 import { expect } from "chai"
-import { isValid } from "./_cellularNumber"
-import { CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from "../datas/cellular"
+import { isValidTelephoneNumber as isValid } from "../ts/functions/index"
 
-describe('Cellular number', () => {
+describe('Telephone number', () => {
 
     it('cannot be empty', () => {
         expect(isValid('')).to.be.false;
@@ -32,22 +31,14 @@ describe('Cellular number', () => {
     })
 
     describe('is not Valid when it has', () => {
-        it('less than ' + CELLULAR_MIN_LENGTH + ' digits including country code', () => {
-            expect(isValid('081812345')).to.be.false;
-        })
-
-        it('more than ' + CELLULAR_MAX_LENGTH + ' digits including country code', () => {
-            expect(isValid('08181234567890')).to.be.false;
-        })
-
         it('unknown cellular prefix', () => {
             expect(isValid('0999123456')).to.be.false;
         })
     })
 
     describe('is Valid when it has', () => {
-        it(CELLULAR_MIN_LENGTH + ' to ' + CELLULAR_MAX_LENGTH + ' digits including country code', () => {
-            expect(isValid('0818123456')).to.be.true;
+        it('known landline areacode', () => {
+            expect(isValid('0274123456')).to.be.true;
         })
     })
 
