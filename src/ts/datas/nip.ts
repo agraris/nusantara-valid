@@ -9,4 +9,9 @@
 **/
 export const NIP_REGEX = /^([0-9]{8})([0-9]{6})([1,2]{1})([0-9]{3})$/
 
+/**
+ * NIP_LENGTH
+ *
+ * Total length of NIP without any special characters
+**/
 export const NIP_LENGTH = 18

@@ -1,5 +1,10 @@
 const range = (start: number, stop: number) => Array.from({ length: (stop - start) / 1 + 1 }, (_, i) => start + (i * 1))
 
+/**
+ * CELLULAR_NUMBER
+ *
+ * List cellular provider in Indonesia
+**/
 export const CELLULAR_NUMBER =
 {
     TELKOMSEL: {
@@ -28,12 +33,26 @@ export const CELLULAR_NUMBER =
     }
 };
 
-// Includes 0 (+XX country code) and prefix
+/**
+ * CELLULAR_MIN_LENGTH
+ *
+ * Minimum length of cellular number including country code
+**/
 export const CELLULAR_MIN_LENGTH = 11;
+
+/**
+ * CELLULAR_MAX_LENGTH
+ *
+ * Maximum length of cellular number including country code
+**/
 export const CELLULAR_MAX_LENGTH = 13;
 
+/**
+ * CELLULAR_COUNTRY_CODE
+ *
+ * The country code
+**/
 export const CELLULAR_COUNTRY_CODE = 62;
 
 export type Cellular = keyof typeof CELLULAR_NUMBER;
-
 export const CELLULAR = Object.keys(CELLULAR_NUMBER) as Cellular[];

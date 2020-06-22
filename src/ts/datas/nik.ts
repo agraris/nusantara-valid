@@ -10,4 +10,9 @@
 **/
 export const NIK_REGEX = /^(\d{2})(\d{2})(\d{2})(\d{6})(\d{4})$/
 
+/**
+ * NIK_LENGTH
+ *
+ * Total length of NIK without any special characters
+**/
 export const NIK_LENGTH = 16

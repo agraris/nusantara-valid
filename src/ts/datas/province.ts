@@ -1,21 +1,13 @@
 const range = (start: number, stop: number) => Array.from({ length: (stop - start) / 1 + 1 }, (_, i) => start + (i * 1))
 
+/**
+ * CELLULAR_NUMBER
+ *
+ * List of province data in Indonesia including BPS code, vehicle plate, 
+ * telephone numbers, and zip code.
+**/
 export const PROVINCES_DATA =
 {
-    /*
-    AA: {
-        name: 'A A',
-        bpsCode: 111,
-        vehiclePlate: ['A'],
-        tel: range(10, 20),
-        zipCode: [
-            {
-                from: 10000,
-                to: 20000
-            },
-        ],
-    },
-    */
     AC: {
         name: 'Aceh',
         bpsCode: 11,
@@ -439,5 +431,4 @@ export const PROVINCES_DATA =
 };
 
 export type Provinces = keyof typeof PROVINCES_DATA;
-
 export const PROVINCES = Object.keys(PROVINCES_DATA) as Provinces[];

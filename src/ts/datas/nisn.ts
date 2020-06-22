@@ -16,7 +16,7 @@ export const NISN_REGEX = /^(\d{3})(\d{3})(\d{4})$/
 export const NISN_LENGTH = 10
 
 /**
- * NISN_LENGTH
+ * NISN_AGE_VALIDITY
  *
  * Validity periode of NISN.
  * Counted from 7 years (as child) + 6 years (as elementaryer) + 3 years (as mid schooler) + 3 years (high schooler) +
