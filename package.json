@@ -2,6 +2,11 @@
   "name": "nusantara-valid",
   "version": "0.1.0",
   "description": "Nusantara Valid is a Indonesian civil data validator.",
+  "author": {
+    "name": "Fajar Setya Budi",
+    "url": "https://magicjar.github.io"
+  },
+  "license": "MIT",
   "main": "dist/nusantara-valid.js",
   "directories": {
     "doc": "docs"
@@ -28,8 +33,6 @@
     "minify:umd": "uglifyjs --compress typeofs=false,drop_console=true --mangle --comments \"/^!/\" --source-map \"content=dist/nusantara-valid.umd.js.map,includeSources,url=nusantara-valid.umd.js.map\" --output dist/nusantara-valid.umd.js dist/nusantara-valid.umd.js",
     "test": "mocha --require ts-node/register **/*.test.ts"
   },
-  "author": "magicjar",
-  "license": "MIT",
   "devDependencies": {
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
