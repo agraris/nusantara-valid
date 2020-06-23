@@ -22,10 +22,10 @@
   ],
   "scripts": {
     "clean": "shx rm -rf dist src/js",
-    "compile": "npm-run-all --sequential clean compile:ts compile:js minify:js",
+    "compile": "npm-run-all --sequential clean compile:ts compile:js minify:*",
     "compile:js": "rollup --config rollup.config.js --sourcemap",
     "compile:ts": "tsc --module ESNext",
-    "minify:js": "uglifyjs --compress typeofs=false,drop_console=true --mangle --comments \"/^!/\" --source-map \"content=dist/nusantara-valid.js.map,includeSources,url=nusantara-valid.min.js.map\" --output dist/nusantara-valid.min.js dist/nusantara-valid.js",
+    "minify:umd": "uglifyjs --compress typeofs=false,drop_console=true --mangle --comments \"/^!/\" --source-map \"content=dist/nusantara-valid.umd.js.map,includeSources,url=nusantara-valid.umd.js.map\" --output dist/nusantara-valid.umd.js dist/nusantara-valid.umd.js",
     "test": "mocha --require ts-node/register **/*.test.ts"
   },
   "author": "magicjar",
