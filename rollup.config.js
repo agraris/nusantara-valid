@@ -1,3 +1,5 @@
+import babel from 'rollup-plugin-babel'
+
 export default {
     input: 'src/js/nusantara-valid.js',
     output: [
@@ -15,4 +17,9 @@ export default {
             name: 'NusantaraValid'
         }
     ],
+    plugins: [
+        babel({
+            exclude: 'node_modules/**'
+        })
+    ]
 }
