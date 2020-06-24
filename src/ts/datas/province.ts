@@ -1,7 +1,7 @@
 const range = (start: number, stop: number) => Array.from({ length: (stop - start) / 1 + 1 }, (_, i) => start + (i * 1))
 
 /**
- * CELLULAR_NUMBER
+ * PROVINCES_DATA
  *
  * List of province data in Indonesia including BPS code, vehicle plate, 
  * telephone numbers, and zip code.

@@ -1,4 +1,5 @@
 // isValid (true / false)
+export { isValid as isValidATMNumber } from './_atmNumber'
 export { isValid as isValidCellularNumber } from './_cellularNumber'
 export { isValid as isValidEmail } from './_email'
 export { isValid as isValidNIK } from './_nomorIndukKependudukan'
