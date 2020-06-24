@@ -46,9 +46,14 @@ export const BANK_DATA =
         atmNumberLength: 10,
         atmNumberDotIndex: []
     },
-    BTPN: {
+    BTPK: {
         name: 'Bank Tabungan Pensiunan Nasional',
         atmNumberLength: 11,
+        atmNumberDotIndex: []
+    },
+    BTPS: {
+        name: 'Bank Tabungan Pensiunan Nasional Syariah',
+        atmNumberLength: 10,
         atmNumberDotIndex: []
     },
     BUKK: {
