@@ -25,6 +25,13 @@
     "mobile-number",
     "telephone-number"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicjar/nusantara-valid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/magicjar/nusantara-valid/issues"
+  },
   "files": [
     "dist/",
     "src/{ts,js}/"
