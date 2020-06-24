@@ -1,8 +1,8 @@
-import { IValid, IValidLength, IGetData } from "../interface/index"
+import { IValid, IValidLength } from "../interface/index"
 import { numbersOnly } from "../helpers/index"
-import { BANK_DATA, BANKS } from "../datas/bank"
+import { BANK_DATA } from "../datas/bank"
 
-export class ATMNumber implements IValid, IValidLength, IGetData {
+export class ATMNumber implements IValid, IValidLength {
     VALID_ATMNUMBER_LENGTH = Object.keys(BANK_DATA).reduce(
         (pref, curr) => pref.includes((BANK_DATA as any)[curr].digits as never) ? pref : pref.concat((BANK_DATA as any)[curr].digits), []
     ) as number[]
@@ -22,15 +22,6 @@ export class ATMNumber implements IValid, IValidLength, IGetData {
     isValidLength(length: number): boolean {
         return this.VALID_ATMNUMBER_LENGTH.includes(length)
     }
-
-    getData(): Bank[] {
-        const banks = BANKS.map((key) => ({
-            key,
-            name: (BANK_DATA as any)[key].name,
-        }));
-
-        return banks
-    }
 }
 
 export interface Bank {
@@ -42,8 +33,4 @@ const atm = new ATMNumber()
 
 export function isValid(param: string, index?: string) {
     return atm.isValid(param, index)
-}
-
-export function getData() {
-    return atm.getData()
 }
