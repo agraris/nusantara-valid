@@ -8,128 +8,128 @@ export const BANK_DATA =
 {
     BCAK: {
         name: 'Bank Central Asia',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     BCAS: {
         name: 'Bank Central Asia Syariah',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     BNIK: {
         name: 'Bank Negara Indonesia',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     BNIS: {
         name: 'Bank Negara Indonesia Syariah',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     BRIK: {
         name: 'Bank Rakyat Indonesia',
-        atmNumberLength: 15,
-        atmNumberDotIndex: []
+        digits: 15,
+        dotIndex: []
     },
     BRIS: {
         name: 'Bank Rakyat Indonesia Syariah',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     BTNK: {
         name: 'Bank Tabungan Negara',
-        atmNumberLength: 16,
-        atmNumberDotIndex: []
+        digits: 16,
+        dotIndex: []
     },
     BTNS: {
         name: 'Bank Tabungan Negara Syariah',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     BTPK: {
         name: 'Bank Tabungan Pensiunan Nasional',
-        atmNumberLength: 11,
-        atmNumberDotIndex: []
+        digits: 11,
+        dotIndex: []
     },
     BTPS: {
         name: 'Bank Tabungan Pensiunan Nasional Syariah',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     BUKK: {
         name: 'Bukopin',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     BUKS: {
         name: 'Bukopin Syariah',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     CMBK: {
         name: 'Bank CIMB Niaga',
-        atmNumberLength: 13,
-        atmNumberDotIndex: []
+        digits: 13,
+        dotIndex: []
     },
     CMBS: {
         name: 'Bank CIMB Niaga Syariah',
-        atmNumberLength: 13,
-        atmNumberDotIndex: []
+        digits: 13,
+        dotIndex: []
     },
     DNMK: {
         name: 'Bank Danamon',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     DNMS: {
         name: 'Bank Danamon Syariah',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     MDRK: {
         name: 'Bank Mandiri',
-        atmNumberLength: 13,
-        atmNumberDotIndex: []
+        digits: 13,
+        dotIndex: []
     },
     MDRS: {
         name: 'Bank Mandiri Syariah',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     MGAK: {
         name: 'Bank Mega',
-        atmNumberLength: 15,
-        atmNumberDotIndex: []
+        digits: 15,
+        dotIndex: []
     },
     MGAS: {
         name: 'Bank Mega Syariah',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     MUAM: {
         name: 'Bank Muamalat',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     PMTK: {
         name: 'Bank Permata',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     PMTS: {
         name: 'Bank Permata Syariah',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     PNBK: {
         name: 'Panin Bank',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     PNBS: {
         name: 'Panin Bank Syariah',
-        atmNumberLength: 10,
-        atmNumberDotIndex: []
+        digits: 10,
+        dotIndex: []
     },
     
 }
