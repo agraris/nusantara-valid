@@ -4,15 +4,15 @@ export default {
     input: 'src/js/nusantara-valid.js',
     output: [
         {
-            file: 'dist/nusantara-valid.cjs.js',
+            file: 'dist/cjs/nusantara-valid.js',
             format: 'cjs',
             name: 'NusantaraValid'
         }, {
-            file: 'dist/nusantara-valid.es.mjs',
+            file: 'dist/esm/nusantara-valid.mjs',
             format: 'es',
             name: 'NusantaraValid'
         }, {
-            file: 'dist/nusantara-valid.umd.js',
+            file: 'dist/umd/nusantara-valid.js',
             format: 'umd',
             name: 'NusantaraValid'
         }

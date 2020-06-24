@@ -15,6 +15,8 @@
     "validator",
     "javascript",
     "indonesia",
+    "atm",
+    "credit-card",
     "nik",
     "nip",
     "nisn",
@@ -41,7 +43,7 @@
     "compile": "npm-run-all --sequential clean compile:ts compile:js minify:*",
     "compile:js": "rollup --config rollup.config.js --sourcemap",
     "compile:ts": "tsc --module ESNext",
-    "minify:umd": "uglifyjs --compress typeofs=false,drop_console=true --mangle --comments \"/^!/\" --source-map \"content=dist/nusantara-valid.umd.js.map,includeSources,url=nusantara-valid.umd.js.map\" --output dist/nusantara-valid.umd.js dist/nusantara-valid.umd.js",
+    "minify:umd": "uglifyjs --compress typeofs=false,drop_console=true --mangle --comments \"/^!/\" --source-map \"content=dist/umd/nusantara-valid.js.map,includeSources,url=nusantara-valid.js.map\" --output dist/umd/nusantara-valid.min.js dist/umd/nusantara-valid.js",
     "test": "mocha --require ts-node/register **/*.test.ts"
   },
   "devDependencies": {
