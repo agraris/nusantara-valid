@@ -1,5 +1,6 @@
 // isValid (true / false)
 export { isValid as isValidATMNumber } from './_atmNumber'
+export { isValid as isValidCCNumber } from './_creditCard'
 export { isValid as isValidCellularNumber } from './_cellularNumber'
 export { isValid as isValidEmail } from './_email'
 export { isValid as isValidNIK } from './_nomorIndukKependudukan'
@@ -11,6 +12,7 @@ export { isValid as isValidTNKB } from './_tandaNomorKendaraanBermotor'
 export { isValid as isValidZIP } from './_zipCode'
 
 // format (string)
+export { format as formatCCNumber } from './_creditCard'
 export { format as formatNPWP } from './_nomorPokokWajibPajak'
 
 // getData (any)
