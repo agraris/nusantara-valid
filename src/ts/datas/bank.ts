@@ -57,12 +57,12 @@ export const BANK_DATA =
         dotIndex: []
     },
     BUKK: {
-        name: 'Bukopin',
+        name: 'Bank Bukopin',
         digits: 10,
         dotIndex: []
     },
     BUKS: {
-        name: 'Bukopin Syariah',
+        name: 'Bank Bukopin Syariah',
         digits: 10,
         dotIndex: []
     },
@@ -133,3 +133,5 @@ export const BANK_DATA =
     },
     
 }
+
+export const BANKS = Object.keys(BANK_DATA);

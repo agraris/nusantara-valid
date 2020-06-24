@@ -12,3 +12,6 @@ export { isValid as isValidZIP } from './_zipCode'
 
 // format (string)
 export { format as formatNPWP } from './_nomorPokokWajibPajak'
+
+// getData (any)
+export { getData as getBankData } from './_atmNumber'
