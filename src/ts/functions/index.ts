@@ -15,3 +15,4 @@ export { format as formatNPWP } from './_nomorPokokWajibPajak'
 
 // getData (any)
 export { getData as getBankData } from './_atmNumber'
+export { getData as getProvinceData } from './_province'

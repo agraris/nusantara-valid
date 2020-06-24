@@ -430,5 +430,4 @@ export const PROVINCES_DATA =
     },
 };
 
-export type Provinces = keyof typeof PROVINCES_DATA;
-export const PROVINCES = Object.keys(PROVINCES_DATA) as Provinces[];
+export const PROVINCES = Object.keys(PROVINCES_DATA);
