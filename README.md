@@ -27,6 +27,7 @@ Nusantara Valid is a data validator to validate any Indonesian specific civil da
 
 ## Getting started
 
+There are some ways to import the package
 - [Download the latest release.](https://github.com/magicjar/nusantara-valid/)
 - Clone the repo:
 
@@ -35,10 +36,10 @@ Nusantara Valid is a data validator to validate any Indonesian specific civil da
     
     `npm install nusantara-valid`
 
-The package includes multiple formats to support different process.
-- **nusantara-valid.cjs.js** - CommonJS module.
-- **nusantara-valid.es.mjs** - ES module.
-- **nusantara-valid.umd.js** - UMD module. Can be used with good-usual-way `script` tag
+The package includes multiple formats to support different build process.
+- **/cjs/nusantara-valid.js** - CommonJS module.
+- **/esm/nusantara-valid.mjs** - ES module.
+- **/umd/nusantara-valid.js** - UMD module. Can be used with good-usual-way `script` tag
 
 ## Usage
 
@@ -49,12 +50,12 @@ const NusantaraValid = require('nusantara-valid')
 
 ### ES module way (`import`)
 ``` javascript
-import NusantaraValid from './node_modules/nusantara-valid/dist/nusantara-valid.es.mjs'
+import NusantaraValid from './node_modules/nusantara-valid/dist/esm/nusantara-valid.mjs'
 ```
 
 ### Good-usual-way (`<script></script>`)
 ``` html
-<script src="../dist/nusantara-valid.umd.js"></script>
+<script src="../dist/umd/nusantara-valid.min.js"></script>
 ```
 
 ## API
