@@ -28,13 +28,18 @@ Nusantara Valid is a data validator to validate any Indonesian specific civil da
 ## Getting started
 
 There are some ways to import the package
-- [Download the latest release.](https://github.com/magicjar/nusantara-valid/)
+- [Download the latest release.](https://github.com/magicjar/nusantara-valid/releases)
 - Clone the repo:
 
     `git clone https://github.com/magicjar/nusantara-valid.git`
+    
 - Install with [npm](https://www.npmjs.com/):
     
     `npm install nusantara-valid`
+
+- or CDN from [jsDelivr](https://www.jsdelivr.com)
+
+    [https://cdn.jsdelivr.net/npm/nusantara-valid@0.1.0/dist/umd/nusantara-valid.min.js](https://cdn.jsdelivr.net/npm/nusantara-valid@0.1.0/dist/umd/nusantara-valid.min.js)
 
 The package includes multiple formats to support different build process.
 - **/cjs/nusantara-valid.js** - CommonJS module.
@@ -54,8 +59,15 @@ import NusantaraValid from './node_modules/nusantara-valid/dist/esm/nusantara-va
 ```
 
 ### Good-usual-way (`<script></script>`)
+
+**Local**
 ``` html
 <script src="../dist/umd/nusantara-valid.min.js"></script>
+```
+
+**CDN**
+``` html
+<script src="https://cdn.jsdelivr.net/npm/nusantara-valid@0.1.0/dist/umd/nusantara-valid.min.js"></script>
 ```
 
 ## API
