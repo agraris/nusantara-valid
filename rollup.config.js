@@ -1,7 +1,9 @@
 import babel from '@rollup/plugin-babel'
+import typescript from '@rollup/plugin-typescript'
+import { terser } from 'rollup-plugin-terser'
 
 export default {
-    input: 'src/js/nusantara-valid.js',
+    input: 'src/ts/nusantara-valid.ts',
     output: [
         {
             file: 'dist/cjs/nusantara-valid.js',
@@ -15,12 +17,39 @@ export default {
             file: 'dist/umd/nusantara-valid.js',
             format: 'umd',
             name: 'NusantaraValid'
+        }, {
+            file: 'dist/js/nusantara-valid.js',
+            format: 'iife',
+            name: 'NusantaraValid'
+        }, {
+            file: 'dist/cjs/nusantara-valid.min.js',
+            format: 'cjs',
+            name: 'NusantaraValid',
+            plugins: [terser()]
+        }, {
+            file: 'dist/esm/nusantara-valid.min.mjs',
+            format: 'esm',
+            name: 'NusantaraValid',
+            plugins: [terser()]
+        }, {
+            file: 'dist/umd/nusantara-valid.min.js',
+            format: 'umd',
+            name: 'NusantaraValid',
+            plugins: [terser()]
+        }, {
+            file: 'dist/js/nusantara-valid.min.js',
+            format: 'iife',
+            name: 'NusantaraValid',
+            plugins: [terser()]
         }
     ],
     plugins: [
         babel({
             exclude: 'node_modules/**',
             babelHelpers: 'bundled'
+        }),
+        typescript({
+            typescript: require('typescript')
         })
     ]
 }

@@ -39,11 +39,9 @@
     "src/{ts,js}/"
   ],
   "scripts": {
-    "clean": "shx rm -rf dist src/js",
-    "compile": "npm-run-all --sequential clean compile:ts compile:js minify:*",
+    "clean": "shx rm -rf dist",
+    "compile": "npm-run-all --sequential clean compile:js",
     "compile:js": "rollup --config rollup.config.js --sourcemap",
-    "compile:ts": "tsc --module ESNext",
-    "minify:umd": "uglifyjs --compress typeofs=false,drop_console=true --mangle --comments \"/^!/\" --source-map \"content=dist/umd/nusantara-valid.js.map,includeSources,url=nusantara-valid.js.map\" --output dist/umd/nusantara-valid.min.js dist/umd/nusantara-valid.js",
     "test": "mocha --require ts-node/register **/*.test.ts"
   },
   "devDependencies": {
