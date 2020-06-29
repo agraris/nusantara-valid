@@ -18,10 +18,6 @@ export default {
             format: 'umd',
             name: 'NusantaraValid'
         }, {
-            file: 'dist/js/nusantara-valid.js',
-            format: 'iife',
-            name: 'NusantaraValid'
-        }, {
             file: 'dist/cjs/nusantara-valid.min.js',
             format: 'cjs',
             name: 'NusantaraValid',
@@ -34,11 +30,6 @@ export default {
         }, {
             file: 'dist/umd/nusantara-valid.min.js',
             format: 'umd',
-            name: 'NusantaraValid',
-            plugins: [terser()]
-        }, {
-            file: 'dist/js/nusantara-valid.min.js',
-            format: 'iife',
             name: 'NusantaraValid',
             plugins: [terser()]
         }

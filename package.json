@@ -7,10 +7,7 @@
     "url": "https://magicjar.github.io"
   },
   "license": "MIT",
-  "main": "dist/nusantara-valid.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "main": "dist/umd/nusantara-valid.js",
   "keywords": [
     "validator",
     "javascript",
@@ -29,14 +26,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/magicjar/nusantara-valid.git"
+    "url": "https://github.com/magicjar/nusantara-valid.git"
   },
   "bugs": {
     "url": "https://github.com/magicjar/nusantara-valid/issues"
   },
   "files": [
     "dist/",
-    "src/{ts,js}/"
+    "src/ts/"
   ],
   "scripts": {
     "clean": "shx rm -rf dist",
@@ -60,6 +57,5 @@
     "ts-node": "^8.10.2",
     "tslib": "^2.0.0",
     "typescript": "^3.9.5"
-  },
-  "dependencies": {}
+  }
 }
