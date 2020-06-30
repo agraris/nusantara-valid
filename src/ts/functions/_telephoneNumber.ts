@@ -1,6 +1,6 @@
 import { IValid } from "../interface/index";
 import { PROVINCES_DATA } from "../datas/province"
-import { parseTelephoneAreaCode } from "../helpers/index";
+import { cleanUpPhoneNumber } from "../helpers/index";
 
 export class TelephoneNumber implements IValid {
 
@@ -11,13 +11,13 @@ export class TelephoneNumber implements IValid {
     isValid(tel: string): boolean {
         if (!tel || typeof tel !== 'string') return false
 
-        const parsedTelephoneNumber = parseTelephoneAreaCode(tel)
+        const cleanTelNumber = cleanUpPhoneNumber(tel)
 
-        return this.isValidCellularPrefix(parsedTelephoneNumber)
+        return this.isValidCellularPrefix(cleanTelNumber)
     }
 
     isValidCellularPrefix(parsedTel: string): boolean {
-        return this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(1, 2))) || this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(1, 3)))
+        return this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(0, 2))) || this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(0, 3)))
     }
 }
 

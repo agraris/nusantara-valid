@@ -1,5 +1,5 @@
 import { IValid, IValidLength, IGetData } from '../interface/index'
-import { parseCellularPrefix } from '../helpers/index'
+import { cleanUpPhoneNumber } from '../helpers/index'
 import { CELLULAR_NUMBER, CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from '../datas/cellular'
 
 export class MobileNumber implements IValid, IValidLength, IGetData {
@@ -11,7 +11,7 @@ export class MobileNumber implements IValid, IValidLength, IGetData {
     isValid(mobile: string): boolean {
         if (!mobile || typeof mobile !== 'string') return false
 
-        const cleanCellularNumber = parseCellularPrefix(mobile)
+        const cleanCellularNumber = cleanUpPhoneNumber(mobile, true)
 
         return this.isValidLength(cleanCellularNumber) && this.isValidCellularPrefix(cleanCellularNumber)
     }
@@ -27,7 +27,7 @@ export class MobileNumber implements IValid, IValidLength, IGetData {
     getData(mobile: string): object | undefined {
         if (!isValid(mobile)) return {}
 
-        const cleanCellularNumber = parseCellularPrefix(mobile)
+        const cleanCellularNumber = cleanUpPhoneNumber(mobile, true)
 
         const pfx = Number(cleanCellularNumber.substr(0, 3))
         
