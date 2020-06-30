@@ -11,14 +11,13 @@ export class MobileNumber implements IValid, IValidLength, IGetData {
     isValid(mobile: string): boolean {
         if (!mobile || typeof mobile !== 'string') return false
 
-        const parsedCellularNumber = parseCellularPrefix(mobile)
+        const cleanCellularNumber = parseCellularPrefix(mobile)
 
-        // Return true if isValidLength and isValidCellularPrefix all true
-        return this.isValidLength(parsedCellularNumber) && this.isValidCellularPrefix(parsedCellularNumber)
+        return this.isValidLength(cleanCellularNumber) && this.isValidCellularPrefix(cleanCellularNumber)
     }
 
-    isValidCellularPrefix(parsedCellularNumber: string): boolean {
-        return this.VALID_CELLULAR_PREFIX.includes(Number(parsedCellularNumber.substr(2, 3)))
+    isValidCellularPrefix(cellularNumber: string): boolean {
+        return this.VALID_CELLULAR_PREFIX.includes(Number(cellularNumber.substr(0, 3)))
     }
 
     isValidLength(phone: string): boolean {        
@@ -28,9 +27,9 @@ export class MobileNumber implements IValid, IValidLength, IGetData {
     getData(mobile: string): object | undefined {
         if (!isValid(mobile)) return {}
 
-        const parsedCellularNumber = parseCellularPrefix(mobile)
+        const cleanCellularNumber = parseCellularPrefix(mobile)
 
-        const pfx = Number(parsedCellularNumber.substr(2, 3))
+        const pfx = Number(cleanCellularNumber.substr(0, 3))
         
         for (const key in CELLULAR_NUMBER) {
             if ((CELLULAR_NUMBER as any)[key].prefix.includes(pfx)) {

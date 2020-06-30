@@ -47,7 +47,19 @@ describe('Cellular number', () => {
 
     describe('isValid()', () => {
         it('when it has ' +CELLULAR_MIN_LENGTH + ' to ' + CELLULAR_MAX_LENGTH + ' digits including country code', () => {
-            expect(isValid('0818123456')).to.be.true;
+            expect(isValid('08181234567')).to.be.true;
+        })
+
+        it('even when country code is included', () => {
+            expect(isValid('628181234567')).to.be.true;
+        })
+
+        it('even when leading plush (+) symbol is included', () => {
+            expect(isValid('+628181234567')).to.be.true;
+        })
+
+        it('even with formating', () => {
+            expect(isValid('0818-1234-1234')).to.be.true;
         })
     })
 

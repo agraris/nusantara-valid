@@ -36,16 +36,17 @@ export const CELLULAR_NUMBER =
 /**
  * CELLULAR_MIN_LENGTH
  *
- * Minimum length of cellular number including country code
+ * Minimum length of cellular number without leading zero or country code
+ * 8961234123
 **/
-export const CELLULAR_MIN_LENGTH = 11;
+export const CELLULAR_MIN_LENGTH = 10;
 
 /**
  * CELLULAR_MAX_LENGTH
  *
- * Maximum length of cellular number including country code
+ * Maximum length of cellular number without leading zero or country code
 **/
-export const CELLULAR_MAX_LENGTH = 13;
+export const CELLULAR_MAX_LENGTH = 12;
 
 /**
  * CELLULAR_COUNTRY_CODE
