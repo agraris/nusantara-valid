@@ -88,6 +88,9 @@ getBankData();
 ``` javascript
 isValidCellularNumber(cel: string);
 isValidCellularNumber('081212341234');
+
+getCellularProviderData(cel: string);
+getCellularProviderData('085612341234');
 ```
 
 ### Credit Card Number

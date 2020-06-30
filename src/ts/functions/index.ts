@@ -17,4 +17,5 @@ export { format as formatNPWP } from './_nomorPokokWajibPajak'
 
 // getData (any)
 export { getData as getBankData } from './_bank'
+export { getData as getCellularProviderData } from './_cellularNumber'
 export { getData as getProvinceData } from './_province'
