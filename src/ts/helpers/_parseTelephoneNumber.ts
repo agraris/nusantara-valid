@@ -1,10 +1,8 @@
 export function parseTelephoneAreaCode (input: string | number): string
 {
-    const number = String(input).replace(/[^\d]/g, '');
-    let newNumber = number
+    let num = String(input).replace(/[^\d]/g, '');
 
-    if (number.charAt(0) != '0')
-        newNumber = '0' + number
+    num = num.replace(/^0+/, '')
 
-    return newNumber
+    return num
 }
