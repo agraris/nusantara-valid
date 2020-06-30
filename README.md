@@ -89,6 +89,7 @@ getBankData();
 isValidCellularNumber(cel: string);
 isValidCellularNumber('081212341234');
 
+// You should validate the cellular number before retriving the data
 getCellularProviderData(cel: string);
 getCellularProviderData('085612341234');
 ```
@@ -99,6 +100,7 @@ isValidCCNumber(cc: string);
 isValidCCNumber('4000123456789010');
 isValidCCNumber('5000 1234 5678 9010');
 
+// You should validate the CC number before formating
 formatCCNumber(cc: string);
 formatCCNumber('4000123456789010');
 formatCCNumber('5000 1234 5678 9010');
@@ -135,6 +137,7 @@ isValidNPWP(npwp: string);
 isValidNPWP('09.123.123.1-123.123');
 isValidNPWP('091231231123123');
 
+// You should validate the NPWP number before formating
 formatNPWP(npwp: string | number, pad?: true); // xx.xxx.xxx.x-xxx.xxx
 formatNPWP('091231231123123');
 formatNPWP(671231231123123, false);
@@ -155,6 +158,11 @@ isValidTNKB('AB1234XYZ');
 ``` javascript
 isValidTelephoneNumber(tel: string);
 isValidTelephoneNumber('0274123123');
+
+// You should validate the telephone number before formating
+formatTelephoneNumber(tel: string, int:boolean = false)
+formatTelephoneNumber('0274123123'); // 0274-123123
+formatTelephoneNumber('0274123123', true); // +62274-123123
 ```
 
 ### ZIP Code (Kode POS)

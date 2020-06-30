@@ -1,5 +1,6 @@
 import { expect } from "chai"
-import { isValidTelephoneNumber as isValid } from "../ts/functions/index"
+import { isValidTelephoneNumber as isValid, formatTelephoneNumber as format } from "../ts/functions/index"
+import { COUNTRY_CODE } from "../ts/datas/province";
 
 describe('Telephone number', () => {
 
@@ -30,16 +31,27 @@ describe('Telephone number', () => {
         })
     })
 
-    describe('is not Valid when it has', () => {
-        it('unknown cellular prefix', () => {
+    describe('isInvalid()', () => {
+        it('when it has unknown cellular prefix', () => {
             expect(isValid('0999123456')).to.be.false;
         })
     })
 
-    describe('is Valid when it has', () => {
-        it('known landline areacode', () => {
+    describe('isValid()', () => {
+        it('when it has known landline areacode', () => {
             expect(isValid('0274123456')).to.be.true;
         })
     })
 
+    describe('format()', () => {
+        it('sould format for local line', () => {
+            expect(format('0274123456')).to.be.string('0274-123456');
+            expect(format('021333444')).to.be.string('021-333444');
+        })
+
+        it('sould format for international line with international calling code +' + COUNTRY_CODE, () => {
+            expect(format('0274123456', true)).to.be.string('+62274-123456');
+            expect(format('021333444', true)).to.be.string('+6221-333444');
+        })
+    })
 })

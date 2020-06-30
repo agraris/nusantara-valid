@@ -430,4 +430,11 @@ export const PROVINCES_DATA =
     },
 };
 
+/**
+ * COUNTRY_CODE
+ *
+ * ISD code (https://en.wikipedia.org/wiki/List_of_country_calling_codes)
+**/
+export const COUNTRY_CODE = 62
+
 export const PROVINCES = Object.keys(PROVINCES_DATA);
