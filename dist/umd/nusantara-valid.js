@@ -4,79 +4,479 @@
     (global = global || self, factory(global.NusantaraValid = {}));
 }(this, (function (exports) { 'use strict';
 
+    /**
+     * Strip all non number characters
+     *
+     * @param {string | number} input - Input parameter. Can be string or number
+     * @return {string} Clean number. Free from any non number characters.
+    **/
     function numbersOnly(input) {
         return String(input).replace(/[^\d]/g, '');
     }
 
     var range = function (start, stop) { return Array.from({ length: (stop - start) / 1 + 1 }, function (_, i) { return start + (i * 1); }); };
     /**
-     * CELLULAR_NUMBER
+     * PROVINCES_DATA
      *
-     * List cellular provider in Indonesia
+     * List of province data in Indonesia including BPS code, vehicle plate,
+     * telephone numbers, and zip code.
     **/
-    var CELLULAR_NUMBER = {
-        TELKOMSEL: {
-            name: 'Telkomsel',
-            prefix: range(811, 813).concat(range(821, 823)).concat(range(851, 853)),
+    var PROVINCES_DATA = {
+        AC: {
+            name: 'Aceh',
+            bpsCode: 11,
+            vehiclePlate: ['BL'],
+            tel: range(641, 659).concat([627, 629]),
+            zipCode: [
+                {
+                    from: 23111,
+                    to: 24794
+                }
+            ]
         },
-        INDOSAT: {
-            name: 'Indosat Ooredoo',
-            prefix: range(814, 816).concat(range(855, 858)),
+        BA: {
+            name: 'Bali',
+            bpsCode: 51,
+            vehiclePlate: ['DK'],
+            tel: range(361, 368),
+            zipCode: [
+                {
+                    from: 80111,
+                    to: 82262
+                }
+            ]
         },
-        XL: {
-            name: 'XL Axiata',
-            prefix: range(817, 819).concat([859, 877, 878]),
+        BB: {
+            name: 'Kepulauan Bangka Belitung',
+            bpsCode: 19,
+            vehiclePlate: ['BN'],
+            tel: range(715, 719),
+            zipCode: [
+                {
+                    from: 33111,
+                    to: 33792
+                }
+            ]
         },
-        TRI: {
-            name: 'Hutchinson Tri',
-            prefix: range(895, 899),
+        BE: {
+            name: 'Bengkulu',
+            bpsCode: 17,
+            vehiclePlate: ['BD'],
+            tel: range(736, 739).concat([732]),
+            zipCode: [
+                {
+                    from: 38113,
+                    to: 39377
+                }
+            ]
         },
-        SMARTFREN: {
-            name: 'Smartfren',
-            prefix: range(881, 889),
+        BT: {
+            name: 'Banten',
+            bpsCode: 36,
+            vehiclePlate: ['A'],
+            tel: range(252, 257),
+            zipCode: [
+                {
+                    from: 15111,
+                    to: 15820
+                }, {
+                    from: 42111,
+                    to: 42455
+                }
+            ]
         },
-        AXIS: {
-            name: 'AXIS',
-            prefix: range(831, 833).concat([838])
-        }
+        GO: {
+            name: 'Gorontalo',
+            bpsCode: 75,
+            vehiclePlate: ['DM'],
+            tel: [435, 443],
+            zipCode: [
+                {
+                    from: 96111,
+                    to: 96574
+                }
+            ]
+        },
+        JA: {
+            name: 'Jambi',
+            bpsCode: 15,
+            vehiclePlate: ['BH'],
+            tel: range(740, 748),
+            zipCode: [
+                {
+                    from: 36111,
+                    to: 37574
+                }
+            ]
+        },
+        JB: {
+            name: 'Jawa Barat',
+            bpsCode: 32,
+            vehiclePlate: ['D', 'E', 'F', 'T', 'Z'],
+            tel: range(231, 234).concat(range(260, 267)).concat([22, 251]),
+            zipCode: [
+                {
+                    from: 16110,
+                    to: 17730
+                }, {
+                    from: 40111,
+                    to: 46476
+                }
+            ]
+        },
+        JI: {
+            name: 'Jawa Timur',
+            bpsCode: 35,
+            vehiclePlate: ['L', 'M', 'N', 'P', 'S', 'W', 'AE', 'AG'],
+            tel: range(321, 358).concat([31]),
+            zipCode: [
+                {
+                    from: 60111,
+                    to: 69493
+                }
+            ]
+        },
+        JK: {
+            name: 'Jakarta',
+            bpsCode: 31,
+            vehiclePlate: ['B'],
+            tel: [21],
+            zipCode: [
+                {
+                    from: 10110,
+                    to: 14540
+                }
+            ]
+        },
+        JT: {
+            name: 'Jawa Tengah',
+            bpsCode: 33,
+            vehiclePlate: ['G', 'H', 'K', 'R', 'AA', 'AD'],
+            tel: range(271, 299).concat([24, 356]),
+            zipCode: [
+                {
+                    from: 50111,
+                    to: 54474
+                }, {
+                    from: 56111,
+                    to: 59584
+                }
+            ]
+        },
+        KB: {
+            name: 'Kalimantan Barat',
+            bpsCode: 61,
+            vehiclePlate: ['KB'],
+            tel: range(564, 568).concat([534]),
+            zipCode: [
+                {
+                    from: 78111,
+                    to: 79682
+                }
+            ]
+        },
+        KI: {
+            name: 'Kalimantan Timur',
+            bpsCode: 64,
+            vehiclePlate: ['KT'],
+            tel: range(541, 556),
+            zipCode: [
+                {
+                    from: 75111,
+                    to: 77381
+                }
+            ]
+        },
+        KR: {
+            name: 'Kepulauan Riau',
+            bpsCode: 21,
+            vehiclePlate: ['BP'],
+            tel: range(771, 779),
+            zipCode: [
+                {
+                    from: 29111,
+                    to: 29878
+                }
+            ]
+        },
+        KS: {
+            name: 'Kalimantan Selatan',
+            bpsCode: 63,
+            vehiclePlate: ['DA'],
+            tel: range(511, 527),
+            zipCode: [
+                {
+                    from: 70111,
+                    to: 72276
+                }
+            ]
+        },
+        KT: {
+            name: 'Kalimantan Tengah',
+            bpsCode: 62,
+            vehiclePlate: ['KH'],
+            tel: range(513, 539),
+            zipCode: [
+                {
+                    from: 73111,
+                    to: 74874
+                }
+            ]
+        },
+        KU: {
+            name: 'Kalimantan Utara',
+            bpsCode: 65,
+            vehiclePlate: ['KU'],
+            tel: range(551, 556),
+            zipCode: [
+                {
+                    from: 77111,
+                    to: 77574
+                }
+            ]
+        },
+        LA: {
+            name: 'Lampung',
+            bpsCode: 18,
+            vehiclePlate: ['BE'],
+            tel: range(721, 729),
+            zipCode: [
+                {
+                    from: 34111,
+                    to: 35686
+                }
+            ]
+        },
+        MA: {
+            name: 'Maluku',
+            bpsCode: 81,
+            vehiclePlate: ['DE'],
+            tel: range(910, 931),
+            zipCode: [
+                {
+                    from: 97114,
+                    to: 97669
+                }
+            ]
+        },
+        MU: {
+            name: 'Maluku Utara',
+            bpsCode: 82,
+            vehiclePlate: ['DG'],
+            tel: range(910, 931),
+            zipCode: [
+                {
+                    from: 97711,
+                    to: 97869
+                }
+            ]
+        },
+        NB: {
+            name: 'Nusa Tenggara Barat',
+            bpsCode: 52,
+            vehiclePlate: ['DR', 'EA'],
+            tel: range(370, 376).concat([364]),
+            zipCode: [
+                {
+                    from: 83115,
+                    to: 84459
+                }
+            ]
+        },
+        NT: {
+            name: 'Nusa Tenggara Timur',
+            bpsCode: 53,
+            vehiclePlate: ['DH', 'EB', 'ED'],
+            tel: range(380, 389),
+            zipCode: [
+                {
+                    from: 85111,
+                    to: 87284
+                }
+            ]
+        },
+        PA: {
+            name: 'Papua',
+            bpsCode: 94,
+            vehiclePlate: ['PA'],
+            tel: range(951, 986).concat([901, 902]),
+            zipCode: [
+                {
+                    from: 98511,
+                    to: 99976
+                }
+            ]
+        },
+        PB: {
+            name: 'Papua Barat',
+            bpsCode: 91,
+            vehiclePlate: ['PB'],
+            tel: range(951, 986).concat([901, 902]),
+            zipCode: [
+                {
+                    from: 98011,
+                    to: 98495
+                }
+            ]
+        },
+        RI: {
+            name: 'Riau',
+            bpsCode: 14,
+            vehiclePlate: ['BM'],
+            tel: range(760, 769).concat([624]),
+            zipCode: [
+                {
+                    from: 28111,
+                    to: 29569
+                }
+            ]
+        },
+        SA: {
+            name: 'Sulawesi Utara',
+            bpsCode: 71,
+            vehiclePlate: ['DB', 'DL'],
+            tel: range(430, 438),
+            zipCode: [
+                {
+                    from: 95111,
+                    to: 95999
+                }
+            ]
+        },
+        SB: {
+            name: 'Sumatra Barat',
+            bpsCode: 13,
+            vehiclePlate: ['BA'],
+            tel: range(751, 759),
+            zipCode: [
+                {
+                    from: 25111,
+                    to: 27779
+                }
+            ]
+        },
+        SG: {
+            name: 'Sulawesi Tenggara',
+            bpsCode: 74,
+            vehiclePlate: ['DT'],
+            tel: range(401, 408),
+            zipCode: [
+                {
+                    from: 93111,
+                    to: 93963
+                }
+            ]
+        },
+        SN: {
+            name: 'Sulawesi Selatan',
+            bpsCode: 73,
+            vehiclePlate: ['DD', 'DP', 'DW'],
+            tel: range(410, 421).concat(range(471, 485)).concat([423, 427]),
+            zipCode: [
+                {
+                    from: 90111,
+                    to: 91273
+                }, {
+                    from: 91611,
+                    to: 92985
+                }
+            ]
+        },
+        SR: {
+            name: 'Sulawesi Barat',
+            bpsCode: 76,
+            vehiclePlate: ['DC'],
+            tel: [422, 426, 428],
+            zipCode: [
+                {
+                    from: 91311,
+                    to: 91591
+                }
+            ]
+        },
+        SS: {
+            name: 'Sumatra Selatan',
+            bpsCode: 16,
+            vehiclePlate: ['BG'],
+            tel: range(711, 714).concat(range(730, 735)).concat([702]),
+            zipCode: [
+                {
+                    from: 30111,
+                    to: 32388
+                }
+            ]
+        },
+        ST: {
+            name: 'Sulawesi Tengah',
+            bpsCode: 72,
+            vehiclePlate: ['DN'],
+            tel: range(445, 465),
+            zipCode: [
+                {
+                    from: 94111,
+                    to: 94981
+                }
+            ]
+        },
+        SU: {
+            name: 'Sumatra Utara',
+            bpsCode: 12,
+            vehiclePlate: ['BB', 'BK'],
+            tel: range(620, 639).concat([601]),
+            zipCode: [
+                {
+                    from: 20111,
+                    to: 22999
+                }
+            ]
+        },
+        YO: {
+            name: 'Yogyakarta',
+            bpsCode: 34,
+            vehiclePlate: ['AB'],
+            tel: [274],
+            zipCode: [
+                {
+                    from: 55111,
+                    to: 55893
+                }
+            ]
+        },
     };
     /**
-     * CELLULAR_MIN_LENGTH
+     * COUNTRY_CODE
      *
-     * Minimum length of cellular number including country code
+     * ISD code (https://en.wikipedia.org/wiki/List_of_country_calling_codes)
     **/
-    var CELLULAR_MIN_LENGTH = 11;
-    /**
-     * CELLULAR_MAX_LENGTH
-     *
-     * Maximum length of cellular number including country code
-    **/
-    var CELLULAR_MAX_LENGTH = 13;
-    /**
-     * CELLULAR_COUNTRY_CODE
-     *
-     * The country code
-    **/
-    var CELLULAR_COUNTRY_CODE = 62;
+    var COUNTRY_CODE = 62;
+    var PROVINCES = Object.keys(PROVINCES_DATA);
 
-    function parseCellularPrefix(input) {
-        // +62xxx => 62xxx
-        var number = String(input).replace(/[^\d]/g, '');
-        var newNumber = "";
-        // 0xxx => 62xxx
-        if (number.charAt(0) == '0')
-            newNumber = number.replace('0', CELLULAR_COUNTRY_CODE.toString());
-        return newNumber;
+    /**
+     * Clean up phone number from leading zero, formating, and country code.
+     *
+     * @param {string} number - The dirty number.
+     * @param {boolean} cellular - The number type, landline number or cellular number.
+     * @return {string} Clean number. Free from leading zero, formating, and country code for mobile number.
+    **/
+    function cleanUpPhoneNumber(number, cellular) {
+        if (cellular === void 0) { cellular = false; }
+        // Remove non digit character
+        var num = String(number).replace(/[^\d]/g, '');
+        // Remove leading zero if any
+        num = num.replace(/^0+/, '');
+        // Remove country code if any on cellular number
+        if (cellular && num.substr(0, 2) == COUNTRY_CODE.toString()) {
+            num = num.substring(2);
+        }
+        return num;
     }
 
-    function parseTelephoneAreaCode(input) {
-        var number = String(input).replace(/[^\d]/g, '');
-        var newNumber = number;
-        if (number.charAt(0) != '0')
-            newNumber = '0' + number;
-        return newNumber;
-    }
-
+    /**
+     * Format date from string
+     *
+     * @param {string} date - The string date.
+     * @return {Date} Formated date.
+    **/
     function formatDate(date) {
         var newDate = date.replace(/(\d{4})(\d{2})(?:(\d{2})?)/, "$1-$2-$3");
         var formatedDate = new Date(newDate);
@@ -303,6 +703,52 @@
         return cc.format(param);
     }
 
+    var range$1 = function (start, stop) { return Array.from({ length: (stop - start) / 1 + 1 }, function (_, i) { return start + (i * 1); }); };
+    /**
+     * CELLULAR_NUMBER
+     *
+     * List cellular provider in Indonesia
+    **/
+    var CELLULAR_NUMBER = {
+        TELKOMSEL: {
+            name: 'Telkomsel',
+            prefix: range$1(811, 813).concat(range$1(821, 823)).concat(range$1(851, 853)),
+        },
+        INDOSAT: {
+            name: 'Indosat Ooredoo',
+            prefix: range$1(814, 816).concat(range$1(855, 858)),
+        },
+        XL: {
+            name: 'XL Axiata',
+            prefix: range$1(817, 819).concat([859, 877, 878]),
+        },
+        TRI: {
+            name: 'Hutchinson Tri',
+            prefix: range$1(895, 899),
+        },
+        SMARTFREN: {
+            name: 'Smartfren',
+            prefix: range$1(881, 889),
+        },
+        AXIS: {
+            name: 'AXIS',
+            prefix: range$1(831, 833).concat([838])
+        }
+    };
+    /**
+     * CELLULAR_MIN_LENGTH
+     *
+     * Minimum length of cellular number without leading zero or country code
+     * 8961234123
+    **/
+    var CELLULAR_MIN_LENGTH = 10;
+    /**
+     * CELLULAR_MAX_LENGTH
+     *
+     * Maximum length of cellular number without leading zero or country code
+    **/
+    var CELLULAR_MAX_LENGTH = 12;
+
     var MobileNumber = /** @class */ (function () {
         function MobileNumber() {
             this.VALID_CELLULAR_PREFIX = Object.keys(CELLULAR_NUMBER).reduce(function (a, b) { return a.concat(CELLULAR_NUMBER[b].prefix); }, []);
@@ -310,21 +756,57 @@
         MobileNumber.prototype.isValid = function (mobile) {
             if (!mobile || typeof mobile !== 'string')
                 return false;
-            var parsedCellularNumber = parseCellularPrefix(mobile);
-            // Return true if isValidLength and isValidCellularPrefix all true
-            return this.isValidLength(parsedCellularNumber) && this.isValidCellularPrefix(parsedCellularNumber);
+            var cleanCellularNumber = cleanUpPhoneNumber(mobile, true);
+            return this.isValidLength(cleanCellularNumber) && this.isValidCellularPrefix(cleanCellularNumber);
         };
-        MobileNumber.prototype.isValidCellularPrefix = function (parsedCellularNumber) {
-            return this.VALID_CELLULAR_PREFIX.includes(Number(parsedCellularNumber.substr(2, 3)));
+        MobileNumber.prototype.isValidCellularPrefix = function (cellularNumber) {
+            return this.VALID_CELLULAR_PREFIX.includes(Number(cellularNumber.substr(0, 3)));
         };
         MobileNumber.prototype.isValidLength = function (phone) {
             return phone.length >= CELLULAR_MIN_LENGTH && phone.length <= CELLULAR_MAX_LENGTH;
+        };
+        MobileNumber.prototype.getData = function (mobile) {
+            if (!isValid$2(mobile))
+                return {};
+            var cleanCellularNumber = cleanUpPhoneNumber(mobile, true);
+            var pfx = Number(cleanCellularNumber.substr(0, 3));
+            for (var key in CELLULAR_NUMBER) {
+                if (CELLULAR_NUMBER[key].prefix.includes(pfx)) {
+                    return CELLULAR_NUMBER[key];
+                }
+            }
+        };
+        MobileNumber.prototype.format = function (input, int) {
+            if (int === void 0) { int = false; }
+            var cleanCelNumber = cleanUpPhoneNumber(input, true);
+            var CEL_HYPEN_INDEX = [2, 6];
+            var formatedNumber = cleanCelNumber
+                .slice(0, cleanCelNumber.length)
+                .split('')
+                .reduce(function (a, b, index) {
+                var result = "" + a + b;
+                if (!(index === cleanCelNumber.length - 1)) {
+                    if (CEL_HYPEN_INDEX.includes(index))
+                        return result + "-";
+                }
+                return result;
+            }, '');
+            if (int)
+                return '+' + COUNTRY_CODE.toString() + formatedNumber;
+            return '0' + formatedNumber;
         };
         return MobileNumber;
     }());
     var mobileNumber = new MobileNumber();
     function isValid$2(param) {
         return mobileNumber.isValid(param);
+    }
+    function getData(param) {
+        return mobileNumber.getData(param);
+    }
+    function format$1(param, int) {
+        if (int === void 0) { int = false; }
+        return mobileNumber.format(param, int);
     }
 
     /**
@@ -390,437 +872,6 @@
      * Total length of NIK without any special characters
     **/
     var NIK_LENGTH = 16;
-
-    var range$1 = function (start, stop) { return Array.from({ length: (stop - start) / 1 + 1 }, function (_, i) { return start + (i * 1); }); };
-    /**
-     * PROVINCES_DATA
-     *
-     * List of province data in Indonesia including BPS code, vehicle plate,
-     * telephone numbers, and zip code.
-    **/
-    var PROVINCES_DATA = {
-        AC: {
-            name: 'Aceh',
-            bpsCode: 11,
-            vehiclePlate: ['BL'],
-            tel: range$1(641, 659).concat([627, 629]),
-            zipCode: [
-                {
-                    from: 23111,
-                    to: 24794
-                }
-            ]
-        },
-        BA: {
-            name: 'Bali',
-            bpsCode: 51,
-            vehiclePlate: ['DK'],
-            tel: range$1(361, 368),
-            zipCode: [
-                {
-                    from: 80111,
-                    to: 82262
-                }
-            ]
-        },
-        BB: {
-            name: 'Kepulauan Bangka Belitung',
-            bpsCode: 19,
-            vehiclePlate: ['BN'],
-            tel: range$1(715, 719),
-            zipCode: [
-                {
-                    from: 33111,
-                    to: 33792
-                }
-            ]
-        },
-        BE: {
-            name: 'Bengkulu',
-            bpsCode: 17,
-            vehiclePlate: ['BD'],
-            tel: range$1(736, 739).concat([732]),
-            zipCode: [
-                {
-                    from: 38113,
-                    to: 39377
-                }
-            ]
-        },
-        BT: {
-            name: 'Banten',
-            bpsCode: 36,
-            vehiclePlate: ['A'],
-            tel: range$1(252, 257),
-            zipCode: [
-                {
-                    from: 15111,
-                    to: 15820
-                }, {
-                    from: 42111,
-                    to: 42455
-                }
-            ]
-        },
-        GO: {
-            name: 'Gorontalo',
-            bpsCode: 75,
-            vehiclePlate: ['DM'],
-            tel: [435, 443],
-            zipCode: [
-                {
-                    from: 96111,
-                    to: 96574
-                }
-            ]
-        },
-        JA: {
-            name: 'Jambi',
-            bpsCode: 15,
-            vehiclePlate: ['BH'],
-            tel: range$1(740, 748),
-            zipCode: [
-                {
-                    from: 36111,
-                    to: 37574
-                }
-            ]
-        },
-        JB: {
-            name: 'Jawa Barat',
-            bpsCode: 32,
-            vehiclePlate: ['D', 'E', 'F', 'T', 'Z'],
-            tel: range$1(231, 234).concat(range$1(260, 267)).concat([22, 251]),
-            zipCode: [
-                {
-                    from: 16110,
-                    to: 17730
-                }, {
-                    from: 40111,
-                    to: 46476
-                }
-            ]
-        },
-        JI: {
-            name: 'Jawa Timur',
-            bpsCode: 35,
-            vehiclePlate: ['L', 'M', 'N', 'P', 'S', 'W', 'AE', 'AG'],
-            tel: range$1(321, 358).concat([31]),
-            zipCode: [
-                {
-                    from: 60111,
-                    to: 69493
-                }
-            ]
-        },
-        JK: {
-            name: 'Jakarta',
-            bpsCode: 31,
-            vehiclePlate: ['B'],
-            tel: [21],
-            zipCode: [
-                {
-                    from: 10110,
-                    to: 14540
-                }
-            ]
-        },
-        JT: {
-            name: 'Jawa Tengah',
-            bpsCode: 33,
-            vehiclePlate: ['G', 'H', 'K', 'R', 'AA', 'AD'],
-            tel: range$1(271, 299).concat([24, 356]),
-            zipCode: [
-                {
-                    from: 50111,
-                    to: 54474
-                }, {
-                    from: 56111,
-                    to: 59584
-                }
-            ]
-        },
-        KB: {
-            name: 'Kalimantan Barat',
-            bpsCode: 61,
-            vehiclePlate: ['KB'],
-            tel: range$1(564, 568).concat([534]),
-            zipCode: [
-                {
-                    from: 78111,
-                    to: 79682
-                }
-            ]
-        },
-        KI: {
-            name: 'Kalimantan Timur',
-            bpsCode: 64,
-            vehiclePlate: ['KT'],
-            tel: range$1(541, 556),
-            zipCode: [
-                {
-                    from: 75111,
-                    to: 77381
-                }
-            ]
-        },
-        KR: {
-            name: 'Kepulauan Riau',
-            bpsCode: 21,
-            vehiclePlate: ['BP'],
-            tel: range$1(771, 779),
-            zipCode: [
-                {
-                    from: 29111,
-                    to: 29878
-                }
-            ]
-        },
-        KS: {
-            name: 'Kalimantan Selatan',
-            bpsCode: 63,
-            vehiclePlate: ['DA'],
-            tel: range$1(511, 527),
-            zipCode: [
-                {
-                    from: 70111,
-                    to: 72276
-                }
-            ]
-        },
-        KT: {
-            name: 'Kalimantan Tengah',
-            bpsCode: 62,
-            vehiclePlate: ['KH'],
-            tel: range$1(513, 539),
-            zipCode: [
-                {
-                    from: 73111,
-                    to: 74874
-                }
-            ]
-        },
-        KU: {
-            name: 'Kalimantan Utara',
-            bpsCode: 65,
-            vehiclePlate: ['KU'],
-            tel: range$1(551, 556),
-            zipCode: [
-                {
-                    from: 77111,
-                    to: 77574
-                }
-            ]
-        },
-        LA: {
-            name: 'Lampung',
-            bpsCode: 18,
-            vehiclePlate: ['BE'],
-            tel: range$1(721, 729),
-            zipCode: [
-                {
-                    from: 34111,
-                    to: 35686
-                }
-            ]
-        },
-        MA: {
-            name: 'Maluku',
-            bpsCode: 81,
-            vehiclePlate: ['DE'],
-            tel: range$1(910, 931),
-            zipCode: [
-                {
-                    from: 97114,
-                    to: 97669
-                }
-            ]
-        },
-        MU: {
-            name: 'Maluku Utara',
-            bpsCode: 82,
-            vehiclePlate: ['DG'],
-            tel: range$1(910, 931),
-            zipCode: [
-                {
-                    from: 97711,
-                    to: 97869
-                }
-            ]
-        },
-        NB: {
-            name: 'Nusa Tenggara Barat',
-            bpsCode: 52,
-            vehiclePlate: ['DR', 'EA'],
-            tel: range$1(370, 376).concat([364]),
-            zipCode: [
-                {
-                    from: 83115,
-                    to: 84459
-                }
-            ]
-        },
-        NT: {
-            name: 'Nusa Tenggara Timur',
-            bpsCode: 53,
-            vehiclePlate: ['DH', 'EB', 'ED'],
-            tel: range$1(380, 389),
-            zipCode: [
-                {
-                    from: 85111,
-                    to: 87284
-                }
-            ]
-        },
-        PA: {
-            name: 'Papua',
-            bpsCode: 94,
-            vehiclePlate: ['PA'],
-            tel: range$1(951, 986).concat([901, 902]),
-            zipCode: [
-                {
-                    from: 98511,
-                    to: 99976
-                }
-            ]
-        },
-        PB: {
-            name: 'Papua Barat',
-            bpsCode: 91,
-            vehiclePlate: ['PB'],
-            tel: range$1(951, 986).concat([901, 902]),
-            zipCode: [
-                {
-                    from: 98011,
-                    to: 98495
-                }
-            ]
-        },
-        RI: {
-            name: 'Riau',
-            bpsCode: 14,
-            vehiclePlate: ['BM'],
-            tel: range$1(760, 769).concat([624]),
-            zipCode: [
-                {
-                    from: 28111,
-                    to: 29569
-                }
-            ]
-        },
-        SA: {
-            name: 'Sulawesi Utara',
-            bpsCode: 71,
-            vehiclePlate: ['DB', 'DL'],
-            tel: range$1(430, 438),
-            zipCode: [
-                {
-                    from: 95111,
-                    to: 95999
-                }
-            ]
-        },
-        SB: {
-            name: 'Sumatra Barat',
-            bpsCode: 13,
-            vehiclePlate: ['BA'],
-            tel: range$1(751, 759),
-            zipCode: [
-                {
-                    from: 25111,
-                    to: 27779
-                }
-            ]
-        },
-        SG: {
-            name: 'Sulawesi Tenggara',
-            bpsCode: 74,
-            vehiclePlate: ['DT'],
-            tel: range$1(401, 408),
-            zipCode: [
-                {
-                    from: 93111,
-                    to: 93963
-                }
-            ]
-        },
-        SN: {
-            name: 'Sulawesi Selatan',
-            bpsCode: 73,
-            vehiclePlate: ['DD', 'DP', 'DW'],
-            tel: range$1(410, 421).concat(range$1(471, 485)).concat([423, 427]),
-            zipCode: [
-                {
-                    from: 90111,
-                    to: 91273
-                }, {
-                    from: 91611,
-                    to: 92985
-                }
-            ]
-        },
-        SR: {
-            name: 'Sulawesi Barat',
-            bpsCode: 76,
-            vehiclePlate: ['DC'],
-            tel: [422, 426, 428],
-            zipCode: [
-                {
-                    from: 91311,
-                    to: 91591
-                }
-            ]
-        },
-        SS: {
-            name: 'Sumatra Selatan',
-            bpsCode: 16,
-            vehiclePlate: ['BG'],
-            tel: range$1(711, 714).concat(range$1(730, 735)).concat([702]),
-            zipCode: [
-                {
-                    from: 30111,
-                    to: 32388
-                }
-            ]
-        },
-        ST: {
-            name: 'Sulawesi Tengah',
-            bpsCode: 72,
-            vehiclePlate: ['DN'],
-            tel: range$1(445, 465),
-            zipCode: [
-                {
-                    from: 94111,
-                    to: 94981
-                }
-            ]
-        },
-        SU: {
-            name: 'Sumatra Utara',
-            bpsCode: 12,
-            vehiclePlate: ['BB', 'BK'],
-            tel: range$1(620, 639).concat([601]),
-            zipCode: [
-                {
-                    from: 20111,
-                    to: 22999
-                }
-            ]
-        },
-        YO: {
-            name: 'Yogyakarta',
-            bpsCode: 34,
-            vehiclePlate: ['AB'],
-            tel: [274],
-            zipCode: [
-                {
-                    from: 55111,
-                    to: 55893
-                }
-            ]
-        },
-    };
-    var PROVINCES = Object.keys(PROVINCES_DATA);
 
     var NomorIndukKependudukan = /** @class */ (function () {
         function NomorIndukKependudukan() {
@@ -1049,7 +1100,7 @@
     function isValid$7(param) {
         return npwp.isValid(param);
     }
-    function format$1(param, pad) {
+    function format$2(param, pad) {
         if (pad === void 0) { pad = true; }
         return npwp.format(param, pad);
     }
@@ -1061,17 +1112,48 @@
         TelephoneNumber.prototype.isValid = function (tel) {
             if (!tel || typeof tel !== 'string')
                 return false;
-            var parsedTelephoneNumber = parseTelephoneAreaCode(tel);
-            return this.isValidCellularPrefix(parsedTelephoneNumber);
+            var cleanTelNumber = cleanUpPhoneNumber(tel);
+            return this.isValidCellularPrefix(cleanTelNumber);
         };
         TelephoneNumber.prototype.isValidCellularPrefix = function (parsedTel) {
-            return this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(1, 2))) || this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(1, 3)));
+            return this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(0, 2))) || this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(0, 3)));
+        };
+        TelephoneNumber.prototype.format = function (tel, int) {
+            if (int === void 0) { int = false; }
+            var cleanTelNumber = cleanUpPhoneNumber(tel);
+            var TEL_HYPEN_INDEX = [];
+            if (this.VALID_TELEPHONE_AREACODE.includes(Number(cleanTelNumber.substr(0, 2)))) {
+                TEL_HYPEN_INDEX = [1];
+            }
+            else if (this.VALID_TELEPHONE_AREACODE.includes(Number(cleanTelNumber.substr(0, 3)))) {
+                TEL_HYPEN_INDEX = [2];
+            }
+            else
+                return '';
+            var formatedNumber = cleanTelNumber
+                .slice(0, cleanTelNumber.length)
+                .split('')
+                .reduce(function (a, b, index) {
+                var result = "" + a + b;
+                if (!(index === cleanTelNumber.length - 1)) {
+                    if (TEL_HYPEN_INDEX.includes(index))
+                        return result + "-";
+                }
+                return result;
+            }, '');
+            if (int)
+                return '+' + COUNTRY_CODE.toString() + formatedNumber;
+            return '0' + formatedNumber;
         };
         return TelephoneNumber;
     }());
     var telNumber = new TelephoneNumber();
     function isValid$8(param) {
         return telNumber.isValid(param);
+    }
+    function format$3(param, int) {
+        if (int === void 0) { int = false; }
+        return telNumber.format(param, int);
     }
 
     /**
@@ -1150,7 +1232,7 @@
         return Bank;
     }());
     var atm$1 = new Bank();
-    function getData() {
+    function getData$1() {
         return atm$1.getData();
     }
 
@@ -1167,15 +1249,19 @@
         return Province;
     }());
     var atm$2 = new Province();
-    function getData$1() {
+    function getData$2() {
         return atm$2.getData();
     }
 
+    exports.cleanUpPhoneNumber = cleanUpPhoneNumber;
     exports.formatCCNumber = format;
+    exports.formatCellularNumber = format$1;
     exports.formatDate = formatDate;
-    exports.formatNPWP = format$1;
-    exports.getBankData = getData;
-    exports.getProvinceData = getData$1;
+    exports.formatNPWP = format$2;
+    exports.formatTelephoneNumber = format$3;
+    exports.getBankData = getData$1;
+    exports.getCellularProviderData = getData;
+    exports.getProvinceData = getData$2;
     exports.isValidATMNumber = isValid;
     exports.isValidCCNumber = isValid$1;
     exports.isValidCellularNumber = isValid$2;
@@ -1188,8 +1274,6 @@
     exports.isValidTelephoneNumber = isValid$8;
     exports.isValidZIP = isValid$a;
     exports.numbersOnly = numbersOnly;
-    exports.parseCellularPrefix = parseCellularPrefix;
-    exports.parseTelephoneAreaCode = parseTelephoneAreaCode;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

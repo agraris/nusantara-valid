@@ -1,8 +1,9 @@
-import { IValid, IValidLength, IGetData } from '../interface/index'
+import { IValid, IValidLength, IGetData, IFormat } from '../interface/index'
 import { cleanUpPhoneNumber } from '../helpers/index'
 import { CELLULAR_NUMBER, CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from '../datas/cellular'
+import { COUNTRY_CODE } from '../datas/province'
 
-export class MobileNumber implements IValid, IValidLength, IGetData {
+export class MobileNumber implements IValid, IValidLength, IGetData, IFormat {
 
     VALID_CELLULAR_PREFIX = Object.keys(CELLULAR_NUMBER).reduce(
         (a, b) => a.concat((CELLULAR_NUMBER as any)[b].prefix), []
@@ -37,6 +38,28 @@ export class MobileNumber implements IValid, IValidLength, IGetData {
             }
         }
     }
+
+    format(input: string, int: boolean = false): string {
+        const cleanCelNumber = cleanUpPhoneNumber(input, true)
+        let CEL_HYPEN_INDEX = [2, 6]
+
+        let formatedNumber = cleanCelNumber
+            .slice(0, cleanCelNumber.length)
+            .split('')
+            .reduce((a, b, index) => {
+                const result = `${a}${b}`;
+
+                if (!(index === cleanCelNumber.length - 1)) {
+                    if (CEL_HYPEN_INDEX.includes(index)) return `${result}-`;
+                }
+
+                return result;
+            }, '');
+
+        if (int) return '+' + COUNTRY_CODE.toString() + formatedNumber
+
+        return '0' + formatedNumber
+    }
 }
 
 const mobileNumber = new MobileNumber()
@@ -47,4 +70,8 @@ export function isValid(param: string) {
 
 export function getData(param: string) {
     return mobileNumber.getData(param)
+}
+
+export function format(param: string, int: boolean = false) {
+    return mobileNumber.format(param, int)
 }

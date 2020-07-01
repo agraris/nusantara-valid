@@ -48,12 +48,5 @@ export const CELLULAR_MIN_LENGTH = 10;
 **/
 export const CELLULAR_MAX_LENGTH = 12;
 
-/**
- * CELLULAR_COUNTRY_CODE
- *
- * The country code
-**/
-export const CELLULAR_COUNTRY_CODE = 62;
-
 export type Cellular = keyof typeof CELLULAR_NUMBER;
 export const CELLULAR = Object.keys(CELLULAR_NUMBER) as Cellular[];

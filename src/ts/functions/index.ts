@@ -13,6 +13,7 @@ export { isValid as isValidZIP } from './_zipCode'
 
 // format (string)
 export { format as formatCCNumber } from './_creditCard'
+export { format as formatCellularNumber } from './_cellularNumber'
 export { format as formatNPWP } from './_nomorPokokWajibPajak'
 export { format as formatTelephoneNumber } from './_telephoneNumber'
 

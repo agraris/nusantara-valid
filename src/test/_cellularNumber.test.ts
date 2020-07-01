@@ -1,6 +1,7 @@
 import { expect } from "chai"
-import { isValidCellularNumber as isValid, getCellularProviderData as getData } from "../ts/functions/index"
+import { isValidCellularNumber as isValid, getCellularProviderData as getData, formatCellularNumber as format } from "../ts/functions/index"
 import { CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from "../ts/datas/cellular"
+import { COUNTRY_CODE } from "../ts/datas/province"
 
 describe('Cellular number', () => {
 
@@ -74,4 +75,15 @@ describe('Cellular number', () => {
         })
     })
 
+    describe('format()', () => {
+        it('sould format for local line', () => {
+            expect(format('081812341234')).to.be.string('0818-1234-1234');
+            expect(format('+6285612341234')).to.be.string('0856-1234-1234');
+        })
+
+        it('sould format for international line with international calling code +' + COUNTRY_CODE, () => {
+            expect(format('081812341234', true)).to.be.string('+62818-1234-1234');
+            expect(format('+6285612341234', true)).to.be.string('+62856-1234-1234');
+        })
+    })
 })

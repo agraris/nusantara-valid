@@ -92,6 +92,11 @@ isValidCellularNumber('081212341234');
 // You should validate the cellular number before retriving the data
 getCellularProviderData(cel: string);
 getCellularProviderData('085612341234');
+
+// You should validate the cellular number before formating
+formatCellularNumber(cel: string, int:boolean = false)
+formatCellularNumber('+6281812341234'); // 0818-1234-1234
+formatCellularNumber('085612341234', true); // +62856-1234-1234
 ```
 
 ### Credit Card Number

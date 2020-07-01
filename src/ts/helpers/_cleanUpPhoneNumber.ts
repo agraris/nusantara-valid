@@ -1,4 +1,4 @@
-import { CELLULAR_COUNTRY_CODE } from "../datas/cellular";
+import { COUNTRY_CODE } from '../datas/province';
 
 /**
  * Clean up phone number from leading zero, formating, and country code.
@@ -16,7 +16,7 @@ export function cleanUpPhoneNumber(number: string, cellular: boolean = false): s
     num = num.replace(/^0+/, '')
 
     // Remove country code if any on cellular number
-    if (cellular && num.substr(0, 2) == CELLULAR_COUNTRY_CODE.toString()) {
+    if (cellular && num.substr(0, 2) == COUNTRY_CODE.toString()) {
         num = num.substring(2)
     }
 
