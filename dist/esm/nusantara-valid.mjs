@@ -1197,11 +1197,28 @@ var TandaNomorKendaraanBermotor = /** @class */ (function () {
     TandaNomorKendaraanBermotor.prototype.isValidTNKBArea = function (tnkb) {
         return this.VALID_TNKB_AREACODE.includes(tnkb[1]);
     };
+    TandaNomorKendaraanBermotor.prototype.getData = function (tnkb) {
+        var validTNKB = TNKB_REGEX.exec(tnkb);
+        if (validTNKB == null)
+            return {
+                areaCode: '',
+                index: 0,
+                detailedAreaCode: ''
+            };
+        return {
+            areaCode: validTNKB[1],
+            index: Number(validTNKB[2]),
+            detailedAreaCode: validTNKB[3]
+        };
+    };
     return TandaNomorKendaraanBermotor;
 }());
 var tnkb = new TandaNomorKendaraanBermotor();
 function isValidTNKB(param) {
     return tnkb.isValid(param);
+}
+function getTNKBData(param) {
+    return tnkb.getData(param);
 }
 
 var ZIPCode = /** @class */ (function () {
@@ -1233,5 +1250,5 @@ function isValidZIP(param) {
     return zip.isValid(param);
 }
 
-export { formatCCNumber, formatCellularNumber, formatNPWP, formatTelephoneNumber, getBankData, getCellularProviderData, getProvinceData, isValidATMNumber, isValidCCNumber, isValidCellularNumber, isValidEmail, isValidNIK, isValidNIP, isValidNISN, isValidNPWP, isValidTNKB, isValidTelephoneNumber, isValidZIP };
+export { formatCCNumber, formatCellularNumber, formatNPWP, formatTelephoneNumber, getBankData, getCellularProviderData, getProvinceData, getTNKBData, isValidATMNumber, isValidCCNumber, isValidCellularNumber, isValidEmail, isValidNIK, isValidNIP, isValidNISN, isValidNPWP, isValidTNKB, isValidTelephoneNumber, isValidZIP };
 //# sourceMappingURL=nusantara-valid.mjs.map

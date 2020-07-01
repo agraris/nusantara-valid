@@ -49,11 +49,13 @@ The package includes multiple formats to support different build process.
 ## Usage
 
 ### CommonJS module way (`require()`)
+
 ``` javascript
 const NusantaraValid = require('nusantara-valid')
 ```
 
 ### ES module way (`import`)
+
 ``` javascript
 import NusantaraValid from './node_modules/nusantara-valid/dist/esm/nusantara-valid.mjs'
 ```
@@ -61,11 +63,13 @@ import NusantaraValid from './node_modules/nusantara-valid/dist/esm/nusantara-va
 ### Good-usual-way (`<script></script>`)
 
 **Local**
+
 ``` html
 <script src="../dist/umd/nusantara-valid.min.js"></script>
 ```
 
 **CDN**
+
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/nusantara-valid@0.1.0/dist/umd/nusantara-valid.min.js"></script>
 ```
@@ -73,6 +77,7 @@ import NusantaraValid from './node_modules/nusantara-valid/dist/esm/nusantara-va
 ## API
 
 ### ATM Number (Nomor Rekening)
+
 ``` javascript
 isValidATMNumber(rek: string, bank?: string);
 isValidATMNumber('87.800.000.00');
@@ -85,6 +90,7 @@ getBankData();
 ```
 
 ### Cellular Number (Nomor HP)
+
 ``` javascript
 isValidCellularNumber(cel: string);
 isValidCellularNumber('081212341234');
@@ -100,6 +106,7 @@ formatCellularNumber('085612341234', true); // +62856-1234-1234
 ```
 
 ### Credit Card Number
+
 ``` javascript
 isValidCCNumber(cc: string);
 isValidCCNumber('4000123456789010');
@@ -112,12 +119,14 @@ formatCCNumber('5000 1234 5678 9010');
 ```
 
 ### E-Mail
+
 ``` javascript
 isValidEmail(email: string);
 isValidEmail('myawesom-email@domain.tld');
 ```
 
 ### Nomor Induk Kependudukan (NIK)
+
 ``` javascript
 isValidNIK(nik: string | number);
 isValidNIK('3101011212930001');
@@ -125,18 +134,21 @@ isValidNIK(3101011212930001);
 ```
 
 ### Nomor Induk Pegawai Negeri Sipil (NIP)
+
 ``` javascript
 isValidNIP(nip: string);
 isValidNIP('198512262000051001');
 ```
 
 ### Nomor Induk Siswa Nasional (NISN)
+
 ``` javascript
 isValidNISN(nisn: string);
 isValidNISN('0061230001');
 ```
 
 ### Nomor Pokok Wajib Pajak (NPWP)
+
 ``` javascript
 isValidNPWP(npwp: string);
 isValidNPWP('09.123.123.1-123.123');
@@ -149,17 +161,24 @@ formatNPWP(671231231123123, false);
 ```
 
 ### Province
+
 ``` javascript
 getProvinceData();
 ```
 
 ### Tanda Nomor Kendaraan Bermotor (TNKB)
+
 ``` javascript
 isValidTNKB(tnkb: string);
 isValidTNKB('AB1234XYZ');
+
+// You should validate the TNKB number before retriving the data
+getTNKBData(tnkb: string);
+getTNKBData('AB1234XYZ');
 ```
 
 ### Telephone Number (Nomor Telefon)
+
 ``` javascript
 isValidTelephoneNumber(tel: string);
 isValidTelephoneNumber('0274123123');
@@ -171,6 +190,7 @@ formatTelephoneNumber('0274123123', true); // +62274-123123
 ```
 
 ### ZIP Code (Kode POS)
+
 ``` javascript
 isValidZIP(zip: string | number);
 isValidZIP('55524');

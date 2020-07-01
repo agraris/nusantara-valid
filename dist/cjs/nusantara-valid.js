@@ -1201,11 +1201,28 @@ var TandaNomorKendaraanBermotor = /** @class */ (function () {
     TandaNomorKendaraanBermotor.prototype.isValidTNKBArea = function (tnkb) {
         return this.VALID_TNKB_AREACODE.includes(tnkb[1]);
     };
+    TandaNomorKendaraanBermotor.prototype.getData = function (tnkb) {
+        var validTNKB = TNKB_REGEX.exec(tnkb);
+        if (validTNKB == null)
+            return {
+                areaCode: '',
+                index: 0,
+                detailedAreaCode: ''
+            };
+        return {
+            areaCode: validTNKB[1],
+            index: Number(validTNKB[2]),
+            detailedAreaCode: validTNKB[3]
+        };
+    };
     return TandaNomorKendaraanBermotor;
 }());
 var tnkb = new TandaNomorKendaraanBermotor();
 function isValidTNKB(param) {
     return tnkb.isValid(param);
+}
+function getTNKBData(param) {
+    return tnkb.getData(param);
 }
 
 var ZIPCode = /** @class */ (function () {
@@ -1244,6 +1261,7 @@ exports.formatTelephoneNumber = formatTelephoneNumber;
 exports.getBankData = getBankData;
 exports.getCellularProviderData = getCellularProviderData;
 exports.getProvinceData = getProvinceData;
+exports.getTNKBData = getTNKBData;
 exports.isValidATMNumber = isValidATMNumber;
 exports.isValidCCNumber = isValidCCNumber;
 exports.isValidCellularNumber = isValidCellularNumber;

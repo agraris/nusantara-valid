@@ -1,7 +1,7 @@
 import { expect } from "chai"
-import { isValidTNKB as isValid } from "../ts/functions/index"
+import { isValidTNKB as isValid, getTNKBData as getData } from "../ts/functions/index"
 
-describe('VRN', () => {
+describe('TNKB', () => {
     it('cannot be empty', () => {
         expect(isValid('')).to.be.false
     })
@@ -29,7 +29,7 @@ describe('VRN', () => {
         })
     })
 
-    describe('is invalid if it', () => {
+    describe('isValid() == false', () => {
         it('does not has Area Code', () => {
             expect(isValid('1234XYZ')).to.be.false
         })
@@ -55,7 +55,7 @@ describe('VRN', () => {
         })
     })
 
-    describe('is valid', () => {
+    describe('isValid() == true', () => {
         it('even it uses lowercase character', () => {
             expect(isValid('ab1234xyz')).to.be.true
         })
@@ -63,6 +63,21 @@ describe('VRN', () => {
         it('when it has known Area Code', () => {
             expect(isValid('AB123XY')).to.be.true;
             expect(isValid('B9876ABC')).to.be.true;
+        })
+    })
+
+    describe('getData()', () => {
+        it('return data object about the TNKB details', () => {
+            expect(getData('AB1234XYZ')).to.deep.equal({
+                areaCode: 'AB',
+                index: 1234,
+                detailedAreaCode: 'XYZ' 
+            })
+            expect(getData('B1A')).to.deep.equal({
+                areaCode: 'B',
+                index: 1,
+                detailedAreaCode: 'A'
+            })
         })
     })
 })
