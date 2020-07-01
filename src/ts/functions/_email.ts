@@ -1,7 +1,7 @@
-import { IValid, IValidLength } from "../interface/index"
+import { IValid, IValidLength } from "../interface"
 import { MAX_EMAIL_LENGTH, EMAIL_REGEX, MAX_LOCALPART_LENGTH } from "../datas/email"
 
-export class Email implements IValid, IValidLength {
+class Email implements IValid, IValidLength {
     isValid (email: string): boolean {
         if (!email || typeof email !== 'string') return false
 
@@ -20,6 +20,6 @@ export class Email implements IValid, IValidLength {
 
 const email = new Email()
 
-export function isValid (param: string) {
+export function isValidEmail (param: string) {
     return email.isValid(param)
 }

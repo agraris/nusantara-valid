@@ -1,7 +1,7 @@
-import { IGetData } from "../interface/index"
+import { IGetData } from "../interface"
 import { BANK_DATA, BANKS } from "../datas/bank"
 
-export class Bank implements IGetData {
+class Bank implements IGetData {
     getData(): BankData[] {
         const banks = BANKS.map((key) => ({
             key,
@@ -12,13 +12,13 @@ export class Bank implements IGetData {
     }
 }
 
-export interface BankData {
+interface BankData {
     key: string;
     name: string;
 }
 
 const atm = new Bank()
 
-export function getData() {
+export function getBankData() {
     return atm.getData()
 }

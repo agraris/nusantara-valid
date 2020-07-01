@@ -1,9 +1,9 @@
-import { IValid, IValidLength } from "../interface/index"
+import { IValid, IValidLength } from "../interface"
 import { NIK_REGEX, NIK_LENGTH } from "../datas/nik"
-import { numbersOnly } from "../helpers/index"
+import { numbersOnly } from "../helpers"
 import { PROVINCES_DATA } from "../datas/province"
 
-export class NomorIndukKependudukan implements IValid, IValidLength {
+class NomorIndukKependudukan implements IValid, IValidLength {
 
     VALID_BPSCODE = Object.keys(PROVINCES_DATA).reduce(
         (a, b) => a.concat((PROVINCES_DATA as any)[b].bpsCode), []
@@ -47,6 +47,6 @@ export class NomorIndukKependudukan implements IValid, IValidLength {
 
 const nik = new NomorIndukKependudukan()
 
-export function isValid(param: string | number) {
+export function isValidNIK(param: string | number) {
     return nik.isValid(param)
 }

@@ -1,7 +1,7 @@
-import { IValid, IValidLength } from "../interface/index"
+import { IValid, IValidLength } from "../interface"
 import { PROVINCES_DATA } from "../datas/province"
 
-export class ZIPCode implements IValid, IValidLength {
+class ZIPCode implements IValid, IValidLength {
     VALID_ZIPCODE = Object.keys(PROVINCES_DATA).reduce(
         (a, b) => a.concat((PROVINCES_DATA as any)[b].zipCode), []
     ) as any[]
@@ -31,6 +31,6 @@ export class ZIPCode implements IValid, IValidLength {
 
 const zip = new ZIPCode()
 
-export function isValid(param: string | number) {
+export function isValidZIP(param: string | number) {
     return zip.isValid(param)
 }

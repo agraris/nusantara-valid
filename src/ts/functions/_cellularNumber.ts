@@ -1,9 +1,9 @@
-import { IValid, IValidLength, IGetData, IFormat } from '../interface/index'
-import { cleanUpPhoneNumber } from '../helpers/index'
+import { IValid, IValidLength, IGetData, IFormat } from '../interface'
+import { cleanUpPhoneNumber } from '../helpers'
 import { CELLULAR_NUMBER, CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from '../datas/cellular'
 import { COUNTRY_CODE } from '../datas/province'
 
-export class MobileNumber implements IValid, IValidLength, IGetData, IFormat {
+class MobileNumber implements IValid, IValidLength, IGetData, IFormat {
 
     VALID_CELLULAR_PREFIX = Object.keys(CELLULAR_NUMBER).reduce(
         (a, b) => a.concat((CELLULAR_NUMBER as any)[b].prefix), []
@@ -25,9 +25,7 @@ export class MobileNumber implements IValid, IValidLength, IGetData, IFormat {
         return phone.length >= CELLULAR_MIN_LENGTH && phone.length <= CELLULAR_MAX_LENGTH
     }
 
-    getData(mobile: string): object | undefined {
-        if (!isValid(mobile)) return {}
-
+    getData(mobile: string): object {
         const cleanCellularNumber = cleanUpPhoneNumber(mobile, true)
 
         const pfx = Number(cleanCellularNumber.substr(0, 3))
@@ -37,6 +35,8 @@ export class MobileNumber implements IValid, IValidLength, IGetData, IFormat {
                 return (CELLULAR_NUMBER as any)[key]
             }
         }
+
+        return {}
     }
 
     format(input: string, int: boolean = false): string {
@@ -64,14 +64,14 @@ export class MobileNumber implements IValid, IValidLength, IGetData, IFormat {
 
 const mobileNumber = new MobileNumber()
 
-export function isValid(param: string) {
+export function isValidCellularNumber(param: string) {
     return mobileNumber.isValid(param)
 }
 
-export function getData(param: string) {
+export function getCellularProviderData(param: string) {
     return mobileNumber.getData(param)
 }
 
-export function format(param: string, int: boolean = false) {
+export function formatCellularNumber(param: string, int: boolean = false) {
     return mobileNumber.format(param, int)
 }

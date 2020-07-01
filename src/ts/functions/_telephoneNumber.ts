@@ -1,8 +1,8 @@
-import { IValid, IFormat } from "../interface/index";
+import { IValid, IFormat } from "../interface";
 import { PROVINCES_DATA, COUNTRY_CODE } from "../datas/province"
-import { cleanUpPhoneNumber } from "../helpers/index";
+import { cleanUpPhoneNumber } from "../helpers";
 
-export class TelephoneNumber implements IValid, IFormat {
+class TelephoneNumber implements IValid, IFormat {
 
     VALID_TELEPHONE_AREACODE = Object.keys(PROVINCES_DATA).reduce(
         (a, b) => a.concat((PROVINCES_DATA as any)[b].tel), []
@@ -54,10 +54,10 @@ export class TelephoneNumber implements IValid, IFormat {
 
 const telNumber = new TelephoneNumber()
 
-export function isValid(param: string) {
+export function isValidTelephoneNumber(param: string) {
     return telNumber.isValid(param)
 }
 
-export function format(param: string, int:boolean = false) {
+export function formatTelephoneNumber(param: string, int:boolean = false) {
     return telNumber.format(param, int)
 }

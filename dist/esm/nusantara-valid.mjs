@@ -466,18 +466,6 @@ function cleanUpPhoneNumber(number, cellular) {
 }
 
 /**
- * Format date from string
- *
- * @param {string} date - The string date.
- * @return {Date} Formated date.
-**/
-function formatDate(date) {
-    var newDate = date.replace(/(\d{4})(\d{2})(?:(\d{2})?)/, "$1-$2-$3");
-    var formatedDate = new Date(newDate);
-    return formatedDate;
-}
-
-/**
  * BANK_DATA
  *
  * List of bank in Indonesia including BPS code, vehicle plate,
@@ -632,69 +620,25 @@ var ATMNumber = /** @class */ (function () {
     return ATMNumber;
 }());
 var atm = new ATMNumber();
-function isValid(param, index) {
+function isValidATMNumber(param, index) {
     return atm.isValid(param, index);
 }
 
-/**
- * CC_LENGTH
- *
- * Total length of Credit Card number without any special characters
-**/
-var CC_LENGTH = 16;
-/**
- * CC_VALID_MII
- *
- * Lists of Credit Card valid MII number
-**/
-var CC_VALID_MII = [
-    '4', '5',
-];
-/**
- * CC_SPACE_INDEXES
- *
- * Indexes of where are the space separator to be placed
- * Eg: 4000 0000 0000 0000
-**/
-var CC_SPACE_INDEXES = [3, 7, 11, 11];
-
-var CreditCard = /** @class */ (function () {
-    function CreditCard() {
+var Bank = /** @class */ (function () {
+    function Bank() {
     }
-    CreditCard.prototype.isValid = function (cc) {
-        if (!cc || typeof cc !== 'string')
-            return false;
-        var numOnly = numbersOnly(cc);
-        return this.isValidMII(cc.charAt(0)) && this.isValidLength(numOnly.length);
+    Bank.prototype.getData = function () {
+        var banks = BANKS.map(function (key) { return ({
+            key: key,
+            name: BANK_DATA[key].name,
+        }); });
+        return banks;
     };
-    CreditCard.prototype.isValidLength = function (length) {
-        return length == CC_LENGTH;
-    };
-    CreditCard.prototype.isValidMII = function (mii) {
-        return CC_VALID_MII.includes(mii);
-    };
-    CreditCard.prototype.format = function (cc) {
-        var newCC = numbersOnly(cc);
-        return newCC
-            .slice(0, CC_LENGTH)
-            .split('')
-            .reduce(function (a, b, index) {
-            var result = "" + a + b;
-            if (!(index === newCC.length - 1)) {
-                if (CC_SPACE_INDEXES.includes(index))
-                    return result + " ";
-            }
-            return result;
-        }, '');
-    };
-    return CreditCard;
+    return Bank;
 }());
-var cc = new CreditCard();
-function isValid$1(param) {
-    return cc.isValid(param);
-}
-function format(param) {
-    return cc.format(param);
+var atm$1 = new Bank();
+function getBankData() {
+    return atm$1.getData();
 }
 
 var range$1 = function (start, stop) { return Array.from({ length: (stop - start) / 1 + 1 }, function (_, i) { return start + (i * 1); }); };
@@ -760,8 +704,6 @@ var MobileNumber = /** @class */ (function () {
         return phone.length >= CELLULAR_MIN_LENGTH && phone.length <= CELLULAR_MAX_LENGTH;
     };
     MobileNumber.prototype.getData = function (mobile) {
-        if (!isValid$2(mobile))
-            return {};
         var cleanCellularNumber = cleanUpPhoneNumber(mobile, true);
         var pfx = Number(cleanCellularNumber.substr(0, 3));
         for (var key in CELLULAR_NUMBER) {
@@ -769,6 +711,7 @@ var MobileNumber = /** @class */ (function () {
                 return CELLULAR_NUMBER[key];
             }
         }
+        return {};
     };
     MobileNumber.prototype.format = function (input, int) {
         if (int === void 0) { int = false; }
@@ -792,15 +735,76 @@ var MobileNumber = /** @class */ (function () {
     return MobileNumber;
 }());
 var mobileNumber = new MobileNumber();
-function isValid$2(param) {
+function isValidCellularNumber(param) {
     return mobileNumber.isValid(param);
 }
-function getData(param) {
+function getCellularProviderData(param) {
     return mobileNumber.getData(param);
 }
-function format$1(param, int) {
+function formatCellularNumber(param, int) {
     if (int === void 0) { int = false; }
     return mobileNumber.format(param, int);
+}
+
+/**
+ * CC_LENGTH
+ *
+ * Total length of Credit Card number without any special characters
+**/
+var CC_LENGTH = 16;
+/**
+ * CC_VALID_MII
+ *
+ * Lists of Credit Card valid MII number
+**/
+var CC_VALID_MII = [
+    '4', '5',
+];
+/**
+ * CC_SPACE_INDEXES
+ *
+ * Indexes of where are the space separator to be placed
+ * Eg: 4000 0000 0000 0000
+**/
+var CC_SPACE_INDEXES = [3, 7, 11, 11];
+
+var CreditCard = /** @class */ (function () {
+    function CreditCard() {
+    }
+    CreditCard.prototype.isValid = function (cc) {
+        if (!cc || typeof cc !== 'string')
+            return false;
+        var numOnly = numbersOnly(cc);
+        return this.isValidMII(cc.charAt(0)) && this.isValidLength(numOnly.length);
+    };
+    CreditCard.prototype.isValidLength = function (length) {
+        return length == CC_LENGTH;
+    };
+    CreditCard.prototype.isValidMII = function (mii) {
+        return CC_VALID_MII.includes(mii);
+    };
+    CreditCard.prototype.format = function (cc) {
+        var newCC = numbersOnly(cc);
+        return newCC
+            .slice(0, CC_LENGTH)
+            .split('')
+            .reduce(function (a, b, index) {
+            var result = "" + a + b;
+            if (!(index === newCC.length - 1)) {
+                if (CC_SPACE_INDEXES.includes(index))
+                    return result + " ";
+            }
+            return result;
+        }, '');
+    };
+    return CreditCard;
+}());
+var cc = new CreditCard();
+function isValidCCNumber(param) {
+    return cc.isValid(param);
+}
+function formatCCNumber(param) {
+    return cc.format(param);
 }
 
 /**
@@ -845,7 +849,7 @@ var Email = /** @class */ (function () {
     return Email;
 }());
 var email = new Email();
-function isValid$3(param) {
+function isValidEmail(param) {
     return email.isValid(param);
 }
 
@@ -900,7 +904,7 @@ var NomorIndukKependudukan = /** @class */ (function () {
     return NomorIndukKependudukan;
 }());
 var nik = new NomorIndukKependudukan();
-function isValid$4(param) {
+function isValidNIK(param) {
     return nik.isValid(param);
 }
 
@@ -943,7 +947,7 @@ var NomorIndukPegawaiNegeriSipil = /** @class */ (function () {
     return NomorIndukPegawaiNegeriSipil;
 }());
 var nip = new NomorIndukPegawaiNegeriSipil();
-function isValid$5(param) {
+function isValidNIP(param) {
     return nip.isValid(param);
 }
 
@@ -1001,7 +1005,7 @@ var NomorIndukSiswaNasional = /** @class */ (function () {
     return NomorIndukSiswaNasional;
 }());
 var nisn = new NomorIndukSiswaNasional();
-function isValid$6(param) {
+function isValidNISN(param) {
     return nisn.isValid(param);
 }
 
@@ -1091,12 +1095,29 @@ var NomorPokokWajibPajak = /** @class */ (function () {
     return NomorPokokWajibPajak;
 }());
 var npwp = new NomorPokokWajibPajak();
-function isValid$7(param) {
+function isValidNPWP(param) {
     return npwp.isValid(param);
 }
-function format$2(param, pad) {
+function formatNPWP(param, pad) {
     if (pad === void 0) { pad = true; }
     return npwp.format(param, pad);
+}
+
+var Province = /** @class */ (function () {
+    function Province() {
+    }
+    Province.prototype.getData = function () {
+        var provinces = PROVINCES.map(function (key) { return ({
+            key: key,
+            name: PROVINCES_DATA[key].name,
+        }); });
+        return provinces;
+    };
+    return Province;
+}());
+var atm$2 = new Province();
+function getProvinceData() {
+    return atm$2.getData();
 }
 
 var TelephoneNumber = /** @class */ (function () {
@@ -1142,10 +1163,10 @@ var TelephoneNumber = /** @class */ (function () {
     return TelephoneNumber;
 }());
 var telNumber = new TelephoneNumber();
-function isValid$8(param) {
+function isValidTelephoneNumber(param) {
     return telNumber.isValid(param);
 }
-function format$3(param, int) {
+function formatTelephoneNumber(param, int) {
     if (int === void 0) { int = false; }
     return telNumber.format(param, int);
 }
@@ -1160,7 +1181,6 @@ function format$3(param, int) {
 **/
 var TNKB_REGEX = /^([A-Z]{1,2})(\d{1,4})([A-Z]{1,3})$/;
 
-// Vehicle Registration Number (TNKB) / Tanda Nomor Kendaraan Bermotor (TNKB)
 var TandaNomorKendaraanBermotor = /** @class */ (function () {
     function TandaNomorKendaraanBermotor() {
         this.VALID_TNKB_AREACODE = Object.keys(PROVINCES_DATA).reduce(function (a, b) { return a.concat(PROVINCES_DATA[b].vehiclePlate); }, []);
@@ -1180,7 +1200,7 @@ var TandaNomorKendaraanBermotor = /** @class */ (function () {
     return TandaNomorKendaraanBermotor;
 }());
 var tnkb = new TandaNomorKendaraanBermotor();
-function isValid$9(param) {
+function isValidTNKB(param) {
     return tnkb.isValid(param);
 }
 
@@ -1209,43 +1229,9 @@ var ZIPCode = /** @class */ (function () {
     return ZIPCode;
 }());
 var zip = new ZIPCode();
-function isValid$a(param) {
+function isValidZIP(param) {
     return zip.isValid(param);
 }
 
-var Bank = /** @class */ (function () {
-    function Bank() {
-    }
-    Bank.prototype.getData = function () {
-        var banks = BANKS.map(function (key) { return ({
-            key: key,
-            name: BANK_DATA[key].name,
-        }); });
-        return banks;
-    };
-    return Bank;
-}());
-var atm$1 = new Bank();
-function getData$1() {
-    return atm$1.getData();
-}
-
-var Province = /** @class */ (function () {
-    function Province() {
-    }
-    Province.prototype.getData = function () {
-        var provinces = PROVINCES.map(function (key) { return ({
-            key: key,
-            name: PROVINCES_DATA[key].name,
-        }); });
-        return provinces;
-    };
-    return Province;
-}());
-var atm$2 = new Province();
-function getData$2() {
-    return atm$2.getData();
-}
-
-export { cleanUpPhoneNumber, format as formatCCNumber, format$1 as formatCellularNumber, formatDate, format$2 as formatNPWP, format$3 as formatTelephoneNumber, getData$1 as getBankData, getData as getCellularProviderData, getData$2 as getProvinceData, isValid as isValidATMNumber, isValid$1 as isValidCCNumber, isValid$2 as isValidCellularNumber, isValid$3 as isValidEmail, isValid$4 as isValidNIK, isValid$5 as isValidNIP, isValid$6 as isValidNISN, isValid$7 as isValidNPWP, isValid$9 as isValidTNKB, isValid$8 as isValidTelephoneNumber, isValid$a as isValidZIP, numbersOnly };
+export { formatCCNumber, formatCellularNumber, formatNPWP, formatTelephoneNumber, getBankData, getCellularProviderData, getProvinceData, isValidATMNumber, isValidCCNumber, isValidCellularNumber, isValidEmail, isValidNIK, isValidNIP, isValidNISN, isValidNPWP, isValidTNKB, isValidTelephoneNumber, isValidZIP };
 //# sourceMappingURL=nusantara-valid.mjs.map

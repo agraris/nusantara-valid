@@ -1,8 +1,8 @@
-import { IValid, IValidLength } from "../interface/index"
+import { IValid, IValidLength } from "../interface"
 import { NIP_LENGTH, NIP_REGEX } from "../datas/nip"
-import { numbersOnly } from "../helpers/index"
+import { numbersOnly } from "../helpers"
 
-export class NomorIndukPegawaiNegeriSipil implements IValid, IValidLength {
+class NomorIndukPegawaiNegeriSipil implements IValid, IValidLength {
 
     isValid(nip: string): boolean {
         if (!nip || typeof nip !== 'string') return false
@@ -29,6 +29,6 @@ export class NomorIndukPegawaiNegeriSipil implements IValid, IValidLength {
 
 const nip = new NomorIndukPegawaiNegeriSipil()
 
-export function isValid(param: string) {
+export function isValidNIP(param: string) {
     return nip.isValid(param)
 }

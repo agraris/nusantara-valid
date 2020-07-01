@@ -2,7 +2,7 @@ import { IValid, IValidLength } from "../interface/index"
 import { numbersOnly } from "../helpers/index"
 import { BANK_DATA } from "../datas/bank"
 
-export class ATMNumber implements IValid, IValidLength {
+class ATMNumber implements IValid, IValidLength {
     VALID_ATMNUMBER_LENGTH = Object.keys(BANK_DATA).reduce(
         (pref, curr) => pref.includes((BANK_DATA as any)[curr].digits as never) ? pref : pref.concat((BANK_DATA as any)[curr].digits), []
     ) as number[]
@@ -24,13 +24,8 @@ export class ATMNumber implements IValid, IValidLength {
     }
 }
 
-export interface Bank {
-    key: string;
-    name: string;
-}
-
 const atm = new ATMNumber()
 
-export function isValid(param: string, index?: string) {
+export function isValidATMNumber(param: string, index?: string) {
     return atm.isValid(param, index)
 }

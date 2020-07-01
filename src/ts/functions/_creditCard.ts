@@ -1,8 +1,8 @@
-import { IValid, IValidLength, IFormat } from "../interface/index"
-import { numbersOnly } from "../helpers/index"
+import { IValid, IValidLength, IFormat } from "../interface"
+import { numbersOnly } from "../helpers"
 import { CC_LENGTH, CC_VALID_MII, CC_SPACE_INDEXES } from "../datas/creditCard"
 
-export class CreditCard implements IValid, IValidLength, IFormat {
+class CreditCard implements IValid, IValidLength, IFormat {
 
     isValid(cc: string): boolean {
         if (!cc || typeof cc !== 'string') return false
@@ -40,10 +40,10 @@ export class CreditCard implements IValid, IValidLength, IFormat {
 
 const cc = new CreditCard()
 
-export function isValid(param: string) {
+export function isValidCCNumber(param: string) {
     return cc.isValid(param)
 }
 
-export function format(param: string) {
+export function formatCCNumber(param: string) {
     return cc.format(param)
 }

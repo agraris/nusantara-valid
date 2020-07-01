@@ -1,8 +1,8 @@
-import { IValid, IValidLength } from "../interface/index"
+import { IValid, IValidLength } from "../interface"
 import { NISN_REGEX, NISN_LENGTH, NISN_AGE_VALIDITY } from "../datas/nisn"
-import { numbersOnly } from "../helpers/index"
+import { numbersOnly } from "../helpers"
 
-export class NomorIndukSiswaNasional implements IValid, IValidLength {
+class NomorIndukSiswaNasional implements IValid, IValidLength {
 
     isValid(nisn: string): boolean {
         if (!nisn || typeof nisn !== 'string') return false
@@ -37,6 +37,6 @@ export class NomorIndukSiswaNasional implements IValid, IValidLength {
 
 const nisn = new NomorIndukSiswaNasional()
 
-export function isValid(param: string) {
+export function isValidNISN(param: string) {
     return nisn.isValid(param)
 }

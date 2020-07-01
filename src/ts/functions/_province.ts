@@ -1,7 +1,7 @@
-import { IGetData } from "../interface/index"
+import { IGetData } from "../interface"
 import { PROVINCES, PROVINCES_DATA } from "../datas/province";
 
-export class Province implements IGetData {
+class Province implements IGetData {
     getData(): Prov[] {
         const provinces = PROVINCES.map((key) => ({
             key,
@@ -12,13 +12,13 @@ export class Province implements IGetData {
     }
 }
 
-export interface Prov {
+interface Prov {
     key: string;
     name: string;
 }
 
 const atm = new Province()
 
-export function getData() {
+export function getProvinceData() {
     return atm.getData()
 }

@@ -1,8 +1,8 @@
-import { IValid, IValidLength, IFormat } from "../interface/index"
+import { IValid, IValidLength, IFormat } from "../interface"
 import { NPWP_REGEX, NPWP_LENGTH, NPWP_TAX_IDENTITIES, NPWP_DOT_INDEXES, NPWP_HYPHEN_INDEXES } from "../datas/npwp"
-import { numbersOnly } from "../helpers/index"
+import { numbersOnly } from "../helpers"
 
-export class NomorPokokWajibPajak implements IValid, IValidLength, IFormat {
+class NomorPokokWajibPajak implements IValid, IValidLength, IFormat {
 
     isValid(npwp: string): boolean {
         if (!npwp || typeof npwp !== 'string') return false
@@ -51,10 +51,10 @@ export class NomorPokokWajibPajak implements IValid, IValidLength, IFormat {
 
 const npwp = new NomorPokokWajibPajak()
 
-export function isValid(param: string) {
+export function isValidNPWP(param: string) {
     return npwp.isValid(param)
 }
 
-export function format(param: string | number, pad = true) {
+export function formatNPWP(param: string | number, pad = true) {
     return npwp.format(param, pad)
 }
