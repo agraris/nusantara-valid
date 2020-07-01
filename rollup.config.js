@@ -3,7 +3,7 @@ import typescript from '@rollup/plugin-typescript'
 import { terser } from 'rollup-plugin-terser'
 
 export default {
-    input: 'src/ts/nusantara-valid.ts',
+    input: 'src/ts/index.ts',
     output: [
         {
             file: 'dist/cjs/nusantara-valid.js',
