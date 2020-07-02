@@ -1,4 +1,4 @@
-import { IValid, IGetData } from "../interface"
+import { IValid, IGetData, IDataProvince, IDataTNKB } from "../interface"
 import { TNKB_REGEX } from "../datas/tnkb"
 import { PROVINCES_DATA } from "../datas/province"
 
@@ -23,7 +23,7 @@ class TandaNomorKendaraanBermotor implements IValid, IGetData {
         return this.VALID_TNKB_AREACODE.includes(tnkb[1])
     }
 
-    getData(tnkb: string): TNKB {
+    getData(tnkb: string): IDataTNKB {
         const validTNKB = TNKB_REGEX.exec(tnkb)
 
         if (validTNKB == null) 
@@ -31,7 +31,10 @@ class TandaNomorKendaraanBermotor implements IValid, IGetData {
                 areaCode: '',
                 index: 0,
                 detailedAreaCode: '',
-                province: {}
+                province: {
+                    key: '',
+                    name: ''
+                }
             }
 
         let provObjs
@@ -53,16 +56,9 @@ class TandaNomorKendaraanBermotor implements IValid, IGetData {
             areaCode: validTNKB[1],
             index: Number(validTNKB[2]),
             detailedAreaCode: validTNKB[3],
-            province: provObjs as object
+            province: provObjs as IDataProvince
         }
     }
-}
-
-interface TNKB {
-    areaCode: string,
-    index: number,
-    detailedAreaCode: string,
-    province: {}
 }
 
 const tnkb = new TandaNomorKendaraanBermotor()

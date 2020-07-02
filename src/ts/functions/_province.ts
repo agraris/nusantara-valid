@@ -1,8 +1,8 @@
-import { IGetData } from "../interface"
+import { IGetData, IDataProvince } from "../interface"
 import { PROVINCES, PROVINCES_DATA } from "../datas/province";
 
 class Province implements IGetData {
-    getData(index: string = ''): Prov | Prov[] {
+    getData(index: string = ''): IDataProvince | IDataProvince[] {
         if (index == '') {
             const provinces = PROVINCES.map((key) => ({
                 key,
@@ -21,17 +21,12 @@ class Province implements IGetData {
     }
 }
 
-interface Prov {
-    key: string;
-    name: string;
-}
-
 const atm = new Province()
 
 export function getDataProvince(param: string) {
-    return atm.getData(param) as Prov
+    return atm.getData(param) as IDataProvince
 }
 
 export function getDataProvinces() {
-    return atm.getData() as Prov[]
+    return atm.getData() as IDataProvince[]
 }
