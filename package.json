@@ -40,7 +40,7 @@
     "compile": "npm-run-all --sequential clean compile:js",
     "compile:js": "rollup --config rollup.config.js --sourcemap",
     "serve": "http-server --silent -p 3000",
-    "test": "mocha --require ts-node/register **/*.test.ts"
+    "test": "mocha --require ts-node/register src/test/*"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
