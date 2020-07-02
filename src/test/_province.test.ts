@@ -1,10 +1,18 @@
 import { expect } from "chai"
-import { getProvinceData as getData } from "../ts/functions/index"
+import { getDataProvince, getDataProvinces } from "../ts/functions"
 
 describe('Province', () => {
-    describe('getData()', () => {
-        it('should return an array of Province data', () => {
-            expect(getData()).to.deep.equal([
+    describe('getDataProvince()', () => {
+        it('should return an object of Province data', () => {
+            expect(getDataProvince('YO')).to.deep.equal(
+                { key: 'YO', name: 'Yogyakarta' }
+            )
+        })
+    })
+
+    describe('getDataProvinces()', () => {
+        it('should return an array of Provinces data', () => {
+            expect(getDataProvinces()).to.deep.equal([
                 { key: 'AC', name: 'Aceh' },
                 { key: 'BA', name: 'Bali' },
                 { key: 'BB', name: 'Kepulauan Bangka Belitung' },

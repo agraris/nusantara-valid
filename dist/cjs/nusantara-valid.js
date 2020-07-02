@@ -1110,17 +1110,28 @@ function formatNPWP(param, pad) {
 var Province = /** @class */ (function () {
     function Province() {
     }
-    Province.prototype.getData = function () {
-        var provinces = PROVINCES.map(function (key) { return ({
-            key: key,
-            name: PROVINCES_DATA[key].name,
-        }); });
-        return provinces;
+    Province.prototype.getData = function (index) {
+        if (index === void 0) { index = ''; }
+        if (index == '') {
+            var provinces = PROVINCES.map(function (key) { return ({
+                key: key,
+                name: PROVINCES_DATA[key].name,
+            }); });
+            return provinces;
+        }
+        var province = {
+            key: index,
+            name: PROVINCES_DATA[index].name
+        };
+        return province;
     };
     return Province;
 }());
 var atm$2 = new Province();
-function getProvinceData() {
+function getDataProvince(param) {
+    return atm$2.getData(param);
+}
+function getDataProvinces() {
     return atm$2.getData();
 }
 
@@ -1260,7 +1271,8 @@ exports.formatNPWP = formatNPWP;
 exports.formatTelephoneNumber = formatTelephoneNumber;
 exports.getBankData = getBankData;
 exports.getCellularProviderData = getCellularProviderData;
-exports.getProvinceData = getProvinceData;
+exports.getDataProvince = getDataProvince;
+exports.getDataProvinces = getDataProvinces;
 exports.getTNKBData = getTNKBData;
 exports.isValidATMNumber = isValidATMNumber;
 exports.isValidCCNumber = isValidCCNumber;

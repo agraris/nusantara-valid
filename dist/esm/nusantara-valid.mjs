@@ -1106,17 +1106,28 @@ function formatNPWP(param, pad) {
 var Province = /** @class */ (function () {
     function Province() {
     }
-    Province.prototype.getData = function () {
-        var provinces = PROVINCES.map(function (key) { return ({
-            key: key,
-            name: PROVINCES_DATA[key].name,
-        }); });
-        return provinces;
+    Province.prototype.getData = function (index) {
+        if (index === void 0) { index = ''; }
+        if (index == '') {
+            var provinces = PROVINCES.map(function (key) { return ({
+                key: key,
+                name: PROVINCES_DATA[key].name,
+            }); });
+            return provinces;
+        }
+        var province = {
+            key: index,
+            name: PROVINCES_DATA[index].name
+        };
+        return province;
     };
     return Province;
 }());
 var atm$2 = new Province();
-function getProvinceData() {
+function getDataProvince(param) {
+    return atm$2.getData(param);
+}
+function getDataProvinces() {
     return atm$2.getData();
 }
 
@@ -1250,5 +1261,5 @@ function isValidZIP(param) {
     return zip.isValid(param);
 }
 
-export { formatCCNumber, formatCellularNumber, formatNPWP, formatTelephoneNumber, getBankData, getCellularProviderData, getProvinceData, getTNKBData, isValidATMNumber, isValidCCNumber, isValidCellularNumber, isValidEmail, isValidNIK, isValidNIP, isValidNISN, isValidNPWP, isValidTNKB, isValidTelephoneNumber, isValidZIP };
+export { formatCCNumber, formatCellularNumber, formatNPWP, formatTelephoneNumber, getBankData, getCellularProviderData, getDataProvince, getDataProvinces, getTNKBData, isValidATMNumber, isValidCCNumber, isValidCellularNumber, isValidEmail, isValidNIK, isValidNIP, isValidNISN, isValidNPWP, isValidTNKB, isValidTelephoneNumber, isValidZIP };
 //# sourceMappingURL=nusantara-valid.mjs.map

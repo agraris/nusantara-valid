@@ -163,7 +163,10 @@ formatNPWP(671231231123123, false);
 ### Province
 
 ``` javascript
-getProvinceData();
+getDataProvince(index: string); // Return object of province
+getDataProvince('YO');
+
+getDataProvinces(); // Return array of provinces
 ```
 
 ### Tanda Nomor Kendaraan Bermotor (TNKB)
