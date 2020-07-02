@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { isValidATMNumber as isValid } from "../ts/functions/index"
+import { isValidATMNumber as isValid } from "../ts/functions"
 
 describe('ATM number', () => {
 
