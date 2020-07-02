@@ -1,10 +1,17 @@
 import { expect } from "chai"
-import { getBankData as getData } from "../ts/functions/index"
+import { getDataBank, getDataBanks } from "../ts/functions"
 
 describe('Bank', () => {
     describe('getData()', () => {
-        it('should return an array of Bank data', () => {
-            expect(getData()).to.deep.equal([
+        it('should return an object of Bank data', () => {
+            expect(getDataBank('BCAK')).to.deep.equal({
+                key: 'BCAK',
+                name: 'Bank Central Asia'
+            })
+        })
+
+        it('should return an array of Banks data', () => {
+            expect(getDataBanks()).to.deep.equal([
                 { key: 'BCAK', name: 'Bank Central Asia' },
                 { key: 'BCAS', name: 'Bank Central Asia Syariah' },
                 { key: 'BNIK', name: 'Bank Negara Indonesia' },
