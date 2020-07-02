@@ -30,13 +30,30 @@ class TandaNomorKendaraanBermotor implements IValid, IGetData {
             return {
                 areaCode: '',
                 index: 0,
-                detailedAreaCode: ''
+                detailedAreaCode: '',
+                province: {}
             }
 
+        let provObjs
+
+        for (const key in PROVINCES_DATA) {
+            if (PROVINCES_DATA.hasOwnProperty(key)) {
+                const el = (PROVINCES_DATA as any)[key];
+                if (el.vehiclePlate.includes(validTNKB[1])) {
+                    provObjs = {
+                        key: key,
+                        name: el.name
+                    }
+                    break
+                }
+            }
+        }
+        
         return {
             areaCode: validTNKB[1],
             index: Number(validTNKB[2]),
-            detailedAreaCode: validTNKB[3]
+            detailedAreaCode: validTNKB[3],
+            province: provObjs as object
         }
     }
 }
@@ -44,7 +61,8 @@ class TandaNomorKendaraanBermotor implements IValid, IGetData {
 interface TNKB {
     areaCode: string,
     index: number,
-    detailedAreaCode: string
+    detailedAreaCode: string,
+    province: {}
 }
 
 const tnkb = new TandaNomorKendaraanBermotor()
@@ -53,6 +71,6 @@ export function isValidTNKB(param: string) {
     return tnkb.isValid(param)
 }
 
-export function getTNKBData(param: string) {
+export function getDataTNKB(param: string) {
     return tnkb.getData(param)
 }
