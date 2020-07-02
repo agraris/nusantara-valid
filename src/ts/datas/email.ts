@@ -4,11 +4,8 @@
  *
  * EMAIL_REGEX[0] = The email
  * EMAIL_REGEX[1] = Local part of email
- * EMAIL_REGEX[2] = @
- * EMAIL_REGEX[3] = Domain name
- * EMAIL_REGEX[4] = TLD
 **/
-export const EMAIL_REGEX = /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]+)$/
+export const EMAIL_REGEX = /^([a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*)@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]+)$/
 
 /**
  * MAX_LOCALPART_LENGTH
