@@ -1,9 +1,9 @@
-import { IValid, IValidLength, IGetData, IFormat } from '../interface'
-import { cleanUpPhoneNumber } from '../helpers'
+import { IValid, IGetData, IFormat } from '../interface'
+import { cleanUpPhoneNumber, correctLength } from '../helpers'
 import { CELLULAR_NUMBER, CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from '../datas/cellular'
 import { COUNTRY_CODE } from '../datas/province'
 
-class MobileNumber implements IValid, IValidLength, IGetData, IFormat {
+class MobileNumber implements IValid, IGetData, IFormat {
 
     VALID_CELLULAR_PREFIX = Object.keys(CELLULAR_NUMBER).reduce(
         (a, b) => a.concat((CELLULAR_NUMBER as any)[b].prefix), []
@@ -14,15 +14,11 @@ class MobileNumber implements IValid, IValidLength, IGetData, IFormat {
 
         const cleanCellularNumber = cleanUpPhoneNumber(mobile, true)
 
-        return this.isValidLength(cleanCellularNumber) && this.isValidCellularPrefix(cleanCellularNumber)
+        return correctLength(1, cleanCellularNumber.length, { minLength: CELLULAR_MIN_LENGTH, maxLength: CELLULAR_MAX_LENGTH }) && this.isValidCellularPrefix(cleanCellularNumber)
     }
 
     isValidCellularPrefix(cellularNumber: string): boolean {
         return this.VALID_CELLULAR_PREFIX.includes(Number(cellularNumber.substr(0, 3)))
-    }
-
-    isValidLength(phone: string): boolean {        
-        return phone.length >= CELLULAR_MIN_LENGTH && phone.length <= CELLULAR_MAX_LENGTH
     }
 
     getData(mobile: string): object {

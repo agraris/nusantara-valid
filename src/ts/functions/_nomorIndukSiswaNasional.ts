@@ -1,23 +1,17 @@
-import { IValid, IValidLength } from "../interface"
+import { IValid } from "../interface"
 import { NISN_REGEX, NISN_LENGTH, NISN_AGE_VALIDITY } from "../datas/nisn"
-import { numbersOnly } from "../helpers"
+import { numbersOnly, correctLength } from "../helpers"
 
-class NomorIndukSiswaNasional implements IValid, IValidLength {
+class NomorIndukSiswaNasional implements IValid {
 
     isValid(nisn: string): boolean {
         if (!nisn || typeof nisn !== 'string') return false
-
-        if (!this.isValidLength(nisn.length)) return false
 
         const validNISN = NISN_REGEX.exec(numbersOnly(nisn))
 
         if (!validNISN) return false
 
-        return this.isValidPeriod(validNISN[1])
-    }
-
-    isValidLength(nisn: number): boolean {
-        return nisn == NISN_LENGTH
+        return this.isValidPeriod(validNISN[1]) && correctLength(0, validNISN[0].length, { minLength: NISN_LENGTH })
     }
 
     isValidPeriod(year: string): boolean {

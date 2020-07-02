@@ -1,8 +1,8 @@
-import { IValid, IValidLength } from "../interface"
+import { IValid } from "../interface"
 import { NIP_LENGTH, NIP_REGEX } from "../datas/nip"
-import { numbersOnly } from "../helpers"
+import { numbersOnly, correctLength } from "../helpers"
 
-class NomorIndukPegawaiNegeriSipil implements IValid, IValidLength {
+class NomorIndukPegawaiNegeriSipil implements IValid {
 
     isValid(nip: string): boolean {
         if (!nip || typeof nip !== 'string') return false
@@ -11,11 +11,7 @@ class NomorIndukPegawaiNegeriSipil implements IValid, IValidLength {
 
         if(!validNIP) return false
         
-        return this.isValidLength(validNIP[0].length) && this.isValidDate(validNIP[1]) && this.isValidDate(validNIP[2])
-    }
-
-    isValidLength(nip: number): boolean {
-        return nip == NIP_LENGTH
+        return this.isValidDate(validNIP[1]) && this.isValidDate(validNIP[2]) && correctLength(0, validNIP[0].length, { minLength: NIP_LENGTH })
     }
 
     isValidDate(date: string): boolean {

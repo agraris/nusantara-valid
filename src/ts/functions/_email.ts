@@ -1,7 +1,8 @@
-import { IValid, IValidLength } from "../interface"
+import { IValid } from "../interface"
 import { MAX_EMAIL_LENGTH, EMAIL_REGEX, MAX_LOCALPART_LENGTH } from "../datas/email"
+import { correctLength } from '../helpers'
 
-class Email implements IValid, IValidLength {
+class Email implements IValid {
     isValid (email: string): boolean {
         if (!email || typeof email !== 'string') return false
 
@@ -9,12 +10,7 @@ class Email implements IValid, IValidLength {
 
         if (!validEmail) return false
 
-        // Return true if validEmail, validEmail length and email local part length is true
-        return validEmail && this.isValidLength(validEmail)
-    }
-
-    isValidLength(email: RegExpExecArray): boolean {
-        return email.length <= MAX_EMAIL_LENGTH && email[0].length <= MAX_LOCALPART_LENGTH
+        return correctLength(1, validEmail[0].length, { minLength: 1, maxLength: MAX_EMAIL_LENGTH }) && correctLength(1, validEmail[1].length, { minLength: 1, maxLength: MAX_LOCALPART_LENGTH })
     }
 }
 

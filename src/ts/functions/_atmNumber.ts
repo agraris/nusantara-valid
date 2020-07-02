@@ -1,8 +1,8 @@
-import { IValid, IValidLength } from "../interface"
-import { numbersOnly } from "../helpers"
+import { IValid } from "../interface"
+import { numbersOnly, correctLength } from "../helpers"
 import { BANK_DATA } from "../datas/bank"
 
-class ATMNumber implements IValid, IValidLength {
+class ATMNumber implements IValid {
     VALID_ATMNUMBER_LENGTH = Object.keys(BANK_DATA).reduce(
         (pref, curr) => pref.includes((BANK_DATA as any)[curr].digits as never) ? pref : pref.concat((BANK_DATA as any)[curr].digits), []
     ) as number[]
@@ -15,11 +15,7 @@ class ATMNumber implements IValid, IValidLength {
         if (bank)
             return (BANK_DATA as any)[bank].digits == numOnly.length
 
-        return this.isValidLength(numOnly.length)
-    }
-
-    isValidLength(length: number): boolean {
-        return this.VALID_ATMNUMBER_LENGTH.includes(length)
+        return correctLength(2, numOnly.length, { collection: this.VALID_ATMNUMBER_LENGTH })
     }
 }
 

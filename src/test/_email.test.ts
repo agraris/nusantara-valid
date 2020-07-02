@@ -29,8 +29,8 @@ describe('Email', () => {
         })
     })
 
-    describe('is false when the email\'s', () => {
-        it('has at [@] symbol', () => {
+    describe('isValid() = false', () => {
+        it('it does not contain at [@] symbol', () => {
             expect(isValid('janedoe.at.domain.id')).to.be.false;
         })
 
@@ -38,31 +38,29 @@ describe('Email', () => {
             const longEmail = 'a'.repeat(60) + '@' + 'd'.repeat(200) + '.id';
             expect(isValid(longEmail)).to.be.false;
         })
-    });
 
-    describe('is false when the email\'s local part', () => {
-        it('length is too long, more than 64 char', () => {
+        it('the local part is too long, with more than 64 char', () => {
             const longLocalPart = 'a'.repeat(65) + '@' + 'domain.id';
             expect(isValid(longLocalPart)).to.be.false;
         })
 
-        it('length is 0', () => {
+        it('does not has local part', () => {
             expect(isValid('@domain.id')).to.to.false;
         })
 
-        it('has non allowed character(s)', () => {
+        it('local part has non allowed character(s)', () => {
             expect(isValid('john()doe@domain.id')).to.to.false;
         })
 
-        it('has multiple special char consecutively', () => {
+        it('local part has multiple special char consecutively', () => {
             expect(isValid('jane..doe@domain.id')).to.to.false;
         })
 
-        it('start with special char', () => {
+        it('localpart start with special char', () => {
             expect(isValid('.johndoe@domain.id')).to.to.false;
         })
 
-        it('contains accentuation', () => {
+        it('localpart contains accentuation', () => {
             expect(isValid('jóhndoe@domain.id')).to.to.false;
         })
     })

@@ -1,9 +1,9 @@
-import { IValid, IValidLength } from "../interface"
+import { IValid } from "../interface"
 import { NIK_REGEX, NIK_LENGTH } from "../datas/nik"
-import { numbersOnly } from "../helpers"
+import { numbersOnly, correctLength } from "../helpers"
 import { PROVINCES_DATA } from "../datas/province"
 
-class NomorIndukKependudukan implements IValid, IValidLength {
+class NomorIndukKependudukan implements IValid {
 
     VALID_BPSCODE = Object.keys(PROVINCES_DATA).reduce(
         (a, b) => a.concat((PROVINCES_DATA as any)[b].bpsCode), []
@@ -15,6 +15,8 @@ class NomorIndukKependudukan implements IValid, IValidLength {
         const validNIK = NIK_REGEX.exec(numbersOnly(nik))
 
         if (!validNIK) return false
+
+        const validLength = correctLength(0, validNIK[0].length, { minLength: NIK_LENGTH })
 
         // Comparison
         if (provinceKey || birthday)
@@ -42,14 +44,10 @@ class NomorIndukKependudukan implements IValid, IValidLength {
                 }
             }
 
-            return this.isValidLength(validNIK[0].length) && validProvince && validBirthday
+            return validProvince && validBirthday && validLength
         }
 
-        return this.isValidLength(validNIK[0].length) && this.isValidProvince(parseInt(validNIK[1])) && this.isValidBirthday(validNIK[4])
-    }
-
-    isValidLength(nipLength: number): boolean {
-        return nipLength == NIK_LENGTH
+        return validLength && this.isValidProvince(parseInt(validNIK[1])) && this.isValidBirthday(validNIK[4])
     }
 
     isValidProvince(bpsCode: number): boolean {

@@ -1,19 +1,15 @@
-import { IValid, IValidLength, IFormat } from "../interface"
-import { numbersOnly } from "../helpers"
+import { IValid, IFormat } from "../interface"
+import { numbersOnly, correctLength } from "../helpers"
 import { CC_LENGTH, CC_VALID_MII, CC_SPACE_INDEXES } from "../datas/creditCard"
 
-class CreditCard implements IValid, IValidLength, IFormat {
+class CreditCard implements IValid, IFormat {
 
     isValid(cc: string): boolean {
         if (!cc || typeof cc !== 'string') return false
 
         const numOnly = numbersOnly(cc)
 
-        return this.isValidMII(cc.charAt(0)) && this.isValidLength(numOnly.length)
-    }
-
-    isValidLength(length: number): boolean {
-        return length == CC_LENGTH
+        return this.isValidMII(cc.charAt(0)) && correctLength(0, numOnly.length, { minLength: CC_LENGTH })
     }
 
     isValidMII(mii: string): boolean {
