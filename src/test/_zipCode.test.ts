@@ -1,54 +1,68 @@
 import { expect } from "chai"
-import { isValidZIP as isValid } from "../ts/functions/index"
+import { isValidZIP, isValidZIPWithComparison } from "../ts/functions/index"
 
 describe('ZIP code', () => {
     it('cannot be empty', () => {
-        expect(isValid('')).to.be.false
+        expect(isValidZIP('')).to.be.false
     })
 
     it('cannot be null', () => {
-        expect(isValid(null as any)).to.be.false
+        expect(isValidZIP(null as any)).to.be.false
     })
 
     describe('type', () => {
         it('cannot be a boolean', () => {
-            expect(isValid(true as any)).to.be.false
-            expect(isValid(false as any)).to.be.false
+            expect(isValidZIP(true as any)).to.be.false
+            expect(isValidZIP(false as any)).to.be.false
         })
 
         it('cannot be a array', () => {
-            expect(isValid([] as any)).to.be.false
+            expect(isValidZIP([] as any)).to.be.false
         })
 
         it('can be a object', () => {
-            expect(isValid({} as any)).to.be.false
+            expect(isValidZIP({} as any)).to.be.false
         })
 
         it('can be a number', () => {
-            expect(isValid(55524)).to.be.true
+            expect(isValidZIP(55524)).to.be.true
         })
 
         it('can be a string', () => {
-            expect(isValid('55524')).to.be.true
+            expect(isValidZIP('55524')).to.be.true
         })
     })
 
-    describe('is valid', () => {
+    describe('isValid() = true', () => {
         it('when it has known ZIP Code', () => {
-            expect(isValid(55564)).to.be.true;
-            expect(isValid('55524')).to.be.true;
+            expect(isValidZIP(55564)).to.be.true;
+            expect(isValidZIP('55524')).to.be.true;
         })
     })
 
-    describe('is invalid', () => {
+    describe('isValid() = false', () => {
         it('if does not has 5 digit number', () => {
-            expect(isValid(555643)).to.be.false; // 6 digits
-            expect(isValid('5552')).to.be.false; // 4 digits
+            expect(isValidZIP(555643)).to.be.false; // 6 digits
+            expect(isValidZIP('5552')).to.be.false; // 4 digits
         })
 
         it('if contain non numeric character', () => {
-            expect(isValid('55$24')).to.be.false
-            expect(isValid('55 24')).to.be.false
+            expect(isValidZIP('55$24')).to.be.false
+            expect(isValidZIP('55 24')).to.be.false
+        })
+    })
+
+    describe('isValidWithComparison() = true', () => {
+        it('when it has known ZIP Code from user specified provinceKey', () => {
+            expect(isValidZIPWithComparison(55564, { provinceKey: 'YO' })).to.be.true;
+            expect(isValidZIPWithComparison('55524', { provinceKey: 'YO' })).to.be.true;
+        })
+    })
+
+    describe('isValidWithComparison() = false', () => {
+        it('when ZIP does not exist ZIP range from user specified provinceKey', () => {
+            expect(isValidZIPWithComparison(55564, { provinceKey: 'JK' })).to.be.false; // 55564 is YO (Yogyakarta) ZIP range, not JK
+            expect(isValidZIPWithComparison('55524', { provinceKey: 'JK' })).to.be.false; // 55524 is ZO (Yogyakarta) ZIP range, not JK
         })
     })
 })
