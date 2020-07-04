@@ -1,9 +1,9 @@
-import { IValid, IGetData, IFormat } from '../interface'
+import { IValid, IGetData, IFormat, IDataCellularProvider } from '../interface'
 import { cleanUpPhoneNumber, correctLength } from '../helpers'
 import { CELLULAR_NUMBER, CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from '../datas/cellular'
 import { COUNTRY_CODE } from '../datas/province'
 
-class MobileNumber implements IValid, IGetData, IFormat {
+class CellularNumber implements IValid, IGetData, IFormat {
 
     VALID_CELLULAR_PREFIX = Object.keys(CELLULAR_NUMBER).reduce(
         (a, b) => a.concat((CELLULAR_NUMBER as any)[b].prefix), []
@@ -21,18 +21,24 @@ class MobileNumber implements IValid, IGetData, IFormat {
         return this.VALID_CELLULAR_PREFIX.includes(Number(cellularNumber.substr(0, 3)))
     }
 
-    getData(mobile: string): object {
-        const cleanCellularNumber = cleanUpPhoneNumber(mobile, true)
+    getData(mobile: string): IDataCellularProvider {
+        const cleanNumber = cleanUpPhoneNumber(mobile, true)
 
-        const pfx = Number(cleanCellularNumber.substr(0, 3))
+        const pfx = Number(cleanNumber.substr(0, 3))
         
         for (const key in CELLULAR_NUMBER) {
             if ((CELLULAR_NUMBER as any)[key].prefix.includes(pfx)) {
-                return (CELLULAR_NUMBER as any)[key]
+                return {
+                    key: key,
+                    name: (CELLULAR_NUMBER as any)[key].name
+                }
             }
         }
 
-        return {}
+        return {
+            key: '',
+            name: ''
+        }
     }
 
     format(input: string, int: boolean = false): string {
@@ -58,16 +64,41 @@ class MobileNumber implements IValid, IGetData, IFormat {
     }
 }
 
-const mobileNumber = new MobileNumber()
+const cellularNumber = new CellularNumber()
 
-export function isValidCellularNumber(param: string) {
-    return mobileNumber.isValid(param)
+/**
+ * Cellular number validation
+ *
+ * It will validate cellular number based on it's prefix and length
+ *
+ * @param {string} number - The cellular number to be validated
+ * @return {boolean} Is valid or not
+**/
+export function isValidCellularNumber(number: string) {
+    return cellularNumber.isValid(number)
 }
 
-export function getCellularProviderData(param: string) {
-    return mobileNumber.getData(param)
+/**
+ * Cellular number data getter
+ *
+ * Return object data based on provided cellular number
+ *
+ * @param {string} number - The cellular number
+ * @return {object} IDataCellularProvider object
+**/
+export function getDataCellularNumber(number: string) {
+    return cellularNumber.getData(number)
 }
 
-export function formatCellularNumber(param: string, int: boolean = false) {
-    return mobileNumber.format(param, int)
+/**
+ * Cellular number formating
+ *
+ * Format cellular number to local calling format (0) and international calling format (+XX)
+ *
+ * @param {string} number - The cellular number to be formated
+ * @param {boolean} int - Local calling format (leading zero) or international calling format (leading country code)
+ * @return {string} Formated number
+**/
+export function formatCellularNumber(number: string, int: boolean = false) {
+    return cellularNumber.format(number, int)
 }
