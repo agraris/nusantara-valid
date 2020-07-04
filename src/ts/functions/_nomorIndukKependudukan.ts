@@ -1,6 +1,6 @@
 import { IValid } from "../interface"
 import { NIK_REGEX, NIK_LENGTH } from "../datas/nik"
-import { numbersOnly, correctLength } from "../helpers"
+import { numbersOnly, correctLength, formatDate } from "../helpers"
 import { PROVINCES_DATA } from "../datas/province"
 
 class NomorIndukKependudukan implements IValid {
@@ -17,6 +17,7 @@ class NomorIndukKependudukan implements IValid {
         if (!validNIK) return false
 
         const validLength = correctLength(0, validNIK[0].length, { minLength: NIK_LENGTH })
+        const cBirthday = this.reformatBirthday(validNIK[4])
 
         // Comparison
         if (provinceKey || birthday)
@@ -31,15 +32,9 @@ class NomorIndukKependudukan implements IValid {
             }
 
             if (birthday) {
-                let dd = validNIK[4].substr(0, 2)
-                const mmyy = validNIK[4].substr(2, 4)
-
-                if (Number(dd) > 40) // Check if it is a man of woman
-                    dd = (Number(dd) - 40).toString()
-
-                const cardBirthday = dd + '' + mmyy
+                const vBirthday = numbersOnly(birthday).substring(2, 8) // Strip the first 2 digits of year
                 
-                if (cardBirthday != birthday) {
+                if (cBirthday != vBirthday) {
                     validBirthday = false
                 }
             }
@@ -47,28 +42,29 @@ class NomorIndukKependudukan implements IValid {
             return validProvince && validBirthday && validLength
         }
 
-        return validLength && this.isValidProvince(parseInt(validNIK[1])) && this.isValidBirthday(validNIK[4])
+        return validLength && this.isValidProvince(parseInt(validNIK[1])) && !isNaN(formatDate('19' + cBirthday).getTime())
     }
 
     isValidProvince(bpsCode: number): boolean {
         return this.VALID_BPSCODE.includes(bpsCode)
     }
 
-    isValidBirthday(birthday: string): boolean {
-        const newBirthday = /(\d{2})(\d{2})(\d{2})/.exec(birthday) // DDMMYY
+    // Reformat DDMMYY into YYMMDD
+    reformatBirthday(birthday: string): string {
+        const newBirthday = /(\d{2})(\d{2})(\d{2})/.exec(birthday)
 
-        if (!newBirthday) return false
+        if (newBirthday) {
+            let cDD = newBirthday[1]
+            const cMM = newBirthday[2]
+            const cYY = newBirthday[3]
 
-        let dd = parseInt(newBirthday[1])
-        const mm = parseInt(newBirthday[2])
-        const yy = parseInt(newBirthday[3])
+            if (Number(cDD) > 40) // Check if it is a man of woman
+                cDD = (Number(cDD) - 40).toString()
 
-        if (dd > 40) // Check if it is a man of woman
-            dd = dd - 40
+            return cYY + '' + cMM + '' + cDD
+        }
 
-        const formatedBirthday = new Date('19' + yy + '-' + mm + '-' + dd) // '19YY-MM-DD'
-        
-        return !isNaN(formatedBirthday.getTime())
+        return ''
     }
 }
 
@@ -94,7 +90,7 @@ export function isValidNIK(nik: string) {
  * and will compare NIK's birthday (see: NIK_REGEX[4] with user provided birthday)
  *
  * @param {string} nik - The NIK, the one to be validated
- * @param {object} comparison - The data to compare with, provinceKey (key from PROVINCE_DATA) and birthday (in DDMMYY format)
+ * @param {object} comparison - The data to compare with, provinceKey (key from PROVINCE_DATA) and birthday (in YYYYMMDD format)
  * @return {boolean} Is valid or not
 **/
 export function isValidNIKWithComparison(nik: string, comparison: { provinceKey?: string, birthday?: string }) {

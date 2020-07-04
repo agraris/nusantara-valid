@@ -72,7 +72,7 @@ describe('NIK', () => {
 
     describe('isValidNIKWithComparison() = true', () => {
         it('if it has valid comparison with provinceKey and birthday', () => {
-            expect(isValidNIKWithComparison('3404021011880001', { provinceKey: 'YO', birthday: '101188' })).to.be.true // 10-11-88 => 1988-11-10 -> Man
+            expect(isValidNIKWithComparison('3404021011880001', { provinceKey: 'YO', birthday: '1988-11-10' })).to.be.true // 10-11-88 => 1988-11-10 -> Man
         })
 
         it('if it has valid comparison with provinceKey only', () => {
@@ -80,7 +80,7 @@ describe('NIK', () => {
         })
 
         it('if it has valid comparison with birthday only', () => {
-            expect(isValidNIKWithComparison('3404025011880001', { birthday: '101188' })).to.be.true // 50-11-88 => 1988-11-(50-40) -> Woman
+            expect(isValidNIKWithComparison('3404025011880001', { birthday: '19881110' })).to.be.true // 50-11-88 => 1988-11-(50-40) -> Woman
         })
 
         it('it still valid if the comparison is all empty', () => {
@@ -90,7 +90,7 @@ describe('NIK', () => {
 
     describe('isValidNIKWithComparison() = false', () => {
         it('if it has unmatch NIK\'s bps code and PROVINCE_DATA[provinceKey].bpsCode but has same NIK\'s birthday and user provided birthday', () => {
-            expect(isValidNIKWithComparison('3404021011880001', { provinceKey: 'JK', birthday: '101188' })).to.be.false // BPS code JK = 31 compared NIK = 34
+            expect(isValidNIKWithComparison('3404021011880001', { provinceKey: 'JK', birthday: '19881110' })).to.be.false // BPS code JK = 31 compared NIK = 34
         })
 
         it('if it has unmatch comparison between NIK\'s bps code and PROVINCE_DATA[provinceKey].bpsCode', () => {
@@ -98,7 +98,7 @@ describe('NIK', () => {
         })
 
         it('if it has unmatch comparison between NIK\'s birthday with user provided birthday', () => {
-            expect(isValidNIKWithComparison('3404025011880001', { birthday: '101199' })).to.be.false // User born in 99 but NIK's born in 88
+            expect(isValidNIKWithComparison('3404025011880001', { birthday: '1999-11-10' })).to.be.false // User born in 99 but NIK's born in 88
         })
     })
 })
