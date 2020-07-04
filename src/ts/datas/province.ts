@@ -138,7 +138,7 @@ export const PROVINCES_DATA =
         name: 'Jawa Tengah',
         bpsCode: 33,
         vehiclePlate: ['G', 'H', 'K', 'R', 'AA', 'AD'],
-        tel: range(271, 299).concat([24, 356]),
+        tel: range(275, 299).concat(range(271, 273)).concat([24, 356]),
         zipCode: [
             {
                 from: 50111,
