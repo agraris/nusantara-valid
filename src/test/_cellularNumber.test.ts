@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { isValidCellularNumber as isValid, getDataCellularNumber as getData, formatCellularNumber as format } from "../ts/functions/index"
+import { isValidCellularNumber as isValid, getDataCellularNumber as getData, formatCellularNumber as format, isValidCellularNumberWithComparison } from "../ts/functions/index"
 import { CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from "../ts/datas/cellular"
 import { COUNTRY_CODE } from "../ts/datas/province"
 
@@ -32,7 +32,7 @@ describe('Cellular number', () => {
         })
     })
 
-    describe('isValid() = true', () => {
+    describe('isValidCellularNumber() = true', () => {
         it('when it has ' + CELLULAR_MIN_LENGTH + ' to ' + CELLULAR_MAX_LENGTH + ' digits including country code', () => {
             expect(isValid('08181234567')).to.be.true;
         })
@@ -50,7 +50,7 @@ describe('Cellular number', () => {
         })
     })
 
-    describe('inValid() = false', () => {
+    describe('inValidCellularNumber() = false', () => {
         it('when it has less than ' + CELLULAR_MIN_LENGTH + ' digits including country code', () => {
             expect(isValid('081812345')).to.be.false;
         })
@@ -61,6 +61,20 @@ describe('Cellular number', () => {
 
         it('when it has unknown cellular prefix', () => {
             expect(isValid('0999123456')).to.be.false;
+        })
+    })
+
+    describe('isValidCellularNumberWithComparison() = true', () => {
+        it('match one of the prefix from specific provider provided by user', () => {
+            expect(isValidCellularNumberWithComparison('08181234567', 'XL')).to.be.true;
+            expect(isValidCellularNumberWithComparison('08561234567', 'INDOSAT')).to.be.true;
+        })
+    })
+
+    describe('isValidCellularNumberWithComparison() = false', () => {
+        it('does not match any prefix from specific provider provided by user', () => {
+            expect(isValidCellularNumberWithComparison('08181234567', 'TRI')).to.be.false; // Provider should be XL
+            expect(isValidCellularNumberWithComparison('08961234567', 'INDOSAT')).to.be.false; // Provider should be TRI
         })
     })
 

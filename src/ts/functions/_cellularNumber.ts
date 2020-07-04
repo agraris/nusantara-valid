@@ -9,16 +9,26 @@ class CellularNumber implements IValid, IGetData, IFormat {
         (a, b) => a.concat((CELLULAR_NUMBER as any)[b].prefix), []
     ) as number[]
 
-    isValid(mobile: string): boolean {
+    isValid(mobile: string, providerKey: string = ''): boolean {
         if (!mobile || typeof mobile !== 'string') return false
+
+        let prefixCollection
 
         const cleanCellularNumber = cleanUpPhoneNumber(mobile, true)
 
-        return correctLength(1, cleanCellularNumber.length, { minLength: CELLULAR_MIN_LENGTH, maxLength: CELLULAR_MAX_LENGTH }) && this.isValidCellularPrefix(cleanCellularNumber)
+        const validLength = correctLength(1, cleanCellularNumber.length, { minLength: CELLULAR_MIN_LENGTH, maxLength: CELLULAR_MAX_LENGTH })        
+
+        if (providerKey) {
+            prefixCollection = (CELLULAR_NUMBER as any)[providerKey].prefix
+        } else {
+            prefixCollection = this.VALID_CELLULAR_PREFIX
+        }
+        
+        return validLength && this.isValidCellularPrefix(Number(cleanCellularNumber.substr(0, 3)), prefixCollection)
     }
 
-    isValidCellularPrefix(cellularNumber: string): boolean {
-        return this.VALID_CELLULAR_PREFIX.includes(Number(cellularNumber.substr(0, 3)))
+    isValidCellularPrefix(prefix: number, prefixCollection: number[]): boolean {
+        return prefixCollection.includes(prefix)
     }
 
     getData(mobile: string): IDataCellularNumber {
@@ -78,6 +88,19 @@ const cellularNumber = new CellularNumber()
 **/
 export function isValidCellularNumber(number: string): boolean {
     return cellularNumber.isValid(number)
+}
+
+/**
+ * Cellular number validation with comparison
+ *
+ * It will validate cellular number based on user provided data
+ *
+ * @param {string} number - The cellular number to be validated
+ * @param {string} providerKey - The cellular provider key
+ * @return {boolean} Is valid or not
+**/
+export function isValidCellularNumberWithComparison(number: string, providerKey: string): boolean {
+    return cellularNumber.isValid(number, providerKey)
 }
 
 /**
