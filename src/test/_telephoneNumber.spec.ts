@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { isValidTelephoneNumber as isValid, formatTelephoneNumber as format } from "../ts/functions/index"
+import { isValidTelephoneNumber as isValid, formatTelephoneNumber as format, getDataTelephoneNumber } from "../ts/functions/index"
 import { COUNTRY_CODE } from "../ts/datas/province";
 
 describe('Telephone number', () => {
@@ -31,15 +31,34 @@ describe('Telephone number', () => {
         })
     })
 
-    describe('isInvalid()', () => {
+    describe('isValid() = true', () => {
+        it('when it has known landline areacode', () => {
+            expect(isValid('0274123456')).to.be.true;
+        })
+    })
+
+    describe('isValid() = false', () => {
         it('when it has unknown cellular prefix', () => {
             expect(isValid('0999123456')).to.be.false;
         })
     })
 
-    describe('isValid()', () => {
-        it('when it has known landline areacode', () => {
-            expect(isValid('0274123456')).to.be.true;
+    describe('getData()', () => {
+        it('should return an object of mobile Provider', () => {
+            expect(getDataTelephoneNumber('(0274)123456')).to.deep.equal({
+                "number": "0274-123456",
+                "origin": {
+                    "key": "YO",
+                    "name": "Yogyakarta"
+                }
+            })
+            expect(getDataTelephoneNumber('021123456')).to.deep.equal({
+                "number": "021-123456",
+                "origin": {
+                    "key": "JK",
+                    "name": "Jakarta"
+                }
+            })
         })
     })
 

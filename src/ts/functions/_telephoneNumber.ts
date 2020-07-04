@@ -1,8 +1,8 @@
-import { IValid, IFormat } from "../interface";
+import { IValid, IFormat, IGetData, IDataTelephoneNumber } from "../interface";
 import { PROVINCES_DATA, COUNTRY_CODE } from "../datas/province"
 import { cleanUpPhoneNumber } from "../helpers";
 
-class TelephoneNumber implements IValid, IFormat {
+class TelephoneNumber implements IValid, IFormat, IGetData {
 
     VALID_TELEPHONE_AREACODE = Object.keys(PROVINCES_DATA).reduce(
         (a, b) => a.concat((PROVINCES_DATA as any)[b].tel), []
@@ -18,6 +18,32 @@ class TelephoneNumber implements IValid, IFormat {
 
     isValidCellularPrefix(parsedTel: string): boolean {
         return this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(0, 2))) || this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(0, 3)))
+    }
+    
+    getData(tel: string): IDataTelephoneNumber {
+        let data = {} as IDataTelephoneNumber
+
+        const cleanTelNumber = cleanUpPhoneNumber(tel)
+
+        let pfx = Number(cleanTelNumber.substr(0, 2))
+
+        if (!this.VALID_TELEPHONE_AREACODE.includes(pfx)) {
+            pfx = Number(cleanTelNumber.substr(0, 3))
+        }
+
+        data.number = this.format(cleanTelNumber)
+
+        for (const key in PROVINCES_DATA) {
+            if ((PROVINCES_DATA as any)[key].tel.includes(pfx)) {
+                data.origin = {
+                    key: key,
+                    name: (PROVINCES_DATA as any)[key].name
+                }
+                break
+            }
+        }
+
+        return data
     }
 
     format(tel: string, int:boolean = false): string {
@@ -54,10 +80,39 @@ class TelephoneNumber implements IValid, IFormat {
 
 const telNumber = new TelephoneNumber()
 
-export function isValidTelephoneNumber(param: string) {
-    return telNumber.isValid(param)
+/**
+ * Telephone number validation
+ *
+ * It will validate telephone number based on it's prefix
+ *
+ * @param {string} number - The telephone number to be validated
+ * @return {boolean} Is valid or not
+**/
+export function isValidTelephoneNumber(number: string): boolean {
+    return telNumber.isValid(number)
 }
 
-export function formatTelephoneNumber(param: string, int:boolean = false) {
-    return telNumber.format(param, int)
+/**
+ * Telephone number data getter
+ *
+ * Return object data based on provided telephone number
+ *
+ * @param {string} number - The telephone number
+ * @return {object} IDataTelephoneNumber object
+**/
+export function getDataTelephoneNumber(number: string): IDataTelephoneNumber {
+    return telNumber.getData(number)
+}
+
+/**
+ * Telephone number formating
+ *
+ * Format telephone number to local calling format (0) and international calling format (+XX)
+ *
+ * @param {string} number - The telephone number to be formated
+ * @param {boolean} int - Local calling format (leading zero) or international calling format (leading country code)
+ * @return {string} Formated number
+**/
+export function formatTelephoneNumber(number: string, int:boolean = false): string {
+    return telNumber.format(number, int)
 }

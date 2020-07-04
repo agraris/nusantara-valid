@@ -25,6 +25,11 @@ export interface IDataProvince {
     name: string
 }
 
+export interface IDataTelephoneNumber {
+    number: string,
+    origin: IDataProvince
+}
+
 export interface IDataTNKB {
     areaCode: string,
     index: number,
