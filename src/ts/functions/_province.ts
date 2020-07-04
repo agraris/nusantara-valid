@@ -21,12 +21,27 @@ class Province implements IGetData {
     }
 }
 
-const atm = new Province()
+const prov = new Province()
 
-export function getDataProvince(param: string) {
-    return atm.getData(param) as IDataProvince
+/**
+ * Get specific province data with IDataProvince object structure
+ *
+ * Return object data based on provided province key
+ *
+ * @param {string} provinceKey - Array key of the province
+ * @return {IDataProvince} IDataProvince object
+**/
+export function getDataProvince(provinceKey: string): IDataProvince {
+    return prov.getData(provinceKey) as IDataProvince
 }
 
-export function getDataProvinces() {
-    return atm.getData() as IDataProvince[]
+/**
+ * Get all province data with IDataProvince object structure
+ *
+ * Return all IDataProvince object in Array<IDataProvince>
+ *
+ * @return {IDataProvince[]} Array of IDataProvince object
+**/
+export function getDataProvinces(): IDataProvince[]{
+    return prov.getData() as IDataProvince[]
 }
