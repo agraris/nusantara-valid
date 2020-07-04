@@ -3,6 +3,11 @@ export interface IDataBank {
     name: string
 }
 
+export interface IDataCellularNumber {
+    number: string,
+    provider: IDataCellularProvider
+}
+
 export interface IDataCellularProvider {
     key: string,
     name: string

@@ -1,4 +1,4 @@
-import { IValid, IGetData, IFormat, IDataCellularProvider } from '../interface'
+import { IValid, IGetData, IFormat, IDataCellularProvider, IDataCellularNumber } from '../interface'
 import { cleanUpPhoneNumber, correctLength } from '../helpers'
 import { CELLULAR_NUMBER, CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from '../datas/cellular'
 import { COUNTRY_CODE } from '../datas/province'
@@ -21,24 +21,26 @@ class CellularNumber implements IValid, IGetData, IFormat {
         return this.VALID_CELLULAR_PREFIX.includes(Number(cellularNumber.substr(0, 3)))
     }
 
-    getData(mobile: string): IDataCellularProvider {
+    getData(mobile: string): IDataCellularNumber {
+        let data = {} as IDataCellularNumber
+
+        data.number = this.format(mobile)
+
         const cleanNumber = cleanUpPhoneNumber(mobile, true)
 
         const pfx = Number(cleanNumber.substr(0, 3))
         
         for (const key in CELLULAR_NUMBER) {
             if ((CELLULAR_NUMBER as any)[key].prefix.includes(pfx)) {
-                return {
+                data.provider = {
                     key: key,
                     name: (CELLULAR_NUMBER as any)[key].name
                 }
+                break
             }
         }
 
-        return {
-            key: '',
-            name: ''
-        }
+        return data
     }
 
     format(input: string, int: boolean = false): string {
@@ -74,7 +76,7 @@ const cellularNumber = new CellularNumber()
  * @param {string} number - The cellular number to be validated
  * @return {boolean} Is valid or not
 **/
-export function isValidCellularNumber(number: string) {
+export function isValidCellularNumber(number: string): boolean {
     return cellularNumber.isValid(number)
 }
 
@@ -84,9 +86,9 @@ export function isValidCellularNumber(number: string) {
  * Return object data based on provided cellular number
  *
  * @param {string} number - The cellular number
- * @return {object} IDataCellularProvider object
+ * @return {object} IDataCellularNumber object
 **/
-export function getDataCellularNumber(number: string) {
+export function getDataCellularNumber(number: string): IDataCellularNumber {
     return cellularNumber.getData(number)
 }
 
@@ -99,6 +101,6 @@ export function getDataCellularNumber(number: string) {
  * @param {boolean} int - Local calling format (leading zero) or international calling format (leading country code)
  * @return {string} Formated number
 **/
-export function formatCellularNumber(number: string, int: boolean = false) {
+export function formatCellularNumber(number: string, int: boolean = false): string {
     return cellularNumber.format(number, int)
 }

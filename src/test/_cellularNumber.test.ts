@@ -68,14 +68,20 @@ describe('Cellular number', () => {
         it('should return an object of mobile Provider', () => {
             expect(getData('081812345678')).to.deep.equal(
                 {
-                    key: 'XL',
-                    name: 'XL Axiata'
+                    "number": "0818-1234-5678",
+                    "provider": {
+                        "key": "XL",
+                        "name": "XL Axiata"
+                    }
                 }
             )
             expect(getData('081212345678')).to.deep.equal(
                 {
-                    key: 'TELKOMSEL',
-                    name: 'Telkomsel'
+                    "number": "0812-1234-5678",
+                    "provider": {
+                        "key": "TELKOMSEL",
+                        "name": "Telkomsel"
+                    }
                 }
             )
         })
