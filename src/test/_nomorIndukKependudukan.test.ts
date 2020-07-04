@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { isValidNIK, isValidNIKWithComparison } from "../ts/functions"
+import { isValidNIK, isValidNIKWithComparison, getDataNIK } from "../ts/functions"
 import { NIK_LENGTH } from "../ts/datas/nik"
 
 describe('NIK', () => {
@@ -99,6 +99,30 @@ describe('NIK', () => {
 
         it('if it has unmatch comparison between NIK\'s birthday with user provided birthday', () => {
             expect(isValidNIKWithComparison('3404025011880001', { birthday: '1999-11-10' })).to.be.false // User born in 99 but NIK's born in 88
+        })
+    })
+
+    describe('getDataNIK()', () => {
+        it('return object data about the NIK\'s details', () => {
+            expect(getDataNIK('3404025011880001')).to.deep.equal({
+                nik: '3404025011880001',
+                birthday: new Date('1988-11-10'),
+                sex: 'Female',
+                province: {
+                    key: 'YO',
+                    name: 'Yogyakarta'
+                }
+            })
+            expect(getDataNIK('3101012012060002')).to.deep.equal({
+                nik: '3101012012060002',
+                birthday: new Date('2006-12-20'),
+                sex: 'Male',
+                province: {
+                    key: 'JK',
+                    name: 'Jakarta'
+                }
+            })
+            expect(getDataNIK('310101201299002')).to.deep.equal({}) // NIK is invalid
         })
     })
 })

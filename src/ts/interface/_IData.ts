@@ -8,6 +8,13 @@ export interface IDataCellularProvider {
     name: string
 }
 
+export interface IDataNIK {
+    nik: string,
+    birthday: Date,
+    sex: string,
+    province: IDataProvince
+}
+
 export interface IDataProvince {
     key: string,
     name: string

@@ -1,9 +1,9 @@
-import { IValid } from "../interface"
+import { IValid, IGetData, IDataNIK, IDataProvince } from "../interface"
 import { NIK_REGEX, NIK_LENGTH } from "../datas/nik"
 import { numbersOnly, correctLength, formatDate } from "../helpers"
 import { PROVINCES_DATA } from "../datas/province"
 
-class NomorIndukKependudukan implements IValid {
+class NomorIndukKependudukan implements IValid, IGetData {
 
     VALID_BPSCODE = Object.keys(PROVINCES_DATA).reduce(
         (a, b) => a.concat((PROVINCES_DATA as any)[b].bpsCode), []
@@ -66,6 +66,54 @@ class NomorIndukKependudukan implements IValid {
 
         return ''
     }
+
+    getData(nik: string): IDataNIK {
+        const validNIK = NIK_REGEX.exec(numbersOnly(nik))
+
+        let data = {} as IDataNIK
+
+        if (!validNIK) return data
+
+        data.nik = validNIK[0]
+        data.sex = Number(validNIK[4].substr(0, 2)) > 40 ? 'Female' : 'Male'
+
+        const fBday = this.reformatBirthday(validNIK[4])
+
+        const validProvince = this.isValidProvince(Number(validNIK[1]))
+        const validBirthday = !isNaN(formatDate('19' + fBday).getTime())
+
+        if (validProvince) {
+            let province = {} as IDataProvince
+
+            for (const key in PROVINCES_DATA) {
+                if (PROVINCES_DATA.hasOwnProperty(key)) {
+                    const el = (PROVINCES_DATA as any)[key];
+                    if (el.bpsCode == Number(validNIK[1])) {
+                        province.key = key,
+                        province.name = el.name
+                        break
+                    }
+                }
+            }
+
+            data.province = province
+        }
+
+        if (validBirthday) {
+            const currentYear = new Date().getFullYear()
+
+            let bYYYY = Number(fBday.substr(0, 2)) + 2000
+            const bMMYY = fBday.substring(2, 6)
+
+            if (bYYYY > currentYear) {
+                bYYYY = bYYYY - 100
+            }
+
+            data.birthday = new Date(formatDate(bYYYY + '' + bMMYY))
+        }
+
+        return data
+    }
 }
 
 const theNIK = new NomorIndukKependudukan()
@@ -79,7 +127,7 @@ const theNIK = new NomorIndukKependudukan()
  * @param {string} nik - The NIK, the one to be validated
  * @return {boolean} Is valid or not
 **/
-export function isValidNIK(nik: string) {
+export function isValidNIK(nik: string): boolean {
     return theNIK.isValid(nik)
 }
 
@@ -93,8 +141,20 @@ export function isValidNIK(nik: string) {
  * @param {object} comparison - The data to compare with, provinceKey (key from PROVINCE_DATA) and birthday (in YYYYMMDD format)
  * @return {boolean} Is valid or not
 **/
-export function isValidNIKWithComparison(nik: string, comparison: { provinceKey?: string, birthday?: string }) {
+export function isValidNIKWithComparison(nik: string, comparison: { provinceKey?: string, birthday?: string }): boolean {
     let { provinceKey = '', birthday = '' } = comparison
 
     return theNIK.isValid(nik, provinceKey, birthday)
+}
+
+/**
+ * NIK data retreiver.
+ *
+ * Return a set of NIK object data from user provided nik
+ *
+ * @param {string} nik - The NIK
+ * @return {object} The NIK data
+**/
+export function getDataNIK(nik: string): IDataNIK {
+    return theNIK.getData(nik)
 }
