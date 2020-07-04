@@ -29,7 +29,18 @@ describe('TNKB', () => {
         })
     })
 
-    describe('isValid() == false', () => {
+    describe('isValid() = true', () => {
+        it('even it uses lowercase character', () => {
+            expect(isValid('ab1234xyz')).to.be.true
+        })
+
+        it('when it has known Area Code', () => {
+            expect(isValid('AB123XY')).to.be.true;
+            expect(isValid('B9876ABC')).to.be.true;
+        })
+    })
+
+    describe('isValid() = false', () => {
         it('does not has Area Code', () => {
             expect(isValid('1234XYZ')).to.be.false
         })
@@ -53,16 +64,9 @@ describe('TNKB', () => {
         it('has more than 3 digit of Detailed Area Code', () => {
             expect(isValid('AB1234XYZA')).to.be.false
         })
-    })
 
-    describe('isValid() == true', () => {
-        it('even it uses lowercase character', () => {
-            expect(isValid('ab1234xyz')).to.be.true
-        })
-
-        it('when it has known Area Code', () => {
-            expect(isValid('AB123XY')).to.be.true;
-            expect(isValid('B9876ABC')).to.be.true;
+        it('has symbol', () => {
+            expect(isValid('AB12#34XYZ')).to.be.false
         })
     })
 
