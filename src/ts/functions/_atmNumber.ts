@@ -12,15 +12,35 @@ class ATMNumber implements IValid {
 
         const numOnly = numbersOnly(atm)
 
-        if (bank)
-            return (BANK_DATA as any)[bank].digits == numOnly.length
+        if (bank) return (BANK_DATA as any)[bank].digits == numOnly.length
 
         return correctLength(2, numOnly.length, { collection: this.VALID_ATMNUMBER_LENGTH })
     }
 }
 
-const atm = new ATMNumber()
+const theATM = new ATMNumber()
 
-export function isValidATMNumber(param: string, index: string = '') {
-    return atm.isValid(param, index)
+/**
+ * ATM number validation without comparison with bank
+ *
+ * It will validate ATM number based on it's length
+ *
+ * @param {string} atm - The atm number to be validated
+ * @return {boolean} Is valid or not
+**/
+export function isValidATMNumber(atm: string): boolean {
+    return theATM.isValid(atm)
+}
+
+/**
+ * ATM number validation with comparison with bank
+ *
+ * It will validate ATM number based on it's length and specific Bank's length
+ *
+ * @param {string} atm - The atm number to be validated
+ * @param {string} key - The bank key
+ * @return {boolean} Is valid or not
+**/
+export function isValidATMNumberWithComparison(atm: string, key: string = ''): boolean {
+    return theATM.isValid(atm, key)
 }
