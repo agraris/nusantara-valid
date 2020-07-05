@@ -62,12 +62,9 @@ describe('VRN', () => {
     })
 
     describe('format()', () => {
-        it('should format number', () => {
-            expect(format(312542943407000)).to.be.string('31.254.294.3-407.000');
-        })
-
-        it('should format string', () => {
+        it('should format with correct result', () => {
             expect(format('092542943407000')).to.be.string('09.254.294.3-407.000');
+            expect(format('312542943407000')).to.be.string('31.254.294.3-407.000');
         })
     })
 })
