@@ -2,6 +2,13 @@ import { IValid } from "../interface"
 import { MAX_EMAIL_LENGTH, EMAIL_REGEX, MAX_LOCALPART_LENGTH } from "../datas/email"
 import { correctLength } from '../helpers'
 
+/**
+ * Nusantara Valid: _email.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ *
+ * @class The Email class
+**/
 class Email implements IValid {
     isValid (email: string): boolean {
         if (!email || typeof email !== 'string') return false
@@ -14,8 +21,16 @@ class Email implements IValid {
     }
 }
 
-const email = new Email()
+const theEmail = new Email()
 
-export function isValidEmail (param: string) {
-    return email.isValid(param)
+/**
+ * E-mail validation.
+ *
+ * It check if email has the correct requirements such as local part (username), @ [at] symbol, domain name part, and TLD
+ *
+ * @param {string} email - The email, the one to be validated
+ * @return {boolean} Is valid or not
+**/
+export function isValidEmail(email: string): boolean {
+    return theEmail.isValid(email)
 }

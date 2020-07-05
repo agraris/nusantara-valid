@@ -1,4 +1,10 @@
 /**
+ * Nusantara Valid: nik.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+**/
+
+/**
  * NIK_REGEX
  *
  * NIK_REGEX[0] = NIK Number has 16 digits

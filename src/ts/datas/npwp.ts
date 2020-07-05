@@ -1,4 +1,10 @@
 /**
+ * Nusantara Valid: npwp.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+**/
+
+/**
  * NPWP_REGEX
  *
  * NPWP_REGEX[0] = NPWP has 15 digits

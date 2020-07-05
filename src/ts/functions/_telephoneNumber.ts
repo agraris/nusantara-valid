@@ -2,6 +2,13 @@ import { IValid, IFormat, IGetData, IDataTelephoneNumber } from "../interface";
 import { PROVINCES_DATA, COUNTRY_CODE } from "../datas/province"
 import { cleanUpPhoneNumber } from "../helpers";
 
+/**
+ * Nusantara Valid: _telephoneNumber.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ *
+ * @class The TelephoneNumber class
+**/
 class TelephoneNumber implements IValid, IFormat, IGetData {
 
     VALID_TELEPHONE_AREACODE = Object.keys(PROVINCES_DATA).reduce(

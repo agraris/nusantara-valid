@@ -1,4 +1,10 @@
 /**
+ * Nusantara Valid: bank.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+**/
+
+/**
  * BANK_DATA
  *
  * List of bank in Indonesia including BPS code, vehicle plate, 

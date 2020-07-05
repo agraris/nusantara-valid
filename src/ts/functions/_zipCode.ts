@@ -2,6 +2,13 @@ import { IValid } from "../interface"
 import { PROVINCES_DATA } from "../datas/province"
 import { correctLength } from '../helpers'
 
+/**
+ * Nusantara Valid: _zipCode.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ *
+ * @class The ZIPCode class
+**/
 class ZIPCode implements IValid {
     ZIP_RANGE = Object.keys(PROVINCES_DATA).reduce(
         (a, b) => a.concat((PROVINCES_DATA as any)[b].zipCode), []
@@ -42,7 +49,7 @@ const theZIP = new ZIPCode()
  * @param {string} zip - The ZIP, the one to be validated
  * @return {boolean} Is valid or not
 **/
-export function isValidZIP(zip: string | number) {
+export function isValidZIP(zip: string | number): boolean {
     return theZIP.isValid(zip)
 }
 
@@ -55,7 +62,7 @@ export function isValidZIP(zip: string | number) {
  * @param {object} comparison - The data to compare with, provinceKey (key from PROVINCE_DATA)
  * @return {boolean} Is valid or not
 **/
-export function isValidZIPWithComparison(zip: string | number, comparison: { provinceKey?: string }) {
+export function isValidZIPWithComparison(zip: string | number, comparison: { provinceKey?: string }): boolean {
     const { provinceKey = '' } = comparison
     return theZIP.isValid(zip, provinceKey)
 }

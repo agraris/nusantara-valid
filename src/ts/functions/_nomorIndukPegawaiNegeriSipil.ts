@@ -2,6 +2,13 @@ import { IValid } from "../interface"
 import { NIP_LENGTH, NIP_REGEX } from "../datas/nip"
 import { numbersOnly, correctLength, formatDate } from "../helpers"
 
+/**
+ * Nusantara Valid: _nomorIndukPegawaiNegeriSipil.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ *
+ * @class The NomorIndukPegawaiNegeriSipil class
+**/
 class NomorIndukPegawaiNegeriSipil implements IValid {
 
     isValid(nip: string): boolean {

@@ -1,4 +1,10 @@
 /**
+ * Nusantara Valid: nisn.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+**/
+
+/**
  * NISN_REGEX
  *
  * NISN_REGEX[0] = NISN has 10 digits

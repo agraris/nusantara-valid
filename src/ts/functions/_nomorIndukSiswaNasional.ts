@@ -2,6 +2,13 @@ import { IValid } from "../interface"
 import { NISN_REGEX, NISN_LENGTH, NISN_AGE_VALIDITY } from "../datas/nisn"
 import { numbersOnly, correctLength } from "../helpers"
 
+/**
+ * Nusantara Valid: _nomorIndukSiswaNasional.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ *
+ * @class The NomorIndukSiswaNasional class
+**/
 class NomorIndukSiswaNasional implements IValid {
 
     isValid(nisn: string): boolean {
@@ -29,8 +36,16 @@ class NomorIndukSiswaNasional implements IValid {
     }
 }
 
-const nisn = new NomorIndukSiswaNasional()
+const theNISN = new NomorIndukSiswaNasional()
 
-export function isValidNISN(param: string) {
-    return nisn.isValid(param)
+/**
+ * NISN validation.
+ *
+ * Validate NISN by validating NISN's birth year (student age) with NISN_AGE_VALIDITY and NISN's length
+ *
+ * @param {string} nisn - The NISN to be validated
+ * @return {boolean} Is valid or not
+**/
+export function isValidNISN(nisn: string): boolean {
+    return theNISN.isValid(nisn)
 }

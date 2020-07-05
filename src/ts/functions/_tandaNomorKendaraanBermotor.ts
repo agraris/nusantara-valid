@@ -2,6 +2,13 @@ import { IValid, IGetData, IDataTNKB } from "../interface"
 import { TNKB_REGEX } from "../datas/tnkb"
 import { PROVINCES_DATA } from "../datas/province"
 
+/**
+ * Nusantara Valid: _tandaNomorKendaraanBermotor.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ *
+ * @class The TandaNomorKendaraanBermotor class
+**/
 class TandaNomorKendaraanBermotor implements IValid, IGetData {
     VALID_TNKB_AREACODE = Object.keys(PROVINCES_DATA).reduce(
         (a, b) => a.concat((PROVINCES_DATA as any)[b].vehiclePlate), []

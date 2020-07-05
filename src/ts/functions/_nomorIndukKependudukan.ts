@@ -3,6 +3,13 @@ import { NIK_REGEX, NIK_LENGTH } from "../datas/nik"
 import { numbersOnly, correctLength, formatDate } from "../helpers"
 import { PROVINCES_DATA } from "../datas/province"
 
+/**
+ * Nusantara Valid: _nomorIndukKependudukan.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ *
+ * @class The NomorIndukKepemdudukan class
+**/
 class NomorIndukKependudukan implements IValid, IGetData {
 
     VALID_BPSCODE = Object.keys(PROVINCES_DATA).reduce(

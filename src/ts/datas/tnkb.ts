@@ -1,4 +1,10 @@
 /**
+ * Nusantara Valid: tnkb.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+**/
+
+/**
  * TNKB_REGEX
  *
  * TNKB_REGEX[0] = The TNKB

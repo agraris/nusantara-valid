@@ -1,4 +1,10 @@
 /**
+ * Nusantara Valid: nip.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+**/
+
+/**
  * NIP_REGEX
  *
  * NIP_REGEX[0] = NIP Number has 18 digits

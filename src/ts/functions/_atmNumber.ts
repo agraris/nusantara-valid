@@ -2,6 +2,13 @@ import { IValid } from "../interface"
 import { numbersOnly, correctLength } from "../helpers"
 import { BANK_DATA } from "../datas/bank"
 
+/**
+ * Nusantara Valid: _atmNumber.ts
+ * 
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ * 
+ * @class The ATMNumber class
+**/
 class ATMNumber implements IValid {
     VALID_ATMNUMBER_LENGTH = Object.keys(BANK_DATA).reduce(
         (pref, curr) => pref.includes((BANK_DATA as any)[curr].digits as never) ? pref : pref.concat((BANK_DATA as any)[curr].digits), []

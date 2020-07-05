@@ -1,4 +1,10 @@
 /**
+ * Nusantara Valid: email.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+**/
+
+/**
  * EMAIL_REGEX
  * by Brent Thomas
  *

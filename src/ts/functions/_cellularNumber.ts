@@ -3,6 +3,13 @@ import { cleanUpPhoneNumber, correctLength } from '../helpers'
 import { CELLULAR_NUMBER, CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from '../datas/cellular'
 import { COUNTRY_CODE } from '../datas/province'
 
+/**
+ * Nusantara Valid: _cellularNumber.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ *
+ * @class The CellularNumber class
+**/
 class CellularNumber implements IValid, IGetData, IFormat {
 
     VALID_CELLULAR_PREFIX = Object.keys(CELLULAR_NUMBER).reduce(

@@ -1,4 +1,10 @@
 /**
+ * Nusantara Valid: creditCard.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+**/
+
+/**
  * CC_LENGTH
  *
  * Total length of Credit Card number without any special characters

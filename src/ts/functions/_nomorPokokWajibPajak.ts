@@ -2,6 +2,13 @@ import { IValid, IFormat } from "../interface"
 import { NPWP_REGEX, NPWP_LENGTH, NPWP_TAX_IDENTITIES, NPWP_DOT_INDEXES, NPWP_HYPHEN_INDEXES } from "../datas/npwp"
 import { numbersOnly, correctLength } from "../helpers"
 
+/**
+ * Nusantara Valid: _nomorPokokWajibPajak.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ *
+ * @class The NomorPokokWajibPajak class
+**/
 class NomorPokokWajibPajak implements IValid, IFormat {
 
     isValid(npwp: string): boolean {

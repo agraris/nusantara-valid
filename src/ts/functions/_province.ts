@@ -1,6 +1,13 @@
 import { IGetData, IDataProvince } from "../interface"
 import { PROVINCES, PROVINCES_DATA } from "../datas/province";
 
+/**
+ * Nusantara Valid: _province.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ *
+ * @class The Province class
+**/
 class Province implements IGetData {
     getData(index: string = ''): IDataProvince | IDataProvince[] {
         if (index == '') {
