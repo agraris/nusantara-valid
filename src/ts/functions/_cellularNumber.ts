@@ -1,6 +1,6 @@
-import { IValid, IGetData, IFormat, IDataCellularProvider, IDataCellularNumber } from '../interface'
+import { IValid, IGetData, IFormat, IDataCellularNumber } from '../interface'
 import { cleanUpPhoneNumber, correctLength } from '../helpers'
-import { CELLULAR_NUMBER, CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from '../datas/cellular'
+import { CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH, CELLULAR_HYPEN_INDEXES, CELLULAR_PROVIDER_DATA, CELLULAR_PROVIDER_KEYS } from '../datas/cellular'
 import { COUNTRY_CODE } from '../datas/province'
 
 /**
@@ -12,8 +12,8 @@ import { COUNTRY_CODE } from '../datas/province'
 **/
 class CellularNumber implements IValid, IGetData, IFormat {
 
-    VALID_CELLULAR_PREFIX = Object.keys(CELLULAR_NUMBER).reduce(
-        (a, b) => a.concat((CELLULAR_NUMBER as any)[b].prefix), []
+    CELLULAR_PROVIDER_PREFIXES = CELLULAR_PROVIDER_KEYS.reduce(
+        (a, b) => a.concat((CELLULAR_PROVIDER_DATA as any)[b].prefix), []
     ) as number[]
 
     isValid(mobile: string, providerKey: string = ''): boolean {
@@ -25,16 +25,13 @@ class CellularNumber implements IValid, IGetData, IFormat {
 
         const validLength = correctLength(1, cleanCellularNumber.length, { minLength: CELLULAR_MIN_LENGTH, maxLength: CELLULAR_MAX_LENGTH })        
 
-        if (providerKey) {
-            prefixCollection = (CELLULAR_NUMBER as any)[providerKey].prefix
-        } else {
-            prefixCollection = this.VALID_CELLULAR_PREFIX
-        }
+        if (providerKey) prefixCollection = (CELLULAR_PROVIDER_DATA as any)[providerKey].prefix
+        else prefixCollection = this.CELLULAR_PROVIDER_PREFIXES
         
-        return validLength && this.isValidCellularPrefix(Number(cleanCellularNumber.substr(0, 3)), prefixCollection)
+        return validLength && this.isValidCellularProviderPrefix(Number(cleanCellularNumber.substr(0, 3)), prefixCollection)
     }
 
-    isValidCellularPrefix(prefix: number, prefixCollection: number[]): boolean {
+    isValidCellularProviderPrefix(prefix: number, prefixCollection: number[]): boolean {
         return prefixCollection.includes(prefix)
     }
 
@@ -43,15 +40,14 @@ class CellularNumber implements IValid, IGetData, IFormat {
 
         data.number = this.format(mobile)
 
-        const cleanNumber = cleanUpPhoneNumber(mobile, true)
-
-        const pfx = Number(cleanNumber.substr(0, 3))
+        const pfx = Number(cleanUpPhoneNumber(mobile, true).substr(0, 3))
         
-        for (const key in CELLULAR_NUMBER) {
-            if ((CELLULAR_NUMBER as any)[key].prefix.includes(pfx)) {
+        for (const key of CELLULAR_PROVIDER_KEYS) {
+            const cellProvider = (CELLULAR_PROVIDER_DATA as any)[key]
+            if (cellProvider.prefix.includes(pfx)) {
                 data.provider = {
                     key: key,
-                    name: (CELLULAR_NUMBER as any)[key].name
+                    name: cellProvider.name
                 }
                 break
             }
@@ -62,7 +58,6 @@ class CellularNumber implements IValid, IGetData, IFormat {
 
     format(input: string, int: boolean = false): string {
         const cleanCelNumber = cleanUpPhoneNumber(input, true)
-        let CEL_HYPEN_INDEX = [2, 6]
 
         let formatedNumber = cleanCelNumber
             .slice(0, cleanCelNumber.length)
@@ -71,7 +66,7 @@ class CellularNumber implements IValid, IGetData, IFormat {
                 const result = `${a}${b}`;
 
                 if (!(index === cleanCelNumber.length - 1)) {
-                    if (CEL_HYPEN_INDEX.includes(index)) return `${result}-`;
+                    if (CELLULAR_HYPEN_INDEXES.includes(index)) return `${result}-`;
                 }
 
                 return result;

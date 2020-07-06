@@ -7,11 +7,11 @@
 const range = (start: number, stop: number) => Array.from({ length: (stop - start) / 1 + 1 }, (_, i) => start + (i * 1))
 
 /**
- * CELLULAR_NUMBER
+ * CELLULAR_PROVIDER_DATA
  *
  * List cellular provider in Indonesia
 **/
-export const CELLULAR_NUMBER =
+export const CELLULAR_PROVIDER_DATA =
 {
     TELKOMSEL: {
         name: 'Telkomsel',
@@ -54,5 +54,12 @@ export const CELLULAR_MIN_LENGTH = 10;
 **/
 export const CELLULAR_MAX_LENGTH = 12;
 
-export type Cellular = keyof typeof CELLULAR_NUMBER;
-export const CELLULAR = Object.keys(CELLULAR_NUMBER) as Cellular[];
+/**
+ * CELLULAR_HYPEN_INDEXES
+ *
+ * Indexes of where are the hypen separator to be placed on formating
+**/
+export const CELLULAR_HYPEN_INDEXES = [2, 6]
+
+export type CellularProvider = keyof typeof CELLULAR_PROVIDER_DATA;
+export const CELLULAR_PROVIDER_KEYS = Object.keys(CELLULAR_PROVIDER_DATA) as CellularProvider[];
