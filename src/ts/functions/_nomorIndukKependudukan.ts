@@ -1,7 +1,7 @@
 import { IValid, IGetData, IDataNIK, IDataProvince } from "../interface"
 import { NIK_REGEX, NIK_LENGTH } from "../datas/nik"
 import { numbersOnly, correctLength, formatDate } from "../helpers"
-import { PROVINCES_DATA } from "../datas/province"
+import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province"
 
 /**
  * Nusantara Valid: _nomorIndukKependudukan.ts
@@ -12,8 +12,8 @@ import { PROVINCES_DATA } from "../datas/province"
 **/
 class NomorIndukKependudukan implements IValid, IGetData {
 
-    VALID_BPSCODE = Object.keys(PROVINCES_DATA).reduce(
-        (a, b) => a.concat((PROVINCES_DATA as any)[b].bpsCode), []
+    VALID_BPSCODE = PROVINCE_KEYS.reduce(
+        (a, b) => a.concat((PROVINCE_DATA as any)[b].bpsCode), []
     ) as number[]
 
     isValid(nik: string, provinceKey: string = '', birthday: string = ''): boolean {
@@ -33,7 +33,7 @@ class NomorIndukKependudukan implements IValid, IGetData {
             let validBirthday = true
 
             if (provinceKey) {
-                if ((PROVINCES_DATA as any)[provinceKey].bpsCode != validNIK[1]) {
+                if ((PROVINCE_DATA as any)[provinceKey].bpsCode != validNIK[1]) {
                     validProvince = false
                 }
             }
@@ -92,9 +92,9 @@ class NomorIndukKependudukan implements IValid, IGetData {
         if (validProvince) {
             let province = {} as IDataProvince
 
-            for (const key in PROVINCES_DATA) {
-                if (PROVINCES_DATA.hasOwnProperty(key)) {
-                    const el = (PROVINCES_DATA as any)[key];
+            for (const key in PROVINCE_DATA) {
+                if (PROVINCE_DATA.hasOwnProperty(key)) {
+                    const el = (PROVINCE_DATA as any)[key];
                     if (el.bpsCode == Number(validNIK[1])) {
                         province.key = key,
                         province.name = el.name

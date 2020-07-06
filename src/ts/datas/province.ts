@@ -7,12 +7,12 @@
 import { range } from '../helpers';
 
 /**
- * PROVINCES_DATA
+ * PROVINCE_DATA
  *
  * List of province data in Indonesia including BPS code, vehicle plate, 
  * telephone numbers, and zip code.
 **/
-export const PROVINCES_DATA =
+export const PROVINCE_DATA =
 {
     AC: {
         name: 'Aceh',
@@ -443,4 +443,5 @@ export const PROVINCES_DATA =
 **/
 export const COUNTRY_CODE = 62
 
-export const PROVINCES = Object.keys(PROVINCES_DATA);
+export type Province = keyof typeof PROVINCE_DATA;
+export const PROVINCE_KEYS = Object.keys(PROVINCE_DATA) as Province[];

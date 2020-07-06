@@ -1,5 +1,5 @@
 import { IValid } from "../interface"
-import { PROVINCES_DATA } from "../datas/province"
+import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province"
 import { correctLength } from '../helpers'
 
 /**
@@ -10,8 +10,8 @@ import { correctLength } from '../helpers'
  * @class The ZIPCode class
 **/
 class ZIPCode implements IValid {
-    ZIP_RANGE = Object.keys(PROVINCES_DATA).reduce(
-        (a, b) => a.concat((PROVINCES_DATA as any)[b].zipCode), []
+    ZIP_RANGE = PROVINCE_KEYS.reduce(
+        (a, b) => a.concat((PROVINCE_DATA as any)[b].zipCode), []
     ) as any[]
 
     isValid(zip: string | number, provinceKey: string = ''): boolean {
@@ -22,7 +22,7 @@ class ZIPCode implements IValid {
         const validLength = correctLength(0, zip.length, { minLength: 5 })
 
         if (provinceKey) {
-            return this.isValidZIPCode(zip, (PROVINCES_DATA as any)[provinceKey].zipCode) && validLength
+            return this.isValidZIPCode(zip, (PROVINCE_DATA as any)[provinceKey].zipCode) && validLength
         }
         
         return this.isValidZIPCode(zip, this.ZIP_RANGE) && validLength

@@ -1,5 +1,5 @@
 import { IGetData, IDataProvince } from "../interface"
-import { PROVINCES, PROVINCES_DATA } from "../datas/province";
+import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province";
 
 /**
  * Nusantara Valid: _province.ts
@@ -11,9 +11,9 @@ import { PROVINCES, PROVINCES_DATA } from "../datas/province";
 class Province implements IGetData {
     getData(index: string = ''): IDataProvince | IDataProvince[] {
         if (index == '') {
-            const provinces = PROVINCES.map((key) => ({
+            const provinces = PROVINCE_KEYS.map((key) => ({
                 key,
-                name: (PROVINCES_DATA as any)[key].name,
+                name: (PROVINCE_DATA as any)[key].name,
             }))
 
             return provinces
@@ -21,7 +21,7 @@ class Province implements IGetData {
 
         const province = {
             key: index,
-            name: (PROVINCES_DATA as any)[index].name
+            name: (PROVINCE_DATA as any)[index].name
         }
 
         return province

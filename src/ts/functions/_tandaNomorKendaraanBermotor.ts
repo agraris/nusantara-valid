@@ -1,6 +1,6 @@
 import { IValid, IGetData, IDataTNKB } from "../interface"
 import { TNKB_REGEX } from "../datas/tnkb"
-import { PROVINCES_DATA } from "../datas/province"
+import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province"
 
 /**
  * Nusantara Valid: _tandaNomorKendaraanBermotor.ts
@@ -10,8 +10,8 @@ import { PROVINCES_DATA } from "../datas/province"
  * @class The TandaNomorKendaraanBermotor class
 **/
 class TandaNomorKendaraanBermotor implements IValid, IGetData {
-    VALID_TNKB_AREACODE = Object.keys(PROVINCES_DATA).reduce(
-        (a, b) => a.concat((PROVINCES_DATA as any)[b].vehiclePlate), []
+    VALID_TNKB_AREACODE = PROVINCE_KEYS.reduce(
+        (a, b) => a.concat((PROVINCE_DATA as any)[b].vehiclePlate), []
     ) as string[]
 
     isValid(tnkb: string) : boolean {
@@ -39,15 +39,15 @@ class TandaNomorKendaraanBermotor implements IValid, IGetData {
 
         if (!validTNKB) return data
 
-        for (const key in PROVINCES_DATA) {
-            if ((PROVINCES_DATA as any)[key].vehiclePlate.includes(validTNKB[1])) {
+        for (const key in PROVINCE_DATA) {
+            if ((PROVINCE_DATA as any)[key].vehiclePlate.includes(validTNKB[1])) {
                 data = {
                     areaCode: validTNKB[1],
                     index: Number(validTNKB[2]),
                     detailedAreaCode: validTNKB[3],
                     province: {
                         key: key,
-                        name: (PROVINCES_DATA as any)[key].name
+                        name: (PROVINCE_DATA as any)[key].name
                     }
                 }
                 break

@@ -1,6 +1,6 @@
 import { IValid } from "../interface"
 import { numbersOnly, correctLength } from "../helpers"
-import { BANK_DATA } from "../datas/bank"
+import { BANK_DATA, BANK_KEYS } from "../datas/bank"
 
 /**
  * Nusantara Valid: _atmNumber.ts
@@ -10,7 +10,7 @@ import { BANK_DATA } from "../datas/bank"
  * @class The ATMNumber class
 **/
 class ATMNumber implements IValid {
-    VALID_ATMNUMBER_LENGTH = Object.keys(BANK_DATA).reduce(
+    VALID_ATMNUMBER_LENGTH = BANK_KEYS.reduce(
         (pref, curr) => pref.includes((BANK_DATA as any)[curr].digits as never) ? pref : pref.concat((BANK_DATA as any)[curr].digits), []
     ) as number[]
 

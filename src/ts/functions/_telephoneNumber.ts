@@ -1,5 +1,5 @@
 import { IValid, IFormat, IGetData, IDataTelephoneNumber } from "../interface";
-import { PROVINCES_DATA, COUNTRY_CODE } from "../datas/province"
+import { PROVINCE_DATA, COUNTRY_CODE, PROVINCE_KEYS } from "../datas/province"
 import { cleanPhoneNumbers } from "../helpers";
 
 /**
@@ -11,8 +11,8 @@ import { cleanPhoneNumbers } from "../helpers";
 **/
 class TelephoneNumber implements IValid, IFormat, IGetData {
 
-    VALID_TELEPHONE_AREACODE = Object.keys(PROVINCES_DATA).reduce(
-        (a, b) => a.concat((PROVINCES_DATA as any)[b].tel), []
+    VALID_TELEPHONE_AREACODE = PROVINCE_KEYS.reduce(
+        (a, b) => a.concat((PROVINCE_DATA as any)[b].tel), []
     ) as number[]
 
     isValid(tel: string): boolean {
@@ -40,11 +40,11 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
 
         data.number = this.format(cleanTelNumber)
 
-        for (const key in PROVINCES_DATA) {
-            if ((PROVINCES_DATA as any)[key].tel.includes(pfx)) {
+        for (const key in PROVINCE_DATA) {
+            if ((PROVINCE_DATA as any)[key].tel.includes(pfx)) {
                 data.origin = {
                     key: key,
-                    name: (PROVINCES_DATA as any)[key].name
+                    name: (PROVINCE_DATA as any)[key].name
                 }
                 break
             }
