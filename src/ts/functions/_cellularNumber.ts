@@ -1,5 +1,5 @@
 import { IValid, IGetData, IFormat, IDataCellularNumber } from '../interface'
-import { cleanUpPhoneNumber, correctLength } from '../helpers'
+import { cleanPhoneNumbers, correctLength } from '../helpers'
 import { CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH, CELLULAR_HYPEN_INDEXES, CELLULAR_PROVIDER_DATA, CELLULAR_PROVIDER_KEYS } from '../datas/cellular'
 import { COUNTRY_CODE } from '../datas/province'
 
@@ -21,7 +21,7 @@ class CellularNumber implements IValid, IGetData, IFormat {
 
         let prefixCollection
 
-        const cleanCellularNumber = cleanUpPhoneNumber(mobile, true)
+        const cleanCellularNumber = cleanPhoneNumbers(mobile, { cellular: true, countryCode: COUNTRY_CODE})
 
         const validLength = correctLength(1, cleanCellularNumber.length, { minLength: CELLULAR_MIN_LENGTH, maxLength: CELLULAR_MAX_LENGTH })        
 
@@ -40,7 +40,7 @@ class CellularNumber implements IValid, IGetData, IFormat {
 
         data.number = this.format(mobile)
 
-        const pfx = Number(cleanUpPhoneNumber(mobile, true).substr(0, 3))
+        const pfx = Number(cleanPhoneNumbers(mobile, { cellular: true, countryCode: COUNTRY_CODE }).substr(0, 3))
         
         for (const key of CELLULAR_PROVIDER_KEYS) {
             const cellProvider = (CELLULAR_PROVIDER_DATA as any)[key]
@@ -57,7 +57,7 @@ class CellularNumber implements IValid, IGetData, IFormat {
     }
 
     format(input: string, int: boolean = false): string {
-        const cleanCelNumber = cleanUpPhoneNumber(input, true)
+        const cleanCelNumber = cleanPhoneNumbers(input, { cellular: true, countryCode: COUNTRY_CODE })
 
         let formatedNumber = cleanCelNumber
             .slice(0, cleanCelNumber.length)

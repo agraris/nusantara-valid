@@ -5,6 +5,6 @@
 **/
 export * from './_range' // Should always on top
 export * from './_numbersOnly'
-export * from './_cleanUpPhoneNumber'
+export * from './_cleanPhoneNumbers'
 export * from './_correctLength'
 export * from './_formatDate'

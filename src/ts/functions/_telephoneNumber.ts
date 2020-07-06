@@ -1,6 +1,6 @@
 import { IValid, IFormat, IGetData, IDataTelephoneNumber } from "../interface";
 import { PROVINCES_DATA, COUNTRY_CODE } from "../datas/province"
-import { cleanUpPhoneNumber } from "../helpers";
+import { cleanPhoneNumbers } from "../helpers";
 
 /**
  * Nusantara Valid: _telephoneNumber.ts
@@ -18,7 +18,7 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
     isValid(tel: string): boolean {
         if (!tel || typeof tel !== 'string') return false
 
-        const cleanTelNumber = cleanUpPhoneNumber(tel)
+        const cleanTelNumber = cleanPhoneNumbers(tel)
 
         return this.isValidCellularPrefix(cleanTelNumber)
     }
@@ -30,7 +30,7 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
     getData(tel: string): IDataTelephoneNumber {
         let data = {} as IDataTelephoneNumber
 
-        const cleanTelNumber = cleanUpPhoneNumber(tel)
+        const cleanTelNumber = cleanPhoneNumbers(tel)
 
         let pfx = Number(cleanTelNumber.substr(0, 2))
 
@@ -54,7 +54,7 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
     }
 
     format(tel: string, int:boolean = false): string {
-        const cleanTelNumber = cleanUpPhoneNumber(tel)
+        const cleanTelNumber = cleanPhoneNumbers(tel)
         let TEL_HYPEN_INDEX = [] as any
 
         if (this.VALID_TELEPHONE_AREACODE.includes(Number(cleanTelNumber.substr(0, 2)))) {
