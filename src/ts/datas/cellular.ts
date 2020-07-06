@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
 **/
 
-const range = (start: number, stop: number) => Array.from({ length: (stop - start) / 1 + 1 }, (_, i) => start + (i * 1))
+import { range } from '../helpers';
 
 /**
  * CELLULAR_PROVIDER_DATA
