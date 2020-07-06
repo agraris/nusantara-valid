@@ -6,6 +6,7 @@
 export * from './_atmNumber'
 export * from './_bank'
 export * from './_cellularNumber'
+export * from './_cellularProvider'
 export * from './_creditCard'
 export * from './_email'
 export * from './_nomorIndukKependudukan'
