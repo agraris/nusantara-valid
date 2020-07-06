@@ -1,5 +1,5 @@
 import { IGetData, IDataBank } from "../interface"
-import { BANK_DATA, BANKS } from "../datas/bank"
+import { BANK_DATA, BANK_KEYS } from "../datas/bank"
 
 /**
  * Nusantara Valid: _bank.ts
@@ -12,19 +12,17 @@ class Bank implements IGetData {
     getData(index: string = ''): IDataBank | IDataBank[] {
         let bank
 
-        if (index) {
+        if (!index) {
+            bank = BANK_KEYS.map((key) => ({
+                key,
+                name: (BANK_DATA as any)[key].name,
+            }))
+        } else {
             bank = {
                 key: index,
                 name: (BANK_DATA as any)[index].name
             }
-
-            return bank
         }
-
-        bank = BANKS.map((key) => ({
-            key,
-            name: (BANK_DATA as any)[key].name,
-        }))
 
         return bank
     }

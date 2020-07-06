@@ -140,4 +140,5 @@ export const BANK_DATA =
     
 }
 
-export const BANKS = Object.keys(BANK_DATA);
+export type Bank = keyof typeof BANK_DATA;
+export const BANK_KEYS = Object.keys(BANK_DATA) as Bank[];
