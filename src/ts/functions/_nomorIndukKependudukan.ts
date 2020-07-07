@@ -11,7 +11,6 @@ import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province"
  * @class The NomorIndukKepemdudukan class
 **/
 class NomorIndukKependudukan implements IValid, IGetData {
-
     VALID_BPSCODE = PROVINCE_KEYS.reduce(
         (a, b) => a.concat((PROVINCE_DATA as any)[b].bpsCode), []
     ) as number[]
@@ -26,12 +25,11 @@ class NomorIndukKependudukan implements IValid, IGetData {
         const validLength = correctLength(0, validNIK[0].length, { minLength: NIK_LENGTH })
         const cBirthday = this.reformatBirthday(validNIK[4])
 
-        // Comparison
-        if (provinceKey || birthday)
-        {
-            let validProvince = true
-            let validBirthday = true
+        let validProvince = includes(this.VALID_BPSCODE, parseInt(validNIK[1]))
+        let validBirthday = !isNaN(formatDate('19' + cBirthday).getTime())
 
+        // Comparison
+        if (provinceKey || birthday) {
             if (provinceKey) {
                 if ((PROVINCE_DATA as any)[provinceKey].bpsCode != validNIK[1]) {
                     validProvince = false
@@ -40,20 +38,13 @@ class NomorIndukKependudukan implements IValid, IGetData {
 
             if (birthday) {
                 const vBirthday = numbersOnly(birthday).substring(2, 8) // Strip the first 2 digits of year
-                
                 if (cBirthday != vBirthday) {
                     validBirthday = false
                 }
             }
-
-            return validProvince && validBirthday && validLength
         }
 
-        return validLength && this.isValidProvince(parseInt(validNIK[1])) && !isNaN(formatDate('19' + cBirthday).getTime())
-    }
-
-    isValidProvince(bpsCode: number): boolean {
-        return includes(this.VALID_BPSCODE, bpsCode)
+        return validLength && validProvince && validBirthday
     }
 
     // Reformat DDMMYY into YYMMDD
@@ -84,22 +75,19 @@ class NomorIndukKependudukan implements IValid, IGetData {
         data.nik = validNIK[0]
         data.sex = Number(validNIK[4].substr(0, 2)) > 40 ? 'Female' : 'Male'
 
-        const fBday = this.reformatBirthday(validNIK[4])
-
-        const validProvince = this.isValidProvince(Number(validNIK[1]))
-        const validBirthday = !isNaN(formatDate('19' + fBday).getTime())
+        const reformatedBirthday = this.reformatBirthday(validNIK[4])
+        const validProvince = includes(this.VALID_BPSCODE, parseInt(validNIK[1]))
+        const validBirthday = !isNaN(formatDate('19' + reformatedBirthday).getTime())
 
         if (validProvince) {
             let province = {} as IDataProvince
 
-            for (const key in PROVINCE_DATA) {
-                if (PROVINCE_DATA.hasOwnProperty(key)) {
-                    const el = (PROVINCE_DATA as any)[key];
-                    if (el.bpsCode == Number(validNIK[1])) {
-                        province.key = key,
-                        province.name = el.name
-                        break
-                    }
+            for (const key of PROVINCE_KEYS) {
+                const element = (PROVINCE_DATA as any)[key];
+                if (element.bpsCode == Number(validNIK[1])) {
+                    province.key = key,
+                    province.name = element.name
+                    break
                 }
             }
 
@@ -108,9 +96,8 @@ class NomorIndukKependudukan implements IValid, IGetData {
 
         if (validBirthday) {
             const currentYear = new Date().getFullYear()
-
-            let bYYYY = Number(fBday.substr(0, 2)) + 2000
-            const bMMYY = fBday.substring(2, 6)
+            let bYYYY = Number(reformatedBirthday.substr(0, 2)) + 2000
+            const bMMYY = reformatedBirthday.substring(2, 6)
 
             if (bYYYY > currentYear) {
                 bYYYY = bYYYY - 100
