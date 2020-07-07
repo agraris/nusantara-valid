@@ -19,9 +19,11 @@ class ATMNumber implements IValid {
 
         const numOnly = numbersOnly(atm)
 
-        if (bank) return (BANK_DATA as any)[bank].digits == numOnly.length
+        let matchLength = correctLength(2, numOnly.length, { collection: this.VALID_ATMNUMBER_LENGTH })
 
-        return correctLength(2, numOnly.length, { collection: this.VALID_ATMNUMBER_LENGTH })
+        if (bank) matchLength = correctLength(0, numOnly.length, { minLength: (BANK_DATA as any)[bank].digits } )
+
+        return matchLength
     }
 }
 
