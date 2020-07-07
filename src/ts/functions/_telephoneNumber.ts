@@ -51,7 +51,7 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
             if (includes(element.tel, pfx)) {
                 data.origin = {
                     key: key,
-                    name: (PROVINCE_DATA as any)[key].name
+                    name: element.name
                 }
                 break
             }
@@ -84,7 +84,7 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
                 return result;
             }, '');
 
-        if (int) return '+' + COUNTRY_CODE.toString() + formatedNumber
+        if (int) return '+' + COUNTRY_CODE + formatedNumber
 
         return '0' + formatedNumber
     }

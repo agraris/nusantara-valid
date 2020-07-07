@@ -22,9 +22,7 @@ class TandaNomorKendaraanBermotor implements IValid, IGetData {
 
         const validTNKB = TNKB_REGEX.exec(TNKB)
 
-        if (!validTNKB) return false
-
-        return this.isValidTNKBArea(validTNKB[1])
+        return validTNKB !== null && this.isValidTNKBArea(validTNKB[1])
     }
 
     isValidTNKBArea(tnkb: string): boolean {
@@ -40,15 +38,16 @@ class TandaNomorKendaraanBermotor implements IValid, IGetData {
 
         if (!validTNKB) return data
 
-        for (const key in PROVINCE_DATA) {
-            if (includes((PROVINCE_DATA as any)[key].vehiclePlate, validTNKB[1])) {
+        for (const key of PROVINCE_KEYS) {
+            const element = (PROVINCE_DATA as any)[key]
+            if (includes(element.vehiclePlate, validTNKB[1])) {
                 data = {
                     areaCode: validTNKB[1],
                     index: Number(validTNKB[2]),
                     detailedAreaCode: validTNKB[3],
                     province: {
                         key: key,
-                        name: (PROVINCE_DATA as any)[key].name
+                        name: element.name
                     }
                 }
                 break
