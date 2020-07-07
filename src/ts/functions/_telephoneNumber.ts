@@ -20,11 +20,21 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
 
         const cleanTelNumber = cleanPhoneNumbers(tel)
 
-        return this.isValidCellularPrefix(cleanTelNumber)
+        return !isNaN(this.isValidCellularPrefix(cleanTelNumber))
     }
 
-    isValidCellularPrefix(parsedTel: string): boolean {
-        return includes(this.VALID_TELEPHONE_AREACODE, Number(parsedTel.substr(0, 2))) || includes(this.VALID_TELEPHONE_AREACODE, Number(parsedTel.substr(0, 3)))
+    isValidCellularPrefix(parsedTel: string): number {
+        let thePrefix = Number(parsedTel.substr(0, 2))
+
+        if (includes(this.VALID_TELEPHONE_AREACODE, thePrefix))
+            return thePrefix
+
+        thePrefix = Number(parsedTel.substr(0, 3))
+
+        if (includes(this.VALID_TELEPHONE_AREACODE, thePrefix))
+            return thePrefix
+
+        return NaN
     }
     
     getData(tel: string): IDataTelephoneNumber {
@@ -32,16 +42,13 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
 
         const cleanTelNumber = cleanPhoneNumbers(tel)
 
-        let pfx = Number(cleanTelNumber.substr(0, 2))
-
-        if (!includes(this.VALID_TELEPHONE_AREACODE, pfx)) {
-            pfx = Number(cleanTelNumber.substr(0, 3))
-        }
-
         data.number = this.format(cleanTelNumber)
 
-        for (const key in PROVINCE_DATA) {
-            if (includes((PROVINCE_DATA as any)[key].tel, pfx)) {
+        const pfx = this.isValidCellularPrefix(cleanTelNumber)
+
+        for (const key of PROVINCE_KEYS) {
+            const element = (PROVINCE_DATA as any)[key]
+            if (includes(element.tel, pfx)) {
                 data.origin = {
                     key: key,
                     name: (PROVINCE_DATA as any)[key].name
@@ -55,16 +62,14 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
 
     format(tel: string, int:boolean = false): string {
         const cleanTelNumber = cleanPhoneNumbers(tel)
+        const pfx = this.isValidCellularPrefix(cleanTelNumber).toString()
+
         let TEL_HYPEN_INDEX = [] as any
 
-        if (includes(this.VALID_TELEPHONE_AREACODE, Number(cleanTelNumber.substr(0, 2)))) {
+        if (pfx.length === 2)
             TEL_HYPEN_INDEX = [1]
-        }
-        else if (includes(this.VALID_TELEPHONE_AREACODE, Number(cleanTelNumber.substr(0, 3)))) {
-            TEL_HYPEN_INDEX = [2]
-        }
         else
-            return ''
+            TEL_HYPEN_INDEX = [2]
 
         let formatedNumber = cleanTelNumber
             .slice(0, cleanTelNumber.length)
