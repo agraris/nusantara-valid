@@ -10,7 +10,6 @@ import { numbersOnly, correctLength, includes } from "../helpers"
  * @class The NomorPokokWajibPajak class
 **/
 class NomorPokokWajibPajak implements IValid, IFormat {
-
     isValid(npwp: string): boolean {
         if (!npwp || typeof npwp !== 'string') return false
 
@@ -18,19 +17,15 @@ class NomorPokokWajibPajak implements IValid, IFormat {
 
         const regexNPWP = NPWP_REGEX.exec(numOnly)
 
-        if (!regexNPWP) return false
-
-        return this.isValidTaxIdentity(regexNPWP[1]) && correctLength(0, regexNPWP[0].length, { minLength: NPWP_LENGTH })
+        return regexNPWP !== null && this.isValidTaxIdentity(regexNPWP[1]) && correctLength(0, regexNPWP[0].length, { minLength: NPWP_LENGTH })
     }
 
     isValidTaxIdentity(taxIdentity: string): boolean {
         return includes(NPWP_TAX_IDENTITIES, taxIdentity)
     }
 
-    format(npwp: string, pad = true): string {
+    format(npwp: string): string {
         let newNPWP = numbersOnly(npwp)
-
-        if (pad) newNPWP = newNPWP.padStart(NPWP_LENGTH, '0');
 
         return newNPWP
             .slice(0, NPWP_LENGTH)
@@ -68,9 +63,8 @@ export function isValidNPWP(npwp: string): boolean {
  * Format NPWP to the correct requirement
  *
  * @param {string} npwp - TheNPWP to be formated
- * @param {boolean} pad
  * @return {string} Formated NPWP
 **/
-export function formatNPWP(npwp: string, pad: boolean = true): string {
-    return theNPWP.format(npwp, pad)
+export function formatNPWP(npwp: string): string {
+    return theNPWP.format(npwp)
 }

@@ -183,9 +183,8 @@ isValidNPWP('09.123.123.1-123.123');
 isValidNPWP('091231231123123');
 
 // You should validate the NPWP number before formating
-formatNPWP(npwp: string | number, pad?: true); // string
+formatNPWP(npwp: string); // string
 formatNPWP('091231231123123');
-formatNPWP('671231231123123', false);
 ```
 
 ### Province
