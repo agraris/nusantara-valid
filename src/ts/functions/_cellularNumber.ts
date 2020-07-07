@@ -1,5 +1,5 @@
 import { IValid, IGetData, IFormat, IDataCellularNumber } from '../interface'
-import { cleanPhoneNumbers, correctLength } from '../helpers'
+import { cleanPhoneNumbers, correctLength, includes } from '../helpers'
 import { CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH, CELLULAR_HYPEN_INDEXES, CELLULAR_PROVIDER_DATA, CELLULAR_PROVIDER_KEYS } from '../datas/cellular'
 import { COUNTRY_CODE } from '../datas/province'
 
@@ -32,7 +32,7 @@ class CellularNumber implements IValid, IGetData, IFormat {
     }
 
     isValidCellularProviderPrefix(prefix: number, prefixCollection: number[]): boolean {
-        return prefixCollection.includes(prefix)
+        return includes(prefixCollection, prefix)
     }
 
     getData(mobile: string): IDataCellularNumber {
@@ -44,7 +44,7 @@ class CellularNumber implements IValid, IGetData, IFormat {
         
         for (const key of CELLULAR_PROVIDER_KEYS) {
             const cellProvider = (CELLULAR_PROVIDER_DATA as any)[key]
-            if (cellProvider.prefix.includes(pfx)) {
+            if (includes(cellProvider.prefix, pfx)) {
                 data.provider = {
                     key: key,
                     name: cellProvider.name
@@ -66,7 +66,7 @@ class CellularNumber implements IValid, IGetData, IFormat {
                 const result = `${a}${b}`;
 
                 if (!(index === cleanCelNumber.length - 1)) {
-                    if (CELLULAR_HYPEN_INDEXES.includes(index)) return `${result}-`;
+                    if (includes(CELLULAR_HYPEN_INDEXES, index)) return `${result}-`;
                 }
 
                 return result;

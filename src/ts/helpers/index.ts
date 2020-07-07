@@ -3,8 +3,9 @@
  *
  * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
 **/
-export * from './_range' // Should always on top
 export * from './_numbersOnly'
 export * from './_cleanPhoneNumbers'
 export * from './_correctLength'
 export * from './_formatDate'
+export * from './_includes'
+export * from './_range'

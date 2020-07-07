@@ -1,6 +1,6 @@
 import { IValid, IFormat, IGetData, IDataTelephoneNumber } from "../interface";
 import { PROVINCE_DATA, COUNTRY_CODE, PROVINCE_KEYS } from "../datas/province"
-import { cleanPhoneNumbers } from "../helpers";
+import { cleanPhoneNumbers, includes } from "../helpers";
 
 /**
  * Nusantara Valid: _telephoneNumber.ts
@@ -24,7 +24,7 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
     }
 
     isValidCellularPrefix(parsedTel: string): boolean {
-        return this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(0, 2))) || this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(0, 3)))
+        return includes(this.VALID_TELEPHONE_AREACODE, Number(parsedTel.substr(0, 2))) || includes(this.VALID_TELEPHONE_AREACODE, Number(parsedTel.substr(0, 3)))
     }
     
     getData(tel: string): IDataTelephoneNumber {
@@ -34,14 +34,14 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
 
         let pfx = Number(cleanTelNumber.substr(0, 2))
 
-        if (!this.VALID_TELEPHONE_AREACODE.includes(pfx)) {
+        if (!includes(this.VALID_TELEPHONE_AREACODE, pfx)) {
             pfx = Number(cleanTelNumber.substr(0, 3))
         }
 
         data.number = this.format(cleanTelNumber)
 
         for (const key in PROVINCE_DATA) {
-            if ((PROVINCE_DATA as any)[key].tel.includes(pfx)) {
+            if (includes((PROVINCE_DATA as any)[key].tel, pfx)) {
                 data.origin = {
                     key: key,
                     name: (PROVINCE_DATA as any)[key].name
@@ -57,10 +57,10 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
         const cleanTelNumber = cleanPhoneNumbers(tel)
         let TEL_HYPEN_INDEX = [] as any
 
-        if (this.VALID_TELEPHONE_AREACODE.includes(Number(cleanTelNumber.substr(0, 2)))) {
+        if (includes(this.VALID_TELEPHONE_AREACODE, Number(cleanTelNumber.substr(0, 2)))) {
             TEL_HYPEN_INDEX = [1]
         }
-        else if (this.VALID_TELEPHONE_AREACODE.includes(Number(cleanTelNumber.substr(0, 3)))) {
+        else if (includes(this.VALID_TELEPHONE_AREACODE, Number(cleanTelNumber.substr(0, 3)))) {
             TEL_HYPEN_INDEX = [2]
         }
         else
@@ -73,7 +73,7 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
                 const result = `${a}${b}`;
 
                 if (!(index === cleanTelNumber.length - 1)) {
-                    if (TEL_HYPEN_INDEX.includes(index)) return `${result}-`;
+                    if (includes(TEL_HYPEN_INDEX, index)) return `${result}-`;
                 }
 
                 return result;

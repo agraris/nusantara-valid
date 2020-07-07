@@ -1,6 +1,6 @@
 import { IValid, IGetData, IDataNIK, IDataProvince } from "../interface"
 import { NIK_REGEX, NIK_LENGTH } from "../datas/nik"
-import { numbersOnly, correctLength, formatDate } from "../helpers"
+import { numbersOnly, correctLength, formatDate, includes } from "../helpers"
 import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province"
 
 /**
@@ -53,7 +53,7 @@ class NomorIndukKependudukan implements IValid, IGetData {
     }
 
     isValidProvince(bpsCode: number): boolean {
-        return this.VALID_BPSCODE.includes(bpsCode)
+        return includes(this.VALID_BPSCODE, bpsCode)
     }
 
     // Reformat DDMMYY into YYMMDD

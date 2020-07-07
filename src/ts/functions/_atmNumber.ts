@@ -1,5 +1,5 @@
 import { IValid } from "../interface"
-import { numbersOnly, correctLength } from "../helpers"
+import { numbersOnly, correctLength, includes } from "../helpers"
 import { BANK_DATA, BANK_KEYS } from "../datas/bank"
 
 /**
@@ -11,7 +11,7 @@ import { BANK_DATA, BANK_KEYS } from "../datas/bank"
 **/
 class ATMNumber implements IValid {
     VALID_ATMNUMBER_LENGTH = BANK_KEYS.reduce(
-        (pref, curr) => pref.includes((BANK_DATA as any)[curr].digits as never) ? pref : pref.concat((BANK_DATA as any)[curr].digits), []
+        (pref, curr) => includes(pref, (BANK_DATA as any)[curr].digits as never) ? pref : pref.concat((BANK_DATA as any)[curr].digits), []
     ) as number[]
 
     isValid(atm: string, bank: string = ''): boolean {

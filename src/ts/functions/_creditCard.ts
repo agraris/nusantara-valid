@@ -1,5 +1,5 @@
 import { IValid, IFormat } from "../interface"
-import { numbersOnly, correctLength } from "../helpers"
+import { numbersOnly, correctLength, includes } from "../helpers"
 import { CC_LENGTH, CC_VALID_MII, CC_SPACE_INDEXES } from "../datas/creditCard"
 
 /**
@@ -20,7 +20,7 @@ class CreditCard implements IValid, IFormat {
     }
 
     isValidMII(mii: string): boolean {
-        return CC_VALID_MII.includes(mii)
+        return includes(CC_VALID_MII, mii)
     }
 
     format(cc: string): string {
@@ -33,7 +33,7 @@ class CreditCard implements IValid, IFormat {
                 const result = `${a}${b}`;
 
                 if (!(index === newCC.length - 1)) {
-                    if (CC_SPACE_INDEXES.includes(index)) return `${result} `;
+                    if (includes(CC_SPACE_INDEXES, index)) return `${result} `;
                 }
 
                 return result;

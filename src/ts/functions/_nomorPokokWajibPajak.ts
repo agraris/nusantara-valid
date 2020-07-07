@@ -1,6 +1,6 @@
 import { IValid, IFormat } from "../interface"
 import { NPWP_REGEX, NPWP_LENGTH, NPWP_TAX_IDENTITIES, NPWP_DOT_INDEXES, NPWP_HYPHEN_INDEXES } from "../datas/npwp"
-import { numbersOnly, correctLength } from "../helpers"
+import { numbersOnly, correctLength, includes } from "../helpers"
 
 /**
  * Nusantara Valid: _nomorPokokWajibPajak.ts
@@ -24,7 +24,7 @@ class NomorPokokWajibPajak implements IValid, IFormat {
     }
 
     isValidTaxIdentity(taxIdentity: string): boolean {
-        return NPWP_TAX_IDENTITIES.includes(taxIdentity)
+        return includes(NPWP_TAX_IDENTITIES, taxIdentity)
     }
 
     format(npwp: string, pad = true): string {
@@ -39,8 +39,8 @@ class NomorPokokWajibPajak implements IValid, IFormat {
                 const result = `${a}${b}`;
 
                 if (!(index === newNPWP.length - 1)) {
-                    if (NPWP_DOT_INDEXES.includes(index)) return `${result}.`;
-                    if (NPWP_HYPHEN_INDEXES.includes(index)) return `${result}-`;
+                    if (includes(NPWP_DOT_INDEXES, index)) return `${result}.`;
+                    if (includes(NPWP_HYPHEN_INDEXES, index)) return `${result}-`;
                 }
 
                 return result;

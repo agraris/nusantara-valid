@@ -1,6 +1,7 @@
 import { IValid, IGetData, IDataTNKB } from "../interface"
 import { TNKB_REGEX } from "../datas/tnkb"
 import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province"
+import { includes } from '../helpers'
 
 /**
  * Nusantara Valid: _tandaNomorKendaraanBermotor.ts
@@ -27,7 +28,7 @@ class TandaNomorKendaraanBermotor implements IValid, IGetData {
     }
 
     isValidTNKBArea(tnkb: string): boolean {
-        return this.VALID_TNKB_AREACODE.includes(tnkb)
+        return includes(this.VALID_TNKB_AREACODE, tnkb)
     }
 
     getData(tnkb: string): IDataTNKB {
@@ -40,7 +41,7 @@ class TandaNomorKendaraanBermotor implements IValid, IGetData {
         if (!validTNKB) return data
 
         for (const key in PROVINCE_DATA) {
-            if ((PROVINCE_DATA as any)[key].vehiclePlate.includes(validTNKB[1])) {
+            if (includes((PROVINCE_DATA as any)[key].vehiclePlate, validTNKB[1])) {
                 data = {
                     areaCode: validTNKB[1],
                     index: Number(validTNKB[2]),
