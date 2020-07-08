@@ -84,9 +84,7 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
                 return result;
             }, '');
 
-        if (int) return '+' + COUNTRY_CODE + formatedNumber
-
-        return '0' + formatedNumber
+        return int ? '+' + COUNTRY_CODE + formatedNumber : '0' + formatedNumber
     }
 }
 

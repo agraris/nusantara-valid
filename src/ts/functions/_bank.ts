@@ -12,16 +12,16 @@ class Bank implements IGetData {
     getData(index: string = ''): IDataBank | IDataBank[] {
         let bank
 
-        if (!index) {
-            bank = BANK_KEYS.map((key) => ({
-                key,
-                name: (BANK_DATA as any)[key].name,
-            }))
-        } else {
+        if (index) {
             bank = {
                 key: index,
                 name: (BANK_DATA as any)[index].name
             }
+        } else {
+            bank = BANK_KEYS.map((key) => ({
+                key,
+                name: (BANK_DATA as any)[key].name,
+            }))
         }
 
         return bank

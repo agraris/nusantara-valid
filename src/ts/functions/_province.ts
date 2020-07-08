@@ -10,18 +10,18 @@ import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province";
 **/
 class Province implements IGetData {
     getData(index: string = ''): IDataProvince | IDataProvince[] {
-        if (index == '') {
-            const provinces = PROVINCE_KEYS.map((key) => ({
+        let province
+
+        if (index) {
+            province = {
+                key: index,
+                name: (PROVINCE_DATA as any)[index].name
+            }
+        } else {
+            province = PROVINCE_KEYS.map((key) => ({
                 key,
                 name: (PROVINCE_DATA as any)[key].name,
             }))
-
-            return provinces
-        }
-
-        const province = {
-            key: index,
-            name: (PROVINCE_DATA as any)[index].name
         }
 
         return province

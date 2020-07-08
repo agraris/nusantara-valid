@@ -12,16 +12,16 @@ class CellularProvider implements IGetData {
     getData(index: string = ''): IDataCellularProvider | IDataCellularProvider[] {
         let providers
 
-        if (!index) {
-            providers = CELLULAR_PROVIDER_KEYS.map((key) => ({
-                key,
-                name: (CELLULAR_PROVIDER_DATA as any)[key].name,
-            }))
-        } else {
+        if (index) {
             providers = {
                 key: index,
                 name: (CELLULAR_PROVIDER_DATA as any)[index].name
             }
+        } else {
+            providers = CELLULAR_PROVIDER_KEYS.map((key) => ({
+                key,
+                name: (CELLULAR_PROVIDER_DATA as any)[key].name,
+            }))
         }
 
         return providers

@@ -15,9 +15,9 @@ class Email implements IValid {
 
         const validEmail = EMAIL_REGEX.exec(email)
 
-        if (!validEmail) return false
-
-        return correctLength(1, validEmail[0].length, { minLength: 1, maxLength: MAX_EMAIL_LENGTH }) && correctLength(1, validEmail[1].length, { minLength: 1, maxLength: MAX_LOCALPART_LENGTH })
+        return validEmail !== null 
+            && correctLength(1, validEmail[0].length, { minLength: 1, maxLength: MAX_EMAIL_LENGTH }) 
+            && correctLength(1, validEmail[1].length, { minLength: 1, maxLength: MAX_LOCALPART_LENGTH })
     }
 }
 

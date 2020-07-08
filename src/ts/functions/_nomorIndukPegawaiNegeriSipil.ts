@@ -10,15 +10,15 @@ import { numbersOnly, correctLength, formatDate } from "../helpers"
  * @class The NomorIndukPegawaiNegeriSipil class
 **/
 class NomorIndukPegawaiNegeriSipil implements IValid {
-
     isValid(nip: string): boolean {
         if (!nip || typeof nip !== 'string') return false
 
         const validNIP = NIP_REGEX.exec(numbersOnly(nip))
-
-        if(!validNIP) return false
         
-        return !isNaN(formatDate(validNIP[1]).getTime()) && !isNaN(formatDate(validNIP[2]).getTime()) && correctLength(0, validNIP[0].length, { minLength: NIP_LENGTH })
+        return validNIP !== null 
+            && !isNaN(formatDate(validNIP[1]).getTime()) 
+            && !isNaN(formatDate(validNIP[2]).getTime()) 
+            && correctLength(0, validNIP[0].length, { minLength: NIP_LENGTH })
     }
 }
 

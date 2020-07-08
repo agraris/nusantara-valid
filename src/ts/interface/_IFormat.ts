@@ -4,5 +4,5 @@
  * @interface
 **/
 export interface IFormat {
-    format: (args: any) => any;
+    format: (args: any) => string;
 }

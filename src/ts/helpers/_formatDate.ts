@@ -7,11 +7,5 @@ import { numbersOnly } from './_numbersOnly'
  * @return {Date} Formated date.
 **/
 export function formatDate(date: string): Date {
-    const numOnly = numbersOnly(date)
-
-    const newDate = numOnly.replace(/(\d{4})(?:(\d{2})?)(?:(\d{2})?)/, "$1-$2-$3")
-
-    const formatedDate = new Date(newDate)
-
-    return formatedDate
+    return new Date(numbersOnly(date).replace(/(\d{4})(?:(\d{2})?)(?:(\d{2})?)/, "$1-$2-$3"))
 }

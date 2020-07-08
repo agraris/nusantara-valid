@@ -11,6 +11,7 @@ import { includes } from '../helpers'
  * @class The TandaNomorKendaraanBermotor class
 **/
 class TandaNomorKendaraanBermotor implements IValid, IGetData {
+
     VALID_TNKB_AREACODE = PROVINCE_KEYS.reduce(
         (a, b) => a.concat((PROVINCE_DATA as any)[b].vehiclePlate), []
     ) as string[]
@@ -22,7 +23,8 @@ class TandaNomorKendaraanBermotor implements IValid, IGetData {
 
         const validTNKB = TNKB_REGEX.exec(TNKB)
 
-        return validTNKB !== null && this.isValidTNKBArea(validTNKB[1])
+        return validTNKB !== null
+            && this.isValidTNKBArea(validTNKB[1])
     }
 
     isValidTNKBArea(tnkb: string): boolean {

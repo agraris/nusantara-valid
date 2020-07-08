@@ -11,6 +11,7 @@ import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province"
  * @class The NomorIndukKepemdudukan class
 **/
 class NomorIndukKependudukan implements IValid, IGetData {
+
     VALID_BPSCODE = PROVINCE_KEYS.reduce(
         (a, b) => a.concat((PROVINCE_DATA as any)[b].bpsCode), []
     ) as number[]
@@ -29,22 +30,22 @@ class NomorIndukKependudukan implements IValid, IGetData {
         let validBirthday = !isNaN(formatDate('19' + cBirthday).getTime())
 
         // Comparison
-        if (provinceKey || birthday) {
-            if (provinceKey) {
-                if ((PROVINCE_DATA as any)[provinceKey].bpsCode != validNIK[1]) {
-                    validProvince = false
-                }
-            }
-
-            if (birthday) {
-                const vBirthday = numbersOnly(birthday).substring(2, 8) // Strip the first 2 digits of year
-                if (cBirthday != vBirthday) {
-                    validBirthday = false
-                }
+        if (provinceKey) {
+            if ((PROVINCE_DATA as any)[provinceKey].bpsCode != validNIK[1]) {
+                validProvince = false
             }
         }
 
-        return validLength && validProvince && validBirthday
+        if (birthday) {
+            const vBirthday = numbersOnly(birthday).substring(2, 8) // Strip the first 2 digits of year
+            if (cBirthday != vBirthday) {
+                validBirthday = false
+            }
+        }
+
+        return validLength 
+            && validProvince 
+            && validBirthday
     }
 
     // Reformat DDMMYY into YYMMDD
@@ -84,7 +85,7 @@ class NomorIndukKependudukan implements IValid, IGetData {
 
             for (const key of PROVINCE_KEYS) {
                 const element = (PROVINCE_DATA as any)[key];
-                if (element.bpsCode == Number(validNIK[1])) {
+                if (element.bpsCode == validNIK[1]) {
                     province.key = key,
                     province.name = element.name
                     break

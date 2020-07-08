@@ -8,9 +8,8 @@
 export const range = (start: number, stop: number): number[] => {
     let numbers = [] as number[]
 
-    for (let i = start; i <= stop; i++) {
+    for (let i = start; i <= stop; i++)
         numbers = numbers.concat(i)
-    }
 
     return numbers
 }

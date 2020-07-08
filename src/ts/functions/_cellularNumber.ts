@@ -22,13 +22,15 @@ class CellularNumber implements IValid, IGetData, IFormat {
         let prefixCollection
 
         const cleanCellularNumber = cleanPhoneNumbers(mobile, { cellular: true, countryCode: COUNTRY_CODE})
-
         const validLength = correctLength(1, cleanCellularNumber.length, { minLength: CELLULAR_MIN_LENGTH, maxLength: CELLULAR_MAX_LENGTH })        
 
-        if (providerKey) prefixCollection = (CELLULAR_PROVIDER_DATA as any)[providerKey].prefix
-        else prefixCollection = this.CELLULAR_PROVIDER_PREFIXES
+        if (providerKey)
+            prefixCollection = (CELLULAR_PROVIDER_DATA as any)[providerKey].prefix
+        else
+            prefixCollection = this.CELLULAR_PROVIDER_PREFIXES
         
-        return validLength && this.isValidCellularProviderPrefix(Number(cleanCellularNumber.substr(0, 3)), prefixCollection)
+        return validLength 
+            && this.isValidCellularProviderPrefix(Number(cleanCellularNumber.substr(0, 3)), prefixCollection)
     }
 
     isValidCellularProviderPrefix(prefix: number, prefixCollection: number[]): boolean {
@@ -72,9 +74,7 @@ class CellularNumber implements IValid, IGetData, IFormat {
                 return result;
             }, '');
 
-        if (int) return '+' + COUNTRY_CODE.toString() + formatedNumber
-
-        return '0' + formatedNumber
+        return int ? '+' + COUNTRY_CODE.toString() + formatedNumber : '0' + formatedNumber
     }
 }
 

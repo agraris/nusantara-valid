@@ -13,7 +13,7 @@
  * NIP_REGEX[3] = 1 digit of Gender identifier (1 for man, 2 for woman)
  * NIP_REGEX[4] = 3 digits of Index
 **/
-export const NIP_REGEX = /^([0-9]{8})([0-9]{6})([1,2]{1})([0-9]{3})$/
+export const NIP_REGEX = /^(\d{8})(\d{6})([1,2]{1})(\d{3})$/
 
 /**
  * NIP_LENGTH

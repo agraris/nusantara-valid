@@ -17,7 +17,9 @@ class NomorPokokWajibPajak implements IValid, IFormat {
 
         const regexNPWP = NPWP_REGEX.exec(numOnly)
 
-        return regexNPWP !== null && this.isValidTaxIdentity(regexNPWP[1]) && correctLength(0, regexNPWP[0].length, { minLength: NPWP_LENGTH })
+        return regexNPWP !== null 
+            && this.isValidTaxIdentity(regexNPWP[1]) 
+            && correctLength(0, regexNPWP[0].length, { minLength: NPWP_LENGTH })
     }
 
     isValidTaxIdentity(taxIdentity: string): boolean {
