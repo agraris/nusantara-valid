@@ -41,6 +41,18 @@ export interface IDataNIK {
 }
 
 /**
+ * IDataNIP data interface
+ *
+ * @interface
+**/
+export interface IDataNIP {
+    nip: string,
+    birthday: Date,
+    recruit_date: string,
+    sex: string
+}
+
+/**
  * IDataProvince data interface
  *
  * @interface

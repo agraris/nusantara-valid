@@ -1,4 +1,4 @@
-import { IValid } from "../interface"
+import { IValid, IGetData, IDataNIP } from "../interface"
 import { NIP_LENGTH, NIP_REGEX } from "../datas/nip"
 import { numbersOnly, correctLength, formatDate } from "../helpers"
 
@@ -9,7 +9,7 @@ import { numbersOnly, correctLength, formatDate } from "../helpers"
  *
  * @class The NomorIndukPegawaiNegeriSipil class
 **/
-class NomorIndukPegawaiNegeriSipil implements IValid {
+class NomorIndukPegawaiNegeriSipil implements IValid, IGetData {
     isValid(nip: string): boolean {
         if (!nip || typeof nip !== 'string') return false
 
@@ -19,6 +19,21 @@ class NomorIndukPegawaiNegeriSipil implements IValid {
             && !isNaN(formatDate(validNIP[1]).getTime()) 
             && !isNaN(formatDate(validNIP[2]).getTime()) 
             && correctLength(0, validNIP[0].length, { minLength: NIP_LENGTH })
+    }
+
+    getData(nip: string): IDataNIP {
+        let data = {} as IDataNIP
+
+        const validNIP = NIP_REGEX.exec(numbersOnly(nip))
+
+        if (!validNIP) return data
+
+        data.nip = validNIP[0]
+        data.birthday = formatDate(validNIP[1])
+        data.recruit_date = validNIP[2].substr(0, 4) + '-' + validNIP[2].substr(4, 2)
+        data.sex = Number(validNIP[3]) == 1 ? 'Male' : 'Female'
+
+        return data
     }
 }
 
@@ -34,4 +49,16 @@ const theNIP = new NomorIndukPegawaiNegeriSipil()
 **/
 export function isValidNIP(nip: string): boolean {
     return theNIP.isValid(nip)
+}
+
+/**
+ * NIP data retreiver.
+ *
+ * Return a set of NIP object data from user provided nip
+ *
+ * @param {string} nip - The NIP
+ * @return {IDataNIP} The NIP data
+**/
+export function getDataNIP(nip: string): IDataNIP {
+    return theNIP.getData(nip)
 }

@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { isValidNIP as isValid } from "../ts/functions/index"
+import { isValidNIP as isValid, getDataNIP } from "../ts/functions/index"
 import { NIP_LENGTH } from "../ts/datas/nip"
 
 describe('NIP', () => {
@@ -30,7 +30,7 @@ describe('NIP', () => {
         })
     })
 
-    describe('is valid', () => {
+    describe('isValid() = true', () => {
         it('if it has ' + NIP_LENGTH + ' digit', () => {
             expect(isValid('199301212020121001')).to.be.true
         })
@@ -48,7 +48,7 @@ describe('NIP', () => {
         })
     })
 
-    describe('is invalid', () => {
+    describe('isValid() = false', () => {
         it('if it does not meet the total NIP length of ' + NIP_LENGTH + ' digit', () => {
             expect(isValid('1993012120201210012')).to.be.false // Have 19 digits
             expect(isValid('19930121202011001')).to.be.false // Have 17 digits
@@ -65,6 +65,28 @@ describe('NIP', () => {
 
         it('if it has invalid gender code', () => {
             expect(isValid('199301212020123001')).to.be.false // 19930121202012(3)001
+        })
+    })
+
+    describe('getDataNIP()', () => {
+        it('return object data about the NIP\'s details', () => {
+            expect(getDataNIP('199301222020121003')).to.deep.equal({
+                nip: '199301222020121003',
+                birthday: new Date('1993-01-22'),
+                recruit_date: '2020-12',
+                sex: 'Male'
+            })
+
+            expect(getDataNIP('199301222020122001')).to.deep.equal({
+                nip: '199301222020122001',
+                birthday: new Date('1993-01-22'),
+                recruit_date: '2020-12',
+                sex: 'Female'
+            })
+        })
+
+        it('return an empty object if the NIP is invalid', () => {
+            expect(getDataNIP('1993012220201210012')).to.deep.equal({}) // NIK is invalid
         })
     })
 })
