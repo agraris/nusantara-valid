@@ -1,12 +1,12 @@
 
 <p align="center">
     <img src="https://magicjar.github.io/assets/images/portfolios/nusantara-valid-logo.svg" alt="Nusantara Valid logo" width=72 height=72>
-  <h1 align="center">Nusantara Valid</h1>
+  <h1 align="center" style="font-weight: bold">Nusantara Valid</h1>
 </p>
 
 Nusantara Valid is a data validator to validate any Indonesian specific civil data such as nik, nip, and many more.
 
-## Table of contents
+## **Table of contents**
 
 - [What it can do?](#what-it-can-do)
 - [Getting started](#getting-started)
@@ -14,7 +14,7 @@ Nusantara Valid is a data validator to validate any Indonesian specific civil da
 - [API](#api)
 - [License](#license)
 
-## What it can do?
+## **What it can do?**
 
 - ATM Number (Nomor Rekening)
 - Cellular Number / Mobile Number
@@ -28,7 +28,7 @@ Nusantara Valid is a data validator to validate any Indonesian specific civil da
 - Telephon Number
 - Zip Code
 
-## Getting started
+## **Getting started**
 
 There are some ways to import the package
 - [Download the latest release.](https://github.com/magicjar/nusantara-valid/releases)
@@ -49,7 +49,7 @@ The package includes multiple formats to support different build process.
 - **/esm/nusantara-valid.mjs** - ES module.
 - **/umd/nusantara-valid.js** - UMD module. Can be used in browser with `script` tag
 
-## Usage
+## **Usage**
 
 ### CommonJS module way (`require()`)
 
@@ -77,7 +77,7 @@ import NusantaraValid from './node_modules/nusantara-valid/dist/esm/nusantara-va
 <script src="https://cdn.jsdelivr.net/npm/nusantara-valid@0.1.0/dist/umd/nusantara-valid.min.js"></script>
 ```
 
-## API
+## **API**
 
 ### ATM Number (Nomor Rekening)
 
@@ -235,6 +235,8 @@ isValidZIPWithComparison('55524', { provinceKey: 'YO' });
 isValidZIPWithComparison(55524, { provinceKey: 'YO' });
 ```
 
-## License
+## **License**
+
+Copyright (c) 2020 - Fajar Setya Budi
 
 Nusantara Valid released under the [MIT License](https://github.com/magicjar/nusantara-valid/blob/master/LICENSE).
