@@ -416,196 +416,208 @@ export const PROVINCE_DATA_EXTENSION =
         ]
     },
     BA: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     BB: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     BE: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     BT: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     GO: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     JA: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     JB: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     JI: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     JK: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     JT: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     KB: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     KI: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     KR: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     KS: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     KT: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     KU: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     LA: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     MA: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     MU: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     NB: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     NT: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     PA: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     PB: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     RI: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     SA: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     SB: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     SG: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     SN: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     SR: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     SS: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     ST: {
-        regencies: {
-            
-        }
+        regencies: []
     },
     SU: {
-        regencies: {
-
-        }
+        regencies: []
     },
     YO: {
-        regencies: {
-            YO01: {
-                name: 'Kota Yogyakarta',
-                bpsCode: 1,
-            },
-            YO02: {
-                name: 'Kabupaten',
-                bpsCode: 2,
-            },
-            YO03: {
-                name: 'Kabupaten',
-                bpsCode: 3,
-            },
-            YO04: {
+        regencies: [
+            {
+                name: 'Kabupaten Kulon Progo',
+                bpsCode: '34.01',
+                districts: [
+                    { name: "Temon", bpsCode: "34.01.01" },
+                    { name: "Wates", bpsCode: "34.01.02" },
+                    { name: "Panjatan", bpsCode: "34.01.03" },
+                    { name: "Galur", bpsCode: "34.01.04" },
+                    { name: "Lendah", bpsCode: "34.01.05" },
+                    { name: "Sentolo", bpsCode: "34.01.06" },
+                    { name: "Pengasih", bpsCode: "34.01.07" },
+                    { name: "Kokap", bpsCode: "34.01.08" },
+                    { name: "Girimulyo", bpsCode: "34.01.09" },
+                    { name: "Nanggulan", bpsCode: "34.01.10" },
+                    { name: "Samigaluh", bpsCode: "34.01.11" },
+                    { name: "Kalibawang", bpsCode: "34.01.12" }
+                ]
+            },  {
+                name: 'Kabupaten Bantul',
+                bpsCode: '34.02',
+                districts: [
+                    { name: "Srandakan", bpsCode: "34.02.01" },
+                    { name: "Sanden", bpsCode: "34.02.02" },
+                    { name: "Kretek", bpsCode: "34.02.03" },
+                    { name: "Pundong", bpsCode: "34.02.04" },
+                    { name: "Bambanglipuro (Bambang Lipuro)", bpsCode: "34.02.05" },
+                    { name: "Pandak", bpsCode: "34.02.06" },
+                    { name: "Pajangan", bpsCode: "34.02.07" },
+                    { name: "Bantul", bpsCode: "34.02.08" },
+                    { name: "Jetis", bpsCode: "34.02.09" },
+                    { name: "Imogiri", bpsCode: "34.02.10" },
+                    { name: "Dlingo", bpsCode: "34.02.11" },
+                    { name: "Banguntapan", bpsCode: "34.02.12" },
+                    { name: "Pleret", bpsCode: "34.02.13" },
+                    { name: "Piyungan", bpsCode: "34.02.14" },
+                    { name: "Sewon", bpsCode: "34.02.15" },
+                    { name: "Kasihan", bpsCode: "34.02.16" },
+                    { name: "Sedayu", bpsCode: "34.02.17" }
+                ]
+            }, {
+                name: 'Kabupaten Gunung Kidul',
+                bpsCode: '34.03',
+                districts: [
+                    { name: "Wonosari", bpsCode: "34.03.01" },
+                    { name: "Nglipar", bpsCode: "34.03.02" },
+                    { name: "Playen", bpsCode: "34.03.03" },
+                    { name: "Patuk", bpsCode: "34.03.04" },
+                    { name: "Paliyan", bpsCode: "34.03.05" },
+                    { name: "Panggang", bpsCode: "34.03.06" },
+                    { name: "Tepus", bpsCode: "34.03.07" },
+                    { name: "Semanu", bpsCode: "34.03.08" },
+                    { name: "Karangmojo", bpsCode: "34.03.09" },
+                    { name: "Ponjong", bpsCode: "34.03.10" },
+                    { name: "Rongkop", bpsCode: "34.03.11" },
+                    { name: "Semin", bpsCode: "34.03.12" },
+                    { name: "Ngawen", bpsCode: "34.03.13" },
+                    { name: "Gedangsari (Gedang Sari)", bpsCode: "34.03.14" },
+                    { name: "Saptosari (Sapto Sari)", bpsCode: "34.03.15" },
+                    { name: "Girisubo", bpsCode: "34.03.16" },
+                    { name: "Tanjungsari", bpsCode: "34.03.17" },
+                    { name: "Purwosari", bpsCode: "34.03.18" }
+                ]
+            }, {
                 name: 'Kabupaten Sleman',
-                bpsCode: 4,
-                sub_district: {
-                    YO0401: {
-                        name: 'Kecamatan'
-                    },
-                    YO0402: {
-                        name: 'Kecamatan Godean'
-                    }
-                }
-            },
-            YO05: {
-                name: 'Kabupaten',
-                bpsCode: 5,
+                bpsCode: '34.04',
+                districts: [
+                    { name: "Gamping", bpsCode: "34.04.01" },
+                    { name: "Godean", bpsCode: "34.04.02" },
+                    { name: "Moyudan", bpsCode: "34.04.03" },
+                    { name: "Minggir", bpsCode: "34.04.04" },
+                    { name: "Seyegan", bpsCode: "34.04.05" },
+                    { name: "Mlati", bpsCode: "34.04.06" },
+                    { name: "Depok", bpsCode: "34.04.07" },
+                    { name: "Berbah", bpsCode: "34.04.08" },
+                    { name: "Prambanan", bpsCode: "34.04.09" },
+                    { name: "Kalasan", bpsCode: "34.04.10" },
+                    { name: "Ngemplak", bpsCode: "34.04.11" },
+                    { name: "Ngaglik", bpsCode: "34.04.12" },
+                    { name: "Sleman", bpsCode: "34.04.13" },
+                    { name: "Tempel", bpsCode: "34.04.14" },
+                    { name: "Turi", bpsCode: "34.04.15" },
+                    { name: "Pakem", bpsCode: "34.04.16" },
+                    { name: "Cangkringan", bpsCode: "34.04.17" }
+                ]
+            }, {
+                name: 'Kota Yogyakarta',
+                bpsCode: '34.71',
+                districts: [
+                    { name: "Tegalrejo", bpsCode: "34.71.01" },
+                    { name: "Jetis", bpsCode: "34.71.02" },
+                    { name: "Gondokusuman", bpsCode: "34.71.03" },
+                    { name: "Danurejan", bpsCode: "34.71.04" },
+                    { name: "Gedongtengen (Gedong Tengen)", bpsCode: "34.71.05" },
+                    { name: "Ngampilan", bpsCode: "34.71.06" },
+                    { name: "Wirobrajan", bpsCode: "34.71.07" },
+                    { name: "Mantrijeron", bpsCode: "34.71.08" },
+                    { name: "Kraton", bpsCode: "34.71.09" },
+                    { name: "Gondomanan", bpsCode: "34.71.10" },
+                    { name: "Pakualaman", bpsCode: "34.71.11" },
+                    { name: "Mergangsan", bpsCode: "34.71.12" },
+                    { name: "Umbulharjo", bpsCode: "34.71.13" },
+                    { name: "Kotagede", bpsCode: "34.71.14" }
+                ]
             }
-        }
+        ]
     },
 };
 
