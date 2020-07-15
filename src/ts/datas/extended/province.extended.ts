@@ -1,9 +1,12 @@
+import { PROVINCE_DATA } from '../province';
+import { MergeRecursive } from '../../helpers/index.extended';
+
 /**
  * PROVINCE_EXTENDED_DATA
  *
  * List of extended province data of Indonesia like distric in a province and sub-district in a district
 **/
-export const PROVINCE_EXTENDED_DATA =
+export const PROVINCE_DATA_EXTENSION =
 {
     AC: {
         district: {
@@ -203,3 +206,5 @@ export const PROVINCE_EXTENDED_DATA =
         }
     },
 };
+
+export const PROVINCE_EXTENDED_DATA = MergeRecursive(PROVINCE_DATA, PROVINCE_DATA_EXTENSION);
