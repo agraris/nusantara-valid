@@ -1,3 +1,9 @@
+/*!
+  * Nusantara Valid v0.2.0
+  * Copyright 2020 - Fajar Setya Budi (https://magicjar.github.io)
+  * Contributors (https://github.com/magicjar/nusantara-valid/graphs/contributors)
+  * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+  */
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -14,14 +20,389 @@
         return String(input).replace(/[^\d]/g, '');
     }
 
-    var range = function (start, stop) { return Array.from({ length: (stop - start) / 1 + 1 }, function (_, i) { return start + (i * 1); }); };
     /**
-     * PROVINCES_DATA
+     * Clean up phone number from leading zero, formating, and country code.
+     *
+     * @param {string} number - The dirty number.
+     * @param {object} type - The number type, landline number or cellular number and the country code.
+     * @return {string} Clean number. Free from leading zero, formating, and country code for mobile number.
+    **/
+    function cleanPhoneNumbers(number, type) {
+        if (type === void 0) { type = {}; }
+        var _a = type.cellular, cellular = _a === void 0 ? false : _a, _b = type.countryCode, countryCode = _b === void 0 ? 0 : _b;
+        var num = String(number).replace(/[^\d]/g, '').replace(/^0+/, '');
+        if (cellular && (Number(num.substr(0, 2)) === countryCode))
+            num = num.substring(2);
+        return num;
+    }
+
+    /**
+     * Check the length
+     *
+     * @param {number} mode - 0 = exact, 1 = between, 2 = includes
+     * @param {number} length - The length
+     * @param {object} options - The options to be checking with { collection: Array of numbers, minLength: The minimum length, maxLength: The maximum length }
+     * @return {boolean} Correct or not
+    **/
+    function correctLength(mode, length, options) {
+        var _a = options.collection, collection = _a === void 0 ? [] : _a, _b = options.minLength, minLength = _b === void 0 ? 0 : _b, _c = options.maxLength, maxLength = _c === void 0 ? 0 : _c;
+        switch (mode) {
+            case 0:
+                return length == minLength;
+            case 1:
+                return length >= minLength && length <= maxLength;
+            case 2:
+                return collection.includes(length);
+            default:
+                return false;
+        }
+    }
+
+    /**
+     * Format date from string
+     *
+     * @param {string} date - The string date in YYYYMMDD format
+     * @return {Date} Formated date.
+    **/
+    function formatDate(date) {
+        return new Date(numbersOnly(date).replace(/(\d{4})(?:(\d{2})?)(?:(\d{2})?)/, "$1-$2-$3"));
+    }
+
+    /**
+     * Determines whether an array includes a certain element, returning true or false as appropriate.
+     *
+     * @param {any[]} searchElement The element to search for.
+     * @param {any} theElement The element we search.
+     * @return {boolean} True or false
+    **/
+    function includes(searchElement, theElement) {
+        return searchElement.indexOf(theElement) > -1;
+    }
+
+    /**
+     * Generate an array of number from start to stop.
+     *
+     * @param {number} start - First number of a range
+     * @param {number} stop - Last number of a range
+     * @return {number[]} Range array
+    **/
+    var range = function (start, stop) {
+        var numbers = [];
+        for (var i = start; i <= stop; i++)
+            numbers = numbers.concat(i);
+        return numbers;
+    };
+
+    /**
+     * Nusantara Valid: bank.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+    **/
+    /**
+     * BANK_DATA
+     *
+     * List of bank in Indonesia including BPS code, vehicle plate,
+     * telephone numbers, and zip code.
+    **/
+    var BANK_DATA = {
+        BCAK: {
+            name: 'Bank Central Asia',
+            digits: 10,
+            dotIndex: []
+        },
+        BCAS: {
+            name: 'Bank Central Asia Syariah',
+            digits: 10,
+            dotIndex: []
+        },
+        BNIK: {
+            name: 'Bank Negara Indonesia',
+            digits: 10,
+            dotIndex: []
+        },
+        BNIS: {
+            name: 'Bank Negara Indonesia Syariah',
+            digits: 10,
+            dotIndex: []
+        },
+        BRIK: {
+            name: 'Bank Rakyat Indonesia',
+            digits: 15,
+            dotIndex: []
+        },
+        BRIS: {
+            name: 'Bank Rakyat Indonesia Syariah',
+            digits: 10,
+            dotIndex: []
+        },
+        BTNK: {
+            name: 'Bank Tabungan Negara',
+            digits: 16,
+            dotIndex: []
+        },
+        BTNS: {
+            name: 'Bank Tabungan Negara Syariah',
+            digits: 10,
+            dotIndex: []
+        },
+        BTPK: {
+            name: 'Bank Tabungan Pensiunan Nasional',
+            digits: 11,
+            dotIndex: []
+        },
+        BTPS: {
+            name: 'Bank Tabungan Pensiunan Nasional Syariah',
+            digits: 10,
+            dotIndex: []
+        },
+        BUKK: {
+            name: 'Bank Bukopin',
+            digits: 10,
+            dotIndex: []
+        },
+        BUKS: {
+            name: 'Bank Bukopin Syariah',
+            digits: 10,
+            dotIndex: []
+        },
+        CMBK: {
+            name: 'Bank CIMB Niaga',
+            digits: 13,
+            dotIndex: []
+        },
+        CMBS: {
+            name: 'Bank CIMB Niaga Syariah',
+            digits: 13,
+            dotIndex: []
+        },
+        DNMK: {
+            name: 'Bank Danamon',
+            digits: 10,
+            dotIndex: []
+        },
+        DNMS: {
+            name: 'Bank Danamon Syariah',
+            digits: 10,
+            dotIndex: []
+        },
+        MDRK: {
+            name: 'Bank Mandiri',
+            digits: 13,
+            dotIndex: []
+        },
+        MDRS: {
+            name: 'Bank Mandiri Syariah',
+            digits: 10,
+            dotIndex: []
+        },
+        MGAK: {
+            name: 'Bank Mega',
+            digits: 15,
+            dotIndex: []
+        },
+        MGAS: {
+            name: 'Bank Mega Syariah',
+            digits: 10,
+            dotIndex: []
+        },
+        MUAM: {
+            name: 'Bank Muamalat',
+            digits: 10,
+            dotIndex: []
+        },
+        PMTK: {
+            name: 'Bank Permata',
+            digits: 10,
+            dotIndex: []
+        },
+        PMTS: {
+            name: 'Bank Permata Syariah',
+            digits: 10,
+            dotIndex: []
+        },
+        PNBK: {
+            name: 'Panin Bank',
+            digits: 10,
+            dotIndex: []
+        },
+        PNBS: {
+            name: 'Panin Bank Syariah',
+            digits: 10,
+            dotIndex: []
+        },
+    };
+    var BANK_KEYS = Object.keys(BANK_DATA);
+
+    /**
+     * Nusantara Valid: _atmNumber.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+     *
+     * @class The ATMNumber class
+    **/
+    var ATMNumber = /** @class */ (function () {
+        function ATMNumber() {
+            this.VALID_ATMNUMBER_LENGTH = BANK_KEYS.reduce(function (pref, curr) { return includes(pref, BANK_DATA[curr].digits) ? pref : pref.concat(BANK_DATA[curr].digits); }, []);
+        }
+        ATMNumber.prototype.isValid = function (atm, bank) {
+            if (bank === void 0) { bank = ''; }
+            if (!atm || typeof atm !== 'string')
+                return false;
+            var numOnly = numbersOnly(atm);
+            var matchLength = correctLength(2, numOnly.length, { collection: this.VALID_ATMNUMBER_LENGTH });
+            if (bank)
+                matchLength = correctLength(0, numOnly.length, { minLength: BANK_DATA[bank].digits });
+            return matchLength;
+        };
+        return ATMNumber;
+    }());
+    var theATM = new ATMNumber();
+    /**
+     * ATM number validation without comparison with bank
+     *
+     * It will validate ATM number based on it's length
+     *
+     * @param {string} atm - The atm number to be validated
+     * @return {boolean} Is valid or not
+    **/
+    function isValidATMNumber(atm) {
+        return theATM.isValid(atm);
+    }
+    /**
+     * ATM number validation with comparison with bank
+     *
+     * It will validate ATM number based on it's length and specific Bank's length
+     *
+     * @param {string} atm - The atm number to be validated
+     * @param {string} key - The bank key
+     * @return {boolean} Is valid or not
+    **/
+    function isValidATMNumberWithComparison(atm, key) {
+        if (key === void 0) { key = ''; }
+        return theATM.isValid(atm, key);
+    }
+
+    /**
+     * Nusantara Valid: _bank.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+     *
+     * @class The Bank class
+    **/
+    var Bank = /** @class */ (function () {
+        function Bank() {
+        }
+        Bank.prototype.getData = function (index) {
+            if (index === void 0) { index = ''; }
+            var bank;
+            if (index) {
+                bank = {
+                    key: index,
+                    name: BANK_DATA[index].name
+                };
+            }
+            else {
+                bank = BANK_KEYS.map(function (key) { return ({
+                    key: key,
+                    name: BANK_DATA[key].name,
+                }); });
+            }
+            return bank;
+        };
+        return Bank;
+    }());
+    var bank = new Bank();
+    /**
+     * Specific Bank data retreiver.
+     *
+     * Return a specific set of bank object data from user provided bank key
+     *
+     * @param {string} key - The Bank key
+     * @return {IDataBank} The Bank data
+    **/
+    function getDataBank(key) {
+        return bank.getData(key);
+    }
+    /**
+     * All Bank data retreiver.
+     *
+     * Return all bank object data as an array
+     *
+     * @return {IDataBank[]} Array of Bank data
+    **/
+    function getDataBanks() {
+        return bank.getData();
+    }
+
+    /**
+     * Nusantara Valid: cellular.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+    **/
+    /**
+     * CELLULAR_PROVIDER_DATA
+     *
+     * List cellular provider in Indonesia
+    **/
+    var CELLULAR_PROVIDER_DATA = {
+        TELKOMSEL: {
+            name: 'Telkomsel',
+            prefix: range(811, 813).concat(range(821, 823)).concat(range(851, 853)),
+        },
+        INDOSAT: {
+            name: 'Indosat Ooredoo',
+            prefix: range(814, 816).concat(range(855, 858)),
+        },
+        XL: {
+            name: 'XL Axiata',
+            prefix: range(817, 819).concat([859, 877, 878]),
+        },
+        TRI: {
+            name: 'Hutchinson Tri',
+            prefix: range(895, 899),
+        },
+        SMARTFREN: {
+            name: 'Smartfren',
+            prefix: range(881, 889),
+        },
+        AXIS: {
+            name: 'AXIS',
+            prefix: range(831, 833).concat([838])
+        }
+    };
+    /**
+     * CELLULAR_MIN_LENGTH
+     *
+     * Minimum length of cellular number without leading zero or country code
+     * 8961234123
+    **/
+    var CELLULAR_MIN_LENGTH = 10;
+    /**
+     * CELLULAR_MAX_LENGTH
+     *
+     * Maximum length of cellular number without leading zero or country code
+    **/
+    var CELLULAR_MAX_LENGTH = 12;
+    /**
+     * CELLULAR_HYPEN_INDEXES
+     *
+     * Indexes of where are the hypen separator to be placed on formating
+    **/
+    var CELLULAR_HYPEN_INDEXES = [2, 6];
+    var CELLULAR_PROVIDER_KEYS = Object.keys(CELLULAR_PROVIDER_DATA);
+
+    /**
+     * Nusantara Valid: province.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+    **/
+    /**
+     * PROVINCE_DATA
      *
      * List of province data in Indonesia including BPS code, vehicle plate,
      * telephone numbers, and zip code.
     **/
-    var PROVINCES_DATA = {
+    var PROVINCE_DATA = {
         AC: {
             name: 'Aceh',
             bpsCode: 11,
@@ -152,7 +533,7 @@
             name: 'Jawa Tengah',
             bpsCode: 33,
             vehiclePlate: ['G', 'H', 'K', 'R', 'AA', 'AD'],
-            tel: range(271, 299).concat([24, 356]),
+            tel: range(275, 299).concat(range(271, 273)).concat([24, 356]),
             zipCode: [
                 {
                     from: 50111,
@@ -449,309 +830,177 @@
      * ISD code (https://en.wikipedia.org/wiki/List_of_country_calling_codes)
     **/
     var COUNTRY_CODE = 62;
-    var PROVINCES = Object.keys(PROVINCES_DATA);
+    var PROVINCE_KEYS = Object.keys(PROVINCE_DATA);
 
     /**
-     * Clean up phone number from leading zero, formating, and country code.
+     * Nusantara Valid: _cellularNumber.ts
      *
-     * @param {string} number - The dirty number.
-     * @param {boolean} cellular - The number type, landline number or cellular number.
-     * @return {string} Clean number. Free from leading zero, formating, and country code for mobile number.
-    **/
-    function cleanUpPhoneNumber(number, cellular) {
-        if (cellular === void 0) { cellular = false; }
-        // Remove non digit character
-        var num = String(number).replace(/[^\d]/g, '');
-        // Remove leading zero if any
-        num = num.replace(/^0+/, '');
-        // Remove country code if any on cellular number
-        if (cellular && num.substr(0, 2) == COUNTRY_CODE.toString()) {
-            num = num.substring(2);
-        }
-        return num;
-    }
-
-    /**
-     * BANK_DATA
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
      *
-     * List of bank in Indonesia including BPS code, vehicle plate,
-     * telephone numbers, and zip code.
+     * @class The CellularNumber class
     **/
-    var BANK_DATA = {
-        BCAK: {
-            name: 'Bank Central Asia',
-            digits: 10,
-            dotIndex: []
-        },
-        BCAS: {
-            name: 'Bank Central Asia Syariah',
-            digits: 10,
-            dotIndex: []
-        },
-        BNIK: {
-            name: 'Bank Negara Indonesia',
-            digits: 10,
-            dotIndex: []
-        },
-        BNIS: {
-            name: 'Bank Negara Indonesia Syariah',
-            digits: 10,
-            dotIndex: []
-        },
-        BRIK: {
-            name: 'Bank Rakyat Indonesia',
-            digits: 15,
-            dotIndex: []
-        },
-        BRIS: {
-            name: 'Bank Rakyat Indonesia Syariah',
-            digits: 10,
-            dotIndex: []
-        },
-        BTNK: {
-            name: 'Bank Tabungan Negara',
-            digits: 16,
-            dotIndex: []
-        },
-        BTNS: {
-            name: 'Bank Tabungan Negara Syariah',
-            digits: 10,
-            dotIndex: []
-        },
-        BTPK: {
-            name: 'Bank Tabungan Pensiunan Nasional',
-            digits: 11,
-            dotIndex: []
-        },
-        BTPS: {
-            name: 'Bank Tabungan Pensiunan Nasional Syariah',
-            digits: 10,
-            dotIndex: []
-        },
-        BUKK: {
-            name: 'Bank Bukopin',
-            digits: 10,
-            dotIndex: []
-        },
-        BUKS: {
-            name: 'Bank Bukopin Syariah',
-            digits: 10,
-            dotIndex: []
-        },
-        CMBK: {
-            name: 'Bank CIMB Niaga',
-            digits: 13,
-            dotIndex: []
-        },
-        CMBS: {
-            name: 'Bank CIMB Niaga Syariah',
-            digits: 13,
-            dotIndex: []
-        },
-        DNMK: {
-            name: 'Bank Danamon',
-            digits: 10,
-            dotIndex: []
-        },
-        DNMS: {
-            name: 'Bank Danamon Syariah',
-            digits: 10,
-            dotIndex: []
-        },
-        MDRK: {
-            name: 'Bank Mandiri',
-            digits: 13,
-            dotIndex: []
-        },
-        MDRS: {
-            name: 'Bank Mandiri Syariah',
-            digits: 10,
-            dotIndex: []
-        },
-        MGAK: {
-            name: 'Bank Mega',
-            digits: 15,
-            dotIndex: []
-        },
-        MGAS: {
-            name: 'Bank Mega Syariah',
-            digits: 10,
-            dotIndex: []
-        },
-        MUAM: {
-            name: 'Bank Muamalat',
-            digits: 10,
-            dotIndex: []
-        },
-        PMTK: {
-            name: 'Bank Permata',
-            digits: 10,
-            dotIndex: []
-        },
-        PMTS: {
-            name: 'Bank Permata Syariah',
-            digits: 10,
-            dotIndex: []
-        },
-        PNBK: {
-            name: 'Panin Bank',
-            digits: 10,
-            dotIndex: []
-        },
-        PNBS: {
-            name: 'Panin Bank Syariah',
-            digits: 10,
-            dotIndex: []
-        },
-    };
-    var BANKS = Object.keys(BANK_DATA);
-
-    var ATMNumber = /** @class */ (function () {
-        function ATMNumber() {
-            this.VALID_ATMNUMBER_LENGTH = Object.keys(BANK_DATA).reduce(function (pref, curr) { return pref.includes(BANK_DATA[curr].digits) ? pref : pref.concat(BANK_DATA[curr].digits); }, []);
+    var CellularNumber = /** @class */ (function () {
+        function CellularNumber() {
+            this.CELLULAR_PROVIDER_PREFIXES = CELLULAR_PROVIDER_KEYS.reduce(function (a, b) { return a.concat(CELLULAR_PROVIDER_DATA[b].prefix); }, []);
         }
-        ATMNumber.prototype.isValid = function (atm, bank) {
-            if (!atm || typeof atm !== 'string')
-                return false;
-            if (bank === undefined)
-                bank = '';
-            var numOnly = numbersOnly(atm);
-            if (bank)
-                return BANK_DATA[bank].digits == numOnly.length;
-            return this.isValidLength(numOnly.length);
-        };
-        ATMNumber.prototype.isValidLength = function (length) {
-            return this.VALID_ATMNUMBER_LENGTH.includes(length);
-        };
-        return ATMNumber;
-    }());
-    var atm = new ATMNumber();
-    function isValidATMNumber(param, index) {
-        return atm.isValid(param, index);
-    }
-
-    var Bank = /** @class */ (function () {
-        function Bank() {
-        }
-        Bank.prototype.getData = function () {
-            var banks = BANKS.map(function (key) { return ({
-                key: key,
-                name: BANK_DATA[key].name,
-            }); });
-            return banks;
-        };
-        return Bank;
-    }());
-    var atm$1 = new Bank();
-    function getBankData() {
-        return atm$1.getData();
-    }
-
-    var range$1 = function (start, stop) { return Array.from({ length: (stop - start) / 1 + 1 }, function (_, i) { return start + (i * 1); }); };
-    /**
-     * CELLULAR_NUMBER
-     *
-     * List cellular provider in Indonesia
-    **/
-    var CELLULAR_NUMBER = {
-        TELKOMSEL: {
-            name: 'Telkomsel',
-            prefix: range$1(811, 813).concat(range$1(821, 823)).concat(range$1(851, 853)),
-        },
-        INDOSAT: {
-            name: 'Indosat Ooredoo',
-            prefix: range$1(814, 816).concat(range$1(855, 858)),
-        },
-        XL: {
-            name: 'XL Axiata',
-            prefix: range$1(817, 819).concat([859, 877, 878]),
-        },
-        TRI: {
-            name: 'Hutchinson Tri',
-            prefix: range$1(895, 899),
-        },
-        SMARTFREN: {
-            name: 'Smartfren',
-            prefix: range$1(881, 889),
-        },
-        AXIS: {
-            name: 'AXIS',
-            prefix: range$1(831, 833).concat([838])
-        }
-    };
-    /**
-     * CELLULAR_MIN_LENGTH
-     *
-     * Minimum length of cellular number without leading zero or country code
-     * 8961234123
-    **/
-    var CELLULAR_MIN_LENGTH = 10;
-    /**
-     * CELLULAR_MAX_LENGTH
-     *
-     * Maximum length of cellular number without leading zero or country code
-    **/
-    var CELLULAR_MAX_LENGTH = 12;
-
-    var MobileNumber = /** @class */ (function () {
-        function MobileNumber() {
-            this.VALID_CELLULAR_PREFIX = Object.keys(CELLULAR_NUMBER).reduce(function (a, b) { return a.concat(CELLULAR_NUMBER[b].prefix); }, []);
-        }
-        MobileNumber.prototype.isValid = function (mobile) {
+        CellularNumber.prototype.isValid = function (mobile, providerKey) {
+            if (providerKey === void 0) { providerKey = ''; }
             if (!mobile || typeof mobile !== 'string')
                 return false;
-            var cleanCellularNumber = cleanUpPhoneNumber(mobile, true);
-            return this.isValidLength(cleanCellularNumber) && this.isValidCellularPrefix(cleanCellularNumber);
+            var prefixCollection;
+            var cleanCellularNumber = cleanPhoneNumbers(mobile, { cellular: true, countryCode: COUNTRY_CODE });
+            var validLength = correctLength(1, cleanCellularNumber.length, { minLength: CELLULAR_MIN_LENGTH, maxLength: CELLULAR_MAX_LENGTH });
+            if (providerKey)
+                prefixCollection = CELLULAR_PROVIDER_DATA[providerKey].prefix;
+            else
+                prefixCollection = this.CELLULAR_PROVIDER_PREFIXES;
+            return validLength
+                && this.isValidCellularProviderPrefix(Number(cleanCellularNumber.substr(0, 3)), prefixCollection);
         };
-        MobileNumber.prototype.isValidCellularPrefix = function (cellularNumber) {
-            return this.VALID_CELLULAR_PREFIX.includes(Number(cellularNumber.substr(0, 3)));
+        CellularNumber.prototype.isValidCellularProviderPrefix = function (prefix, prefixCollection) {
+            return includes(prefixCollection, prefix);
         };
-        MobileNumber.prototype.isValidLength = function (phone) {
-            return phone.length >= CELLULAR_MIN_LENGTH && phone.length <= CELLULAR_MAX_LENGTH;
-        };
-        MobileNumber.prototype.getData = function (mobile) {
-            var cleanCellularNumber = cleanUpPhoneNumber(mobile, true);
-            var pfx = Number(cleanCellularNumber.substr(0, 3));
-            for (var key in CELLULAR_NUMBER) {
-                if (CELLULAR_NUMBER[key].prefix.includes(pfx)) {
-                    return CELLULAR_NUMBER[key];
+        CellularNumber.prototype.getData = function (mobile) {
+            var data = {};
+            data.number = this.format(mobile);
+            var pfx = Number(cleanPhoneNumbers(mobile, { cellular: true, countryCode: COUNTRY_CODE }).substr(0, 3));
+            for (var _i = 0, CELLULAR_PROVIDER_KEYS_1 = CELLULAR_PROVIDER_KEYS; _i < CELLULAR_PROVIDER_KEYS_1.length; _i++) {
+                var key = CELLULAR_PROVIDER_KEYS_1[_i];
+                var cellProvider = CELLULAR_PROVIDER_DATA[key];
+                if (includes(cellProvider.prefix, pfx)) {
+                    data.provider = {
+                        key: key,
+                        name: cellProvider.name
+                    };
+                    break;
                 }
             }
-            return {};
+            return data;
         };
-        MobileNumber.prototype.format = function (input, int) {
+        CellularNumber.prototype.format = function (input, int) {
             if (int === void 0) { int = false; }
-            var cleanCelNumber = cleanUpPhoneNumber(input, true);
-            var CEL_HYPEN_INDEX = [2, 6];
+            var cleanCelNumber = cleanPhoneNumbers(input, { cellular: true, countryCode: COUNTRY_CODE });
             var formatedNumber = cleanCelNumber
                 .slice(0, cleanCelNumber.length)
                 .split('')
                 .reduce(function (a, b, index) {
                 var result = "" + a + b;
                 if (!(index === cleanCelNumber.length - 1)) {
-                    if (CEL_HYPEN_INDEX.includes(index))
+                    if (includes(CELLULAR_HYPEN_INDEXES, index))
                         return result + "-";
                 }
                 return result;
             }, '');
-            if (int)
-                return '+' + COUNTRY_CODE.toString() + formatedNumber;
-            return '0' + formatedNumber;
+            return int ? '+' + COUNTRY_CODE.toString() + formatedNumber : '0' + formatedNumber;
         };
-        return MobileNumber;
+        return CellularNumber;
     }());
-    var mobileNumber = new MobileNumber();
-    function isValidCellularNumber(param) {
-        return mobileNumber.isValid(param);
+    var cellularNumber = new CellularNumber();
+    /**
+     * Cellular number validation
+     *
+     * It will validate cellular number based on it's prefix and length
+     *
+     * @param {string} number - The cellular number to be validated
+     * @return {boolean} Is valid or not
+    **/
+    function isValidCellularNumber(number) {
+        return cellularNumber.isValid(number);
     }
-    function getCellularProviderData(param) {
-        return mobileNumber.getData(param);
+    /**
+     * Cellular number validation with comparison
+     *
+     * It will validate cellular number based on user provided data
+     *
+     * @param {string} number - The cellular number to be validated
+     * @param {string} providerKey - The cellular provider key
+     * @return {boolean} Is valid or not
+    **/
+    function isValidCellularNumberWithComparison(number, providerKey) {
+        return cellularNumber.isValid(number, providerKey);
     }
-    function formatCellularNumber(param, int) {
+    /**
+     * Cellular number data getter
+     *
+     * Return object data based on provided cellular number
+     *
+     * @param {string} number - The cellular number
+     * @return {object} IDataCellularNumber object
+    **/
+    function getDataCellularNumber(number) {
+        return cellularNumber.getData(number);
+    }
+    /**
+     * Cellular number formating
+     *
+     * Format cellular number to local calling format (0) and international calling format (+XX)
+     *
+     * @param {string} number - The cellular number to be formated
+     * @param {boolean} int - Local calling format (leading zero) or international calling format (leading country code)
+     * @return {string} Formated number
+    **/
+    function formatCellularNumber(number, int) {
         if (int === void 0) { int = false; }
-        return mobileNumber.format(param, int);
+        return cellularNumber.format(number, int);
     }
 
+    /**
+     * Nusantara Valid: _cellularProvider.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+     *
+     * @class The CellularProvider class
+    **/
+    var CellularProvider = /** @class */ (function () {
+        function CellularProvider() {
+        }
+        CellularProvider.prototype.getData = function (index) {
+            if (index === void 0) { index = ''; }
+            var providers;
+            if (index) {
+                providers = {
+                    key: index,
+                    name: CELLULAR_PROVIDER_DATA[index].name
+                };
+            }
+            else {
+                providers = CELLULAR_PROVIDER_KEYS.map(function (key) { return ({
+                    key: key,
+                    name: CELLULAR_PROVIDER_DATA[key].name,
+                }); });
+            }
+            return providers;
+        };
+        return CellularProvider;
+    }());
+    var isp = new CellularProvider();
+    /**
+     * Get specific cellular provider data with IDataCellularProvider object structure
+     *
+     * Return object data based on provided cellular provider key
+     *
+     * @param {string} providerKey - The provider key
+     * @return {IDataCellularProvider} IDataCellularProvider object
+    **/
+    function getDataCellularProvider(providerKey) {
+        return isp.getData(providerKey);
+    }
+    /**
+     * Get all cellular provider data with IDataCellularProvider object structure
+     *
+     * Return all IDataCellularProvider object in Array<IDataCellularProvider>
+     *
+     * @return {IDataCellularProvider[]} Array of IDataCellularProvider object
+    **/
+    function getDataCellularProviders() {
+        return isp.getData();
+    }
+
+    /**
+     * Nusantara Valid: creditCard.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+    **/
     /**
      * CC_LENGTH
      *
@@ -774,6 +1023,13 @@
     **/
     var CC_SPACE_INDEXES = [3, 7, 11, 11];
 
+    /**
+     * Nusantara Valid: _creditCard.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+     *
+     * @class The CreditCard class
+    **/
     var CreditCard = /** @class */ (function () {
         function CreditCard() {
         }
@@ -781,13 +1037,11 @@
             if (!cc || typeof cc !== 'string')
                 return false;
             var numOnly = numbersOnly(cc);
-            return this.isValidMII(cc.charAt(0)) && this.isValidLength(numOnly.length);
-        };
-        CreditCard.prototype.isValidLength = function (length) {
-            return length == CC_LENGTH;
+            return this.isValidMII(cc.charAt(0))
+                && correctLength(0, numOnly.length, { minLength: CC_LENGTH });
         };
         CreditCard.prototype.isValidMII = function (mii) {
-            return CC_VALID_MII.includes(mii);
+            return includes(CC_VALID_MII, mii);
         };
         CreditCard.prototype.format = function (cc) {
             var newCC = numbersOnly(cc);
@@ -797,7 +1051,7 @@
                 .reduce(function (a, b, index) {
                 var result = "" + a + b;
                 if (!(index === newCC.length - 1)) {
-                    if (CC_SPACE_INDEXES.includes(index))
+                    if (includes(CC_SPACE_INDEXES, index))
                         return result + " ";
                 }
                 return result;
@@ -806,24 +1060,42 @@
         return CreditCard;
     }());
     var cc = new CreditCard();
-    function isValidCCNumber(param) {
-        return cc.isValid(param);
+    /**
+     * Credit card number validation.
+     *
+     * It check if cc number has correct leading MII code and correct CC number's length
+     *
+     * @param {string} number - The cc number to be validated
+     * @return {boolean} Is valid or not
+    **/
+    function isValidCCNumber(number) {
+        return cc.isValid(number);
     }
-    function formatCCNumber(param) {
-        return cc.format(param);
+    /**
+     * Credit card number formating
+     *
+     * Format credit card with the correct format
+     *
+     * @param {string} number - CC number to be formated
+     * @return {string} Formated cc number
+    **/
+    function formatCCNumber(number) {
+        return cc.format(number);
     }
 
+    /**
+     * Nusantara Valid: email.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+    **/
     /**
      * EMAIL_REGEX
      * by Brent Thomas
      *
      * EMAIL_REGEX[0] = The email
      * EMAIL_REGEX[1] = Local part of email
-     * EMAIL_REGEX[2] = @
-     * EMAIL_REGEX[3] = Domain name
-     * EMAIL_REGEX[4] = TLD
     **/
-    var EMAIL_REGEX = /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]+)$/;
+    var EMAIL_REGEX = /^([a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*)@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]+)$/;
     /**
      * MAX_LOCALPART_LENGTH
      *
@@ -837,6 +1109,13 @@
     **/
     var MAX_EMAIL_LENGTH = 254;
 
+    /**
+     * Nusantara Valid: _email.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+     *
+     * @class The Email class
+    **/
     var Email = /** @class */ (function () {
         function Email() {
         }
@@ -844,21 +1123,30 @@
             if (!email || typeof email !== 'string')
                 return false;
             var validEmail = EMAIL_REGEX.exec(email);
-            if (!validEmail)
-                return false;
-            // Return true if validEmail, validEmail length and email local part length is true
-            return validEmail && this.isValidLength(validEmail);
-        };
-        Email.prototype.isValidLength = function (email) {
-            return email.length <= MAX_EMAIL_LENGTH && email[0].length <= MAX_LOCALPART_LENGTH;
+            return validEmail !== null
+                && correctLength(1, validEmail[0].length, { minLength: 1, maxLength: MAX_EMAIL_LENGTH })
+                && correctLength(1, validEmail[1].length, { minLength: 1, maxLength: MAX_LOCALPART_LENGTH });
         };
         return Email;
     }());
-    var email = new Email();
-    function isValidEmail(param) {
-        return email.isValid(param);
+    var theEmail = new Email();
+    /**
+     * E-mail validation.
+     *
+     * It check if email has the correct requirements such as local part (username), @ [at] symbol, domain name part, and TLD
+     *
+     * @param {string} email - The email, the one to be validated
+     * @return {boolean} Is valid or not
+    **/
+    function isValidEmail(email) {
+        return theEmail.isValid(email);
     }
 
+    /**
+     * Nusantara Valid: nik.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+    **/
     /**
      * NIK_REGEX
      *
@@ -877,43 +1165,138 @@
     **/
     var NIK_LENGTH = 16;
 
+    /**
+     * Nusantara Valid: _nomorIndukKependudukan.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+     *
+     * @class The NomorIndukKepemdudukan class
+    **/
     var NomorIndukKependudukan = /** @class */ (function () {
         function NomorIndukKependudukan() {
-            this.VALID_BPSCODE = Object.keys(PROVINCES_DATA).reduce(function (a, b) { return a.concat(PROVINCES_DATA[b].bpsCode); }, []);
+            this.VALID_BPSCODE = PROVINCE_KEYS.reduce(function (a, b) { return a.concat(PROVINCE_DATA[b].bpsCode); }, []);
         }
-        NomorIndukKependudukan.prototype.isValid = function (nik) {
-            if (!nik)
+        NomorIndukKependudukan.prototype.isValid = function (nik, provinceKey, birthday) {
+            if (provinceKey === void 0) { provinceKey = ''; }
+            if (birthday === void 0) { birthday = ''; }
+            if (!nik || typeof nik !== 'string')
                 return false;
             var validNIK = NIK_REGEX.exec(numbersOnly(nik));
             if (!validNIK)
                 return false;
-            return this.isValidLength(validNIK[0].length) && this.isValidProvince(parseInt(validNIK[1])) && this.isValidBirthday(validNIK[4]);
+            var validLength = correctLength(0, validNIK[0].length, { minLength: NIK_LENGTH });
+            var cBirthday = this.reformatBirthday(validNIK[4]);
+            var validProvince = includes(this.VALID_BPSCODE, parseInt(validNIK[1]));
+            var validBirthday = !isNaN(formatDate('19' + cBirthday).getTime());
+            // Comparison
+            if (provinceKey) {
+                if (PROVINCE_DATA[provinceKey].bpsCode != validNIK[1]) {
+                    validProvince = false;
+                }
+            }
+            if (birthday) {
+                var vBirthday = numbersOnly(birthday).substring(2, 8); // Strip the first 2 digits of year
+                if (cBirthday != vBirthday) {
+                    validBirthday = false;
+                }
+            }
+            return validLength
+                && validProvince
+                && validBirthday;
         };
-        NomorIndukKependudukan.prototype.isValidLength = function (nip) {
-            return nip == NIK_LENGTH;
+        // Reformat DDMMYY into YYMMDD
+        NomorIndukKependudukan.prototype.reformatBirthday = function (birthday) {
+            var newBirthday = /(\d{2})(\d{2})(\d{2})/.exec(birthday);
+            if (newBirthday) {
+                var cDD = newBirthday[1];
+                var cMM = newBirthday[2];
+                var cYY = newBirthday[3];
+                if (Number(cDD) > 40) // Check if it is a man of woman
+                    cDD = (Number(cDD) - 40).toString();
+                return cYY + '' + cMM + '' + cDD;
+            }
+            return '';
         };
-        NomorIndukKependudukan.prototype.isValidProvince = function (bpsCode) {
-            return this.VALID_BPSCODE.includes(bpsCode);
-        };
-        NomorIndukKependudukan.prototype.isValidBirthday = function (birthday) {
-            var newBirthday = /(\d{2})(\d{2})(\d{2})/.exec(birthday); // DDMMYY
-            if (!newBirthday)
-                return false;
-            var dd = parseInt(newBirthday[1]);
-            var mm = parseInt(newBirthday[2]);
-            var yy = parseInt(newBirthday[3]);
-            if (dd > 40) // Check if it is a man of woman
-                dd = dd - 40;
-            var formatedBirthday = new Date('19' + yy + '-' + mm + '-' + dd); // '19YY-MM-DD'
-            return !isNaN(formatedBirthday.getTime());
+        NomorIndukKependudukan.prototype.getData = function (nik) {
+            var validNIK = NIK_REGEX.exec(numbersOnly(nik));
+            var data = {};
+            if (!validNIK)
+                return data;
+            data.nik = validNIK[0];
+            data.sex = Number(validNIK[4].substr(0, 2)) > 40 ? 'Female' : 'Male';
+            var reformatedBirthday = this.reformatBirthday(validNIK[4]);
+            var validProvince = includes(this.VALID_BPSCODE, parseInt(validNIK[1]));
+            var validBirthday = !isNaN(formatDate('19' + reformatedBirthday).getTime());
+            if (validProvince) {
+                var province = {};
+                for (var _i = 0, PROVINCE_KEYS_1 = PROVINCE_KEYS; _i < PROVINCE_KEYS_1.length; _i++) {
+                    var key = PROVINCE_KEYS_1[_i];
+                    var element = PROVINCE_DATA[key];
+                    if (element.bpsCode == validNIK[1]) {
+                        province.key = key,
+                            province.name = element.name;
+                        break;
+                    }
+                }
+                data.province = province;
+            }
+            if (validBirthday) {
+                var currentYear = new Date().getFullYear();
+                var bYYYY = Number(reformatedBirthday.substr(0, 2)) + 2000;
+                var bMMYY = reformatedBirthday.substring(2, 6);
+                if (bYYYY > currentYear) {
+                    bYYYY = bYYYY - 100;
+                }
+                data.birthday = new Date(formatDate(bYYYY + '' + bMMYY));
+            }
+            return data;
         };
         return NomorIndukKependudukan;
     }());
-    var nik = new NomorIndukKependudukan();
-    function isValidNIK(param) {
-        return nik.isValid(param);
+    var theNIK = new NomorIndukKependudukan();
+    /**
+     * NIK validation without any comparison with user provided data.
+     *
+     * It check if the NIK's bps code is included / exist in VALID_BPSCODE, check if the NIK's has valid birthday
+     * and if the NIK has the correct length.
+     *
+     * @param {string} nik - The NIK, the one to be validated
+     * @return {boolean} Is valid or not
+    **/
+    function isValidNIK(nik) {
+        return theNIK.isValid(nik);
+    }
+    /**
+     * NIK validation with comparison with user provided provinceKey and birthday data.
+     *
+     * It will compare NIK's bps code (see: NIK_REGEX[1]) with bps code from PROVINCE_DATA[provinceKey].bpsCode
+     * and will compare NIK's birthday (see: NIK_REGEX[4] with user provided birthday)
+     *
+     * @param {string} nik - The NIK, the one to be validated
+     * @param {object} comparison - The data to compare with, provinceKey (key from PROVINCE_DATA) and birthday (in YYYYMMDD format)
+     * @return {boolean} Is valid or not
+    **/
+    function isValidNIKWithComparison(nik, comparison) {
+        var _a = comparison.provinceKey, provinceKey = _a === void 0 ? '' : _a, _b = comparison.birthday, birthday = _b === void 0 ? '' : _b;
+        return theNIK.isValid(nik, provinceKey, birthday);
+    }
+    /**
+     * NIK data retreiver.
+     *
+     * Return a set of NIK object data from user provided nik
+     *
+     * @param {string} nik - The NIK
+     * @return {object} The NIK data
+    **/
+    function getDataNIK(nik) {
+        return theNIK.getData(nik);
     }
 
+    /**
+     * Nusantara Valid: nip.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+    **/
     /**
      * NIP_REGEX
      *
@@ -923,7 +1306,7 @@
      * NIP_REGEX[3] = 1 digit of Gender identifier (1 for man, 2 for woman)
      * NIP_REGEX[4] = 3 digits of Index
     **/
-    var NIP_REGEX = /^([0-9]{8})([0-9]{6})([1,2]{1})([0-9]{3})$/;
+    var NIP_REGEX = /^(\d{8})(\d{6})([1,2]{1})(\d{3})$/;
     /**
      * NIP_LENGTH
      *
@@ -931,6 +1314,13 @@
     **/
     var NIP_LENGTH = 18;
 
+    /**
+     * Nusantara Valid: _nomorIndukPegawaiNegeriSipil.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+     *
+     * @class The NomorIndukPegawaiNegeriSipil class
+    **/
     var NomorIndukPegawaiNegeriSipil = /** @class */ (function () {
         function NomorIndukPegawaiNegeriSipil() {
         }
@@ -938,25 +1328,53 @@
             if (!nip || typeof nip !== 'string')
                 return false;
             var validNIP = NIP_REGEX.exec(numbersOnly(nip));
+            return validNIP !== null
+                && !isNaN(formatDate(validNIP[1]).getTime())
+                && !isNaN(formatDate(validNIP[2]).getTime())
+                && correctLength(0, validNIP[0].length, { minLength: NIP_LENGTH });
+        };
+        NomorIndukPegawaiNegeriSipil.prototype.getData = function (nip) {
+            var data = {};
+            var validNIP = NIP_REGEX.exec(numbersOnly(nip));
             if (!validNIP)
-                return false;
-            return this.isValidLength(validNIP[0].length) && this.isValidDate(validNIP[1]) && this.isValidDate(validNIP[2]);
-        };
-        NomorIndukPegawaiNegeriSipil.prototype.isValidLength = function (nip) {
-            return nip == NIP_LENGTH;
-        };
-        NomorIndukPegawaiNegeriSipil.prototype.isValidDate = function (date) {
-            var newDate = date.replace(/(\d{4})(\d{2})(?:(\d{2})?)/, "$1-$2-$3");
-            var formatedDate = new Date(newDate);
-            return !isNaN(formatedDate.getTime());
+                return data;
+            data.nip = validNIP[0];
+            data.birthday = formatDate(validNIP[1]);
+            data.recruit_date = validNIP[2].substr(0, 4) + '-' + validNIP[2].substr(4, 2);
+            data.sex = Number(validNIP[3]) == 1 ? 'Male' : 'Female';
+            return data;
         };
         return NomorIndukPegawaiNegeriSipil;
     }());
-    var nip = new NomorIndukPegawaiNegeriSipil();
-    function isValidNIP(param) {
-        return nip.isValid(param);
+    var theNIP = new NomorIndukPegawaiNegeriSipil();
+    /**
+     * NIP validation.
+     *
+     * Validate NIP by validating NIP's birthday, NIP's recruitment date, and NIP's length
+     *
+     * @param {string} nip - The NIP to be validated
+     * @return {boolean} Is valid or not
+    **/
+    function isValidNIP(nip) {
+        return theNIP.isValid(nip);
+    }
+    /**
+     * NIP data retreiver.
+     *
+     * Return a set of NIP object data from user provided nip
+     *
+     * @param {string} nip - The NIP
+     * @return {IDataNIP} The NIP data
+    **/
+    function getDataNIP(nip) {
+        return theNIP.getData(nip);
     }
 
+    /**
+     * Nusantara Valid: nisn.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+    **/
     /**
      * NISN_REGEX
      *
@@ -981,40 +1399,52 @@
     **/
     var NISN_AGE_VALIDITY = 22;
 
+    /**
+     * Nusantara Valid: _nomorIndukSiswaNasional.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+     *
+     * @class The NomorIndukSiswaNasional class
+    **/
     var NomorIndukSiswaNasional = /** @class */ (function () {
         function NomorIndukSiswaNasional() {
         }
         NomorIndukSiswaNasional.prototype.isValid = function (nisn) {
             if (!nisn || typeof nisn !== 'string')
                 return false;
-            if (!this.isValidLength(nisn.length))
-                return false;
             var validNISN = NISN_REGEX.exec(numbersOnly(nisn));
-            if (!validNISN)
-                return false;
-            return this.isValidPeriod(validNISN[1]);
-        };
-        NomorIndukSiswaNasional.prototype.isValidLength = function (nisn) {
-            return nisn == NISN_LENGTH;
+            return validNISN !== null
+                && this.isValidPeriod(validNISN[1])
+                && correctLength(0, validNISN[0].length, { minLength: NISN_LENGTH });
         };
         NomorIndukSiswaNasional.prototype.isValidPeriod = function (year) {
             var thisYear = new Date().getFullYear();
             var endYear = thisYear - NISN_AGE_VALIDITY;
             var birthYear = parseInt(year) + 2000;
-            if (birthYear > thisYear) {
+            if (birthYear > thisYear)
                 birthYear = birthYear - 1000;
-            }
-            if (birthYear < endYear)
-                return false;
-            return true;
+            return birthYear < endYear ? false : true;
         };
         return NomorIndukSiswaNasional;
     }());
-    var nisn = new NomorIndukSiswaNasional();
-    function isValidNISN(param) {
-        return nisn.isValid(param);
+    var theNISN = new NomorIndukSiswaNasional();
+    /**
+     * NISN validation.
+     *
+     * Validate NISN by validating NISN's birth year (student age) with NISN_AGE_VALIDITY and NISN's length
+     *
+     * @param {string} nisn - The NISN to be validated
+     * @return {boolean} Is valid or not
+    **/
+    function isValidNISN(nisn) {
+        return theNISN.isValid(nisn);
     }
 
+    /**
+     * Nusantara Valid: npwp.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+    **/
     /**
      * NPWP_REGEX
      *
@@ -1058,6 +1488,13 @@
     **/
     var NPWP_HYPHEN_INDEXES = [8];
 
+    /**
+     * Nusantara Valid: _nomorPokokWajibPajak.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+     *
+     * @class The NomorPokokWajibPajak class
+    **/
     var NomorPokokWajibPajak = /** @class */ (function () {
         function NomorPokokWajibPajak() {
         }
@@ -1065,34 +1502,25 @@
             if (!npwp || typeof npwp !== 'string')
                 return false;
             var numOnly = numbersOnly(npwp);
-            if (!this.isValidLength(numOnly.length))
-                return false;
             var regexNPWP = NPWP_REGEX.exec(numOnly);
-            if (!regexNPWP)
-                return false;
-            return this.isValidTaxIdentity(regexNPWP[1]);
-        };
-        NomorPokokWajibPajak.prototype.isValidLength = function (npwp) {
-            return npwp == NPWP_LENGTH;
+            return regexNPWP !== null
+                && this.isValidTaxIdentity(regexNPWP[1])
+                && correctLength(0, regexNPWP[0].length, { minLength: NPWP_LENGTH });
         };
         NomorPokokWajibPajak.prototype.isValidTaxIdentity = function (taxIdentity) {
-            return NPWP_TAX_IDENTITIES.includes(taxIdentity);
+            return includes(NPWP_TAX_IDENTITIES, taxIdentity);
         };
-        NomorPokokWajibPajak.prototype.format = function (npwp, pad) {
-            if (pad === void 0) { pad = true; }
+        NomorPokokWajibPajak.prototype.format = function (npwp) {
             var newNPWP = numbersOnly(npwp);
-            if (pad) {
-                newNPWP = newNPWP.padStart(NPWP_LENGTH, '0');
-            }
             return newNPWP
                 .slice(0, NPWP_LENGTH)
                 .split('')
                 .reduce(function (a, b, index) {
                 var result = "" + a + b;
                 if (!(index === newNPWP.length - 1)) {
-                    if (NPWP_DOT_INDEXES.includes(index))
+                    if (includes(NPWP_DOT_INDEXES, index))
                         return result + ".";
-                    if (NPWP_HYPHEN_INDEXES.includes(index))
+                    if (includes(NPWP_HYPHEN_INDEXES, index))
                         return result + "-";
                 }
                 return result;
@@ -1100,94 +1528,192 @@
         };
         return NomorPokokWajibPajak;
     }());
-    var npwp = new NomorPokokWajibPajak();
-    function isValidNPWP(param) {
-        return npwp.isValid(param);
+    var theNPWP = new NomorPokokWajibPajak();
+    /**
+     * NPWP validation.
+     *
+     * Validate NPWP by validating NPWP's tax identity and NPWP's length
+     *
+     * @param {string} npwp - The NPWP to be validated
+     * @return {boolean} Is valid or not
+    **/
+    function isValidNPWP(npwp) {
+        return theNPWP.isValid(npwp);
     }
-    function formatNPWP(param, pad) {
-        if (pad === void 0) { pad = true; }
-        return npwp.format(param, pad);
+    /**
+     * NPWP formating
+     *
+     * Format NPWP to the correct requirement
+     *
+     * @param {string} npwp - TheNPWP to be formated
+     * @return {string} Formated NPWP
+    **/
+    function formatNPWP(npwp) {
+        return theNPWP.format(npwp);
     }
 
+    /**
+     * Nusantara Valid: _province.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+     *
+     * @class The Province class
+    **/
     var Province = /** @class */ (function () {
         function Province() {
         }
         Province.prototype.getData = function (index) {
             if (index === void 0) { index = ''; }
-            if (index == '') {
-                var provinces = PROVINCES.map(function (key) { return ({
-                    key: key,
-                    name: PROVINCES_DATA[key].name,
-                }); });
-                return provinces;
+            var province;
+            if (index) {
+                province = {
+                    key: index,
+                    name: PROVINCE_DATA[index].name
+                };
             }
-            var province = {
-                key: index,
-                name: PROVINCES_DATA[index].name
-            };
+            else {
+                province = PROVINCE_KEYS.map(function (key) { return ({
+                    key: key,
+                    name: PROVINCE_DATA[key].name,
+                }); });
+            }
             return province;
         };
         return Province;
     }());
-    var atm$2 = new Province();
-    function getDataProvince(param) {
-        return atm$2.getData(param);
+    var prov = new Province();
+    /**
+     * Get specific province data with IDataProvince object structure
+     *
+     * Return object data based on provided province key
+     *
+     * @param {string} provinceKey - Array key of the province
+     * @return {IDataProvince} IDataProvince object
+    **/
+    function getDataProvince(provinceKey) {
+        return prov.getData(provinceKey);
     }
+    /**
+     * Get all province data with IDataProvince object structure
+     *
+     * Return all IDataProvince object in Array<IDataProvince>
+     *
+     * @return {IDataProvince[]} Array of IDataProvince object
+    **/
     function getDataProvinces() {
-        return atm$2.getData();
+        return prov.getData();
     }
 
+    /**
+     * Nusantara Valid: _telephoneNumber.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+     *
+     * @class The TelephoneNumber class
+    **/
     var TelephoneNumber = /** @class */ (function () {
         function TelephoneNumber() {
-            this.VALID_TELEPHONE_AREACODE = Object.keys(PROVINCES_DATA).reduce(function (a, b) { return a.concat(PROVINCES_DATA[b].tel); }, []);
+            this.VALID_TELEPHONE_AREACODE = PROVINCE_KEYS.reduce(function (a, b) { return a.concat(PROVINCE_DATA[b].tel); }, []);
         }
         TelephoneNumber.prototype.isValid = function (tel) {
             if (!tel || typeof tel !== 'string')
                 return false;
-            var cleanTelNumber = cleanUpPhoneNumber(tel);
-            return this.isValidCellularPrefix(cleanTelNumber);
+            var cleanTelNumber = cleanPhoneNumbers(tel);
+            return !isNaN(this.isValidCellularPrefix(cleanTelNumber));
         };
         TelephoneNumber.prototype.isValidCellularPrefix = function (parsedTel) {
-            return this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(0, 2))) || this.VALID_TELEPHONE_AREACODE.includes(Number(parsedTel.substr(0, 3)));
+            var thePrefix = Number(parsedTel.substr(0, 2));
+            if (includes(this.VALID_TELEPHONE_AREACODE, thePrefix))
+                return thePrefix;
+            thePrefix = Number(parsedTel.substr(0, 3));
+            if (includes(this.VALID_TELEPHONE_AREACODE, thePrefix))
+                return thePrefix;
+            return NaN;
+        };
+        TelephoneNumber.prototype.getData = function (tel) {
+            var data = {};
+            var cleanTelNumber = cleanPhoneNumbers(tel);
+            data.number = this.format(cleanTelNumber);
+            var pfx = this.isValidCellularPrefix(cleanTelNumber);
+            for (var _i = 0, PROVINCE_KEYS_1 = PROVINCE_KEYS; _i < PROVINCE_KEYS_1.length; _i++) {
+                var key = PROVINCE_KEYS_1[_i];
+                var element = PROVINCE_DATA[key];
+                if (includes(element.tel, pfx)) {
+                    data.origin = {
+                        key: key,
+                        name: element.name
+                    };
+                    break;
+                }
+            }
+            return data;
         };
         TelephoneNumber.prototype.format = function (tel, int) {
             if (int === void 0) { int = false; }
-            var cleanTelNumber = cleanUpPhoneNumber(tel);
+            var cleanTelNumber = cleanPhoneNumbers(tel);
+            var pfx = this.isValidCellularPrefix(cleanTelNumber).toString();
             var TEL_HYPEN_INDEX = [];
-            if (this.VALID_TELEPHONE_AREACODE.includes(Number(cleanTelNumber.substr(0, 2)))) {
+            if (pfx.length === 2)
                 TEL_HYPEN_INDEX = [1];
-            }
-            else if (this.VALID_TELEPHONE_AREACODE.includes(Number(cleanTelNumber.substr(0, 3)))) {
-                TEL_HYPEN_INDEX = [2];
-            }
             else
-                return '';
+                TEL_HYPEN_INDEX = [2];
             var formatedNumber = cleanTelNumber
                 .slice(0, cleanTelNumber.length)
                 .split('')
                 .reduce(function (a, b, index) {
                 var result = "" + a + b;
                 if (!(index === cleanTelNumber.length - 1)) {
-                    if (TEL_HYPEN_INDEX.includes(index))
+                    if (includes(TEL_HYPEN_INDEX, index))
                         return result + "-";
                 }
                 return result;
             }, '');
-            if (int)
-                return '+' + COUNTRY_CODE.toString() + formatedNumber;
-            return '0' + formatedNumber;
+            return int ? '+' + COUNTRY_CODE + formatedNumber : '0' + formatedNumber;
         };
         return TelephoneNumber;
     }());
     var telNumber = new TelephoneNumber();
-    function isValidTelephoneNumber(param) {
-        return telNumber.isValid(param);
+    /**
+     * Telephone number validation
+     *
+     * It will validate telephone number based on it's prefix
+     *
+     * @param {string} number - The telephone number to be validated
+     * @return {boolean} Is valid or not
+    **/
+    function isValidTelephoneNumber(number) {
+        return telNumber.isValid(number);
     }
-    function formatTelephoneNumber(param, int) {
+    /**
+     * Telephone number data getter
+     *
+     * Return object data based on provided telephone number
+     *
+     * @param {string} number - The telephone number
+     * @return {object} IDataTelephoneNumber object
+    **/
+    function getDataTelephoneNumber(number) {
+        return telNumber.getData(number);
+    }
+    /**
+     * Telephone number formating
+     *
+     * Format telephone number to local calling format (0) and international calling format (+XX)
+     *
+     * @param {string} number - The telephone number to be formated
+     * @param {boolean} int - Local calling format (leading zero) or international calling format (leading country code)
+     * @return {string} Formated number
+    **/
+    function formatTelephoneNumber(number, int) {
         if (int === void 0) { int = false; }
-        return telNumber.format(param, int);
+        return telNumber.format(number, int);
     }
 
+    /**
+     * Nusantara Valid: tnkb.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+    **/
     /**
      * TNKB_REGEX
      *
@@ -1198,63 +1724,105 @@
     **/
     var TNKB_REGEX = /^([A-Z]{1,2})(\d{1,4})([A-Z]{1,3})$/;
 
+    /**
+     * Nusantara Valid: _tandaNomorKendaraanBermotor.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+     *
+     * @class The TandaNomorKendaraanBermotor class
+    **/
     var TandaNomorKendaraanBermotor = /** @class */ (function () {
         function TandaNomorKendaraanBermotor() {
-            this.VALID_TNKB_AREACODE = Object.keys(PROVINCES_DATA).reduce(function (a, b) { return a.concat(PROVINCES_DATA[b].vehiclePlate); }, []);
+            this.VALID_TNKB_AREACODE = PROVINCE_KEYS.reduce(function (a, b) { return a.concat(PROVINCE_DATA[b].vehiclePlate); }, []);
         }
         TandaNomorKendaraanBermotor.prototype.isValid = function (tnkb) {
             if (!tnkb || typeof tnkb !== 'string')
                 return false;
             var TNKB = tnkb.toUpperCase();
             var validTNKB = TNKB_REGEX.exec(TNKB);
-            if (!validTNKB)
-                return false;
-            return this.isValidTNKBArea(validTNKB);
+            return validTNKB !== null
+                && this.isValidTNKBArea(validTNKB[1]);
         };
         TandaNomorKendaraanBermotor.prototype.isValidTNKBArea = function (tnkb) {
-            return this.VALID_TNKB_AREACODE.includes(tnkb[1]);
+            return includes(this.VALID_TNKB_AREACODE, tnkb);
         };
         TandaNomorKendaraanBermotor.prototype.getData = function (tnkb) {
-            var validTNKB = TNKB_REGEX.exec(tnkb);
-            if (validTNKB == null)
-                return {
-                    areaCode: '',
-                    index: 0,
-                    detailedAreaCode: ''
-                };
-            return {
-                areaCode: validTNKB[1],
-                index: Number(validTNKB[2]),
-                detailedAreaCode: validTNKB[3]
-            };
+            var data = {};
+            var TNKB = tnkb.toUpperCase();
+            var validTNKB = TNKB_REGEX.exec(TNKB);
+            if (!validTNKB)
+                return data;
+            for (var _i = 0, PROVINCE_KEYS_1 = PROVINCE_KEYS; _i < PROVINCE_KEYS_1.length; _i++) {
+                var key = PROVINCE_KEYS_1[_i];
+                var element = PROVINCE_DATA[key];
+                if (includes(element.vehiclePlate, validTNKB[1])) {
+                    data = {
+                        areaCode: validTNKB[1],
+                        index: Number(validTNKB[2]),
+                        detailedAreaCode: validTNKB[3],
+                        province: {
+                            key: key,
+                            name: element.name
+                        }
+                    };
+                    break;
+                }
+            }
+            return data;
         };
         return TandaNomorKendaraanBermotor;
     }());
-    var tnkb = new TandaNomorKendaraanBermotor();
-    function isValidTNKB(param) {
-        return tnkb.isValid(param);
+    var theTNKB = new TandaNomorKendaraanBermotor();
+    /**
+     * TNKB validation.
+     *
+     * It check if the TNKB's area code is exist in VALID_TNKB_AREACODE
+     *
+     * @param {string} tnkb - The TNKB, the one to be validated
+     * @return {boolean} Is valid or not
+    **/
+    function isValidTNKB(tnkb) {
+        return theTNKB.isValid(tnkb);
     }
-    function getTNKBData(param) {
-        return tnkb.getData(param);
+    /**
+     * TNKB data retreiver.
+     *
+     * Return a set of TNKB object data from user provided tnkb
+     *
+     * @param {string} tnkb - The TNKB
+     * @return {IDataTNKB} The TNKB data
+    **/
+    function getDataTNKB(tnkb) {
+        return theTNKB.getData(tnkb);
     }
 
+    /**
+     * Nusantara Valid: _zipCode.ts
+     *
+     * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+     *
+     * @class The ZIPCode class
+    **/
     var ZIPCode = /** @class */ (function () {
         function ZIPCode() {
-            this.VALID_ZIPCODE = Object.keys(PROVINCES_DATA).reduce(function (a, b) { return a.concat(PROVINCES_DATA[b].zipCode); }, []);
+            this.ZIP_RANGE = PROVINCE_KEYS.reduce(function (a, b) { return a.concat(PROVINCE_DATA[b].zipCode); }, []);
         }
-        ZIPCode.prototype.isValid = function (zip) {
+        ZIPCode.prototype.isValid = function (zip, provinceKey) {
+            if (provinceKey === void 0) { provinceKey = ''; }
             if (!zip)
                 return false;
-            var sZIP = zip.toString();
-            return this.isValidLength(sZIP) && this.isValidZIPCode(sZIP);
+            var zipArray = this.ZIP_RANGE;
+            zip = zip.toString();
+            var validLength = correctLength(0, zip.length, { minLength: 5 });
+            if (provinceKey)
+                zipArray = PROVINCE_DATA[provinceKey].zipCode;
+            return validLength
+                && this.isValidZIPCode(zip, zipArray);
         };
-        ZIPCode.prototype.isValidLength = function (zip) {
-            return zip.length == 5;
-        };
-        ZIPCode.prototype.isValidZIPCode = function (zip) {
-            for (var _i = 0, _a = this.VALID_ZIPCODE; _i < _a.length; _i++) {
-                var val = _a[_i];
-                if (val.from <= zip && val.to <= zip) {
+        ZIPCode.prototype.isValidZIPCode = function (zip, zipRange) {
+            for (var _i = 0, zipRange_1 = zipRange; _i < zipRange_1.length; _i++) {
+                var val = zipRange_1[_i];
+                if (val.from <= zip && val.to >= zip) {
                     return true;
                 }
             }
@@ -1262,31 +1830,68 @@
         };
         return ZIPCode;
     }());
-    var zip = new ZIPCode();
-    function isValidZIP(param) {
-        return zip.isValid(param);
+    var theZIP = new ZIPCode();
+    /**
+     * ZIP validation without any comparison with user provided data.
+     *
+     * It will check if the ZIP is included / exist in VALID_ZIPCODE array and if the ZIP has the correct length of 6.
+     *
+     * @param {string} zip - The ZIP, the one to be validated
+     * @return {boolean} Is valid or not
+    **/
+    function isValidZIP(zip) {
+        return theZIP.isValid(zip);
+    }
+    /**
+     * ZIP validation with comparison with user provided provinceKey.
+     *
+     * It will check if the ZIP is included / exist in ZIP range from PROVINCE_DATA[provinceKey].zipCode[]
+     *
+     * @param {string | number} zip - The ZIP, the one to be validated
+     * @param {object} comparison - The data to compare with, provinceKey (key from PROVINCE_DATA)
+     * @return {boolean} Is valid or not
+    **/
+    function isValidZIPWithComparison(zip, comparison) {
+        var _a = comparison.provinceKey, provinceKey = _a === void 0 ? '' : _a;
+        return theZIP.isValid(zip, provinceKey);
     }
 
+    exports.cleanPhoneNumbers = cleanPhoneNumbers;
+    exports.correctLength = correctLength;
     exports.formatCCNumber = formatCCNumber;
     exports.formatCellularNumber = formatCellularNumber;
+    exports.formatDate = formatDate;
     exports.formatNPWP = formatNPWP;
     exports.formatTelephoneNumber = formatTelephoneNumber;
-    exports.getBankData = getBankData;
-    exports.getCellularProviderData = getCellularProviderData;
+    exports.getDataBank = getDataBank;
+    exports.getDataBanks = getDataBanks;
+    exports.getDataCellularNumber = getDataCellularNumber;
+    exports.getDataCellularProvider = getDataCellularProvider;
+    exports.getDataCellularProviders = getDataCellularProviders;
+    exports.getDataNIK = getDataNIK;
+    exports.getDataNIP = getDataNIP;
     exports.getDataProvince = getDataProvince;
     exports.getDataProvinces = getDataProvinces;
-    exports.getTNKBData = getTNKBData;
+    exports.getDataTNKB = getDataTNKB;
+    exports.getDataTelephoneNumber = getDataTelephoneNumber;
+    exports.includes = includes;
     exports.isValidATMNumber = isValidATMNumber;
+    exports.isValidATMNumberWithComparison = isValidATMNumberWithComparison;
     exports.isValidCCNumber = isValidCCNumber;
     exports.isValidCellularNumber = isValidCellularNumber;
+    exports.isValidCellularNumberWithComparison = isValidCellularNumberWithComparison;
     exports.isValidEmail = isValidEmail;
     exports.isValidNIK = isValidNIK;
+    exports.isValidNIKWithComparison = isValidNIKWithComparison;
     exports.isValidNIP = isValidNIP;
     exports.isValidNISN = isValidNISN;
     exports.isValidNPWP = isValidNPWP;
     exports.isValidTNKB = isValidTNKB;
     exports.isValidTelephoneNumber = isValidTelephoneNumber;
     exports.isValidZIP = isValidZIP;
+    exports.isValidZIPWithComparison = isValidZIPWithComparison;
+    exports.numbersOnly = numbersOnly;
+    exports.range = range;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
