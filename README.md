@@ -46,7 +46,7 @@ There are some ways to import the package
 
 The package includes multiple formats to support different build process.
 - **/cjs/nusantara-valid.js** - CommonJS module.
-- **/esm/nusantara-valid.mjs** - ES module.
+- **/esm/nusantara-valid.js** - ES module.
 - **/umd/nusantara-valid.js** - UMD module. Can be used in browser with `script` tag
 
 ## **Usage**
@@ -60,7 +60,7 @@ const NusantaraValid = require('nusantara-valid')
 ### ES module way (`import`)
 
 ``` javascript
-import NusantaraValid from './node_modules/nusantara-valid/dist/esm/nusantara-valid.mjs'
+import NusantaraValid from './node_modules/nusantara-valid/dist/esm/nusantara-valid.js'
 ```
 
 ### Good-old-browser-way (`<script></script>`)
