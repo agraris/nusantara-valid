@@ -1,3 +1,9 @@
+/**
+ * Nusantara Valid: province.extended.ts
+ *
+ * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+**/
+
 import { PROVINCE_DATA } from '../province';
 import { MergeRecursive } from '../../helpers/index.extended';
 
