@@ -79,161 +79,333 @@ import NusantaraValid from './node_modules/nusantara-valid/dist/esm/nusantara-va
 
 ## **API**
 
-### ATM Number (Nomor Rekening)
+<table><tbody><tr><td><details><summary><b>ATM Number (Nomor Rekening)</b>
 
 ``` javascript
-isValidATMNumber(atm: string); // boolean
+isValidATMNumber(atm: string);
+
+isValidATMNumberWithComparison(atm: string, bankKey: string);
+```
+</summary>
+Result:
+
+``` javascript
 isValidATMNumber('87.800.000.00');
+// true
 
-isValidATMNumberWithComparison(atm: string, bankKey: string); // boolean
 isValidATMNumberWithComparison('1230005123000', 'MDRK');
+// true
 ```
+</details></td></tr></tbody></table>
 
-### Bank
+<table><tbody><tr><td><details><summary><b>Bank</b>
 
 ``` javascript
-getDataBank(bankKey: string); // object
+getDataBank(bankKey: string);
+
+getDataBanks();
+```
+</summary>
+
+Result:
+``` javascript
 getDataBank('BCAK');
+// { key: 'BCAK', name: 'Bank Central Asia' }
 
-getDataBanks(); // array of object
+getDataBanks();
+// [
+//     { key: 'BCAK', name: 'Bank Central Asia' },
+//     { key: 'BCAS', name: 'Bank Central Asia Syariah' },
+//     { key: 'BNIK', name: 'Bank Negara Indonesia' },
+//     ...
+// ]
 ```
+</details></td></tr></tbody></table>
 
-### Cellular Number (Nomor HP)
+<table><tbody><tr><td><details><summary><b>Cellular Number (Nomor HP)</b>
 
 ``` javascript
-isValidCellularNumber(cel: string); // boolean
+isValidCellularNumber(cel: string);
+
+isValidCellularNumberWithComparison(cel: string, providerKey: string);
+
+getDataCellularNumber(cel: string);
+
+formatCellularNumber(cel: string, int:boolean = false)
+```
+</summary>
+
+Result:
+``` javascript
 isValidCellularNumber('081212341234');
+// true
 
-isValidCellularNumberWithComparison(cel: string, providerKey: string); // boolean
 isValidCellularNumberWithComparison('081212341234', 'TELKOMSEL');
+// true
 
-// You should validate the cellular number before retriving the data
-getDataCellularNumber(cel: string); // object
 getDataCellularNumber('085612341234');
+// {
+//     "number": "0856-1234-1234",
+//     "provider": {
+//         "key": "INDOSAT",
+//         "name": "Indosat Ooredoo"
+//     }
+// }
 
-// You should validate the cellular number before formating
-formatCellularNumber(cel: string, int:boolean = false) // string
-formatCellularNumber('+6281812341234'); // 0818-1234-1234
-formatCellularNumber('085612341234', true); // +62856-1234-1234
+formatCellularNumber('+6281812341234');
+// '0818-1234-1234'
+formatCellularNumber('085612341234', true);
+// '+62856-1234-1234'
 ```
+</details></td></tr></tbody></table>
 
-### Cellular Provider
+<table><tbody><tr><td><details><summary><b>Cellular Provider</b>
 
 ``` javascript
-getDataCellularProvider(key: string); // object
+getDataCellularProvider(key: string);
+
+getDataCellularProviders();
+```
+</summary>
+
+Result:
+``` javascript
 getDataCellularProvider('TELKOMSEL');
+// { "key": "TELKOMSEL", "name": "Telkomsel" }
 
-getDataCellularProviders(); // array of object
+getDataCellularProviders();
+// [
+//     { key: 'TELKOMSEL', name: 'Telkomsel' },
+//     { key: 'INDOSAT', name: 'Indosat Ooredoo' },
+//     { key: 'XL', name: 'XL Axiata' },
+//     ...
+// ]
 ```
+</details></td></tr></tbody></table>
 
-### Credit Card Number
+<table><tbody><tr><td><details><summary><b>Credit Card Number</b>
 
 ``` javascript
-isValidCCNumber(cc: string); // boolean
+isValidCCNumber(cc: string);
+
+formatCCNumber(cc: string);
+```
+</summary>
+
+Result:
+``` javascript
 isValidCCNumber('4000123456789010');
+// true
 isValidCCNumber('5000 1234 5678 9010');
+// true
 
-// You should validate the CC number before formating
-formatCCNumber(cc: string); // string
-formatCCNumber('4000123456789010'); // 4000 1234 5678 9010
-formatCCNumber('5000 1234 5678 9010'); // 5000 1234 5678 9010
+formatCCNumber('4000123456789010');
+// '4000 1234 5678 9010'
+formatCCNumber('5000 1234 5678 9010');
+// '5000 1234 5678 9010'
 ```
+</details></td></tr></tbody></table>
 
-### E-Mail
+<table><tbody><tr><td><details><summary><b>E-Mail</b>
 
 ``` javascript
-isValidEmail(email: string); // boolean
+isValidEmail(email: string);
+```
+</summary>
+
+Result:
+``` javascript
 isValidEmail('myawesom-email@domain.tld');
+// true
 ```
+</details></td></tr></tbody></table>
 
-### Nomor Induk Kependudukan (NIK)
+<table><tbody><tr><td><details><summary><b>Nomor Induk Kependudukan (NIK)</b>
 
 ``` javascript
-isValidNIK(nik: string); // boolean
+isValidNIK(nik: string);
+
+isValidNIKWithComparison(nik: string, comparison: { provinceKy?: string, birthday?: string });
+
+getDataNIK(nik: string);
+```
+</summary>
+
+Result:
+``` javascript
 isValidNIK('3101011212930001');
+// true
 
-isValidNIKWithComparison(nik: string, comparison: { provinceKy?: string, birthday?: string }); // boolean
 isValidNIKWithComparison('3101011212930001', { provinceKey: 'JK', birthday: '1993-12-12' });
-isValidNIKWithComparison('3401012012930001', { provinceKey: 'YO' });
+// true
 
-// You should validate the NIK before retriving the data
-getDataNIK(nik: string); // object
 getDataNIK('3101011212930001');
+// {
+//     nik: '3101011212930001',
+//     birthday: 2006-12-20T00:00:00.000Z,
+//     sex: 'Male',
+//     province: {
+//         key: 'JK',
+//         name: 'Jakarta'
+//     }
+// }
 ```
+</details></td></tr></tbody></table>
 
-### Nomor Induk Pegawai Negeri Sipil (NIP)
+<table><tbody><tr><td><details><summary><b>Nomor Induk Pegawai Negeri Sipil (NIP)</b>
 
 ``` javascript
-isValidNIP(nip: string); // boolean
+isValidNIP(nip: string);
+```
+</summary>
+
+Result:
+``` javascript
 isValidNIP('198512262000051001');
+// true
 ```
+</details></td></tr></tbody></table>
 
-### Nomor Induk Siswa Nasional (NISN)
+<table><tbody><tr><td><details><summary><b>Nomor Induk Siswa Nasional (NISN)</b>
 
 ``` javascript
-isValidNISN(nisn: string); // boolean
+isValidNISN(nisn: string);
+```
+</summary>
+
+Result:
+``` javascript
 isValidNISN('0061230001');
+// true
 ```
+</details></td></tr></tbody></table>
 
-### Nomor Pokok Wajib Pajak (NPWP)
+<table><tbody><tr><td><details><summary><b>Nomor Pokok Wajib Pajak (NPWP)</b>
 
 ``` javascript
-isValidNPWP(npwp: string); // boolean
+isValidNPWP(npwp: string);
+
+formatNPWP(npwp: string);
+```
+</summary>
+
+Result:
+``` javascript
 isValidNPWP('09.123.123.1-123.123');
+// true
 isValidNPWP('091231231123123');
+// true
 
-// You should validate the NPWP number before formating
-formatNPWP(npwp: string); // string
 formatNPWP('091231231123123');
+// '09.123.123.1-123.123'
 ```
+</details></td></tr></tbody></table>
 
-### Province
+<table><tbody><tr><td><details><summary><b>Province</b>
 
 ``` javascript
-getDataProvince(key: string); // object
+getDataProvince(key: string);
+
+getDataProvinces();
+```
+</summary>
+
+Result:
+``` javascript
 getDataProvince('YO');
+// { key: 'YO', name: 'Yogyakarta' }
 
-getDataProvinces(); // array of object
+getDataProvinces();
+// [
+//     { key: 'AC', name: 'Aceh' },
+//     { key: 'BA', name: 'Bali' },
+//     { key: 'BB', name: 'Kepulauan Bangka Belitung' },
+//     ...
+// ]
 ```
+</details></td></tr></tbody></table>
 
-### Tanda Nomor Kendaraan Bermotor (TNKB)
+<table><tbody><tr><td><details><summary><b>Tanda Nomor Kendaraan Bermotor (TNKB)</b>
 
 ``` javascript
-isValidTNKB(tnkb: string); // boolean
+isValidTNKB(tnkb: string);
+
+getDataTNKB(tnkb: string);
+```
+</summary>
+
+Result:
+``` javascript
 isValidTNKB('AB1234XYZ');
+// true
 
-// You should validate the TNKB number before retriving the data
-getDataTNKB(tnkb: string); // object
 getDataTNKB('AB1234XYZ');
+// {
+//     areaCode: 'AB',
+//     index: 1234,
+//     detailedAreaCode: 'XYZ',
+//     province: {
+//         key: 'YO',
+//         name: 'Yogyakarta'
+//     }
+// }
 ```
+</details></td></tr></tbody></table>
 
-### Telephone Number (Nomor Telefon)
+<table><tbody><tr><td><details><summary><b>Telephone Number (Nomor Telefon)</b>
 
 ``` javascript
-isValidTelephoneNumber(tel: string); // boolean
+isValidTelephoneNumber(tel: string);
+
+getDataTelephoneNumber(cel: string);
+
+formatTelephoneNumber(tel: string, int:boolean = false)
+```
+</summary>
+
+Result:
+``` javascript
 isValidTelephoneNumber('0274123123');
+// true
 
-// You should validate the telephone number before retriving the data
-getDataTelephoneNumber(cel: string); // object
 getDataTelephoneNumber('0274123123');
+// {
+//     "number": "0274-123123",
+//     "origin": {
+//         "key": "YO",
+//         "name": "Yogyakarta"
+//     }
+// }
 
-// You should validate the telephone number before formating
-formatTelephoneNumber(tel: string, int:boolean = false) // string
-formatTelephoneNumber('0274123123'); // 0274-123123
-formatTelephoneNumber('0274123123', true); // +62274-123123
+formatTelephoneNumber('0274123123');
+// '0274-123123'
+formatTelephoneNumber('0274123123', true);
+// '+62274-123123'
 ```
+</details></td></tr></tbody></table>
 
-### ZIP Code (Kode POS)
+<table><tbody><tr><td><details><summary><b>ZIP Code (Kode POS)</b>
 
 ``` javascript
-isValidZIP(zip: string | number); // boolean
-isValidZIP('55524');
-isValidZIP(55524);
+isValidZIP(zip: string | number);
 
-isValidZIPWithComparison(zip: string | number, comparison: { provinceKy?: string }); // boolean
-isValidZIPWithComparison('55524', { provinceKey: 'YO' });
-isValidZIPWithComparison(55524, { provinceKey: 'YO' });
+isValidZIPWithComparison(zip: string | number, comparison: { provinceKy?: string });
 ```
+</summary>
+
+Result:
+``` javascript
+isValidZIP('55264');
+// true
+isValidZIP(55264);
+// true
+
+isValidZIPWithComparison('55264', { provinceKey: 'YO' });
+// true
+isValidZIPWithComparison(55264, { provinceKey: 'YO' });
+// true
+```
+</details></td></tr></tbody></table>
 
 ## **License**
 
