@@ -4,10 +4,6 @@
   * Contributors (https://github.com/magicjar/nusantara-valid/graphs/contributors)
   * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
   */
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
 /**
  * Strip all non number characters
  *
@@ -1854,40 +1850,5 @@ function isValidZIPWithComparison(zip, comparison) {
     return theZIP.isValid(zip, provinceKey);
 }
 
-exports.cleanPhoneNumbers = cleanPhoneNumbers;
-exports.correctLength = correctLength;
-exports.formatCCNumber = formatCCNumber;
-exports.formatCellularNumber = formatCellularNumber;
-exports.formatDate = formatDate;
-exports.formatNPWP = formatNPWP;
-exports.formatTelephoneNumber = formatTelephoneNumber;
-exports.getDataBank = getDataBank;
-exports.getDataBanks = getDataBanks;
-exports.getDataCellularNumber = getDataCellularNumber;
-exports.getDataCellularProvider = getDataCellularProvider;
-exports.getDataCellularProviders = getDataCellularProviders;
-exports.getDataNIK = getDataNIK;
-exports.getDataNIP = getDataNIP;
-exports.getDataProvince = getDataProvince;
-exports.getDataProvinces = getDataProvinces;
-exports.getDataTNKB = getDataTNKB;
-exports.getDataTelephoneNumber = getDataTelephoneNumber;
-exports.includes = includes;
-exports.isValidATMNumber = isValidATMNumber;
-exports.isValidATMNumberWithComparison = isValidATMNumberWithComparison;
-exports.isValidCCNumber = isValidCCNumber;
-exports.isValidCellularNumber = isValidCellularNumber;
-exports.isValidCellularNumberWithComparison = isValidCellularNumberWithComparison;
-exports.isValidEmail = isValidEmail;
-exports.isValidNIK = isValidNIK;
-exports.isValidNIKWithComparison = isValidNIKWithComparison;
-exports.isValidNIP = isValidNIP;
-exports.isValidNISN = isValidNISN;
-exports.isValidNPWP = isValidNPWP;
-exports.isValidTNKB = isValidTNKB;
-exports.isValidTelephoneNumber = isValidTelephoneNumber;
-exports.isValidZIP = isValidZIP;
-exports.isValidZIPWithComparison = isValidZIPWithComparison;
-exports.numbersOnly = numbersOnly;
-exports.range = range;
+export { cleanPhoneNumbers, correctLength, formatCCNumber, formatCellularNumber, formatDate, formatNPWP, formatTelephoneNumber, getDataBank, getDataBanks, getDataCellularNumber, getDataCellularProvider, getDataCellularProviders, getDataNIK, getDataNIP, getDataProvince, getDataProvinces, getDataTNKB, getDataTelephoneNumber, includes, isValidATMNumber, isValidATMNumberWithComparison, isValidCCNumber, isValidCellularNumber, isValidCellularNumberWithComparison, isValidEmail, isValidNIK, isValidNIKWithComparison, isValidNIP, isValidNISN, isValidNPWP, isValidTNKB, isValidTelephoneNumber, isValidZIP, isValidZIPWithComparison, numbersOnly, range };
 //# sourceMappingURL=nusantara-valid.js.map
