@@ -1,6 +1,6 @@
 {
   "name": "nusantara-valid",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Nusantara Valid is a data validator to validate any Indonesian specific civil data such as nik, nip, and many more.",
   "author": {
     "name": "Fajar Setya Budi",
