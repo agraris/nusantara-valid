@@ -4516,60 +4516,210 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Kotawaringin Barat',
                 bpscode: '62.01',
-                districts: []
+                districts: [
+                    { name: 'Kumai', bpsCode: '62.01.01' },
+                    { name: 'Arut Selatan', bpsCode: '62.01.02' },
+                    { name: 'Kotawaringin Lama', bpsCode: '62.01.03' },
+                    { name: 'Arut Utara', bpsCode: '62.01.04' },
+                    { name: 'Pangkalan Lada', bpsCode: '62.01.05' },
+                    { name: 'Pangkalan Banteng', bpsCode: '62.01.06' }
+                ]
             }, {
                 name: 'Kotawaringin Timur',
                 bpscode: '62.02',
-                districts: []
+                districts: [
+                    { name: 'Kota Besi', bpsCode: '62.02.01' },
+                    { name: 'Cempaga', bpsCode: '62.02.02' },
+                    { name: 'Mentaya Hulu', bpsCode: '62.02.03' },
+                    { name: 'Parenggean', bpsCode: '62.02.04' },
+                    { name: 'Baamang', bpsCode: '62.02.05' },
+                    { name: 'Mentawa Baru Ketapang', bpsCode: '62.02.06' },
+                    { name: 'Mentaya Hilir Utara', bpsCode: '62.02.07' },
+                    { name: 'Mentaya Hilir Selatan', bpsCode: '62.02.08' },
+                    { name: 'Pulau Hanaut', bpsCode: '62.02.09' },
+                    { name: 'Antang Kalang', bpsCode: '62.02.10' },
+                    { name: 'Teluk Sampit', bpsCode: '62.02.11' },
+                    { name: 'Seranau', bpsCode: '62.02.12' },
+                    { name: 'Cempaga Hulu', bpsCode: '62.02.13' },
+                    { name: 'Telawang', bpsCode: '62.02.14' },
+                    { name: 'Bukit Santuai (Bukit Santuei)', bpsCode: '62.02.15' },
+                    { name: 'Tualan Hulu', bpsCode: '62.02.16' },
+                    { name: 'Telaga Antang', bpsCode: '62.02.17' }
+                ]
             }, {
                 name: 'Kapuas',
                 bpscode: '62.03',
-                districts: []
+                districts: [
+                    { name: 'Selat', bpsCode: '62.03.01' },
+                    { name: 'Kapuas Hilir', bpsCode: '62.03.02' },
+                    { name: 'Kapuas Timur', bpsCode: '62.03.03' },
+                    { name: 'Kapuas Kuala', bpsCode: '62.03.04' },
+                    { name: 'Kapuas Barat', bpsCode: '62.03.05' },
+                    { name: 'Pulau Petak', bpsCode: '62.03.06' },
+                    { name: 'Kapuas Murung', bpsCode: '62.03.07' },
+                    { name: 'Basarang', bpsCode: '62.03.08' },
+                    { name: 'Mantangai', bpsCode: '62.03.09' },
+                    { name: 'Timpah', bpsCode: '62.03.10' },
+                    { name: 'Kapuas Tengah', bpsCode: '62.03.11' },
+                    { name: 'Kapuas Hulu', bpsCode: '62.03.12' },
+                    { name: 'Tamban Catur', bpsCode: '62.03.13' },
+                    { name: 'Pasak Talawang', bpsCode: '62.03.14' },
+                    { name: 'Mandau Talawang', bpsCode: '62.03.15' },
+                    { name: 'Dadahup', bpsCode: '62.03.16' },
+                    { name: 'Bataguh', bpsCode: '62.03.17' }
+                ]
             }, {
                 name: 'Barito Selatan',
                 bpscode: '62.04',
-                districts: []
+                districts: [
+                    { name: 'Jenamas', bpsCode: '62.04.01' },
+                    { name: 'Dusun Hilir', bpsCode: '62.04.02' },
+                    { name: 'Karau Kuala', bpsCode: '62.04.03' },
+                    { name: 'Dusun Utara', bpsCode: '62.04.04' },
+                    { name: 'Gunung Bintang Awai', bpsCode: '62.04.05' },
+                    { name: 'Dusun Selatan', bpsCode: '62.04.06' }
+                ]
             }, {
                 name: 'Barito Utara',
                 bpscode: '62.05',
-                districts: []
+                districts: [
+                    { name: 'Montallat (Montalat)', bpsCode: '62.05.01' },
+                    { name: 'Gunung Timang', bpsCode: '62.05.02' },
+                    { name: 'Gunung Purei', bpsCode: '62.05.03' },
+                    { name: 'Teweh Timur', bpsCode: '62.05.04' },
+                    { name: 'Teweh Tengah', bpsCode: '62.05.05' },
+                    { name: 'Lahei', bpsCode: '62.05.06' },
+                    { name: 'Teweh Baru', bpsCode: '62.05.07' },
+                    { name: 'Teweh Selatan', bpsCode: '62.05.08' },
+                    { name: 'Lahei Barat', bpsCode: '62.05.09' }
+                ]
             }, {
                 name: 'Katingan',
                 bpscode: '62.06',
-                districts: []
+                districts: [
+                    { name: 'Kamipang', bpsCode: '62.06.01' },
+                    { name: 'Katingan Hilir', bpsCode: '62.06.02' },
+                    { name: 'Tewang Sangalang / Sanggalang Garing', bpsCode: '62.06.03' },
+                    { name: 'Pulau Malan', bpsCode: '62.06.04' },
+                    { name: 'Katingan Tengah', bpsCode: '62.06.05' },
+                    { name: 'Sanaman Mantikei (Senamang Mantikei)', bpsCode: '62.06.06' },
+                    { name: 'Marikit', bpsCode: '62.06.07' },
+                    { name: 'Katingan Hulu', bpsCode: '62.06.08' },
+                    { name: 'Mendawai', bpsCode: '62.06.09' },
+                    { name: 'Katingan Kuala', bpsCode: '62.06.10' },
+                    { name: 'Tasik Payawan', bpsCode: '62.06.11' },
+                    { name: 'Petak Malai', bpsCode: '62.06.12' },
+                    { name: 'Bukit Raya', bpsCode: '62.06.13' }
+                ]
             }, {
                 name: 'Seruyan',
                 bpscode: '62.07',
-                districts: []
+                districts: [
+                    { name: 'Seruyan Hilir', bpsCode: '62.07.01' },
+                    { name: 'Seruyan Tengah', bpsCode: '62.07.02' },
+                    { name: 'Danau Sembuluh', bpsCode: '62.07.03' },
+                    { name: 'Hanau', bpsCode: '62.07.04' },
+                    { name: 'Seruyan Hulu', bpsCode: '62.07.05' },
+                    { name: 'Seruyan Hilir Timur', bpsCode: '62.07.06' },
+                    { name: 'Seruyan Raya', bpsCode: '62.07.07' },
+                    { name: 'Danau Seluluk', bpsCode: '62.07.08' },
+                    { name: 'Batu Ampar', bpsCode: '62.07.09' },
+                    { name: 'Suling Tambun', bpsCode: '62.07.10' }
+                ]
             }, {
                 name: 'Sukamara',
                 bpscode: '62.08',
-                districts: []
+                districts: [
+                    { name: 'Sukamara', bpsCode: '62.08.01' },
+                    { name: 'Jelai', bpsCode: '62.08.02' },
+                    { name: 'Balai Riam', bpsCode: '62.08.03' },
+                    { name: 'Pantai Lunci', bpsCode: '62.08.04' },
+                    { name: 'Permata Kecubung', bpsCode: '62.08.05' }
+                ]
             }, {
                 name: 'Lamandau',
                 bpscode: '62.09',
-                districts: []
+                districts: [
+                    { name: 'Lamandau', bpsCode: '62.09.01' },
+                    { name: 'Delang', bpsCode: '62.09.02' },
+                    { name: 'Bulik', bpsCode: '62.09.03' },
+                    { name: 'Bulik Timur', bpsCode: '62.09.04' },
+                    { name: 'Menthobi Raya', bpsCode: '62.09.05' },
+                    { name: 'Sematu Jaya', bpsCode: '62.09.06' },
+                    { name: 'Belantikan Raya', bpsCode: '62.09.07' },
+                    { name: 'Batang Kawa', bpsCode: '62.09.08' }
+                ]
             }, {
                 name: 'Gunung Mas',
                 bpscode: '62.10',
-                districts: []
+                districts: [
+                    { name: 'Sepang (Sepang Simin)', bpsCode: '62.10.01' },
+                    { name: 'Kurun', bpsCode: '62.10.02' },
+                    { name: 'Tewah', bpsCode: '62.10.03' },
+                    { name: 'Kahayan Hulu Utara', bpsCode: '62.10.04' },
+                    { name: 'Rungan', bpsCode: '62.10.05' },
+                    { name: 'Manuhing', bpsCode: '62.10.06' },
+                    { name: 'Mihing Raya', bpsCode: '62.10.07' },
+                    { name: 'Damang Batu', bpsCode: '62.10.08' },
+                    { name: 'Miri Manasa', bpsCode: '62.10.09' },
+                    { name: 'Rungan Hulu', bpsCode: '62.10.10' },
+                    { name: 'Mahuning Raya (Manuhing Raya)', bpsCode: '62.10.11' },
+                    { name: 'Rungan Barat', bpsCode: '62.10.12' }
+                ]
             }, {
                 name: 'Pulang Pisau',
                 bpscode: '62.11',
-                districts: []
+                districts: [
+                    { name: 'Pandih Batu', bpsCode: '62.11.01' },
+                    { name: 'Kahayan Kuala', bpsCode: '62.11.02' },
+                    { name: 'Kahayan Tengah', bpsCode: '62.11.03' },
+                    { name: 'Banama Tingang', bpsCode: '62.11.04' },
+                    { name: 'Kahayan Hilir', bpsCode: '62.11.05' },
+                    { name: 'Maliku', bpsCode: '62.11.06' },
+                    { name: 'Jabiren (Jabiren Raya)', bpsCode: '62.11.07' },
+                    { name: 'Sebangau Kuala', bpsCode: '62.11.08' }
+                ]
             }, {
                 name: 'Murung Raya',
                 bpscode: '62.12',
-                districts: []
+                districts: [
+                    { name: 'Murung', bpsCode: '62.12.01' },
+                    { name: 'Tanah Siang', bpsCode: '62.12.02' },
+                    { name: 'Laung Tuhup', bpsCode: '62.12.03' },
+                    { name: 'Permata Intan', bpsCode: '62.12.04' },
+                    { name: 'Sumber Barito', bpsCode: '62.12.05' },
+                    { name: 'Barito Tuhup Raya', bpsCode: '62.12.06' },
+                    { name: 'Tanah Siang Selatan', bpsCode: '62.12.07' },
+                    { name: 'Sungai Babuat', bpsCode: '62.12.08' },
+                    { name: 'Seribu Riam', bpsCode: '62.12.09' },
+                    { name: 'Uut Murung', bpsCode: '62.12.10' }
+                ]
             }, {
                 name: 'Barito Timur',
                 bpscode: '62.13',
-                districts: []
+                districts: [
+                    { name: 'Dusun Timur', bpsCode: '62.13.01' },
+                    { name: 'Banua Lima', bpsCode: '62.13.02' },
+                    { name: 'Patangkep Tutui', bpsCode: '62.13.03' },
+                    { name: 'Awang', bpsCode: '62.13.04' },
+                    { name: 'Dusun Tengah', bpsCode: '62.13.05' },
+                    { name: 'Pematang Karau', bpsCode: '62.13.06' },
+                    { name: 'Paju Epat', bpsCode: '62.13.07' },
+                    { name: 'Raren Batuah', bpsCode: '62.13.08' },
+                    { name: 'Paku', bpsCode: '62.13.09' },
+                    { name: 'Karusen Janang', bpsCode: '62.13.10' }
+                ]
             }, {
                 name: 'Palangka Raya',
                 bpscode: '62.71',
-                districts: []
-            },
+                districts: [
+                    { name: 'Pahandut', bpsCode: '62.71.01' },
+                    { name: 'Bukit Batu', bpsCode: '62.71.02' },
+                    { name: 'Jekan Raya', bpsCode: '62.71.03' },
+                    { name: 'Sabangau (Sebangau)', bpsCode: '62.71.04' },
+                    { name: 'Rakumpit', bpsCode: '62.71.05' }
+                ]
+            }
         ]
     },
     KU: {
