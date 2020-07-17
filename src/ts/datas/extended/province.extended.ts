@@ -4810,64 +4810,307 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Lampung Selatan',
                 bpscode: '18.01',
-                districts: []
+                districts: [
+                    { name: 'Natar', bpsCode: '18.01.04' },
+                    { name: 'Tanjung Bintang', bpsCode: '18.01.05' },
+                    { name: 'Kalianda', bpsCode: '18.01.06' },
+                    { name: 'Sidomulyo', bpsCode: '18.01.07' },
+                    { name: 'Katibung', bpsCode: '18.01.08' },
+                    { name: 'Penengahan', bpsCode: '18.01.09' },
+                    { name: 'Palas', bpsCode: '18.01.10' },
+                    { name: 'Jati Agung', bpsCode: '18.01.13' },
+                    { name: 'Ketapang', bpsCode: '18.01.14' },
+                    { name: 'Sragi', bpsCode: '18.01.15' },
+                    { name: 'Raja Basa (Rajabasa)', bpsCode: '18.01.16' },
+                    { name: 'Candipuro', bpsCode: '18.01.17' },
+                    { name: 'Merbau Mataram', bpsCode: '18.01.18' },
+                    { name: 'Bakauheni', bpsCode: '18.01.21' },
+                    { name: 'Tanjung Sari', bpsCode: '18.01.22' },
+                    { name: 'Way Sulan', bpsCode: '18.01.23' },
+                    { name: 'Way Panji', bpsCode: '18.01.24' }
+                ]
             }, {
                 name: 'Lampung Tengah',
                 bpscode: '18.02',
-                districts: []
+                districts: [
+                    { name: 'Kalirejo', bpsCode: '18.02.01' },
+                    { name: 'Bangun Rejo', bpsCode: '18.02.02' },
+                    { name: 'Padang Ratu', bpsCode: '18.02.03' },
+                    { name: 'Gunung Sugih', bpsCode: '18.02.04' },
+                    { name: 'Trimurjo', bpsCode: '18.02.05' },
+                    { name: 'Punggur', bpsCode: '18.02.06' },
+                    { name: 'Terbanggi Besar', bpsCode: '18.02.07' },
+                    { name: 'Seputih Raman', bpsCode: '18.02.08' },
+                    { name: 'Rumbia', bpsCode: '18.02.09' },
+                    { name: 'Seputih Banyak', bpsCode: '18.02.10' },
+                    { name: 'Seputih Mataram', bpsCode: '18.02.11' },
+                    { name: 'Seputih Surabaya', bpsCode: '18.02.12' },
+                    { name: 'Terusan Nunyai', bpsCode: '18.02.13' },
+                    { name: 'Bumi Ratu Nuban', bpsCode: '18.02.14' },
+                    { name: 'Bekri', bpsCode: '18.02.15' },
+                    { name: 'Seputih Agung', bpsCode: '18.02.16' },
+                    { name: 'Way Pangubuan', bpsCode: '18.02.17' },
+                    { name: 'Bandar Mataram', bpsCode: '18.02.18' },
+                    { name: 'Pubian', bpsCode: '18.02.19' },
+                    { name: 'Selagai Lingga', bpsCode: '18.02.20' },
+                    { name: 'Anak Tuha', bpsCode: '18.02.21' },
+                    { name: 'Sendang Agung', bpsCode: '18.02.22' },
+                    { name: 'Kota Gajah', bpsCode: '18.02.23' },
+                    { name: 'Bumi Nabung', bpsCode: '18.02.24' },
+                    { name: 'Way Seputih', bpsCode: '18.02.25' },
+                    { name: 'Bandar Surabaya', bpsCode: '18.02.26' },
+                    { name: 'Anak Ratu Aji', bpsCode: '18.02.27' },
+                    { name: 'Putra Rumbia', bpsCode: '18.02.28' }
+                ]
             }, {
                 name: 'Lampung Utara',
                 bpscode: '18.03',
-                districts: []
+                districts: [
+                    { name: 'Bukit Kemuning', bpsCode: '18.03.01' },
+                    { name: 'Kotabumi', bpsCode: '18.03.02' },
+                    { name: 'Sungkai Selatan', bpsCode: '18.03.03' },
+                    { name: 'Tanjung Raja', bpsCode: '18.03.04' },
+                    { name: 'Abung Timur', bpsCode: '18.03.05' },
+                    { name: 'Abung Barat', bpsCode: '18.03.06' },
+                    { name: 'Abung Selatan', bpsCode: '18.03.07' },
+                    { name: 'Sungkai Utara', bpsCode: '18.03.08' },
+                    { name: 'Kotabumi Utara', bpsCode: '18.03.09' },
+                    { name: 'Kotabumi Selatan', bpsCode: '18.03.10' },
+                    { name: 'Abung Tengah', bpsCode: '18.03.11' },
+                    { name: 'Abung Tinggi', bpsCode: '18.03.12' },
+                    { name: 'Abung Semuli', bpsCode: '18.03.13' },
+                    { name: 'Abung Surakarta', bpsCode: '18.03.14' },
+                    { name: 'Muara Sungkai', bpsCode: '18.03.15' },
+                    { name: 'Bunga Mayang', bpsCode: '18.03.16' },
+                    { name: 'Hulu Sungkai', bpsCode: '18.03.17' },
+                    { name: 'Sungkai Tengah', bpsCode: '18.03.18' },
+                    { name: 'Abung Pekurun', bpsCode: '18.03.19' },
+                    { name: 'Sungkai Jaya', bpsCode: '18.03.20' },
+                    { name: 'Sungkai Barat', bpsCode: '18.03.21' },
+                    { name: 'Abung Kunang', bpsCode: '18.03.22' },
+                    { name: 'Blambangan Pagar', bpsCode: '18.03.23' }
+                ]
             }, {
                 name: 'Lampung Barat',
                 bpscode: '18.04',
-                districts: []
+                districts: [
+                    { name: 'Balik Bukit', bpsCode: '18.04.04' },
+                    { name: 'Sumber Jaya', bpsCode: '18.04.05' },
+                    { name: 'Belalau', bpsCode: '18.04.06' },
+                    { name: 'Way Tenong', bpsCode: '18.04.07' },
+                    { name: 'Sekincau', bpsCode: '18.04.08' },
+                    { name: 'Suoh', bpsCode: '18.04.09' },
+                    { name: 'Batu Brak', bpsCode: '18.04.10' },
+                    { name: 'Sukau', bpsCode: '18.04.11' },
+                    { name: 'Gedung Surian', bpsCode: '18.04.15' },
+                    { name: 'Kebun Tebu', bpsCode: '18.04.18' },
+                    { name: 'Air Hitam', bpsCode: '18.04.19' },
+                    { name: 'Pagar Dewa', bpsCode: '18.04.20' },
+                    { name: 'Batu Ketulis', bpsCode: '18.04.21' },
+                    { name: 'Lumbok Seminung', bpsCode: '18.04.22' },
+                    { name: 'Bandar Negeri Suoh', bpsCode: '18.04.23' }
+                ]
             }, {
                 name: 'Tulang Bawang',
                 bpscode: '18.05',
-                districts: []
+                districts: [
+                    { name: 'Menggala', bpsCode: '18.05.02' },
+                    { name: 'Gedung Aji', bpsCode: '18.05.06' },
+                    { name: 'Banjar Agung', bpsCode: '18.05.08' },
+                    { name: 'Gedung Meneng', bpsCode: '18.05.11' },
+                    { name: 'Rawa Jitu Selatan (Rawajitu Selatan)', bpsCode: '18.05.12' },
+                    { name: 'Penawar Tama', bpsCode: '18.05.13' },
+                    { name: 'Rawa Jitu Timur (Rawajitu Timur)', bpsCode: '18.05.18' },
+                    { name: 'Banjar Margo', bpsCode: '18.05.20' },
+                    { name: 'Rawa Pitu', bpsCode: '18.05.22' },
+                    { name: 'Penawar Aji', bpsCode: '18.05.23' },
+                    { name: 'Dente Teladas', bpsCode: '18.05.25' },
+                    { name: 'Meraksa Aji', bpsCode: '18.05.26' },
+                    { name: 'Gedung Aji Baru', bpsCode: '18.05.27' },
+                    { name: 'Banjar Baru', bpsCode: '18.05.29' },
+                    { name: 'Menggala Timur', bpsCode: '18.05.30' }
+                ]
             }, {
                 name: 'Tanggamus',
                 bpscode: '18.06',
-                districts: []
+                districts: [
+                    { name: 'Kota Agung (Kota Agung Pusat)', bpsCode: '18.06.01' },
+                    { name: 'Talang Padang', bpsCode: '18.06.02' },
+                    { name: 'Wonosobo', bpsCode: '18.06.03' },
+                    { name: 'Pulau Panggung', bpsCode: '18.06.04' },
+                    { name: 'Cukuh Balak', bpsCode: '18.06.09' },
+                    { name: 'Pugung', bpsCode: '18.06.11' },
+                    { name: 'Semaka', bpsCode: '18.06.12' },
+                    { name: 'Sumber Rejo (Sumberejo)', bpsCode: '18.06.13' },
+                    { name: 'Ulu Belu (Ulubelu)', bpsCode: '18.06.15' },
+                    { name: 'Pematang Sawa', bpsCode: '18.06.16' },
+                    { name: 'Klumbayan (Kelumbayan)', bpsCode: '18.06.17' },
+                    { name: 'Kota Agung Barat', bpsCode: '18.06.18' },
+                    { name: 'Kota Agung Timur', bpsCode: '18.06.19' },
+                    { name: 'Gisting', bpsCode: '18.06.20' },
+                    { name: 'Gunung Alip', bpsCode: '18.06.21' },
+                    { name: 'Limau', bpsCode: '18.06.24' },
+                    { name: 'Bandar Negeri Semuong', bpsCode: '18.06.25' },
+                    { name: 'Air Naningan', bpsCode: '18.06.26' },
+                    { name: 'Bulok', bpsCode: '18.06.27' },
+                    { name: 'Klumbayan Barat (Kelumbayan Barat)', bpsCode: '18.06.28' }
+                ]
             }, {
                 name: 'Lampung Timur',
                 bpscode: '18.07',
-                districts: []
+                districts: [
+                    { name: 'Sukadana', bpsCode: '18.07.01' },
+                    { name: 'Labuhan Maringgai', bpsCode: '18.07.02' },
+                    { name: 'Jabung', bpsCode: '18.07.03' },
+                    { name: 'Pekalongan', bpsCode: '18.07.04' },
+                    { name: 'Sekampung', bpsCode: '18.07.05' },
+                    { name: 'Batanghari', bpsCode: '18.07.06' },
+                    { name: 'Way Jepara', bpsCode: '18.07.07' },
+                    { name: 'Purbolinggo', bpsCode: '18.07.08' },
+                    { name: 'Raman Utara', bpsCode: '18.07.09' },
+                    { name: 'Metro Kibang', bpsCode: '18.07.10' },
+                    { name: 'Marga Tiga (Margatiga)', bpsCode: '18.07.11' },
+                    { name: 'Sekampung Udik', bpsCode: '18.07.12' },
+                    { name: 'Batanghari Nuban', bpsCode: '18.07.13' },
+                    { name: 'Bumi Agung', bpsCode: '18.07.14' },
+                    { name: 'Bandar Sribhawono (Bandar Sribawono)', bpsCode: '18.07.15' },
+                    { name: 'Mataram Baru', bpsCode: '18.07.16' },
+                    { name: 'Melinting', bpsCode: '18.07.17' },
+                    { name: 'Gunung Pelindung', bpsCode: '18.07.18' },
+                    { name: 'Pasir Sakti', bpsCode: '18.07.19' },
+                    { name: 'Waway Karya', bpsCode: '18.07.20' },
+                    { name: 'Labuhan Ratu', bpsCode: '18.07.21' },
+                    { name: 'Braja Selebah (Braja Slebah)', bpsCode: '18.07.22' },
+                    { name: 'Way Bungur (Purbolinggo Utara)', bpsCode: '18.07.23' },
+                    { name: 'Marga Sekampung', bpsCode: '18.07.24' }
+                ]
             }, {
                 name: 'Way Kanan',
                 bpscode: '18.08',
-                districts: []
+                districts: [
+                    { name: 'Blambangan Umpu', bpsCode: '18.08.01' },
+                    { name: 'Kasui', bpsCode: '18.08.02' },
+                    { name: 'Banjit', bpsCode: '18.08.03' },
+                    { name: 'Baradatu', bpsCode: '18.08.04' },
+                    { name: 'Bahuga', bpsCode: '18.08.05' },
+                    { name: 'Pakuan Ratu', bpsCode: '18.08.06' },
+                    { name: 'Negeri Agung', bpsCode: '18.08.07' },
+                    { name: 'Way Tuba', bpsCode: '18.08.08' },
+                    { name: 'Rebang Tangkas', bpsCode: '18.08.09' },
+                    { name: 'Gunung Labuhan', bpsCode: '18.08.10' },
+                    { name: 'Negara Batin', bpsCode: '18.08.11' },
+                    { name: 'Negeri Besar', bpsCode: '18.08.12' },
+                    { name: 'Buay Bahuga', bpsCode: '18.08.13' },
+                    { name: 'Bumi Agung', bpsCode: '18.08.14' }
+                ]
             }, {
                 name: 'Pesawaran',
                 bpscode: '18.09',
-                districts: []
+                districts: [
+                    { name: 'Gedong Tataan', bpsCode: '18.09.01' },
+                    { name: 'Negeri Katon', bpsCode: '18.09.02' },
+                    { name: 'Tegineneng', bpsCode: '18.09.03' },
+                    { name: 'Way Lima', bpsCode: '18.09.04' },
+                    { name: 'Padang Cermin', bpsCode: '18.09.05' },
+                    { name: 'Punduh Pidada', bpsCode: '18.09.06' },
+                    { name: 'Kedondong', bpsCode: '18.09.07' },
+                    { name: 'Marga Punduh', bpsCode: '18.09.08' },
+                    { name: 'Way Khilau', bpsCode: '18.09.09' },
+                    { name: 'Teluk Pandan', bpsCode: '18.09.10' },
+                    { name: 'Way Ratai', bpsCode: '18.09.11' }
+                ]
             }, {
                 name: 'Pringsewu',
                 bpscode: '18.10',
-                districts: []
+                districts: [
+                    { name: 'Pringsewu', bpsCode: '18.10.01' },
+                    { name: 'Gading Rejo', bpsCode: '18.10.02' },
+                    { name: 'Ambarawa', bpsCode: '18.10.03' },
+                    { name: 'Pardasuka', bpsCode: '18.10.04' },
+                    { name: 'Pagelaran', bpsCode: '18.10.05' },
+                    { name: 'Banyumas', bpsCode: '18.10.06' },
+                    { name: 'Adiluwih (Adi Luwih)', bpsCode: '18.10.07' },
+                    { name: 'Sukoharjo', bpsCode: '18.10.08' },
+                    { name: 'Pagelaran Utara', bpsCode: '18.10.09' }
+                ]
             }, {
                 name: 'Mesuji',
                 bpscode: '18.11',
-                districts: []
+                districts: [
+                    { name: 'Mesuji', bpsCode: '18.11.01' },
+                    { name: 'Mesuji Timur', bpsCode: '18.11.02' },
+                    { name: 'Rawa Jitu Utara', bpsCode: '18.11.03' },
+                    { name: 'Way Serdang', bpsCode: '18.11.04' },
+                    { name: 'Simpang Pematang', bpsCode: '18.11.05' },
+                    { name: 'Panca Jaya', bpsCode: '18.11.06' },
+                    { name: 'Tanjung Raya', bpsCode: '18.11.07' }
+                ]
             }, {
                 name: 'Tulang Bawang Barat',
                 bpscode: '18.12',
-                districts: []
+                districts: [
+                    { name: 'Tulang Bawang Tengah', bpsCode: '18.12.01' },
+                    { name: 'Tumijajar', bpsCode: '18.12.02' },
+                    { name: 'Tulang Bawang Udik', bpsCode: '18.12.03' },
+                    { name: 'Gunung Terang', bpsCode: '18.12.04' },
+                    { name: 'Gunung Agung', bpsCode: '18.12.05' },
+                    { name: 'Way Kenanga', bpsCode: '18.12.06' },
+                    { name: 'Lambu Kibang', bpsCode: '18.12.07' },
+                    { name: 'Pagar Dewa', bpsCode: '18.12.08' },
+                    { name: 'Batu Putih', bpsCode: '18.12.09' }
+                ]
             }, {
                 name: 'Pesisir Barat',
                 bpscode: '18.13',
-                districts: []
+                districts: [
+                    { name: 'Pesisir Tengah', bpsCode: '18.13.01' },
+                    { name: 'Pesisir Selatan', bpsCode: '18.13.02' },
+                    { name: 'Lemong', bpsCode: '18.13.03' },
+                    { name: 'Pesisir Utara', bpsCode: '18.13.04' },
+                    { name: 'Karya Penggawa', bpsCode: '18.13.05' },
+                    { name: 'Pulaupisang (Pulau Pisang)', bpsCode: '18.13.06' },
+                    { name: 'Way Krui', bpsCode: '18.13.07' },
+                    { name: 'Krui Selatan', bpsCode: '18.13.08' },
+                    { name: 'Ngambur', bpsCode: '18.13.09' },
+                    { name: 'Ngaras (Bengkunat Belimbing)', bpsCode: '18.13.10' },
+                    { name: 'Bangkunat (Bengkunat)', bpsCode: '18.13.11' }
+                ]
             }, {
                 name: 'Bandar Lampung',
                 bpscode: '18.71',
-                districts: []
+                districts: [
+                    { name: 'Kedaton', bpsCode: '18.71.01' },
+                    { name: 'Sukarame', bpsCode: '18.71.02' },
+                    { name: 'Tanjungkarang Barat (Tanjung Karang Barat)', bpsCode: '18.71.03' },
+                    { name: 'Panjang', bpsCode: '18.71.04' },
+                    { name: 'Tanjungkarang Timur (Tanjung Karang Timur)', bpsCode: '18.71.05' },
+                    { name: 'Tanjungkarang Pusat (Tanjung Karang Pusat)', bpsCode: '18.71.06' },
+                    { name: 'Telukbetung Selatan', bpsCode: '18.71.07' },
+                    { name: 'Telukbetung Barat', bpsCode: '18.71.08' },
+                    { name: 'Telukbetung Utara', bpsCode: '18.71.09' },
+                    { name: 'Rajabasa', bpsCode: '18.71.10' },
+                    { name: 'Tanjung Senang', bpsCode: '18.71.11' },
+                    { name: 'Sukabumi', bpsCode: '18.71.12' },
+                    { name: 'Kemiling', bpsCode: '18.71.13' },
+                    { name: 'Labuhan Ratu', bpsCode: '18.71.14' },
+                    { name: 'Way Halim', bpsCode: '18.71.15' },
+                    { name: 'Langkapura', bpsCode: '18.71.16' },
+                    { name: 'Enggal', bpsCode: '18.71.17' },
+                    { name: 'Kedamaian', bpsCode: '18.71.18' },
+                    { name: 'Telukbetung Timur', bpsCode: '18.71.19' },
+                    { name: 'Bumi Waras', bpsCode: '18.71.20' }
+                ]
             }, {
                 name: 'Metro',
                 bpscode: '18.72',
-                districts: []
-            },
+                districts: [
+                    { name: 'Metro Pusat', bpsCode: '18.72.01' },
+                    { name: 'Metro Utara', bpsCode: '18.72.02' },
+                    { name: 'Metro Barat', bpsCode: '18.72.03' },
+                    { name: 'Metro Timur', bpsCode: '18.72.04' },
+                    { name: 'Metro Selatan', bpsCode: '18.72.05' }
+                ]
+            }
         ]
     },
     MA: {
