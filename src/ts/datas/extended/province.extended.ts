@@ -2083,156 +2083,860 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Pacitan',
                 bpscode: '35.01',
-                districts: []
+                districts: [
+                    { name: 'Donorojo', bpsCode: '35.01.01' },
+                    { name: 'Pringkuku', bpsCode: '35.01.02' },
+                    { name: 'Punung', bpsCode: '35.01.03' },
+                    { name: 'Pacitan', bpsCode: '35.01.04' },
+                    { name: 'Kebonagung (Kebon Agung)', bpsCode: '35.01.05' },
+                    { name: 'Arjosari', bpsCode: '35.01.06' },
+                    { name: 'Nawangan', bpsCode: '35.01.07' },
+                    { name: 'Bandar', bpsCode: '35.01.08' },
+                    { name: 'Tegalombo', bpsCode: '35.01.09' },
+                    { name: 'Tulakan', bpsCode: '35.01.10' },
+                    { name: 'Ngadirojo', bpsCode: '35.01.11' },
+                    { name: 'Sudimoro', bpsCode: '35.01.12' }
+                ]
             }, {
                 name: 'Ponorogo',
                 bpscode: '35.02',
-                districts: []
+                districts: [
+                    { name: 'Slahung', bpsCode: '35.02.01' },
+                    { name: 'Ngrayun', bpsCode: '35.02.02' },
+                    { name: 'Bungkal', bpsCode: '35.02.03' },
+                    { name: 'Sambit', bpsCode: '35.02.04' },
+                    { name: 'Sawoo', bpsCode: '35.02.05' },
+                    { name: 'Sooko', bpsCode: '35.02.06' },
+                    { name: 'Pulung', bpsCode: '35.02.07' },
+                    { name: 'Mlarak', bpsCode: '35.02.08' },
+                    { name: 'Jetis', bpsCode: '35.02.09' },
+                    { name: 'Siman', bpsCode: '35.02.10' },
+                    { name: 'Balong', bpsCode: '35.02.11' },
+                    { name: 'Kauman', bpsCode: '35.02.12' },
+                    { name: 'Badegan', bpsCode: '35.02.13' },
+                    { name: 'Sampung', bpsCode: '35.02.14' },
+                    { name: 'Sukorejo', bpsCode: '35.02.15' },
+                    { name: 'Babadan', bpsCode: '35.02.16' },
+                    { name: 'Ponorogo', bpsCode: '35.02.17' },
+                    { name: 'Jenangan', bpsCode: '35.02.18' },
+                    { name: 'Ngebel', bpsCode: '35.02.19' },
+                    { name: 'Jambon', bpsCode: '35.02.20' },
+                    { name: 'Pudak', bpsCode: '35.02.21' }
+                ]
             }, {
                 name: 'Trenggalek',
                 bpscode: '35.03',
-                districts: []
+                districts: [
+                    { name: 'Panggul', bpsCode: '35.03.01' },
+                    { name: 'Munjungan', bpsCode: '35.03.02' },
+                    { name: 'Pule', bpsCode: '35.03.03' },
+                    { name: 'Dongko', bpsCode: '35.03.04' },
+                    { name: 'Tugu', bpsCode: '35.03.05' },
+                    { name: 'Karangan', bpsCode: '35.03.06' },
+                    { name: 'Kampak', bpsCode: '35.03.07' },
+                    { name: 'Watulimo', bpsCode: '35.03.08' },
+                    { name: 'Bendungan', bpsCode: '35.03.09' },
+                    { name: 'Gandusari', bpsCode: '35.03.10' },
+                    { name: 'Trenggalek', bpsCode: '35.03.11' },
+                    { name: 'Pogalan', bpsCode: '35.03.12' },
+                    { name: 'Durenan', bpsCode: '35.03.13' },
+                    { name: 'Suruh', bpsCode: '35.03.14' }
+                ]
             }, {
                 name: 'Tulungagung',
                 bpscode: '35.04',
-                districts: []
+                districts: [
+                    { name: 'Tulungagung', bpsCode: '35.04.01' },
+                    { name: 'Boyolangu', bpsCode: '35.04.02' },
+                    { name: 'Kedungwaru', bpsCode: '35.04.03' },
+                    { name: 'Ngantru', bpsCode: '35.04.04' },
+                    { name: 'Kauman', bpsCode: '35.04.05' },
+                    { name: 'Pagerwojo', bpsCode: '35.04.06' },
+                    { name: 'Sendang', bpsCode: '35.04.07' },
+                    { name: 'Karangrejo (Karang Rejo)', bpsCode: '35.04.08' },
+                    { name: 'Gondang', bpsCode: '35.04.09' },
+                    { name: 'Sumbergempol', bpsCode: '35.04.10' },
+                    { name: 'Ngunut', bpsCode: '35.04.11' },
+                    { name: 'Pucanglaban', bpsCode: '35.04.12' },
+                    { name: 'Rejotangan', bpsCode: '35.04.13' },
+                    { name: 'Kalidawir', bpsCode: '35.04.14' },
+                    { name: 'Besuki', bpsCode: '35.04.15' },
+                    { name: 'Campurdarat (Campur Darat)', bpsCode: '35.04.16' },
+                    { name: 'Bandung', bpsCode: '35.04.17' },
+                    { name: 'Pakel', bpsCode: '35.04.18' },
+                    { name: 'Tanggunggunung (Tanggung Gunung)', bpsCode: '35.04.19' }
+                ]
             }, {
                 name: 'Blitar',
                 bpscode: '35.05',
-                districts: []
+                districts: [
+                    { name: 'Wonodadi', bpsCode: '35.05.01' },
+                    { name: 'Udanawu', bpsCode: '35.05.02' },
+                    { name: 'Srengat', bpsCode: '35.05.03' },
+                    { name: 'Kademangan', bpsCode: '35.05.04' },
+                    { name: 'Bakung', bpsCode: '35.05.05' },
+                    { name: 'Ponggok', bpsCode: '35.05.06' },
+                    { name: 'Sanankulon (Sanan Kulon)', bpsCode: '35.05.07' },
+                    { name: 'Wonotirto', bpsCode: '35.05.08' },
+                    { name: 'Nglegok', bpsCode: '35.05.09' },
+                    { name: 'Kanigoro', bpsCode: '35.05.10' },
+                    { name: 'Garum', bpsCode: '35.05.11' },
+                    { name: 'Sutojayan', bpsCode: '35.05.12' },
+                    { name: 'Panggungrejo', bpsCode: '35.05.13' },
+                    { name: 'Talun', bpsCode: '35.05.14' },
+                    { name: 'Gandusari', bpsCode: '35.05.15' },
+                    { name: 'Binangun', bpsCode: '35.05.16' },
+                    { name: 'Wlingi', bpsCode: '35.05.17' },
+                    { name: 'Doko', bpsCode: '35.05.18' },
+                    { name: 'Kesamben', bpsCode: '35.05.19' },
+                    { name: 'Wates', bpsCode: '35.05.20' },
+                    { name: 'Selorejo', bpsCode: '35.05.21' },
+                    { name: 'Selopuro', bpsCode: '35.05.22' }
+                ]
             }, {
                 name: 'Kediri',
                 bpscode: '35.06',
-                districts: []
+                districts: [
+                    { name: 'Semen', bpsCode: '35.06.01' },
+                    { name: 'Mojo', bpsCode: '35.06.02' },
+                    { name: 'Kras', bpsCode: '35.06.03' },
+                    { name: 'Ngadiluwih', bpsCode: '35.06.04' },
+                    { name: 'Kandat', bpsCode: '35.06.05' },
+                    { name: 'Wates', bpsCode: '35.06.06' },
+                    { name: 'Ngancar', bpsCode: '35.06.07' },
+                    { name: 'Puncu', bpsCode: '35.06.08' },
+                    { name: 'Plosoklaten', bpsCode: '35.06.09' },
+                    { name: 'Gurah', bpsCode: '35.06.10' },
+                    { name: 'Pagu', bpsCode: '35.06.11' },
+                    { name: 'Gampengrejo', bpsCode: '35.06.12' },
+                    { name: 'Grogol', bpsCode: '35.06.13' },
+                    { name: 'Papar', bpsCode: '35.06.14' },
+                    { name: 'Purwoasri', bpsCode: '35.06.15' },
+                    { name: 'Plemahan', bpsCode: '35.06.16' },
+                    { name: 'Pare', bpsCode: '35.06.17' },
+                    { name: 'Kepung', bpsCode: '35.06.18' },
+                    { name: 'Kandangan', bpsCode: '35.06.19' },
+                    { name: 'Tarokan', bpsCode: '35.06.20' },
+                    { name: 'Kunjang', bpsCode: '35.06.21' },
+                    { name: 'Banyakan', bpsCode: '35.06.22' },
+                    { name: 'Ringinrejo', bpsCode: '35.06.23' },
+                    { name: 'Kayen Kidul', bpsCode: '35.06.24' },
+                    { name: 'Ngasem', bpsCode: '35.06.25' },
+                    { name: 'Badas', bpsCode: '35.06.26' }
+                ]
             }, {
                 name: 'Malang',
                 bpscode: '35.07',
-                districts: []
+                districts: [
+                    { name: 'Donomulyo', bpsCode: '35.07.01' },
+                    { name: 'Pagak', bpsCode: '35.07.02' },
+                    { name: 'Bantur', bpsCode: '35.07.03' },
+                    { name: 'Sumbermanjing Wetan', bpsCode: '35.07.04' },
+                    { name: 'Dampit', bpsCode: '35.07.05' },
+                    { name: 'Ampelgading', bpsCode: '35.07.06' },
+                    { name: 'Poncokusumo', bpsCode: '35.07.07' },
+                    { name: 'Wajak', bpsCode: '35.07.08' },
+                    { name: 'Turen', bpsCode: '35.07.09' },
+                    { name: 'Gondanglegi', bpsCode: '35.07.10' },
+                    { name: 'Kalipare', bpsCode: '35.07.11' },
+                    { name: 'Sumberpucung', bpsCode: '35.07.12' },
+                    { name: 'Kepanjen', bpsCode: '35.07.13' },
+                    { name: 'Bululawang', bpsCode: '35.07.14' },
+                    { name: 'Tajinan', bpsCode: '35.07.15' },
+                    { name: 'Tumpang', bpsCode: '35.07.16' },
+                    { name: 'Jabung', bpsCode: '35.07.17' },
+                    { name: 'Pakis', bpsCode: '35.07.18' },
+                    { name: 'Pakisaji', bpsCode: '35.07.19' },
+                    { name: 'Ngajung (Ngajum)', bpsCode: '35.07.20' },
+                    { name: 'Wagir', bpsCode: '35.07.21' },
+                    { name: 'Dau', bpsCode: '35.07.22' },
+                    { name: 'Karang Ploso (Karangploso)', bpsCode: '35.07.23' },
+                    { name: 'Singosari', bpsCode: '35.07.24' },
+                    { name: 'Lawang', bpsCode: '35.07.25' },
+                    { name: 'Pujon', bpsCode: '35.07.26' },
+                    { name: 'Ngantang', bpsCode: '35.07.27' },
+                    { name: 'Kasembon', bpsCode: '35.07.28' },
+                    { name: 'Gedangan', bpsCode: '35.07.29' },
+                    { name: 'Tirtoyudo', bpsCode: '35.07.30' },
+                    { name: 'Kromengan', bpsCode: '35.07.31' },
+                    { name: 'Wonosari', bpsCode: '35.07.32' },
+                    { name: 'Pagelaran', bpsCode: '35.07.33' }
+                ]
             }, {
                 name: 'Lumajang',
                 bpscode: '35.08',
-                districts: []
+                districts: [
+                    { name: 'Tempursari', bpsCode: '35.08.01' },
+                    { name: 'Pronojiwo', bpsCode: '35.08.02' },
+                    { name: 'Candipuro', bpsCode: '35.08.03' },
+                    { name: 'Pasirian', bpsCode: '35.08.04' },
+                    { name: 'Tempeh', bpsCode: '35.08.05' },
+                    { name: 'Kunir', bpsCode: '35.08.06' },
+                    { name: 'Yosowilangun', bpsCode: '35.08.07' },
+                    { name: 'Rowokangkung', bpsCode: '35.08.08' },
+                    { name: 'Tekung', bpsCode: '35.08.09' },
+                    { name: 'Lumajang', bpsCode: '35.08.10' },
+                    { name: 'Pasrujambe/Pasujambe', bpsCode: '35.08.11' },
+                    { name: 'Senduro', bpsCode: '35.08.12' },
+                    { name: 'Gucialit', bpsCode: '35.08.13' },
+                    { name: 'Padang', bpsCode: '35.08.14' },
+                    { name: 'Sukodono', bpsCode: '35.08.15' },
+                    { name: 'Kedungjajang', bpsCode: '35.08.16' },
+                    { name: 'Jatiroto', bpsCode: '35.08.17' },
+                    { name: 'Randuagung', bpsCode: '35.08.18' },
+                    { name: 'Klakah', bpsCode: '35.08.19' },
+                    { name: 'Ranuyoso', bpsCode: '35.08.20' },
+                    { name: 'Sumbersuko', bpsCode: '35.08.21' }
+                ]
             }, {
                 name: 'Jember',
                 bpscode: '35.09',
-                districts: []
+                districts: [
+                    { name: 'Jombang', bpsCode: '35.09.01' },
+                    { name: 'Kencong', bpsCode: '35.09.02' },
+                    { name: 'Sumberbaru (Sumber Baru)', bpsCode: '35.09.03' },
+                    { name: 'Gumukmas (Gumuk Mas)', bpsCode: '35.09.04' },
+                    { name: 'Umbulsari', bpsCode: '35.09.05' },
+                    { name: 'Tanggul', bpsCode: '35.09.06' },
+                    { name: 'Semboro', bpsCode: '35.09.07' },
+                    { name: 'Puger', bpsCode: '35.09.08' },
+                    { name: 'Bangsalsari', bpsCode: '35.09.09' },
+                    { name: 'Balung', bpsCode: '35.09.10' },
+                    { name: 'Wuluhan', bpsCode: '35.09.11' },
+                    { name: 'Ambulu', bpsCode: '35.09.12' },
+                    { name: 'Rambipuji', bpsCode: '35.09.13' },
+                    { name: 'Panti', bpsCode: '35.09.14' },
+                    { name: 'Sukorambi', bpsCode: '35.09.15' },
+                    { name: 'Jenggawah', bpsCode: '35.09.16' },
+                    { name: 'Ajung', bpsCode: '35.09.17' },
+                    { name: 'Tempurejo', bpsCode: '35.09.18' },
+                    { name: 'Kaliwates', bpsCode: '35.09.19' },
+                    { name: 'Patrang', bpsCode: '35.09.20' },
+                    { name: 'Sumbersari (Sumber Sari)', bpsCode: '35.09.21' },
+                    { name: 'Arjasa', bpsCode: '35.09.22' },
+                    { name: 'Mumbulsari', bpsCode: '35.09.23' },
+                    { name: 'Pakusari', bpsCode: '35.09.24' },
+                    { name: 'Jelbuk', bpsCode: '35.09.25' },
+                    { name: 'Mayang', bpsCode: '35.09.26' },
+                    { name: 'Kalisat', bpsCode: '35.09.27' },
+                    { name: 'Ledokombo', bpsCode: '35.09.28' },
+                    { name: 'Sukowono', bpsCode: '35.09.29' },
+                    { name: 'Silo', bpsCode: '35.09.30' },
+                    { name: 'Sumberjambe (Sumber Jambe)', bpsCode: '35.09.31' }
+                ]
             }, {
                 name: 'Banyuwangi',
                 bpscode: '35.10',
-                districts: []
+                districts: [
+                    { name: 'Pesanggaran', bpsCode: '35.10.01' },
+                    { name: 'Bangorejo', bpsCode: '35.10.02' },
+                    { name: 'Purwoharjo', bpsCode: '35.10.03' },
+                    { name: 'Tegaldlimo', bpsCode: '35.10.04' },
+                    { name: 'Muncar', bpsCode: '35.10.05' },
+                    { name: 'Cluring', bpsCode: '35.10.06' },
+                    { name: 'Gambiran', bpsCode: '35.10.07' },
+                    { name: 'Srono', bpsCode: '35.10.08' },
+                    { name: 'Genteng', bpsCode: '35.10.09' },
+                    { name: 'Glenmore', bpsCode: '35.10.10' },
+                    { name: 'Kalibaru', bpsCode: '35.10.11' },
+                    { name: 'Singojuruh', bpsCode: '35.10.12' },
+                    { name: 'Rogojampi', bpsCode: '35.10.13' },
+                    { name: 'Kabat', bpsCode: '35.10.14' },
+                    { name: 'Glagah', bpsCode: '35.10.15' },
+                    { name: 'Banyuwangi', bpsCode: '35.10.16' },
+                    { name: 'Giri', bpsCode: '35.10.17' },
+                    { name: 'Wongsorejo', bpsCode: '35.10.18' },
+                    { name: 'Songgon', bpsCode: '35.10.19' },
+                    { name: 'Sempu', bpsCode: '35.10.20' },
+                    { name: 'Kalipuro', bpsCode: '35.10.21' },
+                    { name: 'Siliragung', bpsCode: '35.10.22' },
+                    { name: 'Tegalsari', bpsCode: '35.10.23' },
+                    { name: 'Licin', bpsCode: '35.10.24' },
+                    { name: 'Blimbingsari', bpsCode: '35.10.25' }
+                ]
             }, {
                 name: 'Bondowoso',
                 bpscode: '35.11',
-                districts: []
+                districts: [
+                    { name: 'Maesan', bpsCode: '35.11.01' },
+                    { name: 'Tamanan', bpsCode: '35.11.02' },
+                    { name: 'Tlogosari', bpsCode: '35.11.03' },
+                    { name: 'Sukosari', bpsCode: '35.11.04' },
+                    { name: 'Pujer', bpsCode: '35.11.05' },
+                    { name: 'Grujugan', bpsCode: '35.11.06' },
+                    { name: 'Curahdami', bpsCode: '35.11.07' },
+                    { name: 'Tenggarang', bpsCode: '35.11.08' },
+                    { name: 'Wonosari', bpsCode: '35.11.09' },
+                    { name: 'Tapen', bpsCode: '35.11.10' },
+                    { name: 'Bondowoso', bpsCode: '35.11.11' },
+                    { name: 'Wringin', bpsCode: '35.11.12' },
+                    { name: 'Tegalampel', bpsCode: '35.11.13' },
+                    { name: 'Klabang', bpsCode: '35.11.14' },
+                    { name: 'Cermee', bpsCode: '35.11.15' },
+                    { name: 'Prajekan', bpsCode: '35.11.16' },
+                    { name: 'Pakem', bpsCode: '35.11.17' },
+                    { name: 'Sumberwringin (Sumber Wringin)', bpsCode: '35.11.18' },
+                    { name: 'Sempol', bpsCode: '35.11.19' },
+                    { name: 'Binakal', bpsCode: '35.11.20' },
+                    { name: 'Taman Krocok', bpsCode: '35.11.21' },
+                    { name: 'Botolinggo', bpsCode: '35.11.22' },
+                    { name: 'Jambesari / Jambe Sari Darus Sholah', bpsCode: '35.11.23' }
+                ]
             }, {
                 name: 'Situbondo',
                 bpscode: '35.12',
-                districts: []
+                districts: [
+                    { name: 'Jatibanteng', bpsCode: '35.12.01' },
+                    { name: 'Besuki', bpsCode: '35.12.02' },
+                    { name: 'Suboh', bpsCode: '35.12.03' },
+                    { name: 'Mlandingan', bpsCode: '35.12.04' },
+                    { name: 'Kendit', bpsCode: '35.12.05' },
+                    { name: 'Panarukan', bpsCode: '35.12.06' },
+                    { name: 'Situbondo', bpsCode: '35.12.07' },
+                    { name: 'Panji', bpsCode: '35.12.08' },
+                    { name: 'Mangaran', bpsCode: '35.12.09' },
+                    { name: 'Kapongan', bpsCode: '35.12.10' },
+                    { name: 'Arjasa', bpsCode: '35.12.11' },
+                    { name: 'Jangkar', bpsCode: '35.12.12' },
+                    { name: 'Asembagus', bpsCode: '35.12.13' },
+                    { name: 'Banyuputih', bpsCode: '35.12.14' },
+                    { name: 'Sumbermalang', bpsCode: '35.12.15' },
+                    { name: 'Banyuglugur', bpsCode: '35.12.16' },
+                    { name: 'Bungatan', bpsCode: '35.12.17' }
+                ]
             }, {
                 name: 'Probolinggo',
                 bpscode: '35.13',
-                districts: []
+                districts: [
+                    { name: 'Sukapura', bpsCode: '35.13.01' },
+                    { name: 'Sumber', bpsCode: '35.13.02' },
+                    { name: 'Kuripan', bpsCode: '35.13.03' },
+                    { name: 'Bantaran', bpsCode: '35.13.04' },
+                    { name: 'Leces', bpsCode: '35.13.05' },
+                    { name: 'Banyuanyar (Banyu Anyar)', bpsCode: '35.13.06' },
+                    { name: 'Tiris', bpsCode: '35.13.07' },
+                    { name: 'Krucil', bpsCode: '35.13.08' },
+                    { name: 'Gading', bpsCode: '35.13.09' },
+                    { name: 'Pakuniran', bpsCode: '35.13.10' },
+                    { name: 'Kotaanyar (Kota Anyar)', bpsCode: '35.13.11' },
+                    { name: 'Paiton', bpsCode: '35.13.12' },
+                    { name: 'Besuk', bpsCode: '35.13.13' },
+                    { name: 'Kraksaan', bpsCode: '35.13.14' },
+                    { name: 'Krejengan', bpsCode: '35.13.15' },
+                    { name: 'Pejarakan (Pajarakan)', bpsCode: '35.13.16' },
+                    { name: 'Maron', bpsCode: '35.13.17' },
+                    { name: 'Gending', bpsCode: '35.13.18' },
+                    { name: 'Dringu', bpsCode: '35.13.19' },
+                    { name: 'Tegalsiwalan (Tegal Siwalan)', bpsCode: '35.13.20' },
+                    { name: 'Sumberasih', bpsCode: '35.13.21' },
+                    { name: 'Wonomerto', bpsCode: '35.13.22' },
+                    { name: 'Tongas', bpsCode: '35.13.23' },
+                    { name: 'Lumbang', bpsCode: '35.13.24' }
+                ]
             }, {
                 name: 'Pasuruan',
                 bpscode: '35.14',
-                districts: []
+                districts: [
+                    { name: 'Purwodadi', bpsCode: '35.14.01' },
+                    { name: 'Tutur', bpsCode: '35.14.02' },
+                    { name: 'Puspo', bpsCode: '35.14.03' },
+                    { name: 'Lumbang', bpsCode: '35.14.04' },
+                    { name: 'Pasrepan', bpsCode: '35.14.05' },
+                    { name: 'Kejayan', bpsCode: '35.14.06' },
+                    { name: 'Wonorejo', bpsCode: '35.14.07' },
+                    { name: 'Purwosari', bpsCode: '35.14.08' },
+                    { name: 'Sukorejo', bpsCode: '35.14.09' },
+                    { name: 'Prigen', bpsCode: '35.14.10' },
+                    { name: 'Pandaan', bpsCode: '35.14.11' },
+                    { name: 'Gempol', bpsCode: '35.14.12' },
+                    { name: 'Beji', bpsCode: '35.14.13' },
+                    { name: 'Bangil', bpsCode: '35.14.14' },
+                    { name: 'Rembang', bpsCode: '35.14.15' },
+                    { name: 'Kraton', bpsCode: '35.14.16' },
+                    { name: 'Pohjentrek', bpsCode: '35.14.17' },
+                    { name: 'Gondangwetan (Gondang Wetan)', bpsCode: '35.14.18' },
+                    { name: 'Winongan', bpsCode: '35.14.19' },
+                    { name: 'Grati', bpsCode: '35.14.20' },
+                    { name: 'Nguling', bpsCode: '35.14.21' },
+                    { name: 'Lekok', bpsCode: '35.14.22' },
+                    { name: 'Rejoso', bpsCode: '35.14.23' },
+                    { name: 'Tosari', bpsCode: '35.14.24' }
+                ]
             }, {
                 name: 'Sidoarjo',
                 bpscode: '35.15',
-                districts: []
+                districts: [
+                    { name: 'Tarik', bpsCode: '35.15.01' },
+                    { name: 'Prambon', bpsCode: '35.15.02' },
+                    { name: 'Krembung', bpsCode: '35.15.03' },
+                    { name: 'Porong', bpsCode: '35.15.04' },
+                    { name: 'Jabon', bpsCode: '35.15.05' },
+                    { name: 'Tanggulangin', bpsCode: '35.15.06' },
+                    { name: 'Candi', bpsCode: '35.15.07' },
+                    { name: 'Sidoarjo', bpsCode: '35.15.08' },
+                    { name: 'Tulangan', bpsCode: '35.15.09' },
+                    { name: 'Wonoayu', bpsCode: '35.15.10' },
+                    { name: 'Krian', bpsCode: '35.15.11' },
+                    { name: 'Balongbendo', bpsCode: '35.15.12' },
+                    { name: 'Taman', bpsCode: '35.15.13' },
+                    { name: 'Sukodono', bpsCode: '35.15.14' },
+                    { name: 'Buduran', bpsCode: '35.15.15' },
+                    { name: 'Gedangan', bpsCode: '35.15.16' },
+                    { name: 'Sedati', bpsCode: '35.15.17' },
+                    { name: 'Waru', bpsCode: '35.15.18' }
+                ]
             }, {
                 name: 'Mojokerto',
                 bpscode: '35.16',
-                districts: []
+                districts: [
+                    { name: 'Jatirejo', bpsCode: '35.16.01' },
+                    { name: 'Gondang', bpsCode: '35.16.02' },
+                    { name: 'Pacet', bpsCode: '35.16.03' },
+                    { name: 'Trawas', bpsCode: '35.16.04' },
+                    { name: 'Ngoro', bpsCode: '35.16.05' },
+                    { name: 'Pungging', bpsCode: '35.16.06' },
+                    { name: 'Kutorejo', bpsCode: '35.16.07' },
+                    { name: 'Mojosari', bpsCode: '35.16.08' },
+                    { name: 'Dlanggu', bpsCode: '35.16.09' },
+                    { name: 'Bangsal', bpsCode: '35.16.10' },
+                    { name: 'Puri', bpsCode: '35.16.11' },
+                    { name: 'Trowulan', bpsCode: '35.16.12' },
+                    { name: 'Sooko', bpsCode: '35.16.13' },
+                    { name: 'Gedeg', bpsCode: '35.16.14' },
+                    { name: 'Kemlagi', bpsCode: '35.16.15' },
+                    { name: 'Jetis', bpsCode: '35.16.16' },
+                    { name: 'Dawarblandong (Dawar Blandong)', bpsCode: '35.16.17' },
+                    { name: 'Mojoanyar', bpsCode: '35.16.18' }
+                ]
             }, {
                 name: 'Jombang',
                 bpscode: '35.17',
-                districts: []
+                districts: [
+                    { name: 'Perak', bpsCode: '35.17.01' },
+                    { name: 'Gudo', bpsCode: '35.17.02' },
+                    { name: 'Ngoro', bpsCode: '35.17.03' },
+                    { name: 'Bareng', bpsCode: '35.17.04' },
+                    { name: 'Wonosalam', bpsCode: '35.17.05' },
+                    { name: 'Mojoagung', bpsCode: '35.17.06' },
+                    { name: 'Mojowarno', bpsCode: '35.17.07' },
+                    { name: 'Diwek', bpsCode: '35.17.08' },
+                    { name: 'Jombang', bpsCode: '35.17.09' },
+                    { name: 'Peterongan', bpsCode: '35.17.10' },
+                    { name: 'Sumobito', bpsCode: '35.17.11' },
+                    { name: 'Kesamben', bpsCode: '35.17.12' },
+                    { name: 'Tembelang', bpsCode: '35.17.13' },
+                    { name: 'Ploso', bpsCode: '35.17.14' },
+                    { name: 'Plandaan', bpsCode: '35.17.15' },
+                    { name: 'Kabuh', bpsCode: '35.17.16' },
+                    { name: 'Kudu', bpsCode: '35.17.17' },
+                    { name: 'Bandarkedungmulyo (Bandar Kedung Mulyo)', bpsCode: '35.17.18' },
+                    { name: 'Jogoroto', bpsCode: '35.17.19' },
+                    { name: 'Megaluh', bpsCode: '35.17.20' },
+                    { name: 'Ngusikan', bpsCode: '35.17.21' }
+                ]
             }, {
                 name: 'Nganjuk',
                 bpscode: '35.18',
-                districts: []
+                districts: [
+                    { name: 'Sawahan', bpsCode: '35.18.01' },
+                    { name: 'Ngetos', bpsCode: '35.18.02' },
+                    { name: 'Berbek', bpsCode: '35.18.03' },
+                    { name: 'Loceret', bpsCode: '35.18.04' },
+                    { name: 'Pace', bpsCode: '35.18.05' },
+                    { name: 'Prambon', bpsCode: '35.18.06' },
+                    { name: 'Ngronggot', bpsCode: '35.18.07' },
+                    { name: 'Kertosono', bpsCode: '35.18.08' },
+                    { name: 'Patianrowo', bpsCode: '35.18.09' },
+                    { name: 'Baron', bpsCode: '35.18.10' },
+                    { name: 'Tanjunganom', bpsCode: '35.18.11' },
+                    { name: 'Sukomoro', bpsCode: '35.18.12' },
+                    { name: 'Nganjuk', bpsCode: '35.18.13' },
+                    { name: 'Bagor', bpsCode: '35.18.14' },
+                    { name: 'Wilangan', bpsCode: '35.18.15' },
+                    { name: 'Rejoso', bpsCode: '35.18.16' },
+                    { name: 'Gondang', bpsCode: '35.18.17' },
+                    { name: 'Ngluyu', bpsCode: '35.18.18' },
+                    { name: 'Lengkong', bpsCode: '35.18.19' },
+                    { name: 'Jatikalen', bpsCode: '35.18.20' }
+                ]
             }, {
                 name: 'Madiun',
                 bpscode: '35.19',
-                districts: []
+                districts: [
+                    { name: 'Kebon Sari (Kebonsari)', bpsCode: '35.19.01' },
+                    { name: 'Dolopo', bpsCode: '35.19.02' },
+                    { name: 'Geger', bpsCode: '35.19.03' },
+                    { name: 'Dagangan', bpsCode: '35.19.04' },
+                    { name: 'Kare', bpsCode: '35.19.05' },
+                    { name: 'Gemarang', bpsCode: '35.19.06' },
+                    { name: 'Wungu', bpsCode: '35.19.07' },
+                    { name: 'Madiun', bpsCode: '35.19.08' },
+                    { name: 'Jiwan', bpsCode: '35.19.09' },
+                    { name: 'Balerejo', bpsCode: '35.19.10' },
+                    { name: 'Mejayan', bpsCode: '35.19.11' },
+                    { name: 'Saradan', bpsCode: '35.19.12' },
+                    { name: 'Pilangkenceng', bpsCode: '35.19.13' },
+                    { name: 'Sawahan', bpsCode: '35.19.14' },
+                    { name: 'Wonoasri', bpsCode: '35.19.15' }
+                ]
             }, {
                 name: 'Magetan',
                 bpscode: '35.20',
-                districts: []
+                districts: [
+                    { name: 'Poncol', bpsCode: '35.20.01' },
+                    { name: 'Parang', bpsCode: '35.20.02' },
+                    { name: 'Lembeyan', bpsCode: '35.20.03' },
+                    { name: 'Takeran', bpsCode: '35.20.04' },
+                    { name: 'Kawedanan', bpsCode: '35.20.05' },
+                    { name: 'Magetan', bpsCode: '35.20.06' },
+                    { name: 'Plaosan', bpsCode: '35.20.07' },
+                    { name: 'Panekan', bpsCode: '35.20.08' },
+                    { name: 'Sukomoro', bpsCode: '35.20.09' },
+                    { name: 'Bendo', bpsCode: '35.20.10' },
+                    { name: 'Maospati', bpsCode: '35.20.11' },
+                    { name: 'Barat', bpsCode: '35.20.12' },
+                    { name: 'Karangrejo', bpsCode: '35.20.13' },
+                    { name: 'Karas', bpsCode: '35.20.14' },
+                    { name: 'Kartoharjo (Kertoharjo)', bpsCode: '35.20.15' },
+                    { name: 'Ngariboyo', bpsCode: '35.20.16' },
+                    { name: 'Nguntoronadi', bpsCode: '35.20.17' },
+                    { name: 'Sidorejo', bpsCode: '35.20.18' }
+                ]
             }, {
                 name: 'Ngawi',
                 bpscode: '35.21',
-                districts: []
+                districts: [
+                    { name: 'Sine', bpsCode: '35.21.01' },
+                    { name: 'Ngrambe', bpsCode: '35.21.02' },
+                    { name: 'Jogorogo', bpsCode: '35.21.03' },
+                    { name: 'Kendal', bpsCode: '35.21.04' },
+                    { name: 'Geneng', bpsCode: '35.21.05' },
+                    { name: 'Kwadungan', bpsCode: '35.21.06' },
+                    { name: 'Karangjati', bpsCode: '35.21.07' },
+                    { name: 'Padas', bpsCode: '35.21.08' },
+                    { name: 'Ngawi', bpsCode: '35.21.09' },
+                    { name: 'Paron', bpsCode: '35.21.10' },
+                    { name: 'Kedunggalar', bpsCode: '35.21.11' },
+                    { name: 'Widodaren', bpsCode: '35.21.12' },
+                    { name: 'Mantingan', bpsCode: '35.21.13' },
+                    { name: 'Pangkur', bpsCode: '35.21.14' },
+                    { name: 'Bringin', bpsCode: '35.21.15' },
+                    { name: 'Pitu', bpsCode: '35.21.16' },
+                    { name: 'Karanganyar', bpsCode: '35.21.17' },
+                    { name: 'Gerih', bpsCode: '35.21.18' },
+                    { name: 'Kasreman', bpsCode: '35.21.19' }
+                ]
             }, {
                 name: 'Bojonegoro',
                 bpscode: '35.22',
-                districts: []
+                districts: [
+                    { name: 'Ngraho', bpsCode: '35.22.01' },
+                    { name: 'Tambakrejo', bpsCode: '35.22.02' },
+                    { name: 'Ngambon', bpsCode: '35.22.03' },
+                    { name: 'Ngasem', bpsCode: '35.22.04' },
+                    { name: 'Bubulan', bpsCode: '35.22.05' },
+                    { name: 'Dander', bpsCode: '35.22.06' },
+                    { name: 'Sugihwaras', bpsCode: '35.22.07' },
+                    { name: 'Kedungadem', bpsCode: '35.22.08' },
+                    { name: 'Kepohbaru', bpsCode: '35.22.09' },
+                    { name: 'Baureno', bpsCode: '35.22.10' },
+                    { name: 'Kanor', bpsCode: '35.22.11' },
+                    { name: 'Sumberejo', bpsCode: '35.22.12' },
+                    { name: 'Balen', bpsCode: '35.22.13' },
+                    { name: 'Kapas', bpsCode: '35.22.14' },
+                    { name: 'Bojonegoro', bpsCode: '35.22.15' },
+                    { name: 'Kalitidu', bpsCode: '35.22.16' },
+                    { name: 'Malo', bpsCode: '35.22.17' },
+                    { name: 'Purwosari', bpsCode: '35.22.18' },
+                    { name: 'Padangan', bpsCode: '35.22.19' },
+                    { name: 'Kasiman', bpsCode: '35.22.20' },
+                    { name: 'Temayang', bpsCode: '35.22.21' },
+                    { name: 'Margomulyo', bpsCode: '35.22.22' },
+                    { name: 'Trucuk', bpsCode: '35.22.23' },
+                    { name: 'Sukosewu', bpsCode: '35.22.24' },
+                    { name: 'Kedewan', bpsCode: '35.22.25' },
+                    { name: 'Gondang', bpsCode: '35.22.26' },
+                    { name: 'Sekar', bpsCode: '35.22.27' },
+                    { name: 'Gayam', bpsCode: '35.22.28' }
+                ]
             }, {
                 name: 'Tuban',
                 bpscode: '35.23',
-                districts: []
+                districts: [
+                    { name: 'Kenduruan', bpsCode: '35.23.01' },
+                    { name: 'Jatirogo', bpsCode: '35.23.02' },
+                    { name: 'Bangilan', bpsCode: '35.23.03' },
+                    { name: 'Bancar', bpsCode: '35.23.04' },
+                    { name: 'Senori', bpsCode: '35.23.05' },
+                    { name: 'Tambakboyo', bpsCode: '35.23.06' },
+                    { name: 'Singgahan', bpsCode: '35.23.07' },
+                    { name: 'Kerek', bpsCode: '35.23.08' },
+                    { name: 'Parengan', bpsCode: '35.23.09' },
+                    { name: 'Montong', bpsCode: '35.23.10' },
+                    { name: 'Soko', bpsCode: '35.23.11' },
+                    { name: 'Jenu', bpsCode: '35.23.12' },
+                    { name: 'Merakurak', bpsCode: '35.23.13' },
+                    { name: 'Rengel', bpsCode: '35.23.14' },
+                    { name: 'Semanding', bpsCode: '35.23.15' },
+                    { name: 'Tuban', bpsCode: '35.23.16' },
+                    { name: 'Plumpang', bpsCode: '35.23.17' },
+                    { name: 'Palang', bpsCode: '35.23.18' },
+                    { name: 'Widang', bpsCode: '35.23.19' },
+                    { name: 'Grabagan', bpsCode: '35.23.20' }
+                ]
             }, {
                 name: 'Lamongan',
                 bpscode: '35.24',
-                districts: []
+                districts: [
+                    { name: 'Sukorame', bpsCode: '35.24.01' },
+                    { name: 'Bluluk', bpsCode: '35.24.02' },
+                    { name: 'Modo', bpsCode: '35.24.03' },
+                    { name: 'Ngimbang', bpsCode: '35.24.04' },
+                    { name: 'Babat', bpsCode: '35.24.05' },
+                    { name: 'Kedungpring', bpsCode: '35.24.06' },
+                    { name: 'Brondong', bpsCode: '35.24.07' },
+                    { name: 'Laren', bpsCode: '35.24.08' },
+                    { name: 'Sekaran', bpsCode: '35.24.09' },
+                    { name: 'Maduran', bpsCode: '35.24.10' },
+                    { name: 'Sambeng', bpsCode: '35.24.11' },
+                    { name: 'Sugio', bpsCode: '35.24.12' },
+                    { name: 'Pucuk', bpsCode: '35.24.13' },
+                    { name: 'Paciran', bpsCode: '35.24.14' },
+                    { name: 'Solokuro', bpsCode: '35.24.15' },
+                    { name: 'Mantup', bpsCode: '35.24.16' },
+                    { name: 'Sukodadi', bpsCode: '35.24.17' },
+                    { name: 'Karanggeneng (Karang Geneng)', bpsCode: '35.24.18' },
+                    { name: 'Kembangbahu', bpsCode: '35.24.19' },
+                    { name: 'Kalitengah', bpsCode: '35.24.20' },
+                    { name: 'Turi', bpsCode: '35.24.21' },
+                    { name: 'Lamongan', bpsCode: '35.24.22' },
+                    { name: 'Tikung', bpsCode: '35.24.23' },
+                    { name: 'Karangbinangun', bpsCode: '35.24.24' },
+                    { name: 'Deket', bpsCode: '35.24.25' },
+                    { name: 'Glagah', bpsCode: '35.24.26' },
+                    { name: 'Sarirejo', bpsCode: '35.24.27' }
+                ]
             }, {
                 name: 'Gresik',
                 bpscode: '35.25',
-                districts: []
+                districts: [
+                    { name: 'Dukun', bpsCode: '35.25.01' },
+                    { name: 'Balongpanggang (Balong Panggang)', bpsCode: '35.25.02' },
+                    { name: 'Panceng', bpsCode: '35.25.03' },
+                    { name: 'Benjeng', bpsCode: '35.25.04' },
+                    { name: 'Duduksampeyan (Duduk Sampeyan)', bpsCode: '35.25.05' },
+                    { name: 'Wringinanom (Wringin Anom)', bpsCode: '35.25.06' },
+                    { name: 'Ujungpangkah (Ujung Pangkah)', bpsCode: '35.25.07' },
+                    { name: 'Kedamean', bpsCode: '35.25.08' },
+                    { name: 'Sidayu', bpsCode: '35.25.09' },
+                    { name: 'Manyar', bpsCode: '35.25.10' },
+                    { name: 'Cerme', bpsCode: '35.25.11' },
+                    { name: 'Bungah', bpsCode: '35.25.12' },
+                    { name: 'Menganti', bpsCode: '35.25.13' },
+                    { name: 'Kebomas', bpsCode: '35.25.14' },
+                    { name: 'Driyorejo', bpsCode: '35.25.15' },
+                    { name: 'Gresik', bpsCode: '35.25.16' },
+                    { name: 'Sangkapura', bpsCode: '35.25.17' },
+                    { name: 'Tambak', bpsCode: '35.25.18' }
+                ]
             }, {
                 name: 'Bangkalan',
                 bpscode: '35.26',
-                districts: []
+                districts: [
+                    { name: 'Bangkalan', bpsCode: '35.26.01' },
+                    { name: 'Socah', bpsCode: '35.26.02' },
+                    { name: 'Burneh', bpsCode: '35.26.03' },
+                    { name: 'Kamal', bpsCode: '35.26.04' },
+                    { name: 'Arosbaya', bpsCode: '35.26.05' },
+                    { name: 'Geger', bpsCode: '35.26.06' },
+                    { name: 'Klampis', bpsCode: '35.26.07' },
+                    { name: 'Sepulu', bpsCode: '35.26.08' },
+                    { name: 'Tanjung Bumi (Tanjungbumi)', bpsCode: '35.26.09' },
+                    { name: 'Kokop', bpsCode: '35.26.10' },
+                    { name: 'Kwanyar', bpsCode: '35.26.11' },
+                    { name: 'Labang', bpsCode: '35.26.12' },
+                    { name: 'Tanah Merah', bpsCode: '35.26.13' },
+                    { name: 'Tragah', bpsCode: '35.26.14' },
+                    { name: 'Blega', bpsCode: '35.26.15' },
+                    { name: 'Modung', bpsCode: '35.26.16' },
+                    { name: 'Konang', bpsCode: '35.26.17' },
+                    { name: 'Galis', bpsCode: '35.26.18' }
+                ]
             }, {
                 name: 'Sampang',
                 bpscode: '35.27',
-                districts: []
+                districts: [
+                    { name: 'Sreseh', bpsCode: '35.27.01' },
+                    { name: 'Torjun', bpsCode: '35.27.02' },
+                    { name: 'Sampang', bpsCode: '35.27.03' },
+                    { name: 'Camplong', bpsCode: '35.27.04' },
+                    { name: 'Omben', bpsCode: '35.27.05' },
+                    { name: 'Kedungdung', bpsCode: '35.27.06' },
+                    { name: 'Jrengik', bpsCode: '35.27.07' },
+                    { name: 'Tambelangan', bpsCode: '35.27.08' },
+                    { name: 'Banyuates', bpsCode: '35.27.09' },
+                    { name: 'Robatal', bpsCode: '35.27.10' },
+                    { name: 'Sokobanah', bpsCode: '35.27.11' },
+                    { name: 'Ketapang', bpsCode: '35.27.12' },
+                    { name: 'Pangarengan', bpsCode: '35.27.13' },
+                    { name: 'Karangpenang (Karang Penang)', bpsCode: '35.27.14' }
+                ]
             }, {
                 name: 'Pamekasan',
                 bpscode: '35.28',
-                districts: []
+                districts: [
+                    { name: 'Tlanakan', bpsCode: '35.28.01' },
+                    { name: 'Pademawu', bpsCode: '35.28.02' },
+                    { name: 'Galis', bpsCode: '35.28.03' },
+                    { name: 'Pamekasan', bpsCode: '35.28.04' },
+                    { name: 'Proppo', bpsCode: '35.28.05' },
+                    { name: 'Palenggaan (Palenga\'an)', bpsCode: '35.28.06' },
+                    { name: 'Pegantenan', bpsCode: '35.28.07' },
+                    { name: 'Larangan', bpsCode: '35.28.08' },
+                    { name: 'Pakong', bpsCode: '35.28.09' },
+                    { name: 'Waru', bpsCode: '35.28.10' },
+                    { name: 'Batumarmar', bpsCode: '35.28.11' },
+                    { name: 'Kadur', bpsCode: '35.28.12' },
+                    { name: 'Pasean', bpsCode: '35.28.13' }
+                ]
             }, {
                 name: 'Sumenep',
                 bpscode: '35.29',
-                districts: []
+                districts: [
+                    { name: 'Kota Sumenep', bpsCode: '35.29.01' },
+                    { name: 'Kalianget', bpsCode: '35.29.02' },
+                    { name: 'Manding', bpsCode: '35.29.03' },
+                    { name: 'Talango', bpsCode: '35.29.04' },
+                    { name: 'Bluto', bpsCode: '35.29.05' },
+                    { name: 'Saronggi', bpsCode: '35.29.06' },
+                    { name: 'Lenteng', bpsCode: '35.29.07' },
+                    { name: 'Giliginting (Gili Ginting)', bpsCode: '35.29.08' },
+                    { name: 'Guluk-Guluk (Guluk Guluk)', bpsCode: '35.29.09' },
+                    { name: 'Ganding', bpsCode: '35.29.10' },
+                    { name: 'Pragaan', bpsCode: '35.29.11' },
+                    { name: 'Ambunten', bpsCode: '35.29.12' },
+                    { name: 'Pasongsongan', bpsCode: '35.29.13' },
+                    { name: 'Dasuk', bpsCode: '35.29.14' },
+                    { name: 'Rubaru', bpsCode: '35.29.15' },
+                    { name: 'Batang Batang', bpsCode: '35.29.16' },
+                    { name: 'Batuputih', bpsCode: '35.29.17' },
+                    { name: 'Dungkek', bpsCode: '35.29.18' },
+                    { name: 'Gapura', bpsCode: '35.29.19' },
+                    { name: 'Gayam', bpsCode: '35.29.20' },
+                    { name: 'Nonggunong', bpsCode: '35.29.21' },
+                    { name: 'Raas (Ra\'as)', bpsCode: '35.29.22' },
+                    { name: 'Masalembu', bpsCode: '35.29.23' },
+                    { name: 'Arjasa', bpsCode: '35.29.24' },
+                    { name: 'Sapeken', bpsCode: '35.29.25' },
+                    { name: 'Batuan', bpsCode: '35.29.26' },
+                    { name: 'Kangayan', bpsCode: '35.29.27' }
+                ]
             }, {
                 name: 'Kediri',
                 bpscode: '35.71',
-                districts: []
+                districts: [
+                    { name: 'Mojoroto', bpsCode: '35.71.01' },
+                    { name: 'Kota (Kediri Kota)', bpsCode: '35.71.02' },
+                    { name: 'Pesantren', bpsCode: '35.71.03' }
+                ]
             }, {
                 name: 'Blitar',
                 bpscode: '35.72',
-                districts: []
+                districts: [
+                    { name: 'Kepanjenkidul (Kepanjen Kidul)', bpsCode: '35.72.01' },
+                    { name: 'Sukorejo', bpsCode: '35.72.02' },
+                    { name: 'Sananwetan (Sanan Wetan)', bpsCode: '35.72.03' }
+                ]
             }, {
                 name: 'Malang',
                 bpscode: '35.73',
-                districts: []
+                districts: [
+                    { name: 'Blimbing', bpsCode: '35.73.01' },
+                    { name: 'Klojen', bpsCode: '35.73.02' },
+                    { name: 'Kedungkandang', bpsCode: '35.73.03' },
+                    { name: 'Sukun', bpsCode: '35.73.04' },
+                    { name: 'Lowokwaru', bpsCode: '35.73.05' }
+                ]
             }, {
                 name: 'Probolinggo',
                 bpscode: '35.74',
-                districts: []
+                districts: [
+                    { name: 'Kademangan', bpsCode: '35.74.01' },
+                    { name: 'Wonoasih', bpsCode: '35.74.02' },
+                    { name: 'Mayangan', bpsCode: '35.74.03' },
+                    { name: 'Kanigaran', bpsCode: '35.74.04' },
+                    { name: 'Kedopok (Kedopak)', bpsCode: '35.74.05' }
+                ]
             }, {
                 name: 'Pasuruan',
                 bpscode: '35.75',
-                districts: []
+                districts: [
+                    { name: 'Gadingrejo', bpsCode: '35.75.01' },
+                    { name: 'Purworejo', bpsCode: '35.75.02' },
+                    { name: 'Bugul Kidul', bpsCode: '35.75.03' },
+                    { name: 'Panggungrejo', bpsCode: '35.75.04' }
+                ]
             }, {
                 name: 'Mojokerto',
                 bpscode: '35.76',
-                districts: []
+                districts: [
+                    { name: 'Prajuritkulon (Prajurit Kulon)', bpsCode: '35.76.01' },
+                    { name: 'Magersari', bpsCode: '35.76.02' },
+                    { name: 'Kranggan', bpsCode: '35.76.03' }
+                ]
             }, {
                 name: 'Madiun',
                 bpscode: '35.77',
-                districts: []
+                districts: [
+                    { name: 'Kartoharjo', bpsCode: '35.77.01' },
+                    { name: 'Manguharjo', bpsCode: '35.77.02' },
+                    { name: 'Taman', bpsCode: '35.77.03' }
+                ]
             }, {
                 name: 'Surabaya',
                 bpscode: '35.78',
-                districts: []
+                districts: [
+                    { name: 'Karangpilang', bpsCode: '35.78.01' },
+                    { name: 'Wonocolo', bpsCode: '35.78.02' },
+                    { name: 'Rungkut', bpsCode: '35.78.03' },
+                    { name: 'Wonokromo', bpsCode: '35.78.04' },
+                    { name: 'Tegalsari', bpsCode: '35.78.05' },
+                    { name: 'Sawahan', bpsCode: '35.78.06' },
+                    { name: 'Genteng', bpsCode: '35.78.07' },
+                    { name: 'Gubeng', bpsCode: '35.78.08' },
+                    { name: 'Sukolilo', bpsCode: '35.78.09' },
+                    { name: 'Tambaksari', bpsCode: '35.78.10' },
+                    { name: 'Simokerto', bpsCode: '35.78.11' },
+                    { name: 'Pabean Cantian (Pabean Cantikan)', bpsCode: '35.78.12' },
+                    { name: 'Bubutan', bpsCode: '35.78.13' },
+                    { name: 'Tandes', bpsCode: '35.78.14' },
+                    { name: 'Krembangan', bpsCode: '35.78.15' },
+                    { name: 'Semampir', bpsCode: '35.78.16' },
+                    { name: 'Kenjeran', bpsCode: '35.78.17' },
+                    { name: 'Lakarsantri', bpsCode: '35.78.18' },
+                    { name: 'Benowo', bpsCode: '35.78.19' },
+                    { name: 'Wiyung', bpsCode: '35.78.20' },
+                    { name: 'Dukuh Pakis', bpsCode: '35.78.21' },
+                    { name: 'Gayungan', bpsCode: '35.78.22' },
+                    { name: 'Jambangan', bpsCode: '35.78.23' },
+                    { name: 'Tenggilis Mejoyo', bpsCode: '35.78.24' },
+                    { name: 'Gunung Anyar (Gununganyar)', bpsCode: '35.78.25' },
+                    { name: 'Mulyorejo', bpsCode: '35.78.26' },
+                    { name: 'Sukomanunggal', bpsCode: '35.78.27' },
+                    { name: 'Asem Rowo (Asemrowo)', bpsCode: '35.78.28' },
+                    { name: 'Bulak', bpsCode: '35.78.29' },
+                    { name: 'Pakal', bpsCode: '35.78.30' },
+                    { name: 'Sambikerep', bpsCode: '35.78.31' }
+                ]
             }, {
                 name: 'Batu',
                 bpscode: '35.79',
-                districts: []
-            },
+                districts: [
+                    { name: 'Batu', bpsCode: '35.79.01' },
+                    { name: 'Bumiaji', bpsCode: '35.79.02' },
+                    { name: 'Junrejo', bpsCode: '35.79.03' }
+                ]
+            }
         ]
     },
     JK: {
