@@ -620,44 +620,182 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Bengkulu Selatan',
                 bpscode: '17.01',
-                districts: []
+                districts: [
+                    { name: 'Kedurang', bpsCode: '17.01.01' },
+                    { name: 'Seginim', bpsCode: '17.01.02' },
+                    { name: 'Pino', bpsCode: '17.01.03' },
+                    { name: 'Manna', bpsCode: '17.01.04' },
+                    { name: 'Kota Manna', bpsCode: '17.01.05' },
+                    { name: 'Pino Raya (Pinoraya)', bpsCode: '17.01.06' },
+                    { name: 'Kedurang Ilir', bpsCode: '17.01.07' },
+                    { name: 'Air Nipis', bpsCode: '17.01.08' },
+                    { name: 'Ulu Manna', bpsCode: '17.01.09' },
+                    { name: 'Bunga Mas', bpsCode: '17.01.10' },
+                    { name: 'Pasar Manna', bpsCode: '17.01.11' }
+                ]
             }, {
                 name: 'Rejang Lebong',
                 bpscode: '17.02',
-                districts: []
+                districts: [
+                    { name: 'Kota Padang', bpsCode: '17.02.06' },
+                    { name: 'Padang Ulak Tanding', bpsCode: '17.02.07' },
+                    { name: 'Sindang Kelingi', bpsCode: '17.02.08' },
+                    { name: 'Curup', bpsCode: '17.02.09' },
+                    { name: 'Bermani Ulu', bpsCode: '17.02.10' },
+                    { name: 'Selupu Rejang', bpsCode: '17.02.11' },
+                    { name: 'Curup Utara', bpsCode: '17.02.16' },
+                    { name: 'Curup Timur', bpsCode: '17.02.17' },
+                    { name: 'Curup Selatan', bpsCode: '17.02.18' },
+                    { name: 'Curup Tengah', bpsCode: '17.02.19' },
+                    { name: 'Binduriang', bpsCode: '17.02.20' },
+                    { name: 'Sindang Beliti Ulu', bpsCode: '17.02.21' },
+                    { name: 'Sindang Dataran (Sindang Daratan)', bpsCode: '17.02.22' },
+                    { name: 'Sindang Beliti Ilir', bpsCode: '17.02.23' },
+                    { name: 'Bermani Ulu Raya', bpsCode: '17.02.24' }
+                ]
             }, {
                 name: 'Bengkulu Utara',
                 bpscode: '17.03',
-                districts: []
+                districts: [
+                    { name: 'Enggano', bpsCode: '17.03.01' },
+                    { name: 'Kerkap', bpsCode: '17.03.06' },
+                    { name: 'Kota Arga Makmur', bpsCode: '17.03.07' },
+                    { name: 'Giri Mulia (Giri Mulya)', bpsCode: '17.03.08' },
+                    { name: 'Padang Jaya', bpsCode: '17.03.09' },
+                    { name: 'Lais', bpsCode: '17.03.10' },
+                    { name: 'Batik Nau', bpsCode: '17.03.11' },
+                    { name: 'Ketahun', bpsCode: '17.03.12' },
+                    { name: 'Napal Putih', bpsCode: '17.03.13' },
+                    { name: 'Putri Hijau', bpsCode: '17.03.14' },
+                    { name: 'Air Besi', bpsCode: '17.03.15' },
+                    { name: 'Air Napal', bpsCode: '17.03.16' },
+                    { name: 'Hulu Palik', bpsCode: '17.03.19' },
+                    { name: 'Air Padang', bpsCode: '17.03.20' },
+                    { name: 'Arma Jaya', bpsCode: '17.03.21' },
+                    { name: 'Tanjung Agung Palik', bpsCode: '17.03.22' },
+                    { name: 'Ulok Kupai', bpsCode: '17.03.23' },
+                    { name: 'Pinang Raya', bpsCode: '17.03.24' },
+                    { name: 'Marga Sakti Sebelat (Marga Sakti)', bpsCode: '17.03.25' }
+                ]
             }, {
                 name: 'Kaur',
                 bpscode: '17.04',
-                districts: []
+                districts: [
+                    { name: 'Kinal', bpsCode: '17.04.01' },
+                    { name: 'Tanjung Kemuning', bpsCode: '17.04.02' },
+                    { name: 'Kaur Utara', bpsCode: '17.04.03' },
+                    { name: 'Kaur Tengah', bpsCode: '17.04.04' },
+                    { name: 'Kaur Selatan', bpsCode: '17.04.05' },
+                    { name: 'Maje', bpsCode: '17.04.06' },
+                    { name: 'Nasal', bpsCode: '17.04.07' },
+                    { name: 'Semidang Gumai (Gumay)', bpsCode: '17.04.08' },
+                    { name: 'Kelam Tengah', bpsCode: '17.04.09' },
+                    { name: 'Luas', bpsCode: '17.04.10' },
+                    { name: 'Muara Sahung', bpsCode: '17.04.11' },
+                    { name: 'Tetap (Muara Tetap)', bpsCode: '17.04.12' },
+                    { name: 'Lungkang Kule', bpsCode: '17.04.13' },
+                    { name: 'Padang Guci Hilir', bpsCode: '17.04.14' },
+                    { name: 'Padang Guci Hulu', bpsCode: '17.04.15' }
+                ]
             }, {
                 name: 'Seluma',
                 bpscode: '17.05',
-                districts: []
+                districts: [
+                    { name: 'Sukaraja', bpsCode: '17.05.01' },
+                    { name: 'Seluma', bpsCode: '17.05.02' },
+                    { name: 'Talo', bpsCode: '17.05.03' },
+                    { name: 'Semidang Alas', bpsCode: '17.05.04' },
+                    { name: 'Semidang Alas Maras', bpsCode: '17.05.05' },
+                    { name: 'Air Periukan', bpsCode: '17.05.06' },
+                    { name: 'Lubuk Sandi', bpsCode: '17.05.07' },
+                    { name: 'Seluma Barat', bpsCode: '17.05.08' },
+                    { name: 'Seluma Timur', bpsCode: '17.05.09' },
+                    { name: 'Seluma Utara', bpsCode: '17.05.10' },
+                    { name: 'Seluma Selatan', bpsCode: '17.05.11' },
+                    { name: 'Talo Kecil', bpsCode: '17.05.12' },
+                    { name: 'Ulu Talo', bpsCode: '17.05.13' },
+                    { name: 'Ilir Talo', bpsCode: '17.05.14' }
+                ]
             }, {
                 name: 'Muko Muko',
                 bpscode: '17.06',
-                districts: []
+                districts: [
+                    { name: 'Lubuk Pinang', bpsCode: '17.06.01' },
+                    { name: 'Kota Mukomuko (Mukomuko Utara)', bpsCode: '17.06.02' },
+                    { name: 'Teras Terunjam', bpsCode: '17.06.03' },
+                    { name: 'Pondok Suguh', bpsCode: '17.06.04' },
+                    { name: 'Ipuh (Muko Muko Selatan)', bpsCode: '17.06.05' },
+                    { name: 'Malin Deman', bpsCode: '17.06.06' },
+                    { name: 'Air Rami', bpsCode: '17.06.07' },
+                    { name: 'Teramang Jaya', bpsCode: '17.06.08' },
+                    { name: 'Selagan Raya', bpsCode: '17.06.09' },
+                    { name: 'Penarik', bpsCode: '17.06.10' },
+                    { name: 'XIV Koto', bpsCode: '17.06.11' },
+                    { name: 'V Koto', bpsCode: '17.06.12' },
+                    { name: 'Air Majunto', bpsCode: '17.06.13' },
+                    { name: 'Air Dikit', bpsCode: '17.06.14' },
+                    { name: 'Sungai Rumbai', bpsCode: '17.06.15' }
+                ]
             }, {
                 name: 'Lebong',
                 bpscode: '17.07',
-                districts: []
+                districts: [
+                    { name: 'Lebong Utara', bpsCode: '17.07.01' },
+                    { name: 'Lebong Atas', bpsCode: '17.07.02' },
+                    { name: 'Lebong Tengah', bpsCode: '17.07.03' },
+                    { name: 'Lebong Selatan', bpsCode: '17.07.04' },
+                    { name: 'Rimbo Pengadang', bpsCode: '17.07.05' },
+                    { name: 'Topos', bpsCode: '17.07.06' },
+                    { name: 'Bingin Kuning', bpsCode: '17.07.07' },
+                    { name: 'Lebong Sakti', bpsCode: '17.07.08' },
+                    { name: 'Pelabai', bpsCode: '17.07.09' },
+                    { name: 'Amen', bpsCode: '17.07.10' },
+                    { name: 'Uram Jaya', bpsCode: '17.07.11' },
+                    { name: 'Pinang Belapis', bpsCode: '17.07.12' }
+                ]
             }, {
                 name: 'Kepahiang',
                 bpscode: '17.08',
-                districts: []
+                districts: [
+                    { name: 'Bermani Ilir', bpsCode: '17.08.01' },
+                    { name: 'Ujan Mas', bpsCode: '17.08.02' },
+                    { name: 'Tebat Karai', bpsCode: '17.08.03' },
+                    { name: 'Kepahiang', bpsCode: '17.08.04' },
+                    { name: 'Merigi', bpsCode: '17.08.05' },
+                    { name: 'Kebawetan', bpsCode: '17.08.06' },
+                    { name: 'Seberang Musi', bpsCode: '17.08.07' },
+                    { name: 'Muara Kemumu', bpsCode: '17.08.08' }
+                ]
             }, {
                 name: 'Bengkulu Tengah',
                 bpscode: '17.09',
-                districts: []
+                districts: [
+                    { name: 'Karang Tinggi', bpsCode: '17.09.01' },
+                    { name: 'Talang Empat', bpsCode: '17.09.02' },
+                    { name: 'Pondok Kelapa', bpsCode: '17.09.03' },
+                    { name: 'Pematang Tiga', bpsCode: '17.09.04' },
+                    { name: 'Pagar Jati', bpsCode: '17.09.05' },
+                    { name: 'Taba Penanjung', bpsCode: '17.09.06' },
+                    { name: 'Merigi Kelindang', bpsCode: '17.09.07' },
+                    { name: 'Merigi Sakti', bpsCode: '17.09.08' },
+                    { name: 'Pondok Kubang', bpsCode: '17.09.09' },
+                    { name: 'Bang Haji', bpsCode: '17.09.10' }
+                ]
             }, {
                 name: 'Bengkulu',
                 bpscode: '17.71',
-                districts: []
-            },
+                districts: [
+                    { name: 'Selebar', bpsCode: '17.71.01' },
+                    { name: 'Gading Cempaka', bpsCode: '17.71.02' },
+                    { name: 'Teluk Segara', bpsCode: '17.71.03' },
+                    { name: 'Muara Bangka Hulu', bpsCode: '17.71.04' },
+                    { name: 'Kampung Melayu', bpsCode: '17.71.05' },
+                    { name: 'Ratu Agung', bpsCode: '17.71.06' },
+                    { name: 'Ratu Samban', bpsCode: '17.71.07' },
+                    { name: 'Sungai Serut', bpsCode: '17.71.08' },
+                    { name: 'Singaran Pati', bpsCode: '17.71.09' }
+                ]
+            }
         ]
     },
     BT: {
