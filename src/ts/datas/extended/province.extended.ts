@@ -426,40 +426,106 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Jembrana',
                 bpscode: '51.01',
-                districts: []
+                districts: [
+                    { name: 'Negara', bpsCode: '51.01.01' },
+                    { name: 'Mendoyo', bpsCode: '51.01.02' },
+                    { name: 'Pekutatan', bpsCode: '51.01.03' },
+                    { name: 'Melaya', bpsCode: '51.01.04' },
+                    { name: 'Jembrana', bpsCode: '51.01.05' }
+                ]
             }, {
                 name: 'Tabanan',
                 bpscode: '51.02',
-                districts: []
+                districts: [
+                    { name: 'Selemadeg', bpsCode: '51.02.01' },
+                    { name: 'Salamadeg Timur (Salemadeg Timur)', bpsCode: '51.02.02' },
+                    { name: 'Salemadeg Barat', bpsCode: '51.02.03' },
+                    { name: 'Kerambitan', bpsCode: '51.02.04' },
+                    { name: 'Tabanan', bpsCode: '51.02.05' },
+                    { name: 'Kediri', bpsCode: '51.02.06' },
+                    { name: 'Marga', bpsCode: '51.02.07' },
+                    { name: 'Penebel', bpsCode: '51.02.08' },
+                    { name: 'Baturiti', bpsCode: '51.02.09' },
+                    { name: 'Pupuan', bpsCode: '51.02.10' }
+                ]
             }, {
                 name: 'Badung',
                 bpscode: '51.03',
-                districts: []
+                districts: [
+                    { name: 'Kuta', bpsCode: '51.03.01' },
+                    { name: 'Mengwi', bpsCode: '51.03.02' },
+                    { name: 'Abiansemal', bpsCode: '51.03.03' },
+                    { name: 'Petang', bpsCode: '51.03.04' },
+                    { name: 'Kuta Selatan', bpsCode: '51.03.05' },
+                    { name: 'Kuta Utara', bpsCode: '51.03.06' }
+                ]
             }, {
                 name: 'Gianyar',
                 bpscode: '51.04',
-                districts: []
+                districts: [
+                    { name: 'Sukawati', bpsCode: '51.04.01' },
+                    { name: 'Belah Batuh (Blahbatuh)', bpsCode: '51.04.02' },
+                    { name: 'Gianyar', bpsCode: '51.04.03' },
+                    { name: 'Tampaksiring (Tampak Siring)', bpsCode: '51.04.04' },
+                    { name: 'Ubud', bpsCode: '51.04.05' },
+                    { name: 'Tegallalang', bpsCode: '51.04.06' },
+                    { name: 'Payangan', bpsCode: '51.04.07' }
+                ]
             }, {
                 name: 'Klungkung',
                 bpscode: '51.05',
-                districts: []
+                districts: [
+                    { name: 'Nusa Penida (Nusapenida)', bpsCode: '51.05.01' },
+                    { name: 'Banjarangkan', bpsCode: '51.05.02' },
+                    { name: 'Klungkung', bpsCode: '51.05.03' },
+                    { name: 'Dawan', bpsCode: '51.05.04' }
+                ]
             }, {
                 name: 'Bangli',
                 bpscode: '51.06',
-                districts: []
+                districts: [
+                    { name: 'Susut', bpsCode: '51.06.01' },
+                    { name: 'Bangli', bpsCode: '51.06.02' },
+                    { name: 'Tembuku', bpsCode: '51.06.03' },
+                    { name: 'Kintamani', bpsCode: '51.06.04' }
+                ]
             }, {
                 name: 'Karangasem',
                 bpscode: '51.07',
-                districts: []
+                districts: [
+                    { name: 'Rendang', bpsCode: '51.07.01' },
+                    { name: 'Sidemen', bpsCode: '51.07.02' },
+                    { name: 'Manggis', bpsCode: '51.07.03' },
+                    { name: 'Karangasem (Karang Asem)', bpsCode: '51.07.04' },
+                    { name: 'Abang', bpsCode: '51.07.05' },
+                    { name: 'Bebandem', bpsCode: '51.07.06' },
+                    { name: 'Selat', bpsCode: '51.07.07' },
+                    { name: 'Kubu', bpsCode: '51.07.08' }
+                ]
             }, {
                 name: 'Buleleng',
                 bpscode: '51.08',
-                districts: []
+                districts: [
+                    { name: 'Gerokgak', bpsCode: '51.08.01' },
+                    { name: 'Seririt', bpsCode: '51.08.02' },
+                    { name: 'Busung biu (Busungbiu)', bpsCode: '51.08.03' },
+                    { name: 'Banjar', bpsCode: '51.08.04' },
+                    { name: 'Sukasada', bpsCode: '51.08.05' },
+                    { name: 'Buleleng', bpsCode: '51.08.06' },
+                    { name: 'Sawan', bpsCode: '51.08.07' },
+                    { name: 'Kubutambahan', bpsCode: '51.08.08' },
+                    { name: 'Tejakula', bpsCode: '51.08.09' }
+                ]
             }, {
                 name: 'Denpasar',
                 bpscode: '51.71',
-                districts: []
-            },
+                districts: [
+                    { name: 'Denpasar Selatan', bpsCode: '51.71.01' },
+                    { name: 'Denpasar Timur', bpsCode: '51.71.02' },
+                    { name: 'Denpasar Barat', bpsCode: '51.71.03' },
+                    { name: 'Denpasar Utara', bpsCode: '51.71.04' }
+                ]
+            }
         ]
     },
     BB: {
