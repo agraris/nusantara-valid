@@ -5118,48 +5118,177 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Maluku Tengah',
                 bpscode: '81.01',
-                districts: []
+                districts: [
+                    { name: 'Amahai', bpsCode: '81.01.01' },
+                    { name: 'Teon Nila Serua', bpsCode: '81.01.02' },
+                    { name: 'Seram Utara', bpsCode: '81.01.06' },
+                    { name: 'Banda', bpsCode: '81.01.09' },
+                    { name: 'Tehoru', bpsCode: '81.01.11' },
+                    { name: 'Saparua', bpsCode: '81.01.12' },
+                    { name: 'Pulau Haruku', bpsCode: '81.01.13' },
+                    { name: 'Salahutu', bpsCode: '81.01.14' },
+                    { name: 'Leihitu', bpsCode: '81.01.15' },
+                    { name: 'Nusa Laut', bpsCode: '81.01.16' },
+                    { name: 'Kota Masohi', bpsCode: '81.01.17' },
+                    { name: 'Seram Utara Barat', bpsCode: '81.01.20' },
+                    { name: 'Teluk Elpaputih', bpsCode: '81.01.21' },
+                    { name: 'Leihitu Barat', bpsCode: '81.01.22' },
+                    { name: 'Telutih', bpsCode: '81.01.23' },
+                    { name: 'Seram Utara Timur Seti', bpsCode: '81.01.24' },
+                    { name: 'Seram Utara Timur Kobi', bpsCode: '81.01.25' },
+                    { name: 'Saparua Timur', bpsCode: '81.01.26' }
+                ]
             }, {
                 name: 'Maluku Tenggara',
                 bpscode: '81.02',
-                districts: []
+                districts: [
+                    { name: 'Kei Kecil', bpsCode: '81.02.01' },
+                    { name: 'Kei Besar', bpsCode: '81.02.03' },
+                    { name: 'Kei Besar Selatan', bpsCode: '81.02.04' },
+                    { name: 'Kei Besar Utara Timur', bpsCode: '81.02.05' },
+                    { name: 'Kei Kecil Timur', bpsCode: '81.02.13' },
+                    { name: 'Kei Kecil Barat', bpsCode: '81.02.14' },
+                    { name: 'Manyeuw', bpsCode: '81.02.15' },
+                    { name: 'Hoat Sorbay', bpsCode: '81.02.16' },
+                    { name: 'Kei Besar Utara Barat', bpsCode: '81.02.17' },
+                    { name: 'Kei Besar Selatan Barat', bpsCode: '81.02.18' },
+                    { name: 'Kei Kecil Timur Selatan', bpsCode: '81.02.19' }
+                ]
             }, {
                 name: 'Maluku Tenggara Barat',
                 bpscode: '81.03',
-                districts: []
+                districts: [
+                    { name: 'Tanimbar Selatan', bpsCode: '81.03.01' },
+                    { name: 'Selaru', bpsCode: '81.03.02' },
+                    { name: 'Wer Tamrian', bpsCode: '81.03.03' },
+                    { name: 'Wer Maktian', bpsCode: '81.03.04' },
+                    { name: 'Tanimbar Utara', bpsCode: '81.03.05' },
+                    { name: 'Yaru', bpsCode: '81.03.06' },
+                    { name: 'Wuar Labobar', bpsCode: '81.03.07' },
+                    { name: 'Kormomolin', bpsCode: '81.03.08' },
+                    { name: 'Nirunmas', bpsCode: '81.03.09' },
+                    { name: 'Molu Maru', bpsCode: '81.03.18' }
+                ]
             }, {
                 name: 'Buru',
                 bpscode: '81.04',
-                districts: []
+                districts: [
+                    { name: 'Namlea', bpsCode: '81.04.01' },
+                    { name: 'Air Buaya (Airbuaya)', bpsCode: '81.04.02' },
+                    { name: 'Waeapo', bpsCode: '81.04.03' },
+                    { name: 'Waplau', bpsCode: '81.04.06' },
+                    { name: 'Batabual', bpsCode: '81.04.10' },
+                    { name: 'Lolong Guba', bpsCode: '81.04.11' },
+                    { name: 'Waelata', bpsCode: '81.04.12' },
+                    { name: 'Fena Leisela', bpsCode: '81.04.13' },
+                    { name: 'Teluk Kaiely', bpsCode: '81.04.14' },
+                    { name: 'Lilialy', bpsCode: '81.04.15' }
+                ]
             }, {
                 name: 'Seram Bagian Timur',
                 bpscode: '81.05',
-                districts: []
+                districts: [
+                    { name: 'Bula', bpsCode: '81.05.01' },
+                    { name: 'Seram Timur', bpsCode: '81.05.02' },
+                    { name: 'Werinama', bpsCode: '81.05.03' },
+                    { name: 'Pulau Gorom', bpsCode: '81.05.04' },
+                    { name: 'Wakate', bpsCode: '81.05.05' },
+                    { name: 'Tutuk Tolu', bpsCode: '81.05.06' },
+                    { name: 'Siwalalat', bpsCode: '81.05.07' },
+                    { name: 'Kilmury', bpsCode: '81.05.08' },
+                    { name: 'Pulau Panjang', bpsCode: '81.05.09' },
+                    { name: 'Teor', bpsCode: '81.05.10' },
+                    { name: 'Gorom Timur', bpsCode: '81.05.11' },
+                    { name: 'Bula Barat', bpsCode: '81.05.12' },
+                    { name: 'Kian Darat', bpsCode: '81.05.13' },
+                    { name: 'Siritaun Wida Timur', bpsCode: '81.05.14' },
+                    { name: 'Teluk Waru', bpsCode: '81.05.15' }
+                ]
             }, {
                 name: 'Seram Bagian Barat',
                 bpscode: '81.06',
-                districts: []
+                districts: [
+                    { name: 'Kairatu', bpsCode: '81.06.01' },
+                    { name: 'Seram Barat', bpsCode: '81.06.02' },
+                    { name: 'Taniwel', bpsCode: '81.06.03' },
+                    { name: 'Huamual Belakang', bpsCode: '81.06.04' },
+                    { name: 'Amalatu', bpsCode: '81.06.05' },
+                    { name: 'Inamosol', bpsCode: '81.06.06' },
+                    { name: 'Kairatu Barat', bpsCode: '81.06.07' },
+                    { name: 'Huamual', bpsCode: '81.06.08' },
+                    { name: 'Kepulauan Manipa', bpsCode: '81.06.09' },
+                    { name: 'Taniwel Timur', bpsCode: '81.06.10' },
+                    { name: 'Elpaputih', bpsCode: '81.06.11' }
+                ]
             }, {
                 name: 'Kepulauan Aru',
                 bpscode: '81.07',
-                districts: []
+                districts: [
+                    { name: 'Pulau-Pulau Aru', bpsCode: '81.07.01' },
+                    { name: 'Aru Selatan', bpsCode: '81.07.02' },
+                    { name: 'Aru Tengah', bpsCode: '81.07.03' },
+                    { name: 'Aru Utara', bpsCode: '81.07.04' },
+                    { name: 'Aru Utara Timur Batuley', bpsCode: '81.07.05' },
+                    { name: 'Sir-Sir', bpsCode: '81.07.06' },
+                    { name: 'Aru Tengah Timur', bpsCode: '81.07.07' },
+                    { name: 'Aru Tengah Selatan', bpsCode: '81.07.08' },
+                    { name: 'Aru Selatan Timur', bpsCode: '81.07.09' },
+                    { name: 'Aru Selatan Utara', bpsCode: '81.07.10' }
+                ]
             }, {
                 name: 'Maluku Barat Daya',
                 bpscode: '81.08',
-                districts: []
+                districts: [
+                    { name: 'Moa Lakor', bpsCode: '81.08.01' },
+                    { name: 'Damer', bpsCode: '81.08.02' },
+                    { name: 'Mndona Hiera (Mdona Hyera / Hiera)', bpsCode: '81.08.03' },
+                    { name: 'Pulau Pulau Babar', bpsCode: '81.08.04' },
+                    { name: 'Pulau-Pulau Babar Timur', bpsCode: '81.08.05' },
+                    { name: 'Wetar', bpsCode: '81.08.06' },
+                    { name: 'Pulau Pulau Terselatan', bpsCode: '81.08.07' },
+                    { name: 'Pulau Leti / Letti (Leti Moa Lakor)', bpsCode: '81.08.08' },
+                    { name: 'Pulau Masela', bpsCode: '81.08.09' },
+                    { name: 'Dawelor Dawera', bpsCode: '81.08.10' },
+                    { name: 'Pulau Wetang', bpsCode: '81.08.11' },
+                    { name: 'Pulau Lakor', bpsCode: '81.08.12' },
+                    { name: 'Wetar Utara', bpsCode: '81.08.13' },
+                    { name: 'Wetar Barat', bpsCode: '81.08.14' },
+                    { name: 'Wetar Timur', bpsCode: '81.08.15' },
+                    { name: 'Kepulauan Romang', bpsCode: '81.08.16' },
+                    { name: 'Kisar Utara', bpsCode: '81.08.17' }
+                ]
             }, {
                 name: 'Buru Selatan',
                 bpscode: '81.09',
-                districts: []
+                districts: [
+                    { name: 'Namrole', bpsCode: '81.09.01' },
+                    { name: 'Waesama', bpsCode: '81.09.02' },
+                    { name: 'Ambalau', bpsCode: '81.09.03' },
+                    { name: 'Kepala Madan', bpsCode: '81.09.04' },
+                    { name: 'Leksula', bpsCode: '81.09.05' },
+                    { name: 'Fena Fafan', bpsCode: '81.09.06' }
+                ]
             }, {
                 name: 'Ambon',
                 bpscode: '81.71',
-                districts: []
+                districts: [
+                    { name: 'Nusaniwe (Nusanive)', bpsCode: '81.71.01' },
+                    { name: 'Sirimau', bpsCode: '81.71.02' },
+                    { name: 'Baguala', bpsCode: '81.71.03' },
+                    { name: 'Teluk Ambon', bpsCode: '81.71.04' },
+                    { name: 'Leitimur Selatan', bpsCode: '81.71.05' }
+                ]
             }, {
                 name: 'Tual',
                 bpscode: '81.72',
-                districts: []
-            },
+                districts: [
+                    { name: 'Pulau Dullah Utara', bpsCode: '81.72.01' },
+                    { name: 'Pulau Dullah Selatan', bpsCode: '81.72.02' },
+                    { name: 'Tayando Tam', bpsCode: '81.72.03' },
+                    { name: 'Pulau-Pulau Kur', bpsCode: '81.72.04' },
+                    { name: 'Kur Selatan', bpsCode: '81.72.05' }
+                ]
+            }
         ]
     },
     MU: {
@@ -5167,44 +5296,169 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Halmahera Barat',
                 bpscode: '82.01',
-                districts: []
+                districts: [
+                    { name: 'Jailolo', bpsCode: '82.01.01' },
+                    { name: 'Loloda', bpsCode: '82.01.02' },
+                    { name: 'Ibu', bpsCode: '82.01.03' },
+                    { name: 'Sahu', bpsCode: '82.01.04' },
+                    { name: 'Jailolo Selatan', bpsCode: '82.01.05' },
+                    { name: 'Ibu Utara', bpsCode: '82.01.07' },
+                    { name: 'Ibu Selatan', bpsCode: '82.01.08' },
+                    { name: 'Sahu Timur', bpsCode: '82.01.09' }
+                ]
             }, {
                 name: 'Halmahera Tengah',
                 bpscode: '82.02',
-                districts: []
+                districts: [
+                    { name: 'Weda', bpsCode: '82.02.01' },
+                    { name: 'Patani', bpsCode: '82.02.02' },
+                    { name: 'Pulau Gebe', bpsCode: '82.02.03' },
+                    { name: 'Weda Utara', bpsCode: '82.02.04' },
+                    { name: 'Weda Selatan', bpsCode: '82.02.05' },
+                    { name: 'Patani Utara', bpsCode: '82.02.06' },
+                    { name: 'Weda Tengah', bpsCode: '82.02.07' },
+                    { name: 'Patani Barat', bpsCode: '82.02.08' },
+                    { name: 'Weda Timur', bpsCode: '82.02.09' },
+                    { name: 'Patani Timur', bpsCode: '82.02.10' }
+                ]
             }, {
                 name: 'Halmahera Utara',
                 bpscode: '82.03',
-                districts: []
+                districts: [
+                    { name: 'Galela', bpsCode: '82.03.04' },
+                    { name: 'Tobelo', bpsCode: '82.03.05' },
+                    { name: 'Tobelo Selatan', bpsCode: '82.03.06' },
+                    { name: 'Kao', bpsCode: '82.03.07' },
+                    { name: 'Malifut', bpsCode: '82.03.08' },
+                    { name: 'Loloda Utara', bpsCode: '82.03.09' },
+                    { name: 'Tobelo Utara', bpsCode: '82.03.10' },
+                    { name: 'Tobelo Tengah', bpsCode: '82.03.11' },
+                    { name: 'Tobelo Timur', bpsCode: '82.03.12' },
+                    { name: 'Tobelo Barat', bpsCode: '82.03.13' },
+                    { name: 'Galela Barat', bpsCode: '82.03.14' },
+                    { name: 'Galela Utara', bpsCode: '82.03.15' },
+                    { name: 'Galela Selatan', bpsCode: '82.03.16' },
+                    { name: 'Loloda Kepulauan', bpsCode: '82.03.19' },
+                    { name: 'Kao Utara', bpsCode: '82.03.20' },
+                    { name: 'Kao Barat', bpsCode: '82.03.21' },
+                    { name: 'Kao Teluk', bpsCode: '82.03.22' }
+                ]
             }, {
                 name: 'Halmahera Selatan',
                 bpscode: '82.04',
-                districts: []
+                districts: [
+                    { name: 'Pulau Makian', bpsCode: '82.04.01' },
+                    { name: 'Kayoa', bpsCode: '82.04.02' },
+                    { name: 'Gane Timur', bpsCode: '82.04.03' },
+                    { name: 'Gane Barat', bpsCode: '82.04.04' },
+                    { name: 'Obi Selatan', bpsCode: '82.04.05' },
+                    { name: 'Obi', bpsCode: '82.04.06' },
+                    { name: 'Bacan Timur', bpsCode: '82.04.07' },
+                    { name: 'Bacan', bpsCode: '82.04.08' },
+                    { name: 'Bacan Barat', bpsCode: '82.04.09' },
+                    { name: 'Makian Barat', bpsCode: '82.04.10' },
+                    { name: 'Kayoa Barat', bpsCode: '82.04.11' },
+                    { name: 'Kayoa Selatan', bpsCode: '82.04.12' },
+                    { name: 'Kayoa Utara', bpsCode: '82.04.13' },
+                    { name: 'Bacan Barat Utara', bpsCode: '82.04.14' },
+                    { name: 'Kasiruta Barat', bpsCode: '82.04.15' },
+                    { name: 'Kasiruta Timur', bpsCode: '82.04.16' },
+                    { name: 'Bacan Selatan', bpsCode: '82.04.17' },
+                    { name: 'Kepulauan Botanglomang', bpsCode: '82.04.18' },
+                    { name: 'Mandioli Selatan', bpsCode: '82.04.19' },
+                    { name: 'Mandioli Utara', bpsCode: '82.04.20' },
+                    { name: 'Bacan Timur Selatan', bpsCode: '82.04.21' },
+                    { name: 'Bacan Timur Tengah', bpsCode: '82.04.22' },
+                    { name: 'Gane Barat Selatan', bpsCode: '82.04.23' },
+                    { name: 'Gane Barat Utara', bpsCode: '82.04.24' },
+                    { name: 'Kepulauan Joronga', bpsCode: '82.04.25' },
+                    { name: 'Gane Timur Selatan', bpsCode: '82.04.26' },
+                    { name: 'Gane Timur Tengah', bpsCode: '82.04.27' },
+                    { name: 'Obi Barat', bpsCode: '82.04.28' },
+                    { name: 'Obi Timur', bpsCode: '82.04.29' },
+                    { name: 'Obi Utara', bpsCode: '82.04.30' }
+                ]
             }, {
                 name: 'Kepulauan Sula',
                 bpscode: '82.05',
-                districts: []
+                districts: [
+                    { name: 'Mangoli Timur', bpsCode: '82.05.01' },
+                    { name: 'Sanana', bpsCode: '82.05.02' },
+                    { name: 'Sulabesi Barat', bpsCode: '82.05.03' },
+                    { name: 'Mangoli Barat', bpsCode: '82.05.06' },
+                    { name: 'Sulabesi Tengah', bpsCode: '82.05.07' },
+                    { name: 'Sulabesi Timur', bpsCode: '82.05.08' },
+                    { name: 'Sulabesi Selatan', bpsCode: '82.05.09' },
+                    { name: 'Mangoli Utara Timur', bpsCode: '82.05.10' },
+                    { name: 'Mangoli Tengah', bpsCode: '82.05.11' },
+                    { name: 'Mangoli Selatan', bpsCode: '82.05.12' },
+                    { name: 'Mangoli Utara', bpsCode: '82.05.13' },
+                    { name: 'Sanana Utara', bpsCode: '82.05.18' }
+                ]
             }, {
                 name: 'Halmahera Timur',
                 bpscode: '82.06',
-                districts: []
+                districts: [
+                    { name: 'Wasile', bpsCode: '82.06.01' },
+                    { name: 'Maba', bpsCode: '82.06.02' },
+                    { name: 'Maba Selatan', bpsCode: '82.06.03' },
+                    { name: 'Wasile Selatan', bpsCode: '82.06.04' },
+                    { name: 'Wasile Tengah', bpsCode: '82.06.05' },
+                    { name: 'Wasile Utara', bpsCode: '82.06.06' },
+                    { name: 'Wasile Timur', bpsCode: '82.06.07' },
+                    { name: 'Maba Tengah', bpsCode: '82.06.08' },
+                    { name: 'Maba Utara', bpsCode: '82.06.09' },
+                    { name: 'Kota Maba', bpsCode: '82.06.10' }
+                ]
             }, {
                 name: 'Pulau Morotai',
                 bpscode: '82.07',
-                districts: []
+                districts: [
+                    { name: 'Morotai Selatan', bpsCode: '82.07.01' },
+                    { name: 'Morotai Selatan Barat', bpsCode: '82.07.02' },
+                    { name: 'Morotai Jaya', bpsCode: '82.07.03' },
+                    { name: 'Morotai Utara', bpsCode: '82.07.04' },
+                    { name: 'Morotai Timur', bpsCode: '82.07.05' }
+                ]
             }, {
                 name: 'Pulau Taliabu',
                 bpscode: '82.08',
-                districts: []
+                districts: [
+                    { name: 'Taliabu Barat', bpsCode: '82.08.01' },
+                    { name: 'Taliabu Barat Laut', bpsCode: '82.08.02' },
+                    { name: 'Lede', bpsCode: '82.08.03' },
+                    { name: 'Taliabu Utara', bpsCode: '82.08.04' },
+                    { name: 'Taliabu Timur', bpsCode: '82.08.05' },
+                    { name: 'Taliabu Timur Selatan', bpsCode: '82.08.06' },
+                    { name: 'Taliabu Selatan', bpsCode: '82.08.07' },
+                    { name: 'Tabona', bpsCode: '82.08.08' }
+                ]
             }, {
                 name: 'Ternate',
                 bpscode: '82.71',
-                districts: []
+                districts: [
+                    { name: 'Pulau Ternate', bpsCode: '82.71.01' },
+                    { name: 'Kota Ternate Selatan', bpsCode: '82.71.02' },
+                    { name: 'Kota Ternate Utara', bpsCode: '82.71.03' },
+                    { name: 'Moti', bpsCode: '82.71.04' },
+                    { name: 'Pulau Batang Dua', bpsCode: '82.71.05' },
+                    { name: 'Kota Ternate Tengah', bpsCode: '82.71.06' },
+                    { name: 'Pulau Hiri', bpsCode: '82.71.07' }
+                ]
             }, {
                 name: 'Tidore Kepulauan',
                 bpscode: '82.72',
-                districts: []
-            },
+                districts: [
+                    { name: 'Tidore', bpsCode: '82.72.01' },
+                    { name: 'Oba Utara', bpsCode: '82.72.02' },
+                    { name: 'Oba', bpsCode: '82.72.03' },
+                    { name: 'Tidore Selatan', bpsCode: '82.72.04' },
+                    { name: 'Tidore Utara', bpsCode: '82.72.05' },
+                    { name: 'Oba Tengah', bpsCode: '82.72.06' },
+                    { name: 'Oba Selatan', bpsCode: '82.72.07' },
+                    { name: 'Tidore Timur', bpsCode: '82.72.08' }
+                ]
+            }
         ]
     },
     NB: {
