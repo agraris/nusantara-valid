@@ -2944,28 +2944,78 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Kepulauan Seribu',
                 bpscode: '31.01',
-                districts: []
+                districts: [
+                    { name: 'Kepulauan Seribu Utara', bpsCode: '31.01.01' },
+                    { name: 'Kepulauan Seribu Selatan', bpsCode: '31.01.02' }
+                ]
             }, {
                 name: 'Jakarta Pusat',
                 bpscode: '31.71',
-                districts: []
+                districts: [
+                    { name: 'Gambir', bpsCode: '31.71.01' },
+                    { name: 'Sawah Besar', bpsCode: '31.71.02' },
+                    { name: 'Kemayoran', bpsCode: '31.71.03' },
+                    { name: 'Senen', bpsCode: '31.71.04' },
+                    { name: 'Cempaka Putih', bpsCode: '31.71.05' },
+                    { name: 'Menteng', bpsCode: '31.71.06' },
+                    { name: 'Tanah Abang', bpsCode: '31.71.07' },
+                    { name: 'Johar Baru', bpsCode: '31.71.08' }
+                ]
             }, {
                 name: 'Jakarta Utara',
                 bpscode: '31.72',
-                districts: []
+                districts: [
+                    { name: 'Penjaringan', bpsCode: '31.72.01' },
+                    { name: 'Tanjung Priok', bpsCode: '31.72.02' },
+                    { name: 'Koja', bpsCode: '31.72.03' },
+                    { name: 'Cilincing', bpsCode: '31.72.04' },
+                    { name: 'Pademangan', bpsCode: '31.72.05' },
+                    { name: 'Kelapa Gading', bpsCode: '31.72.06' }
+                ]
             }, {
                 name: 'Jakarta Barat',
                 bpscode: '31.73',
-                districts: []
+                districts: [
+                    { name: 'Cengkareng', bpsCode: '31.73.01' },
+                    { name: 'Grogol Petamburan', bpsCode: '31.73.02' },
+                    { name: 'Taman Sari', bpsCode: '31.73.03' },
+                    { name: 'Tambora', bpsCode: '31.73.04' },
+                    { name: 'Kebon Jeruk', bpsCode: '31.73.05' },
+                    { name: 'Kalideres', bpsCode: '31.73.06' },
+                    { name: 'Pal Merah (Palmerah)', bpsCode: '31.73.07' },
+                    { name: 'Kembangan', bpsCode: '31.73.08' }
+                ]
             }, {
                 name: 'Jakarta Selatan',
                 bpscode: '31.74',
-                districts: []
+                districts: [
+                    { name: 'Tebet', bpsCode: '31.74.01' },
+                    { name: 'Setiabudi (Setia Budi)', bpsCode: '31.74.02' },
+                    { name: 'Mampang Prapatan', bpsCode: '31.74.03' },
+                    { name: 'Pasar Minggu', bpsCode: '31.74.04' },
+                    { name: 'Kebayoran Lama', bpsCode: '31.74.05' },
+                    { name: 'Cilandak', bpsCode: '31.74.06' },
+                    { name: 'Kebayoran Baru', bpsCode: '31.74.07' },
+                    { name: 'Pancoran', bpsCode: '31.74.08' },
+                    { name: 'Jagakarsa', bpsCode: '31.74.09' },
+                    { name: 'Pesanggrahan', bpsCode: '31.74.10' }
+                ]
             }, {
                 name: 'Jakarta Timur',
                 bpscode: '31.75',
-                districts: []
-            },
+                districts: [
+                    { name: 'Matraman', bpsCode: '31.75.01' },
+                    { name: 'Pulogadung (Pulo Gadung)', bpsCode: '31.75.02' },
+                    { name: 'Jatinegara', bpsCode: '31.75.03' },
+                    { name: 'Kramatjati (Kramat Jati)', bpsCode: '31.75.04' },
+                    { name: 'Pasar Rebo', bpsCode: '31.75.05' },
+                    { name: 'Cakung', bpsCode: '31.75.06' },
+                    { name: 'Duren Sawit', bpsCode: '31.75.07' },
+                    { name: 'Makasar', bpsCode: '31.75.08' },
+                    { name: 'Ciracas', bpsCode: '31.75.09' },
+                    { name: 'Cipayung', bpsCode: '31.75.10' }
+                ]
+            }
         ]
     },
     JT: {
