@@ -4025,44 +4025,157 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Paser',
                 bpscode: '64.01',
-                districts: []
+                districts: [
+                    { name: 'Batu Sopang', bpsCode: '64.01.01' },
+                    { name: 'Tanjung Harapan', bpsCode: '64.01.02' },
+                    { name: 'Paser Belengkong (Pasir Belengkong)', bpsCode: '64.01.03' },
+                    { name: 'Tanah Grogot', bpsCode: '64.01.04' },
+                    { name: 'Kuaro', bpsCode: '64.01.05' },
+                    { name: 'Long Ikis', bpsCode: '64.01.06' },
+                    { name: 'Muara Komam', bpsCode: '64.01.07' },
+                    { name: 'Long Kali', bpsCode: '64.01.08' },
+                    { name: 'Batu Engau', bpsCode: '64.01.09' },
+                    { name: 'Muara Samu', bpsCode: '64.01.10' }
+                ]
             }, {
                 name: 'Kutai Kartanegara',
                 bpscode: '64.02',
-                districts: []
+                districts: [
+                    { name: 'Muara Muntai', bpsCode: '64.02.01' },
+                    { name: 'Loa Kulu', bpsCode: '64.02.02' },
+                    { name: 'Loa Janan', bpsCode: '64.02.03' },
+                    { name: 'Anggana', bpsCode: '64.02.04' },
+                    { name: 'Muara Badak', bpsCode: '64.02.05' },
+                    { name: 'Tenggarong', bpsCode: '64.02.06' },
+                    { name: 'Sebulu', bpsCode: '64.02.07' },
+                    { name: 'Kota Bangun', bpsCode: '64.02.08' },
+                    { name: 'Kenohan', bpsCode: '64.02.09' },
+                    { name: 'Kembang Janggut', bpsCode: '64.02.10' },
+                    { name: 'Muara Kaman', bpsCode: '64.02.11' },
+                    { name: 'Tabang', bpsCode: '64.02.12' },
+                    { name: 'Samboja (Semboja)', bpsCode: '64.02.13' },
+                    { name: 'Muara Jawa', bpsCode: '64.02.14' },
+                    { name: 'Sanga-Sanga', bpsCode: '64.02.15' },
+                    { name: 'Tenggarong Seberang', bpsCode: '64.02.16' },
+                    { name: 'Marang Kayu', bpsCode: '64.02.17' },
+                    { name: 'Muara Wis', bpsCode: '64.02.18' }
+                ]
             }, {
                 name: 'Berau',
                 bpscode: '64.03',
-                districts: []
+                districts: [
+                    { name: 'Kelay', bpsCode: '64.03.01' },
+                    { name: 'Talisayan', bpsCode: '64.03.02' },
+                    { name: 'Sambaliung', bpsCode: '64.03.03' },
+                    { name: 'Segah', bpsCode: '64.03.04' },
+                    { name: 'Tanjung Redeb', bpsCode: '64.03.05' },
+                    { name: 'Gunung Tabur', bpsCode: '64.03.06' },
+                    { name: 'Pulau Derawan', bpsCode: '64.03.07' },
+                    { name: 'Biduk-Biduk', bpsCode: '64.03.08' },
+                    { name: 'Teluk Bayur', bpsCode: '64.03.09' },
+                    { name: 'Tabalar', bpsCode: '64.03.10' },
+                    { name: 'Maratua', bpsCode: '64.03.11' },
+                    { name: 'Batu Putih', bpsCode: '64.03.12' },
+                    { name: 'Biatan', bpsCode: '64.03.13' }
+                ]
             }, {
                 name: 'Kutai Barat',
                 bpscode: '64.07',
-                districts: []
+                districts: [
+                    { name: 'Long Iram', bpsCode: '64.07.05' },
+                    { name: 'Melak', bpsCode: '64.07.06' },
+                    { name: 'Barong Tongkok', bpsCode: '64.07.07' },
+                    { name: 'Damai', bpsCode: '64.07.08' },
+                    { name: 'Muara Lawa', bpsCode: '64.07.09' },
+                    { name: 'Muara Pahu', bpsCode: '64.07.10' },
+                    { name: 'Jempang', bpsCode: '64.07.11' },
+                    { name: 'Bongan', bpsCode: '64.07.12' },
+                    { name: 'Penyinggahan', bpsCode: '64.07.13' },
+                    { name: 'Bentian Besar', bpsCode: '64.07.14' },
+                    { name: 'Linggang Bigung', bpsCode: '64.07.15' },
+                    { name: 'Nyuatan', bpsCode: '64.07.16' },
+                    { name: 'Siluq Ngurai', bpsCode: '64.07.17' },
+                    { name: 'Mook Manaar Bulatn', bpsCode: '64.07.18' },
+                    { name: 'Tering', bpsCode: '64.07.19' },
+                    { name: 'Sekolaq Darat', bpsCode: '64.07.20' }
+                ]
             }, {
                 name: 'Kutai Timur',
                 bpscode: '64.08',
-                districts: []
+                districts: [
+                    { name: 'Muara Ancalong', bpsCode: '64.08.01' },
+                    { name: 'Muara Wahau', bpsCode: '64.08.02' },
+                    { name: 'Muara Bengkal', bpsCode: '64.08.03' },
+                    { name: 'Sangatta Utara', bpsCode: '64.08.04' },
+                    { name: 'Sangkulirang', bpsCode: '64.08.05' },
+                    { name: 'Busang', bpsCode: '64.08.06' },
+                    { name: 'Telen', bpsCode: '64.08.07' },
+                    { name: 'Kombeng (Kongbeng)', bpsCode: '64.08.08' },
+                    { name: 'Bengalon', bpsCode: '64.08.09' },
+                    { name: 'Kaliorang', bpsCode: '64.08.10' },
+                    { name: 'Sandaran', bpsCode: '64.08.11' },
+                    { name: 'Sangatta Selatan', bpsCode: '64.08.12' },
+                    { name: 'Teluk Pandan', bpsCode: '64.08.13' },
+                    { name: 'Rantau Pulung', bpsCode: '64.08.14' },
+                    { name: 'Kaubun', bpsCode: '64.08.15' },
+                    { name: 'Karangan', bpsCode: '64.08.16' },
+                    { name: 'Batu Ampar', bpsCode: '64.08.17' },
+                    { name: 'Long Mesangat', bpsCode: '64.08.18' }
+                ]
             }, {
                 name: 'Penajam Paser Utara',
                 bpscode: '64.09',
-                districts: []
+                districts: [
+                    { name: 'Penajam', bpsCode: '64.09.01' },
+                    { name: 'Waru', bpsCode: '64.09.02' },
+                    { name: 'Babulu', bpsCode: '64.09.03' },
+                    { name: 'Sepaku', bpsCode: '64.09.04' }
+                ]
             }, {
                 name: 'Mahakam Ulu',
                 bpscode: '64.11',
-                districts: []
+                districts: [
+                    { name: 'Long Bagun', bpsCode: '64.11.01' },
+                    { name: 'Long Hubung', bpsCode: '64.11.02' },
+                    { name: 'Laham', bpsCode: '64.11.03' },
+                    { name: 'Long Apari', bpsCode: '64.11.04' },
+                    { name: 'Long Pahangai', bpsCode: '64.11.05' }
+                ]
             }, {
                 name: 'Balikpapan',
                 bpscode: '64.71',
-                districts: []
+                districts: [
+                    { name: 'Balikpapan Timur', bpsCode: '64.71.01' },
+                    { name: 'Balikpapan Barat', bpsCode: '64.71.02' },
+                    { name: 'Balikpapan Utara', bpsCode: '64.71.03' },
+                    { name: 'Balikpapan Tengah', bpsCode: '64.71.04' },
+                    { name: 'Balikpapan Selatan', bpsCode: '64.71.05' },
+                    { name: 'Balikpapan Kota', bpsCode: '64.71.06' }
+                ]
             }, {
                 name: 'Samarinda',
                 bpscode: '64.72',
-                districts: []
+                districts: [
+                    { name: 'Palaran', bpsCode: '64.72.01' },
+                    { name: 'Samarinda Seberang', bpsCode: '64.72.02' },
+                    { name: 'Samarinda Ulu', bpsCode: '64.72.03' },
+                    { name: 'Samarinda Ilir', bpsCode: '64.72.04' },
+                    { name: 'Samarinda Utara', bpsCode: '64.72.05' },
+                    { name: 'Sungai Kunjang', bpsCode: '64.72.06' },
+                    { name: 'Sambutan', bpsCode: '64.72.07' },
+                    { name: 'Sungai Pinang', bpsCode: '64.72.08' },
+                    { name: 'Samarinda Kota', bpsCode: '64.72.09' },
+                    { name: 'Loa Janan Ilir', bpsCode: '64.72.10' }
+                ]
             }, {
                 name: 'Bontang',
                 bpscode: '64.74',
-                districts: []
-            },
+                districts: [
+                    { name: 'Bontang Utara', bpsCode: '64.74.01' },
+                    { name: 'Bontang Selatan', bpsCode: '64.74.02' },
+                    { name: 'Bontang Barat', bpsCode: '64.74.03' }
+                ]
+            }
         ]
     },
     KR: {
