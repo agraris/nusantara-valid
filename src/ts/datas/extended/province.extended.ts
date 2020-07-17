@@ -4183,32 +4183,109 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Bintan',
                 bpscode: '21.01',
-                districts: []
+                districts: [
+                    { name: 'Gunung Kijang', bpsCode: '21.01.04' },
+                    { name: 'Bintan Timur', bpsCode: '21.01.06' },
+                    { name: 'Bintan Utara', bpsCode: '21.01.07' },
+                    { name: 'Teluk Bintan', bpsCode: '21.01.08' },
+                    { name: 'Tambelan', bpsCode: '21.01.09' },
+                    { name: 'Telok Sebong (Teluk Sebong)', bpsCode: '21.01.10' },
+                    { name: 'Toapaya', bpsCode: '21.01.12' },
+                    { name: 'Mantang', bpsCode: '21.01.13' },
+                    { name: 'Bintan Pesisir', bpsCode: '21.01.14' },
+                    { name: 'Seri/Sri Kuala Lobam', bpsCode: '21.01.15' }
+                ]
             }, {
                 name: 'Karimun',
                 bpscode: '21.02',
-                districts: []
+                districts: [
+                    { name: 'Moro', bpsCode: '21.02.01' },
+                    { name: 'Kundur', bpsCode: '21.02.02' },
+                    { name: 'Karimun', bpsCode: '21.02.03' },
+                    { name: 'Meral', bpsCode: '21.02.04' },
+                    { name: 'Tebing', bpsCode: '21.02.05' },
+                    { name: 'Buru', bpsCode: '21.02.06' },
+                    { name: 'Kundur Utara', bpsCode: '21.02.07' },
+                    { name: 'Kundur Barat', bpsCode: '21.02.08' },
+                    { name: 'Durai', bpsCode: '21.02.09' },
+                    { name: 'Meral Barat', bpsCode: '21.02.10' },
+                    { name: 'Ungar', bpsCode: '21.02.11' },
+                    { name: 'Belat', bpsCode: '21.02.12' }
+                ]
             }, {
                 name: 'Natuna',
                 bpscode: '21.03',
-                districts: []
+                districts: [
+                    { name: 'Midai', bpsCode: '21.03.04' },
+                    { name: 'Bunguran Barat', bpsCode: '21.03.05' },
+                    { name: 'Serasan', bpsCode: '21.03.06' },
+                    { name: 'Bunguran Timur', bpsCode: '21.03.07' },
+                    { name: 'Bunguran Utara', bpsCode: '21.03.08' },
+                    { name: 'Subi', bpsCode: '21.03.09' },
+                    { name: 'Pulau Laut', bpsCode: '21.03.10' },
+                    { name: 'Pulau Tiga', bpsCode: '21.03.11' },
+                    { name: 'Bunguran Timur Laut', bpsCode: '21.03.15' },
+                    { name: 'Bunguran Tengah', bpsCode: '21.03.16' },
+                    { name: 'Bunguran Selatan', bpsCode: '21.03.18' },
+                    { name: 'Serasan Timur', bpsCode: '21.03.19' },
+                    { name: 'Bunguran Batubi', bpsCode: '21.03.20' },
+                    { name: 'Pulau Tiga Barat', bpsCode: '21.03.21' },
+                    { name: 'Suak Midai', bpsCode: '21.03.22' }
+                ]
             }, {
                 name: 'Lingga',
                 bpscode: '21.04',
-                districts: []
+                districts: [
+                    { name: 'Singkep', bpsCode: '21.04.01' },
+                    { name: 'Lingga', bpsCode: '21.04.02' },
+                    { name: 'Senayang', bpsCode: '21.04.03' },
+                    { name: 'Singkep Barat', bpsCode: '21.04.04' },
+                    { name: 'Lingga Utara', bpsCode: '21.04.05' },
+                    { name: 'Singkep Pesisir', bpsCode: '21.04.06' },
+                    { name: 'Lingga Timur', bpsCode: '21.04.07' },
+                    { name: 'Selayar', bpsCode: '21.04.08' },
+                    { name: 'Singkep Selatan', bpsCode: '21.04.09' },
+                    { name: 'Kepulauan Posek', bpsCode: '21.04.10' }
+                ]
             }, {
                 name: 'Kepulauan Anambas',
                 bpscode: '21.05',
-                districts: []
+                districts: [
+                    { name: 'Siantan', bpsCode: '21.05.01' },
+                    { name: 'Palmatak', bpsCode: '21.05.02' },
+                    { name: 'Siantan Timur', bpsCode: '21.05.03' },
+                    { name: 'Siantan Selatan', bpsCode: '21.05.04' },
+                    { name: 'Jemaja Timur', bpsCode: '21.05.05' },
+                    { name: 'Jemaja', bpsCode: '21.05.06' },
+                    { name: 'Siantan Tengah', bpsCode: '21.05.07' }
+                ]
             }, {
                 name: 'Batam',
                 bpscode: '21.71',
-                districts: []
+                districts: [
+                    { name: 'Belakang Padang', bpsCode: '21.71.01' },
+                    { name: 'Batu Ampar', bpsCode: '21.71.02' },
+                    { name: 'Sekupang', bpsCode: '21.71.03' },
+                    { name: 'Nongsa', bpsCode: '21.71.04' },
+                    { name: 'Bulang', bpsCode: '21.71.05' },
+                    { name: 'Lubuk Baja', bpsCode: '21.71.06' },
+                    { name: 'Sei/Sungai Beduk', bpsCode: '21.71.07' },
+                    { name: 'Galang', bpsCode: '21.71.08' },
+                    { name: 'Bengkong', bpsCode: '21.71.09' },
+                    { name: 'Batam Kota', bpsCode: '21.71.10' },
+                    { name: 'Sagulung', bpsCode: '21.71.11' },
+                    { name: 'Batu Aji', bpsCode: '21.71.12' }
+                ]
             }, {
                 name: 'Tanjung Pinang',
                 bpscode: '21.72',
-                districts: []
-            },
+                districts: [
+                    { name: 'Tanjung Pinang Barat', bpsCode: '21.72.01' },
+                    { name: 'Tanjung Pinang Timur', bpsCode: '21.72.02' },
+                    { name: 'Tanjung Pinang Kota', bpsCode: '21.72.03' },
+                    { name: 'Bukit Bestari', bpsCode: '21.72.04' }
+                ]
+            }
         ]
     },
     KS: {
