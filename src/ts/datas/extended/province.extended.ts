@@ -4727,24 +4727,82 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Bulungan',
                 bpscode: '65.01',
-                districts: []
+                districts: [
+                    { name: 'Tanjung Palas', bpsCode: '65.01.01' },
+                    { name: 'Tanjung Palas Barat', bpsCode: '65.01.02' },
+                    { name: 'Tanjung Palas Utara', bpsCode: '65.01.03' },
+                    { name: 'Tanjung Palas Timur', bpsCode: '65.01.04' },
+                    { name: 'Tanjung Selor', bpsCode: '65.01.05' },
+                    { name: 'Tanjung Palas Tengah', bpsCode: '65.01.06' },
+                    { name: 'Peso', bpsCode: '65.01.07' },
+                    { name: 'Peso Hilir/Ilir', bpsCode: '65.01.08' },
+                    { name: 'Sekatak', bpsCode: '65.01.09' },
+                    { name: 'Bunyu (Pulau Bunyu)', bpsCode: '65.01.10' }
+                ]
             }, {
                 name: 'Malinau',
                 bpscode: '65.02',
-                districts: []
+                districts: [
+                    { name: 'Mentarang', bpsCode: '65.02.01' },
+                    { name: 'Malinau Kota', bpsCode: '65.02.02' },
+                    { name: 'Pujungan', bpsCode: '65.02.03' },
+                    { name: 'Kayan Hilir', bpsCode: '65.02.04' },
+                    { name: 'Kayan Hulu', bpsCode: '65.02.05' },
+                    { name: 'Malinau Selatan', bpsCode: '65.02.06' },
+                    { name: 'Malinau Utara', bpsCode: '65.02.07' },
+                    { name: 'Malinau Barat', bpsCode: '65.02.08' },
+                    { name: 'Sungai Boh', bpsCode: '65.02.09' },
+                    { name: 'Kayan Selatan', bpsCode: '65.02.10' },
+                    { name: 'Bahau Hulu', bpsCode: '65.02.11' },
+                    { name: 'Mentarang Hulu', bpsCode: '65.02.12' },
+                    { name: 'Malinau Selatan Hilir', bpsCode: '65.02.13' },
+                    { name: 'Malinau Selatan Hulu', bpsCode: '65.02.14' },
+                    { name: 'Sungai Tubu', bpsCode: '65.02.15' }
+                ]
             }, {
                 name: 'Nunukan',
                 bpscode: '65.03',
-                districts: []
+                districts: [
+                    { name: 'Sebatik', bpsCode: '65.03.01' },
+                    { name: 'Nunukan', bpsCode: '65.03.02' },
+                    { name: 'Sembakung', bpsCode: '65.03.03' },
+                    { name: 'Lumbis', bpsCode: '65.03.04' },
+                    { name: 'Krayan', bpsCode: '65.03.05' },
+                    { name: 'Sebuku', bpsCode: '65.03.06' },
+                    { name: 'Krayan Selatan', bpsCode: '65.03.07' },
+                    { name: 'Sebatik Barat', bpsCode: '65.03.08' },
+                    { name: 'Nunukan Selatan', bpsCode: '65.03.09' },
+                    { name: 'Sebatik Timur', bpsCode: '65.03.10' },
+                    { name: 'Sebatik Utara', bpsCode: '65.03.11' },
+                    { name: 'Sebatik Tengah', bpsCode: '65.03.12' },
+                    { name: 'Sei Menggaris', bpsCode: '65.03.13' },
+                    { name: 'Tulin Onsoi', bpsCode: '65.03.14' },
+                    { name: 'Lumbis Ogong', bpsCode: '65.03.15' },
+                    { name: 'Sembakung Atulai', bpsCode: '65.03.16' },
+                    { name: 'Krayan Tengah', bpsCode: '65.03.17' },
+                    { name: 'Krayan Timur', bpsCode: '65.03.18' },
+                    { name: 'Krayan Barat', bpsCode: '65.03.19' }
+                ]
             }, {
                 name: 'Tana Tidung',
                 bpscode: '65.04',
-                districts: []
+                districts: [
+                    { name: 'Sesayap', bpsCode: '65.04.01' },
+                    { name: 'Sesayap Hilir', bpsCode: '65.04.02' },
+                    { name: 'Tana Lia', bpsCode: '65.04.03' },
+                    { name: 'Betayau', bpsCode: '65.04.04' },
+                    { name: 'Muruk Rian', bpsCode: '65.04.05' }
+                ]
             }, {
                 name: 'Tarakan',
                 bpscode: '65.71',
-                districts: []
-            },
+                districts: [
+                    { name: 'Tarakan Barat', bpsCode: '65.71.01' },
+                    { name: 'Tarakan Tengah', bpsCode: '65.71.02' },
+                    { name: 'Tarakan Timur', bpsCode: '65.71.03' },
+                    { name: 'Tarakan Utara', bpsCode: '65.71.04' }
+                ]
+            }
         ]
     },
     LA: {
