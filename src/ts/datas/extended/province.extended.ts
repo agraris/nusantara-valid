@@ -1115,48 +1115,200 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Kerinci',
                 bpscode: '15.01',
-                districts: []
+                districts: [
+                    { name: 'Gunung Raya', bpsCode: '15.01.01' },
+                    { name: 'Danau Kerinci', bpsCode: '15.01.02' },
+                    { name: 'Sitinjau Laut', bpsCode: '15.01.04' },
+                    { name: 'Air Hangat', bpsCode: '15.01.05' },
+                    { name: 'Gunung Kerinci', bpsCode: '15.01.06' },
+                    { name: 'Batang Merangin', bpsCode: '15.01.07' },
+                    { name: 'Keliling Danau', bpsCode: '15.01.08' },
+                    { name: 'Kayu Aro', bpsCode: '15.01.09' },
+                    { name: 'Air Hangat Timur', bpsCode: '15.01.11' },
+                    { name: 'Gunung Tujuh', bpsCode: '15.01.15' },
+                    { name: 'Siulak', bpsCode: '15.01.16' },
+                    { name: 'Depati Tujuh', bpsCode: '15.01.17' },
+                    { name: 'Siulak Mukai', bpsCode: '15.01.18' },
+                    { name: 'Kayu Aro Barat', bpsCode: '15.01.19' },
+                    { name: 'Bukitkerman', bpsCode: '15.01.20' },
+                    { name: 'Air Hangat Barat', bpsCode: '15.01.21' }
+                ]
             }, {
                 name: 'Merangin',
                 bpscode: '15.02',
-                districts: []
+                districts: [
+                    { name: 'Jangkat', bpsCode: '15.02.01' },
+                    { name: 'Bangko', bpsCode: '15.02.02' },
+                    { name: 'Muara Siau', bpsCode: '15.02.03' },
+                    { name: 'Sungai Manau', bpsCode: '15.02.04' },
+                    { name: 'Tabir', bpsCode: '15.02.05' },
+                    { name: 'Pamenang', bpsCode: '15.02.06' },
+                    { name: 'Tabir Ulu', bpsCode: '15.02.07' },
+                    { name: 'Tabir Selatan', bpsCode: '15.02.08' },
+                    { name: 'Lembah Masurai', bpsCode: '15.02.09' },
+                    { name: 'Bangko Barat', bpsCode: '15.02.10' },
+                    { name: 'Nalo Tatan (Nalo Tantan)', bpsCode: '15.02.11' },
+                    { name: 'Batang Masumai', bpsCode: '15.02.12' },
+                    { name: 'Pamenang Barat', bpsCode: '15.02.13' },
+                    { name: 'Tabir Ilir', bpsCode: '15.02.14' },
+                    { name: 'Tabir Timur', bpsCode: '15.02.15' },
+                    { name: 'Renah Pembarap', bpsCode: '15.02.16' },
+                    { name: 'Pangkalan Jambu', bpsCode: '15.02.17' },
+                    { name: 'Jangkat Timur (Sungai Tenang)', bpsCode: '15.02.18' },
+                    { name: 'Renah Pamenang (Renah Pemenang)', bpsCode: '15.02.19' },
+                    { name: 'Pamenang Selatan', bpsCode: '15.02.20' },
+                    { name: 'Margo Tabir', bpsCode: '15.02.21' },
+                    { name: 'Tabir Lintas', bpsCode: '15.02.22' },
+                    { name: 'Tabir Barat', bpsCode: '15.02.23' },
+                    { name: 'Tiang Pumpung', bpsCode: '15.02.24' }
+                ]
             }, {
                 name: 'Sarolangun',
                 bpscode: '15.03',
-                districts: []
+                districts: [
+                    { name: 'Batang Asai', bpsCode: '15.03.01' },
+                    { name: 'Limun', bpsCode: '15.03.02' },
+                    { name: 'Sarolangun', bpsCode: '15.03.03' },
+                    { name: 'Pauh', bpsCode: '15.03.04' },
+                    { name: 'Pelawan', bpsCode: '15.03.05' },
+                    { name: 'Mandiangin', bpsCode: '15.03.06' },
+                    { name: 'Air Hitam', bpsCode: '15.03.07' },
+                    { name: 'Bathin VIII (Batin VIII)', bpsCode: '15.03.08' },
+                    { name: 'Singkut', bpsCode: '15.03.09' },
+                    { name: 'Cermin Nan Gedang / Gadang', bpsCode: '15.03.10' }
+                ]
             }, {
                 name: 'Batang Hari',
                 bpscode: '15.04',
-                districts: []
+                districts: [
+                    { name: 'Mersam', bpsCode: '15.04.01' },
+                    { name: 'Muara Tembesi', bpsCode: '15.04.02' },
+                    { name: 'Muara Bulian', bpsCode: '15.04.03' },
+                    { name: 'Batin XXIV', bpsCode: '15.04.04' },
+                    { name: 'Pemayung', bpsCode: '15.04.05' },
+                    { name: 'Maro Sebo Ulu', bpsCode: '15.04.06' },
+                    { name: 'Bajubang', bpsCode: '15.04.07' },
+                    { name: 'Maro Sebo Ilir', bpsCode: '15.04.08' }
+                ]
             }, {
                 name: 'Muaro Jambi',
                 bpscode: '15.05',
-                districts: []
+                districts: [
+                    { name: 'Jambi Luar Kota', bpsCode: '15.05.01' },
+                    { name: 'Sekernan', bpsCode: '15.05.02' },
+                    { name: 'Kumpeh', bpsCode: '15.05.03' },
+                    { name: 'Maro Sebo', bpsCode: '15.05.04' },
+                    { name: 'Mestong', bpsCode: '15.05.05' },
+                    { name: 'Kumpeh Ulu', bpsCode: '15.05.06' },
+                    { name: 'Sungai Bahar', bpsCode: '15.05.07' },
+                    { name: 'Sungai Gelam', bpsCode: '15.05.08' },
+                    { name: 'Bahar Utara', bpsCode: '15.05.09' },
+                    { name: 'Bahar Selatan', bpsCode: '15.05.10' },
+                    { name: 'Taman Rajo', bpsCode: '15.05.11' }
+                ]
             }, {
                 name: 'Tanjung Jabung Barat',
                 bpscode: '15.06',
-                districts: []
+                districts: [
+                    { name: 'Tungkal Ulu', bpsCode: '15.06.01' },
+                    { name: 'Tungkal Ilir', bpsCode: '15.06.02' },
+                    { name: 'Pengabuan', bpsCode: '15.06.03' },
+                    { name: 'Betara', bpsCode: '15.06.04' },
+                    { name: 'Merlung', bpsCode: '15.06.05' },
+                    { name: 'Tebing Tinggi', bpsCode: '15.06.06' },
+                    { name: 'Batang Asam', bpsCode: '15.06.07' },
+                    { name: 'Renah Mendaluh', bpsCode: '15.06.08' },
+                    { name: 'Muara Papalik', bpsCode: '15.06.09' },
+                    { name: 'Seberang Kota', bpsCode: '15.06.10' },
+                    { name: 'Bram Itam', bpsCode: '15.06.11' },
+                    { name: 'Kuala Betara', bpsCode: '15.06.12' },
+                    { name: 'Senyerang', bpsCode: '15.06.13' }
+                ]
             }, {
                 name: 'Tanjung Jabung Timur',
                 bpscode: '15.07',
-                districts: []
+                districts: [
+                    { name: 'Muara Sabak Timur', bpsCode: '15.07.01' },
+                    { name: 'Nipah Panjang', bpsCode: '15.07.02' },
+                    { name: 'Mendahara', bpsCode: '15.07.03' },
+                    { name: 'Rantau Rasau', bpsCode: '15.07.04' },
+                    { name: 'Sadu', bpsCode: '15.07.05' },
+                    { name: 'Dendang', bpsCode: '15.07.06' },
+                    { name: 'Muara Sabak Barat', bpsCode: '15.07.07' },
+                    { name: 'Kuala Jambi', bpsCode: '15.07.08' },
+                    { name: 'Mendahara Ulu', bpsCode: '15.07.09' },
+                    { name: 'Geragai', bpsCode: '15.07.10' },
+                    { name: 'Berbak', bpsCode: '15.07.11' }
+                ]
             }, {
                 name: 'Bungo',
                 bpscode: '15.08',
-                districts: []
+                districts: [
+                    { name: 'Tanah Tumbuh', bpsCode: '15.08.01' },
+                    { name: 'Rantau Pandan', bpsCode: '15.08.02' },
+                    { name: 'Pasar Muaro Bungo (Pasar Muara Bungo)', bpsCode: '15.08.03' },
+                    { name: 'Jujuhan', bpsCode: '15.08.04' },
+                    { name: 'Tanah Sepenggal', bpsCode: '15.08.05' },
+                    { name: 'Pelepat', bpsCode: '15.08.06' },
+                    { name: 'Limbur Lubuk Mengkuang', bpsCode: '15.08.07' },
+                    { name: 'Muko-muko Bathin / Batin VII', bpsCode: '15.08.08' },
+                    { name: 'Pelepat Ilir', bpsCode: '15.08.09' },
+                    { name: 'Bathin / Batin II Babeko', bpsCode: '15.08.10' },
+                    { name: 'Bathin III', bpsCode: '15.08.11' },
+                    { name: 'Bungo Dani', bpsCode: '15.08.12' },
+                    { name: 'Rimbo Tengah', bpsCode: '15.08.13' },
+                    { name: 'Bathin III Ulu', bpsCode: '15.08.14' },
+                    { name: 'Bathin II Pelayang', bpsCode: '15.08.15' },
+                    { name: 'Jujuhan Ilir', bpsCode: '15.08.16' },
+                    { name: 'Tanah Sepenggal Lintas', bpsCode: '15.08.17' }
+                ]
             }, {
                 name: 'Tebo',
                 bpscode: '15.09',
-                districts: []
+                districts: [
+                    { name: 'Tebo Tengah', bpsCode: '15.09.01' },
+                    { name: 'Tebo Ilir', bpsCode: '15.09.02' },
+                    { name: 'Tebo Ulu', bpsCode: '15.09.03' },
+                    { name: 'Rimbo Bujang', bpsCode: '15.09.04' },
+                    { name: 'Sumay', bpsCode: '15.09.05' },
+                    { name: 'VII Koto', bpsCode: '15.09.06' },
+                    { name: 'Rimbo Ulu', bpsCode: '15.09.07' },
+                    { name: 'Rimbo Ilir', bpsCode: '15.09.08' },
+                    { name: 'Tengah Ilir', bpsCode: '15.09.09' },
+                    { name: 'Serai Serumpun', bpsCode: '15.09.10' },
+                    { name: 'VII Koto Ilir', bpsCode: '15.09.11' },
+                    { name: 'Muara Tabir', bpsCode: '15.09.12' }
+                ]
             }, {
                 name: 'Jambi',
                 bpscode: '15.71',
-                districts: []
+                districts: [
+                    { name: 'Telanaipura', bpsCode: '15.71.01' },
+                    { name: 'Jambi Selatan', bpsCode: '15.71.02' },
+                    { name: 'Jambi Timur', bpsCode: '15.71.03' },
+                    { name: 'Pasar Jambi', bpsCode: '15.71.04' },
+                    { name: 'Pelayangan', bpsCode: '15.71.05' },
+                    { name: 'Danau Teluk', bpsCode: '15.71.06' },
+                    { name: 'Kota Baru', bpsCode: '15.71.07' },
+                    { name: 'Jelutung', bpsCode: '15.71.08' },
+                    { name: 'Alam Barajo', bpsCode: '15.71.09' },
+                    { name: 'Danau Sipin', bpsCode: '15.71.10' },
+                    { name: 'Paal Merah', bpsCode: '15.71.11' }
+                ]
             }, {
                 name: 'Sungaipenuh',
                 bpscode: '15.72',
-                districts: []
-            },
+                districts: [
+                    { name: 'Sungai Penuh', bpsCode: '15.72.01' },
+                    { name: 'Pesisir Bukit', bpsCode: '15.72.02' },
+                    { name: 'Hamparan Rawang', bpsCode: '15.72.03' },
+                    { name: 'Tanah Kampung', bpsCode: '15.72.04' },
+                    { name: 'Kumun Debai', bpsCode: '15.72.05' },
+                    { name: 'Pondok Tinggi', bpsCode: '15.72.06' },
+                    { name: 'Koto Baru', bpsCode: '15.72.07' },
+                    { name: 'Sungai Bungkal', bpsCode: '15.72.08' }
+                ]
+            }
         ]
     },
     JB: {
