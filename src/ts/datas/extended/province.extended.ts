@@ -6118,120 +6118,709 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Merauke',
                 bpscode: '91.01',
-                districts: []
+                districts: [
+                    { name: 'Merauke', bpsCode: '91.01.01' },
+                    { name: 'Muting', bpsCode: '91.01.02' },
+                    { name: 'Okaba', bpsCode: '91.01.03' },
+                    { name: 'Kimaam', bpsCode: '91.01.04' },
+                    { name: 'Semangga', bpsCode: '91.01.05' },
+                    { name: 'Tanah Miring', bpsCode: '91.01.06' },
+                    { name: 'Jagebob', bpsCode: '91.01.07' },
+                    { name: 'Sota', bpsCode: '91.01.08' },
+                    { name: 'Ulilin', bpsCode: '91.01.09' },
+                    { name: 'Elikobal', bpsCode: '91.01.10' },
+                    { name: 'Kurik', bpsCode: '91.01.11' },
+                    { name: 'Naukenjerai', bpsCode: '91.01.12' },
+                    { name: 'Animha', bpsCode: '91.01.13' },
+                    { name: 'Malind', bpsCode: '91.01.14' },
+                    { name: 'Tubang', bpsCode: '91.01.15' },
+                    { name: 'Ngguti', bpsCode: '91.01.16' },
+                    { name: 'Kaptel', bpsCode: '91.01.17' },
+                    { name: 'Tabonji', bpsCode: '91.01.18' },
+                    { name: 'Waan', bpsCode: '91.01.19' },
+                    { name: 'Ilwayab (Ilyawab)', bpsCode: '91.01.20' }
+                ]
             }, {
                 name: 'Jayawijaya',
                 bpscode: '91.02',
-                districts: []
+                districts: [
+                    { name: 'Wamena', bpsCode: '91.02.01' },
+                    { name: 'Kurulu', bpsCode: '91.02.03' },
+                    { name: 'Asologaima (Asalogaima)', bpsCode: '91.02.04' },
+                    { name: 'Hubikosi (Hobikosi)', bpsCode: '91.02.12' },
+                    { name: 'Bolakme', bpsCode: '91.02.15' },
+                    { name: 'Walelagama', bpsCode: '91.02.25' },
+                    { name: 'Musatfak', bpsCode: '91.02.27' },
+                    { name: 'Wollo (Wolo)', bpsCode: '91.02.28' },
+                    { name: 'Asolokobal', bpsCode: '91.02.29' },
+                    { name: 'Pelebaga', bpsCode: '91.02.34' },
+                    { name: 'Yalengga', bpsCode: '91.02.35' },
+                    { name: 'Trikora', bpsCode: '91.02.40' },
+                    { name: 'Napua', bpsCode: '91.02.41' },
+                    { name: 'Walaik', bpsCode: '91.02.42' },
+                    { name: 'Wouma', bpsCode: '91.02.43' },
+                    { name: 'Hubikiak', bpsCode: '91.02.44' },
+                    { name: 'Ibele', bpsCode: '91.02.45' },
+                    { name: 'Taelarek', bpsCode: '91.02.46' },
+                    { name: 'Itlay Hisage', bpsCode: '91.02.47' },
+                    { name: 'Siepkosi', bpsCode: '91.02.48' },
+                    { name: 'Usilimo', bpsCode: '91.02.49' },
+                    { name: 'Wita Waya', bpsCode: '91.02.50' },
+                    { name: 'Libarek', bpsCode: '91.02.51' },
+                    { name: 'Wadangku', bpsCode: '91.02.52' },
+                    { name: 'Pisugi', bpsCode: '91.02.53' },
+                    { name: 'Koragi', bpsCode: '91.02.54' },
+                    { name: 'Tagime', bpsCode: '91.02.55' },
+                    { name: 'Molagalome', bpsCode: '91.02.56' },
+                    { name: 'Tagineri', bpsCode: '91.02.57' },
+                    { name: 'Silo Karno Doga', bpsCode: '91.02.58' },
+                    { name: 'Piramid', bpsCode: '91.02.59' },
+                    { name: 'Muliama', bpsCode: '91.02.60' },
+                    { name: 'Bugi', bpsCode: '91.02.61' },
+                    { name: 'Bpiri', bpsCode: '91.02.62' },
+                    { name: 'Welesi', bpsCode: '91.02.63' },
+                    { name: 'Asotipo', bpsCode: '91.02.64' },
+                    { name: 'Maima', bpsCode: '91.02.65' },
+                    { name: 'Popugoba', bpsCode: '91.02.66' },
+                    { name: 'Wame', bpsCode: '91.02.67' },
+                    { name: 'Wesaput', bpsCode: '91.02.68' }
+                ]
             }, {
                 name: 'Jayapura',
                 bpscode: '91.03',
-                districts: []
+                districts: [
+                    { name: 'Sentani', bpsCode: '91.03.01' },
+                    { name: 'Sentani Timur', bpsCode: '91.03.02' },
+                    { name: 'Depapre', bpsCode: '91.03.03' },
+                    { name: 'Sentani Barat', bpsCode: '91.03.04' },
+                    { name: 'Kemtuk', bpsCode: '91.03.05' },
+                    { name: 'Kemtuk Gresi', bpsCode: '91.03.06' },
+                    { name: 'Nimboran', bpsCode: '91.03.07' },
+                    { name: 'Nimbokrang', bpsCode: '91.03.08' },
+                    { name: 'Unurum Guay', bpsCode: '91.03.09' },
+                    { name: 'Demta', bpsCode: '91.03.10' },
+                    { name: 'Kaureh', bpsCode: '91.03.11' },
+                    { name: 'Ebungfao (Ebungfau / Ebungfa)', bpsCode: '91.03.12' },
+                    { name: 'Waibu', bpsCode: '91.03.13' },
+                    { name: 'Nambluong', bpsCode: '91.03.14' },
+                    { name: 'Yapsi', bpsCode: '91.03.15' },
+                    { name: 'Airu', bpsCode: '91.03.16' },
+                    { name: 'Raveni Rara (Ravenirara)', bpsCode: '91.03.17' },
+                    { name: 'Gresi Selatan', bpsCode: '91.03.18' },
+                    { name: 'Yokari', bpsCode: '91.03.19' }
+                ]
             }, {
                 name: 'Nabire',
                 bpscode: '91.04',
-                districts: []
+                districts: [
+                    { name: 'Nabire', bpsCode: '91.04.01' },
+                    { name: 'Napan', bpsCode: '91.04.02' },
+                    { name: 'Yaur', bpsCode: '91.04.03' },
+                    { name: 'Uwapa', bpsCode: '91.04.06' },
+                    { name: 'Wanggar', bpsCode: '91.04.07' },
+                    { name: 'Siriwo', bpsCode: '91.04.10' },
+                    { name: 'Makimi', bpsCode: '91.04.11' },
+                    { name: 'Teluk Umar', bpsCode: '91.04.12' },
+                    { name: 'Teluk Kimi', bpsCode: '91.04.16' },
+                    { name: 'Yaro (Yaro Kabisay)', bpsCode: '91.04.17' },
+                    { name: 'Wapoga', bpsCode: '91.04.21' },
+                    { name: 'Nabire Barat', bpsCode: '91.04.22' },
+                    { name: 'Moora', bpsCode: '91.04.23' },
+                    { name: 'Dipa', bpsCode: '91.04.24' },
+                    { name: 'Menou', bpsCode: '91.04.25' }
+                ]
             }, {
                 name: 'Kepulauan Yapen',
                 bpscode: '91.05',
-                districts: []
+                districts: [
+                    { name: 'Yapen Selatan', bpsCode: '91.05.01' },
+                    { name: 'Yapen Barat', bpsCode: '91.05.02' },
+                    { name: 'Yapen Timur', bpsCode: '91.05.03' },
+                    { name: 'Angkaisera', bpsCode: '91.05.04' },
+                    { name: 'Poom', bpsCode: '91.05.05' },
+                    { name: 'Kosiwo', bpsCode: '91.05.06' },
+                    { name: 'Yapen Utara', bpsCode: '91.05.07' },
+                    { name: 'Raimbawi', bpsCode: '91.05.08' },
+                    { name: 'Teluk Ampimoi', bpsCode: '91.05.09' },
+                    { name: 'Kepulauan Ambai', bpsCode: '91.05.10' },
+                    { name: 'Wonawa', bpsCode: '91.05.11' },
+                    { name: 'Windesi', bpsCode: '91.05.12' },
+                    { name: 'Pulau Kurudu', bpsCode: '91.05.13' },
+                    { name: 'Pulau Yerui', bpsCode: '91.05.14' },
+                    { name: 'Anotaurei', bpsCode: '91.05.15' },
+                    { name: 'Yawakukat', bpsCode: '91.05.16' }
+                ]
             }, {
                 name: 'Biak Numfor',
                 bpscode: '91.06',
-                districts: []
+                districts: [
+                    { name: 'Biak Kota', bpsCode: '91.06.01' },
+                    { name: 'Biak Utara', bpsCode: '91.06.02' },
+                    { name: 'Biak Timur', bpsCode: '91.06.03' },
+                    { name: 'Numfor Barat', bpsCode: '91.06.04' },
+                    { name: 'Numfor Timur', bpsCode: '91.06.05' },
+                    { name: 'Biak Barat', bpsCode: '91.06.08' },
+                    { name: 'Warsa', bpsCode: '91.06.09' },
+                    { name: 'Padaido', bpsCode: '91.06.10' },
+                    { name: 'Yendidori', bpsCode: '91.06.11' },
+                    { name: 'Samofa', bpsCode: '91.06.12' },
+                    { name: 'Yawosi', bpsCode: '91.06.13' },
+                    { name: 'Andey', bpsCode: '91.06.14' },
+                    { name: 'Swandiwe', bpsCode: '91.06.15' },
+                    { name: 'Bruyadori', bpsCode: '91.06.16' },
+                    { name: 'Orkeri', bpsCode: '91.06.17' },
+                    { name: 'Poiru', bpsCode: '91.06.18' },
+                    { name: 'Aimando Padaido', bpsCode: '91.06.19' },
+                    { name: 'Oridek', bpsCode: '91.06.20' },
+                    { name: 'Bondifuar', bpsCode: '91.06.21' }
+                ]
             }, {
                 name: 'Puncak Jaya',
                 bpscode: '91.07',
-                districts: []
+                districts: [
+                    { name: 'Mulia', bpsCode: '91.07.01' },
+                    { name: 'Ilu', bpsCode: '91.07.03' },
+                    { name: 'Fawi', bpsCode: '91.07.06' },
+                    { name: 'Mewoluk', bpsCode: '91.07.07' },
+                    { name: 'Yamo', bpsCode: '91.07.08' },
+                    { name: 'Nume', bpsCode: '91.07.10' },
+                    { name: 'Torere', bpsCode: '91.07.11' },
+                    { name: 'Tingginambut', bpsCode: '91.07.12' },
+                    { name: 'Pagaleme', bpsCode: '91.07.17' },
+                    { name: 'Gurage', bpsCode: '91.07.18' },
+                    { name: 'Irimuli', bpsCode: '91.07.19' },
+                    { name: 'Muara', bpsCode: '91.07.20' },
+                    { name: 'Ilamburawi', bpsCode: '91.07.21' },
+                    { name: 'Yambi', bpsCode: '91.07.22' },
+                    { name: 'Lumo', bpsCode: '91.07.23' },
+                    { name: 'Molanikime', bpsCode: '91.07.24' },
+                    { name: 'Dokome', bpsCode: '91.07.25' },
+                    { name: 'Kalome', bpsCode: '91.07.26' },
+                    { name: 'Wanwi', bpsCode: '91.07.27' },
+                    { name: 'Yamoneri', bpsCode: '91.07.28' },
+                    { name: 'Waegi', bpsCode: '91.07.29' },
+                    { name: 'Nioga', bpsCode: '91.07.30' },
+                    { name: 'Gubume', bpsCode: '91.07.31' },
+                    { name: 'Taganombak', bpsCode: '91.07.32' },
+                    { name: 'Dagai', bpsCode: '91.07.33' },
+                    { name: 'Kiyage', bpsCode: '91.07.34' }
+                ]
             }, {
                 name: 'Paniai',
                 bpscode: '91.08',
-                districts: []
+                districts: [
+                    { name: 'Paniai Timur', bpsCode: '91.08.01' },
+                    { name: 'Paniai Barat', bpsCode: '91.08.02' },
+                    { name: 'Aradide', bpsCode: '91.08.04' },
+                    { name: 'Bogabaida (Bogobaida)', bpsCode: '91.08.07' },
+                    { name: 'Bibida', bpsCode: '91.08.09' },
+                    { name: 'Dumadama', bpsCode: '91.08.12' },
+                    { name: 'Siriwo', bpsCode: '91.08.13' },
+                    { name: 'Kebo', bpsCode: '91.08.19' },
+                    { name: 'Yatamo', bpsCode: '91.08.20' },
+                    { name: 'Ekadide', bpsCode: '91.08.21' },
+                    { name: 'Wegee Muka', bpsCode: '91.08.22' },
+                    { name: 'Wegee Bino', bpsCode: '91.08.23' },
+                    { name: 'Pugo Dagi', bpsCode: '91.08.24' },
+                    { name: 'Muye', bpsCode: '91.08.25' },
+                    { name: 'Nakama', bpsCode: '91.08.26' },
+                    { name: 'Teluk Deya', bpsCode: '91.08.27' },
+                    { name: 'Yagai', bpsCode: '91.08.28' },
+                    { name: 'Youtadi', bpsCode: '91.08.29' },
+                    { name: 'Baya Biru', bpsCode: '91.08.30' },
+                    { name: 'Deiyai Miyo', bpsCode: '91.08.31' },
+                    { name: 'Dogomo', bpsCode: '91.08.32' },
+                    { name: 'Aweida', bpsCode: '91.08.33' },
+                    { name: 'Topiyai', bpsCode: '91.08.34' }
+                ]
             }, {
                 name: 'Mimika',
                 bpscode: '91.09',
-                districts: []
+                districts: [
+                    { name: 'Mimika Baru', bpsCode: '91.09.01' },
+                    { name: 'Agimuga', bpsCode: '91.09.02' },
+                    { name: 'Mimika Timur', bpsCode: '91.09.03' },
+                    { name: 'Mimika Barat', bpsCode: '91.09.04' },
+                    { name: 'Jita', bpsCode: '91.09.05' },
+                    { name: 'Jila', bpsCode: '91.09.06' },
+                    { name: 'Mimika Timur Jauh', bpsCode: '91.09.07' },
+                    { name: 'Mimika Tengah', bpsCode: '91.09.08' },
+                    { name: 'Kuala Kencana', bpsCode: '91.09.09' },
+                    { name: 'Tembagapura', bpsCode: '91.09.10' },
+                    { name: 'Mimika Barat Jauh', bpsCode: '91.09.11' },
+                    { name: 'Mimika Barat Tengah', bpsCode: '91.09.12' },
+                    { name: 'Kwamki Narama', bpsCode: '91.09.13' },
+                    { name: 'Hoya', bpsCode: '91.09.14' },
+                    { name: 'Iwaka', bpsCode: '91.09.15' },
+                    { name: 'Wania', bpsCode: '91.09.16' },
+                    { name: 'Amar', bpsCode: '91.09.17' },
+                    { name: 'Alama', bpsCode: '91.09.18' }
+                ]
             }, {
                 name: 'Sarmi',
                 bpscode: '91.10',
-                districts: []
+                districts: [
+                    { name: 'Sarmi', bpsCode: '91.10.01' },
+                    { name: 'Tor Atas', bpsCode: '91.10.02' },
+                    { name: 'Pantai Barat', bpsCode: '91.10.03' },
+                    { name: 'Pantai Timur', bpsCode: '91.10.04' },
+                    { name: 'Bonggo', bpsCode: '91.10.05' },
+                    { name: 'Apawer Hulu', bpsCode: '91.10.09' },
+                    { name: 'Sarmi Selatan', bpsCode: '91.10.12' },
+                    { name: 'Sarmi Timur', bpsCode: '91.10.13' },
+                    { name: 'Pantai Timur Bagian Barat', bpsCode: '91.10.14' },
+                    { name: 'Bonggo Timur', bpsCode: '91.10.15' }
+                ]
             }, {
                 name: 'Keerom',
                 bpscode: '91.11',
-                districts: []
+                districts: [
+                    { name: 'Waris', bpsCode: '91.11.01' },
+                    { name: 'Arso', bpsCode: '91.11.02' },
+                    { name: 'Senggi', bpsCode: '91.11.03' },
+                    { name: 'Web', bpsCode: '91.11.04' },
+                    { name: 'Skanto', bpsCode: '91.11.05' },
+                    { name: 'Arso Timur', bpsCode: '91.11.06' },
+                    { name: 'Towe', bpsCode: '91.11.07' },
+                    { name: 'Arso Barat', bpsCode: '91.11.08' },
+                    { name: 'Mannem', bpsCode: '91.11.09' },
+                    { name: 'Yaffi', bpsCode: '91.11.10' },
+                    { name: 'Kaisenar', bpsCode: '91.11.11' }
+                ]
             }, {
                 name: 'Pegunungan Bintang',
                 bpscode: '91.12',
-                districts: []
+                districts: [
+                    { name: 'Oksibil', bpsCode: '91.12.01' },
+                    { name: 'Kiwirok', bpsCode: '91.12.02' },
+                    { name: 'Okbibab', bpsCode: '91.12.03' },
+                    { name: 'Iwur (Okiwur)', bpsCode: '91.12.04' },
+                    { name: 'Batom', bpsCode: '91.12.05' },
+                    { name: 'Borme', bpsCode: '91.12.06' },
+                    { name: 'Kiwirok Timur', bpsCode: '91.12.07' },
+                    { name: 'Aboy', bpsCode: '91.12.08' },
+                    { name: 'Pepera', bpsCode: '91.12.09' },
+                    { name: 'Bime', bpsCode: '91.12.10' },
+                    { name: 'Alemsom', bpsCode: '91.12.11' },
+                    { name: 'Okbape', bpsCode: '91.12.12' },
+                    { name: 'Kalomdol', bpsCode: '91.12.13' },
+                    { name: 'Oksop', bpsCode: '91.12.14' },
+                    { name: 'Serambakon', bpsCode: '91.12.15' },
+                    { name: 'Ok Aom', bpsCode: '91.12.16' },
+                    { name: 'Kawor', bpsCode: '91.12.17' },
+                    { name: 'Awinbon', bpsCode: '91.12.18' },
+                    { name: 'Tarup', bpsCode: '91.12.19' },
+                    { name: 'Okhika', bpsCode: '91.12.20' },
+                    { name: 'Oksamol', bpsCode: '91.12.21' },
+                    { name: 'Oklip', bpsCode: '91.12.22' },
+                    { name: 'Okbemtau', bpsCode: '91.12.23' },
+                    { name: 'Oksebang', bpsCode: '91.12.24' },
+                    { name: 'Okbab', bpsCode: '91.12.25' },
+                    { name: 'Batani', bpsCode: '91.12.26' },
+                    { name: 'Weime', bpsCode: '91.12.27' },
+                    { name: 'Murkim', bpsCode: '91.12.28' },
+                    { name: 'Mofinop', bpsCode: '91.12.29' },
+                    { name: 'Jetfa', bpsCode: '91.12.30' },
+                    { name: 'Teiraplu', bpsCode: '91.12.31' },
+                    { name: 'Eipumek', bpsCode: '91.12.32' },
+                    { name: 'Pamek', bpsCode: '91.12.33' },
+                    { name: 'Nongme', bpsCode: '91.12.34' }
+                ]
             }, {
                 name: 'Yahukimo',
                 bpscode: '91.13',
-                districts: []
+                districts: [
+                    { name: 'Kurima', bpsCode: '91.13.01' },
+                    { name: 'Anggruk', bpsCode: '91.13.02' },
+                    { name: 'Ninia', bpsCode: '91.13.03' },
+                    { name: 'Silimo', bpsCode: '91.13.06' },
+                    { name: 'Samenage', bpsCode: '91.13.07' },
+                    { name: 'Nalca', bpsCode: '91.13.08' },
+                    { name: 'Dekai', bpsCode: '91.13.09' },
+                    { name: 'Obio', bpsCode: '91.13.10' },
+                    { name: 'Suru Suru', bpsCode: '91.13.11' },
+                    { name: 'Wusama (Wusuma)', bpsCode: '91.13.12' },
+                    { name: 'Amuma', bpsCode: '91.13.13' },
+                    { name: 'Musaik', bpsCode: '91.13.14' },
+                    { name: 'Pasema', bpsCode: '91.13.15' },
+                    { name: 'Hogio (Hugio)', bpsCode: '91.13.16' },
+                    { name: 'Mugi', bpsCode: '91.13.17' },
+                    { name: 'Soba', bpsCode: '91.13.18' },
+                    { name: 'Werima', bpsCode: '91.13.19' },
+                    { name: 'Tangma', bpsCode: '91.13.20' },
+                    { name: 'Ukha', bpsCode: '91.13.21' },
+                    { name: 'Panggema', bpsCode: '91.13.22' },
+                    { name: 'Kosarek', bpsCode: '91.13.23' },
+                    { name: 'Nipsan', bpsCode: '91.13.24' },
+                    { name: 'Ubahak', bpsCode: '91.13.25' },
+                    { name: 'Pronggoli (Proggoli)', bpsCode: '91.13.26' },
+                    { name: 'Walma', bpsCode: '91.13.27' },
+                    { name: 'Yahuliambut', bpsCode: '91.13.28' },
+                    { name: 'Hereapini (Hereanini)', bpsCode: '91.13.29' },
+                    { name: 'Ubalihi', bpsCode: '91.13.30' },
+                    { name: 'Talambo', bpsCode: '91.13.31' },
+                    { name: 'Puldama', bpsCode: '91.13.32' },
+                    { name: 'Endomen', bpsCode: '91.13.33' },
+                    { name: 'Kona', bpsCode: '91.13.34' },
+                    { name: 'Dirwemna (Diruwena)', bpsCode: '91.13.35' },
+                    { name: 'Holuon', bpsCode: '91.13.36' },
+                    { name: 'Lolat', bpsCode: '91.13.37' },
+                    { name: 'Soloikma', bpsCode: '91.13.38' },
+                    { name: 'Sela', bpsCode: '91.13.39' },
+                    { name: 'Koropun (Korupun)', bpsCode: '91.13.40' },
+                    { name: 'Langda', bpsCode: '91.13.41' },
+                    { name: 'Bomela', bpsCode: '91.13.42' },
+                    { name: 'Suntamon', bpsCode: '91.13.43' },
+                    { name: 'Seredela (Seredala)', bpsCode: '91.13.44' },
+                    { name: 'Sobaham', bpsCode: '91.13.45' },
+                    { name: 'Kabianggama (Kabianggema)', bpsCode: '91.13.46' },
+                    { name: 'Kwelemdua (Kwelamdua)', bpsCode: '91.13.47' },
+                    { name: 'Kwikma', bpsCode: '91.13.48' },
+                    { name: 'Hilipuk', bpsCode: '91.13.49' },
+                    { name: 'Duram', bpsCode: '91.13.50' },
+                    { name: 'Yogosem', bpsCode: '91.13.51' },
+                    { name: 'Kayo', bpsCode: '91.13.52' },
+                    { name: 'Sumo', bpsCode: '91.13.53' }
+                ]
             }, {
                 name: 'Tolikara',
                 bpscode: '91.14',
-                districts: []
+                districts: [
+                    { name: 'Karubaga', bpsCode: '91.14.01' },
+                    { name: 'Bokondini', bpsCode: '91.14.02' },
+                    { name: 'Kanggime (Kanggima )', bpsCode: '91.14.03' },
+                    { name: 'Kembu', bpsCode: '91.14.04' },
+                    { name: 'Goyage', bpsCode: '91.14.05' },
+                    { name: 'Wunim (Wunin / Wumin)', bpsCode: '91.14.06' },
+                    { name: 'Wina', bpsCode: '91.14.07' },
+                    { name: 'Umagi', bpsCode: '91.14.08' },
+                    { name: 'Panaga', bpsCode: '91.14.09' },
+                    { name: 'Wonoki (Woniki)', bpsCode: '91.14.10' },
+                    { name: 'Kubu', bpsCode: '91.14.11' },
+                    { name: 'Kondaga (Konda)', bpsCode: '91.14.12' },
+                    { name: 'Nelawi', bpsCode: '91.14.13' },
+                    { name: 'Kuari', bpsCode: '91.14.14' },
+                    { name: 'Bokoneri', bpsCode: '91.14.15' },
+                    { name: 'Bewani', bpsCode: '91.14.16' },
+                    { name: 'Nabunage', bpsCode: '91.14.18' },
+                    { name: 'Gilubandu (Gilumbandu/Gilimbandu)', bpsCode: '91.14.19' },
+                    { name: 'Nunggawi (Munggawi)', bpsCode: '91.14.20' },
+                    { name: 'Gundagi (Gudage)', bpsCode: '91.14.21' },
+                    { name: 'Numba', bpsCode: '91.14.22' },
+                    { name: 'Timori', bpsCode: '91.14.23' },
+                    { name: 'Dundu (Ndundu)', bpsCode: '91.14.24' },
+                    { name: 'Geya', bpsCode: '91.14.25' },
+                    { name: 'Egiam', bpsCode: '91.14.26' },
+                    { name: 'Poganeri', bpsCode: '91.14.27' },
+                    { name: 'Kamboneri', bpsCode: '91.14.28' },
+                    { name: 'Airgaram', bpsCode: '91.14.29' },
+                    { name: 'Wari / Taiyeve II', bpsCode: '91.14.30' },
+                    { name: 'Dow', bpsCode: '91.14.31' },
+                    { name: 'Tagineri', bpsCode: '91.14.32' },
+                    { name: 'Yuneri', bpsCode: '91.14.33' },
+                    { name: 'Wakuwo', bpsCode: '91.14.34' },
+                    { name: 'Gika', bpsCode: '91.14.35' },
+                    { name: 'Telenggeme', bpsCode: '91.14.36' },
+                    { name: 'Anawi', bpsCode: '91.14.37' },
+                    { name: 'Wenam', bpsCode: '91.14.38' },
+                    { name: 'Wugi', bpsCode: '91.14.39' },
+                    { name: 'Danime', bpsCode: '91.14.40' },
+                    { name: 'Tagime', bpsCode: '91.14.41' },
+                    { name: 'Kai', bpsCode: '91.14.42' },
+                    { name: 'Aweku', bpsCode: '91.14.43' },
+                    { name: 'Bogonuk', bpsCode: '91.14.44' },
+                    { name: 'Li Anogomma', bpsCode: '91.14.45' },
+                    { name: 'Biuk', bpsCode: '91.14.46' },
+                    { name: 'Yuko', bpsCode: '91.14.47' }
+                ]
             }, {
                 name: 'Waropen',
                 bpscode: '91.15',
-                districts: []
+                districts: [
+                    { name: 'Waropen Bawah', bpsCode: '91.15.01' },
+                    { name: 'Masirei', bpsCode: '91.15.03' },
+                    { name: 'Risei Sayati', bpsCode: '91.15.07' },
+                    { name: 'Urei Faisei', bpsCode: '91.15.08' },
+                    { name: 'Inggerus', bpsCode: '91.15.09' },
+                    { name: 'Kirihi', bpsCode: '91.15.10' },
+                    { name: 'Oudate', bpsCode: '91.15.11' },
+                    { name: 'Wapoga', bpsCode: '91.15.12' },
+                    { name: 'Demba', bpsCode: '91.15.13' },
+                    { name: 'Wonti', bpsCode: '91.15.14' },
+                    { name: 'Soyoi Mambai', bpsCode: '91.15.15' }
+                ]
             }, {
                 name: 'Boven Digoel',
                 bpscode: '91.16',
-                districts: []
+                districts: [
+                    { name: 'Mandobo', bpsCode: '91.16.01' },
+                    { name: 'Mindiptana', bpsCode: '91.16.02' },
+                    { name: 'Waropko', bpsCode: '91.16.03' },
+                    { name: 'Kouh', bpsCode: '91.16.04' },
+                    { name: 'Jair', bpsCode: '91.16.05' },
+                    { name: 'Bomakia', bpsCode: '91.16.06' },
+                    { name: 'Kombut', bpsCode: '91.16.07' },
+                    { name: 'Iniyandit', bpsCode: '91.16.08' },
+                    { name: 'Arimop', bpsCode: '91.16.09' },
+                    { name: 'Fofi', bpsCode: '91.16.10' },
+                    { name: 'Ambatkwi (Ambatkui)', bpsCode: '91.16.11' },
+                    { name: 'Manggelum', bpsCode: '91.16.12' },
+                    { name: 'Firiwage', bpsCode: '91.16.13' },
+                    { name: 'Yaniruma', bpsCode: '91.16.14' },
+                    { name: 'Subur', bpsCode: '91.16.15' },
+                    { name: 'Kombay', bpsCode: '91.16.16' },
+                    { name: 'Ninati', bpsCode: '91.16.17' },
+                    { name: 'Sesnuk', bpsCode: '91.16.18' },
+                    { name: 'Ki', bpsCode: '91.16.19' },
+                    { name: 'Kawagit', bpsCode: '91.16.20' }
+                ]
             }, {
                 name: 'Mappi',
                 bpscode: '91.17',
-                districts: []
+                districts: [
+                    { name: 'Obaa', bpsCode: '91.17.01' },
+                    { name: 'Mambioman Bapai', bpsCode: '91.17.02' },
+                    { name: 'Citak-Mitak (Citakmitak)', bpsCode: '91.17.03' },
+                    { name: 'Edera', bpsCode: '91.17.04' },
+                    { name: 'Haju', bpsCode: '91.17.05' },
+                    { name: 'Assue', bpsCode: '91.17.06' },
+                    { name: 'Kaibar', bpsCode: '91.17.07' },
+                    { name: 'Passue', bpsCode: '91.17.08' },
+                    { name: 'Minyamur', bpsCode: '91.17.09' },
+                    { name: 'Venaha', bpsCode: '91.17.10' },
+                    { name: 'Syahcame', bpsCode: '91.17.11' },
+                    { name: 'Yakomi', bpsCode: '91.17.12' },
+                    { name: 'Bamgi', bpsCode: '91.17.13' },
+                    { name: 'Passue Bawah', bpsCode: '91.17.14' },
+                    { name: 'Ti Zain', bpsCode: '91.17.15' }
+                ]
             }, {
                 name: 'Asmat',
                 bpscode: '91.18',
-                districts: []
+                districts: [
+                    { name: 'Agats', bpsCode: '91.18.01' },
+                    { name: 'Atsy / Atsj', bpsCode: '91.18.02' },
+                    { name: 'Sawa Erma', bpsCode: '91.18.03' },
+                    { name: 'Akat', bpsCode: '91.18.04' },
+                    { name: 'Fayit', bpsCode: '91.18.05' },
+                    { name: 'Pantai Kasuari', bpsCode: '91.18.06' },
+                    { name: 'Suator', bpsCode: '91.18.07' },
+                    { name: 'Suru-suru', bpsCode: '91.18.08' },
+                    { name: 'Kolf Braza', bpsCode: '91.18.09' },
+                    { name: 'Unir Sirau', bpsCode: '91.18.10' },
+                    { name: 'Joerat', bpsCode: '91.18.11' },
+                    { name: 'Pulau Tiga', bpsCode: '91.18.12' },
+                    { name: 'Jetsy', bpsCode: '91.18.13' },
+                    { name: 'Der Koumur', bpsCode: '91.18.14' },
+                    { name: 'Kopay', bpsCode: '91.18.15' },
+                    { name: 'Safan', bpsCode: '91.18.16' },
+                    { name: 'Sirets', bpsCode: '91.18.17' },
+                    { name: 'Ayip', bpsCode: '91.18.18' },
+                    { name: 'Betcbamu', bpsCode: '91.18.19' }
+                ]
             }, {
                 name: 'Supiori',
                 bpscode: '91.19',
-                districts: []
+                districts: [
+                    { name: 'Supiori Selatan', bpsCode: '91.19.01' },
+                    { name: 'Supiori Utara', bpsCode: '91.19.02' },
+                    { name: 'Supiori Timur', bpsCode: '91.19.03' },
+                    { name: 'Kepulauan Aruri', bpsCode: '91.19.04' },
+                    { name: 'Supiori Barat', bpsCode: '91.19.05' }
+                ]
             }, {
                 name: 'Mamberamo Raya',
                 bpscode: '91.20',
-                districts: []
+                districts: [
+                    { name: 'Mamberamo Tengah', bpsCode: '91.20.01' },
+                    { name: 'Mamberamo Hulu', bpsCode: '91.20.02' },
+                    { name: 'Rufaer', bpsCode: '91.20.03' },
+                    { name: 'Mamberamo Tengah Timur', bpsCode: '91.20.04' },
+                    { name: 'Mamberamo Hilir', bpsCode: '91.20.05' },
+                    { name: 'Waropen Atas', bpsCode: '91.20.06' },
+                    { name: 'Benuki', bpsCode: '91.20.07' },
+                    { name: 'Sawai', bpsCode: '91.20.08' }
+                ]
             }, {
                 name: 'Mamberamo Tengah',
                 bpscode: '91.21',
-                districts: []
+                districts: [
+                    { name: 'Kobagma (Kobakma)', bpsCode: '91.21.01' },
+                    { name: 'Kelila', bpsCode: '91.21.02' },
+                    { name: 'Eragayam', bpsCode: '91.21.03' },
+                    { name: 'Megambilis', bpsCode: '91.21.04' },
+                    { name: 'Ilugwa', bpsCode: '91.21.05' }
+                ]
             }, {
                 name: 'Yalimo',
                 bpscode: '91.22',
-                districts: []
+                districts: [
+                    { name: 'Elelim', bpsCode: '91.22.01' },
+                    { name: 'Apalapsili', bpsCode: '91.22.02' },
+                    { name: 'Abenaho', bpsCode: '91.22.03' },
+                    { name: 'Benawa', bpsCode: '91.22.04' },
+                    { name: 'Welarek', bpsCode: '91.22.05' }
+                ]
             }, {
                 name: 'Lanny Jaya',
                 bpscode: '91.23',
-                districts: []
+                districts: [
+                    { name: 'Tiom', bpsCode: '91.23.01' },
+                    { name: 'Pirime', bpsCode: '91.23.02' },
+                    { name: 'Makki', bpsCode: '91.23.03' },
+                    { name: 'Gamelia', bpsCode: '91.23.04' },
+                    { name: 'Dimba', bpsCode: '91.23.05' },
+                    { name: 'Melagineri', bpsCode: '91.23.06' },
+                    { name: 'Balingga', bpsCode: '91.23.07' },
+                    { name: 'Tiomneri', bpsCode: '91.23.08' },
+                    { name: 'Kuyawage', bpsCode: '91.23.09' },
+                    { name: 'Poga', bpsCode: '91.23.10' },
+                    { name: 'Niname', bpsCode: '91.23.11' },
+                    { name: 'Nogi', bpsCode: '91.23.12' },
+                    { name: 'Yiginua', bpsCode: '91.23.13' },
+                    { name: 'Tiom Ollo', bpsCode: '91.23.14' },
+                    { name: 'Yugungwi', bpsCode: '91.23.15' },
+                    { name: 'Mokoni', bpsCode: '91.23.16' },
+                    { name: 'Wereka', bpsCode: '91.23.17' },
+                    { name: 'Milimbo', bpsCode: '91.23.18' },
+                    { name: 'Wiringgambut', bpsCode: '91.23.19' },
+                    { name: 'Gollo', bpsCode: '91.23.20' },
+                    { name: 'Awina', bpsCode: '91.23.21' },
+                    { name: 'Ayumnati', bpsCode: '91.23.22' },
+                    { name: 'Wano Barat', bpsCode: '91.23.23' },
+                    { name: 'Goa Balim', bpsCode: '91.23.24' },
+                    { name: 'Bruwa', bpsCode: '91.23.25' },
+                    { name: 'Balingga Barat', bpsCode: '91.23.26' },
+                    { name: 'Gupura', bpsCode: '91.23.27' },
+                    { name: 'Kolawa', bpsCode: '91.23.28' },
+                    { name: 'Gelok Beam', bpsCode: '91.23.29' },
+                    { name: 'Kuly Lanny', bpsCode: '91.23.30' },
+                    { name: 'Lannyna', bpsCode: '91.23.31' },
+                    { name: 'Karu', bpsCode: '91.23.32' },
+                    { name: 'Yiluk', bpsCode: '91.23.33' },
+                    { name: 'Guna', bpsCode: '91.23.34' },
+                    { name: 'Kelulome', bpsCode: '91.23.35' },
+                    { name: 'Nikogwe', bpsCode: '91.23.36' },
+                    { name: 'Muara', bpsCode: '91.23.37' },
+                    { name: 'Buguk Gona', bpsCode: '91.23.38' },
+                    { name: 'Melagi', bpsCode: '91.23.39' }
+                ]
             }, {
                 name: 'Nduga',
                 bpscode: '91.24',
-                districts: []
+                districts: [
+                    { name: 'Kenyam', bpsCode: '91.24.01' },
+                    { name: 'Mapenduma', bpsCode: '91.24.02' },
+                    { name: 'Yigi', bpsCode: '91.24.03' },
+                    { name: 'Wosak', bpsCode: '91.24.04' },
+                    { name: 'Geselma (Geselema)', bpsCode: '91.24.05' },
+                    { name: 'Mugi', bpsCode: '91.24.06' },
+                    { name: 'Mbuwa (Mbua / Mbuga)', bpsCode: '91.24.07' },
+                    { name: 'Gearek', bpsCode: '91.24.08' },
+                    { name: 'Koroptak', bpsCode: '91.24.09' },
+                    { name: 'Kegayem', bpsCode: '91.24.10' },
+                    { name: 'Paro', bpsCode: '91.24.11' },
+                    { name: 'Mebarok', bpsCode: '91.24.12' },
+                    { name: 'Yenggelo', bpsCode: '91.24.13' },
+                    { name: 'Kilmid', bpsCode: '91.24.14' },
+                    { name: 'Alama', bpsCode: '91.24.15' },
+                    { name: 'Yal', bpsCode: '91.24.16' },
+                    { name: 'Mam', bpsCode: '91.24.17' },
+                    { name: 'Dal', bpsCode: '91.24.18' },
+                    { name: 'Nirkuri', bpsCode: '91.24.19' },
+                    { name: 'Inikgal', bpsCode: '91.24.20' },
+                    { name: 'Iniye', bpsCode: '91.24.21' },
+                    { name: 'Mbulmu Yalma', bpsCode: '91.24.22' },
+                    { name: 'Mbua Tengah', bpsCode: '91.24.23' },
+                    { name: 'Embetpen', bpsCode: '91.24.24' },
+                    { name: 'Kora', bpsCode: '91.24.25' },
+                    { name: 'Wusi', bpsCode: '91.24.26' },
+                    { name: 'Pija', bpsCode: '91.24.27' },
+                    { name: 'Moba', bpsCode: '91.24.28' },
+                    { name: 'Wutpaga', bpsCode: '91.24.29' },
+                    { name: 'Nenggeagin', bpsCode: '91.24.30' },
+                    { name: 'Krepkuri', bpsCode: '91.24.31' },
+                    { name: 'Pasir Putih', bpsCode: '91.24.32' }
+                ]
             }, {
                 name: 'Puncak',
                 bpscode: '91.25',
-                districts: []
+                districts: [
+                    { name: 'Ilaga', bpsCode: '91.25.01' },
+                    { name: 'Wangbe', bpsCode: '91.25.02' },
+                    { name: 'Beoga', bpsCode: '91.25.03' },
+                    { name: 'Doufo', bpsCode: '91.25.04' },
+                    { name: 'Pogoma', bpsCode: '91.25.05' },
+                    { name: 'Sinak', bpsCode: '91.25.06' },
+                    { name: 'Agandugume', bpsCode: '91.25.07' },
+                    { name: 'Gome', bpsCode: '91.25.08' },
+                    { name: 'Dervos', bpsCode: '91.25.09' },
+                    { name: 'Beoga Barat', bpsCode: '91.25.10' },
+                    { name: 'Beoga Timur', bpsCode: '91.25.11' },
+                    { name: 'Ogamanim', bpsCode: '91.25.12' },
+                    { name: 'Kembru', bpsCode: '91.25.13' },
+                    { name: 'Bina', bpsCode: '91.25.14' },
+                    { name: 'Sinak Barat', bpsCode: '91.25.15' },
+                    { name: 'Mage\'abume', bpsCode: '91.25.16' },
+                    { name: 'Yugumuak', bpsCode: '91.25.17' },
+                    { name: 'Ilaga Utara', bpsCode: '91.25.18' },
+                    { name: 'Mabugi', bpsCode: '91.25.19' },
+                    { name: 'Omukia', bpsCode: '91.25.20' },
+                    { name: 'Lambewi', bpsCode: '91.25.21' },
+                    { name: 'Oneri', bpsCode: '91.25.22' },
+                    { name: 'Amungkalpia', bpsCode: '91.25.23' },
+                    { name: 'Gome Utara', bpsCode: '91.25.24' },
+                    { name: 'Erelmakawia', bpsCode: '91.25.25' }
+                ]
             }, {
                 name: 'Dogiyai',
                 bpscode: '91.26',
-                districts: []
+                districts: [
+                    { name: 'Kamu', bpsCode: '91.26.01' },
+                    { name: 'Mapia', bpsCode: '91.26.02' },
+                    { name: 'Piyaiye (Sukikai)', bpsCode: '91.26.03' },
+                    { name: 'Kamu Utara (Ikrar/Ikrat)', bpsCode: '91.26.04' },
+                    { name: 'Sukikai Selatan', bpsCode: '91.26.05' },
+                    { name: 'Mapia Barat', bpsCode: '91.26.06' },
+                    { name: 'Kamu Selatan', bpsCode: '91.26.07' },
+                    { name: 'Kamu Timur', bpsCode: '91.26.08' },
+                    { name: 'Mapia Tengah', bpsCode: '91.26.09' },
+                    { name: 'Dogiyai', bpsCode: '91.26.10' }
+                ]
             }, {
                 name: 'Intan Jaya',
                 bpscode: '91.27',
-                districts: []
+                districts: [
+                    { name: 'Sugapa', bpsCode: '91.27.01' },
+                    { name: 'Homeyo', bpsCode: '91.27.02' },
+                    { name: 'Wandai', bpsCode: '91.27.03' },
+                    { name: 'Biandoga', bpsCode: '91.27.04' },
+                    { name: 'Agisiga', bpsCode: '91.27.05' },
+                    { name: 'Hitadipa', bpsCode: '91.27.06' },
+                    { name: 'Ugimba', bpsCode: '91.27.07' },
+                    { name: 'Tomosiga', bpsCode: '91.27.08' }
+                ]
             }, {
                 name: 'Deiyai',
                 bpscode: '91.28',
-                districts: []
+                districts: [
+                    { name: 'Tigi', bpsCode: '91.28.01' },
+                    { name: 'Tigi Timur', bpsCode: '91.28.02' },
+                    { name: 'Bowobado', bpsCode: '91.28.03' },
+                    { name: 'Tigi Barat', bpsCode: '91.28.04' },
+                    { name: 'Kapiraya', bpsCode: '91.28.05' }
+                ]
             }, {
                 name: 'Jayapura',
                 bpscode: '91.71',
-                districts: []
-            },
+                districts: [
+                    { name: 'Jayapura Utara', bpsCode: '91.71.01' },
+                    { name: 'Jayapura Selatan', bpsCode: '91.71.02' },
+                    { name: 'Abepura', bpsCode: '91.71.03' },
+                    { name: 'Muara Tami', bpsCode: '91.71.04' },
+                    { name: 'Heram', bpsCode: '91.71.05' }
+                ]
+            }
         ]
     },
     RI: {
