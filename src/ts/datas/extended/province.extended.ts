@@ -6061,55 +6061,286 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Sorong',
                 bpscode: '92.01',
-                districts: []
+                districts: [
+                    { name: "Makbon", bpsCode: "92.01.01" },
+                    { name: "Beraur", bpsCode: "92.01.04" },
+                    { name: "Salawati", bpsCode: "92.01.05" },
+                    { name: "Seget", bpsCode: "92.01.06" },
+                    { name: "Aimas", bpsCode: "92.01.07" },
+                    { name: "Klamono", bpsCode: "92.01.08" },
+                    { name: "Sayosa", bpsCode: "92.01.10" },
+                    { name: "Segun", bpsCode: "92.01.12" },
+                    { name: "Mayamuk", bpsCode: "92.01.13" },
+                    { name: "Salawati Selatan", bpsCode: "92.01.14" },
+                    { name: "Klabot", bpsCode: "92.01.17" },
+                    { name: "Klawak", bpsCode: "92.01.18" },
+                    { name: "Maudus", bpsCode: "92.01.20" },
+                    { name: "Mariat", bpsCode: "92.01.39" },
+                    { name: "Klayili", bpsCode: "92.01.40" },
+                    { name: "Klaso", bpsCode: "92.01.41" },
+                    { name: "Moisegen", bpsCode: "92.01.42" },
+                    { name: "Sorong", bpsCode: "92.01.43" },
+                    { name: "Bagun", bpsCode: "92.01.44" },
+                    { name: "Wemak", bpsCode: "92.01.45" },
+                    { name: "Sunook", bpsCode: "92.01.46" },
+                    { name: "Buk", bpsCode: "92.01.47" },
+                    { name: "Saengkeduk", bpsCode: "92.01.48" },
+                    { name: "Malabotom", bpsCode: "92.01.49" },
+                    { name: "Konhir", bpsCode: "92.01.50" },
+                    { name: "Klasafet", bpsCode: "92.01.51" },
+                    { name: "Hobard", bpsCode: "92.01.52" },
+                    { name: "Salawati Tengah", bpsCode: "92.01.53" },
+                    { name: "Botain", bpsCode: "92.01.54" },
+                    { name: "Sayosa Timur", bpsCode: "92.01.55" }
+                ]
             }, {
                 name: 'Manokwari',
                 bpscode: '92.02',
-                districts: []
+                districts: [
+                    { name: "Warmare", bpsCode: "92.02.03" },
+                    { name: "Prafi", bpsCode: "92.02.04" },
+                    { name: "Masni", bpsCode: "92.02.05" },
+                    { name: "Manokwari Barat", bpsCode: "92.02.12" },
+                    { name: "Manokwari Timur", bpsCode: "92.02.13" },
+                    { name: "Manokwari Utara", bpsCode: "92.02.14" },
+                    { name: "Manokwari Selatan", bpsCode: "92.02.15" },
+                    { name: "Tanah Rubuh", bpsCode: "92.02.17" },
+                    { name: "Sidey", bpsCode: "92.02.21" }
+                ]
             }, {
                 name: 'Fakfak',
                 bpscode: '92.03',
-                districts: []
+                districts: [
+                    { name: "Fak-Fak (Fakfak)", bpsCode: "92.03.01" },
+                    { name: "Fak-Fak Barat (Fakfak Barat)", bpsCode: "92.03.02" },
+                    { name: "Fak-Fak Timur (Fakfak Timur)", bpsCode: "92.03.03" },
+                    { name: "Kokas", bpsCode: "92.03.04" },
+                    { name: "Fak-Fak Tengah (Fakfak Tengah)", bpsCode: "92.03.05" },
+                    { name: "Karas", bpsCode: "92.03.06" },
+                    { name: "Bomberay", bpsCode: "92.03.07" },
+                    { name: "Kramongmongga", bpsCode: "92.03.08" },
+                    { name: "Teluk Patipi", bpsCode: "92.03.09" },
+                    { name: "Pariwari", bpsCode: "92.03.10" },
+                    { name: "Wartutin", bpsCode: "92.03.11" },
+                    { name: "Fakfak Timur Tengah", bpsCode: "92.03.12" },
+                    { name: "Arguni", bpsCode: "92.03.13" },
+                    { name: "Mbahamdandara", bpsCode: "92.03.14" },
+                    { name: "Kayauni", bpsCode: "92.03.15" },
+                    { name: "Furwagi", bpsCode: "92.03.16" },
+                    { name: "Tomage", bpsCode: "92.03.17" }
+                ]
             }, {
                 name: 'Sorong Selatan',
                 bpscode: '92.04',
-                districts: []
+                districts: [
+                    { name: "Teminabuan", bpsCode: "92.04.01" },
+                    { name: "Inanwatan", bpsCode: "92.04.04" },
+                    { name: "Sawiat", bpsCode: "92.04.06" },
+                    { name: "Kokoda", bpsCode: "92.04.09" },
+                    { name: "Moswaren", bpsCode: "92.04.10" },
+                    { name: "Seremuk", bpsCode: "92.04.11" },
+                    { name: "Wayer", bpsCode: "92.04.12" },
+                    { name: "Kais", bpsCode: "92.04.14" },
+                    { name: "Konda", bpsCode: "92.04.15" },
+                    { name: "Matemani", bpsCode: "92.04.20" },
+                    { name: "Kokoda Utara", bpsCode: "92.04.21" },
+                    { name: "Saifi", bpsCode: "92.04.22" },
+                    { name: "Fokour", bpsCode: "92.04.24" },
+                    { name: "Salkma", bpsCode: "92.04.25" },
+                    { name: "Kais Darat", bpsCode: "92.04.26" }
+                ]
             }, {
                 name: 'Raja Ampat',
                 bpscode: '92.05',
-                districts: []
+                districts: [
+                    { name: "Misool (Misool Utara)", bpsCode: "92.05.01" },
+                    { name: "Waigeo Utara", bpsCode: "92.05.02" },
+                    { name: "Waigeo Selatan", bpsCode: "92.05.03" },
+                    { name: "Salawati Utara", bpsCode: "92.05.04" },
+                    { name: "Kepulauan Ayau", bpsCode: "92.05.05" },
+                    { name: "Misool Timur", bpsCode: "92.05.06" },
+                    { name: "Waigeo Barat", bpsCode: "92.05.07" },
+                    { name: "Waigeo Timur", bpsCode: "92.05.08" },
+                    { name: "Teluk Mayalibit", bpsCode: "92.05.09" },
+                    { name: "Kofiau", bpsCode: "92.05.10" },
+                    { name: "Meos Mansar", bpsCode: "92.05.11" },
+                    { name: "Misool Selatan", bpsCode: "92.05.13" },
+                    { name: "Warwarbomi", bpsCode: "92.05.14" },
+                    { name: "Waigeo Barat Kepulauan", bpsCode: "92.05.15" },
+                    { name: "Misool Barat", bpsCode: "92.05.16" },
+                    { name: "Kepulauan Sembilan", bpsCode: "92.05.17" },
+                    { name: "Kota Waisai", bpsCode: "92.05.18" },
+                    { name: "Tiplol Mayalibit", bpsCode: "92.05.19" },
+                    { name: "Batanta Utara", bpsCode: "92.05.20" },
+                    { name: "Salawati Barat", bpsCode: "92.05.21" },
+                    { name: "Salawati Tengah", bpsCode: "92.05.22" },
+                    { name: "Supnin", bpsCode: "92.05.23" },
+                    { name: "Ayau", bpsCode: "92.05.24" },
+                    { name: "Batanta Selatan", bpsCode: "92.05.25" }
+                ]
             }, {
                 name: 'Teluk Bintuni',
                 bpscode: '92.06',
-                districts: []
+                districts: [
+                    { name: "Bintuni", bpsCode: "92.06.01" },
+                    { name: "Merdey", bpsCode: "92.06.02" },
+                    { name: "Babo", bpsCode: "92.06.03" },
+                    { name: "Aranday", bpsCode: "92.06.04" },
+                    { name: "Moskona Selatan", bpsCode: "92.06.05" },
+                    { name: "Moskona Utara", bpsCode: "92.06.06" },
+                    { name: "Wamesa (Idoor)", bpsCode: "92.06.07" },
+                    { name: "Fafurwar (Irorutu)", bpsCode: "92.06.08" },
+                    { name: "Tembuni", bpsCode: "92.06.09" },
+                    { name: "Kuri", bpsCode: "92.06.10" },
+                    { name: "Manimeri", bpsCode: "92.06.11" },
+                    { name: "Tuhiba", bpsCode: "92.06.12" },
+                    { name: "Dataran Beimes", bpsCode: "92.06.13" },
+                    { name: "Sumuri (Simuri)", bpsCode: "92.06.14" },
+                    { name: "Kaitaro", bpsCode: "92.06.15" },
+                    { name: "Aroba", bpsCode: "92.06.16" },
+                    { name: "Masyeta", bpsCode: "92.06.17" },
+                    { name: "Biscoop", bpsCode: "92.06.18" },
+                    { name: "Tomu", bpsCode: "92.06.19" },
+                    { name: "Kamundan", bpsCode: "92.06.20" },
+                    { name: "Weriagar", bpsCode: "92.06.21" },
+                    { name: "Moskona Barat", bpsCode: "92.06.22" },
+                    { name: "Meyado (Mayado)", bpsCode: "92.06.23" },
+                    { name: "Moskona Timur", bpsCode: "92.06.24" }
+                ]
             }, {
                 name: 'Teluk Wondama',
                 bpscode: '92.07',
-                districts: []
+                districts: [
+                    { name: "Wasior", bpsCode: "92.07.01" },
+                    { name: "Windesi", bpsCode: "92.07.02" },
+                    { name: "Teluk Duairi", bpsCode: "92.07.03" },
+                    { name: "Wondiboy", bpsCode: "92.07.04" },
+                    { name: "Wamesa", bpsCode: "92.07.05" },
+                    { name: "Rumberpon", bpsCode: "92.07.06" },
+                    { name: "Naikere", bpsCode: "92.07.07" },
+                    { name: "Rasiei", bpsCode: "92.07.08" },
+                    { name: "Kuri Wamesa", bpsCode: "92.07.09" },
+                    { name: "Roon", bpsCode: "92.07.10" },
+                    { name: "Roswar", bpsCode: "92.07.11" },
+                    { name: "Nikiwar", bpsCode: "92.07.12" },
+                    { name: "Soug Jaya", bpsCode: "92.07.13" }
+                ]
             }, {
                 name: 'Kaimana',
                 bpscode: '92.08',
-                districts: []
+                districts: [
+                    { name: "Kaimana", bpsCode: "92.08.01" },
+                    { name: "Buruway", bpsCode: "92.08.02" },
+                    { name: "Teluk Arguni Atas", bpsCode: "92.08.03" },
+                    { name: "Teluk Etna", bpsCode: "92.08.04" },
+                    { name: "Kambrau (Kambraw / Kamberau)", bpsCode: "92.08.05" },
+                    { name: "Teluk Arguni Bawah (Yerusi)", bpsCode: "92.08.06" },
+                    { name: "Yamor", bpsCode: "92.08.07" }
+                ]
             }, {
                 name: 'Tambrauw',
                 bpscode: '92.09',
-                districts: []
+                districts: [
+                    { name: "Fef", bpsCode: "92.09.01" },
+                    { name: "Miyah", bpsCode: "92.09.02" },
+                    { name: "Yembun", bpsCode: "92.09.03" },
+                    { name: "Kwoor", bpsCode: "92.09.04" },
+                    { name: "Sausapor", bpsCode: "92.09.05" },
+                    { name: "Abun", bpsCode: "92.09.06" },
+                    { name: "Syujak", bpsCode: "92.09.07" },
+                    { name: "Moraid", bpsCode: "92.09.08" },
+                    { name: "Kebar", bpsCode: "92.09.09" },
+                    { name: "Amberbaken", bpsCode: "92.09.10" },
+                    { name: "Senopi", bpsCode: "92.09.11" },
+                    { name: "Mubrani", bpsCode: "92.09.12" },
+                    { name: "Bikar", bpsCode: "92.09.13" },
+                    { name: "Bamusbama", bpsCode: "92.09.14" },
+                    { name: "Ases", bpsCode: "92.09.15" },
+                    { name: "Miyah Selatan", bpsCode: "92.09.16" },
+                    { name: "Ireres", bpsCode: "92.09.17" },
+                    { name: "Tobouw", bpsCode: "92.09.18" },
+                    { name: "Wilhem Roumbouts", bpsCode: "92.09.19" },
+                    { name: "Tinggouw", bpsCode: "92.09.20" },
+                    { name: "Kwesefo", bpsCode: "92.09.21" },
+                    { name: "Mawabuan", bpsCode: "92.09.22" },
+                    { name: "Kebar Timur", bpsCode: "92.09.23" },
+                    { name: "Kebar Selatan", bpsCode: "92.09.24" },
+                    { name: "Manekar", bpsCode: "92.09.25" },
+                    { name: "Mpur", bpsCode: "92.09.26" },
+                    { name: "Amberbaken Barat", bpsCode: "92.09.27" },
+                    { name: "Kasi", bpsCode: "92.09.28" },
+                    { name: "Selemkai", bpsCode: "92.09.29" }
+                ]
             }, {
                 name: 'Maybrat',
                 bpscode: '92.10',
-                districts: []
+                districts: [
+                    { name: "Aifat", bpsCode: "92.10.01" },
+                    { name: "Aifat Utara", bpsCode: "92.10.02" },
+                    { name: "Aifat Timur", bpsCode: "92.10.03" },
+                    { name: "Aifat Selatan", bpsCode: "92.10.04" },
+                    { name: "Aitinyo Barat", bpsCode: "92.10.05" },
+                    { name: "Aitinyo", bpsCode: "92.10.06" },
+                    { name: "Aitinyo Utara", bpsCode: "92.10.07" },
+                    { name: "Ayamaru", bpsCode: "92.10.08" },
+                    { name: "Ayamaru Utara", bpsCode: "92.10.09" },
+                    { name: "Ayamaru Timur", bpsCode: "92.10.10" },
+                    { name: "Mare", bpsCode: "92.10.11" },
+                    { name: "Aifat Timur Tengah", bpsCode: "92.10.12" },
+                    { name: "Aifat Timur Jauh", bpsCode: "92.10.13" },
+                    { name: "Aifat Timur Selatan", bpsCode: "92.10.14" },
+                    { name: "Ayamaru Selatan", bpsCode: "92.10.15" },
+                    { name: "Ayamaru Jaya", bpsCode: "92.10.16" },
+                    { name: "Ayamaru Selatan Jaya", bpsCode: "92.10.17" },
+                    { name: "Ayamaru Timur Selatan", bpsCode: "92.10.18" },
+                    { name: "Ayamaru Utara Timur", bpsCode: "92.10.19" },
+                    { name: "Ayamaru Tengah", bpsCode: "92.10.20" },
+                    { name: "Ayamaru Barat", bpsCode: "92.10.21" },
+                    { name: "Aitinyo Tengah", bpsCode: "92.10.22" },
+                    { name: "Aitinyo Raya", bpsCode: "92.10.23" },
+                    { name: "Mare Selatan", bpsCode: "92.10.24" }
+                ]
             }, {
                 name: 'Manokwari Selatan',
                 bpscode: '92.11',
-                districts: []
+                districts: [
+                    { name: "Ransiki", bpsCode: "92.11.01" },
+                    { name: "Oransbari", bpsCode: "92.11.02" },
+                    { name: "Neney", bpsCode: "92.11.03" },
+                    { name: "Dataran Isim", bpsCode: "92.11.04" },
+                    { name: "Momi Waren", bpsCode: "92.11.05" },
+                    { name: "Tahota", bpsCode: "92.11.06" }
+                ]
             }, {
                 name: 'Pegunungan Arfak',
                 bpscode: '92.12',
-                districts: []
+                districts: [
+                    { name: "Anggi", bpsCode: "92.12.01" },
+                    { name: "Anggi Gida", bpsCode: "92.12.02" },
+                    { name: "Membey", bpsCode: "92.12.03" },
+                    { name: "Sururey", bpsCode: "92.12.04" },
+                    { name: "Didohu", bpsCode: "92.12.05" },
+                    { name: "Taige", bpsCode: "92.12.06" },
+                    { name: "Catubouw", bpsCode: "92.12.07" },
+                    { name: "Testega", bpsCode: "92.12.08" },
+                    { name: "Minyambaouw", bpsCode: "92.12.09" },
+                    { name: "Hingk", bpsCode: "92.12.10" }
+                ]
             }, {
                 name: 'Sorong',
                 bpscode: '92.71',
-                districts: []
+                districts: [
+                    { name: "Sorong", bpsCode: "92.71.01" },
+                    { name: "Sorong Timur", bpsCode: "92.71.02" },
+                    { name: "Sorong Barat", bpsCode: "92.71.03" },
+                    { name: "Sorong Kepulauan", bpsCode: "92.71.04" },
+                    { name: "Sorong Utara", bpsCode: "92.71.05" },
+                    { name: "Sorong Manoi", bpsCode: "92.71.06" },
+                    { name: "Sorong Kota", bpsCode: "92.71.07" },
+                    { name: "Klaurung", bpsCode: "92.71.08" },
+                    { name: "Malaimsimsa", bpsCode: "92.71.09" },
+                    { name: "Maladum Mes", bpsCode: "92.71.10" }
+                ]
             }
         ]
     },
