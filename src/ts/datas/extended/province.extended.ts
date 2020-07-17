@@ -533,32 +533,86 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Bangka',
                 bpscode: '19.01',
-                districts: []
+                districts: [
+                    { name: 'Sungailiat (Sungai Liat)', bpsCode: '19.01.01' },
+                    { name: 'Belinyu', bpsCode: '19.01.02' },
+                    { name: 'Merawang', bpsCode: '19.01.03' },
+                    { name: 'Mendo Barat', bpsCode: '19.01.04' },
+                    { name: 'Pemali', bpsCode: '19.01.05' },
+                    { name: 'Bakam', bpsCode: '19.01.06' },
+                    { name: 'Riau Silip', bpsCode: '19.01.07' },
+                    { name: 'Puding Besar', bpsCode: '19.01.08' }
+                ]
             }, {
                 name: 'Belitung',
                 bpscode: '19.02',
-                districts: []
+                districts: [
+                    { name: 'Tanjung Pandan', bpsCode: '19.02.01' },
+                    { name: 'Membalong', bpsCode: '19.02.02' },
+                    { name: 'Selat Nasik', bpsCode: '19.02.03' },
+                    { name: 'Sijuk', bpsCode: '19.02.04' },
+                    { name: 'Badau', bpsCode: '19.02.05' }
+                ]
             }, {
                 name: 'Bangka Selatan',
                 bpscode: '19.03',
-                districts: []
+                districts: [
+                    { name: 'Toboali', bpsCode: '19.03.01' },
+                    { name: 'Lepar Pongok', bpsCode: '19.03.02' },
+                    { name: 'Air Gegas', bpsCode: '19.03.03' },
+                    { name: 'Simpang Rimba', bpsCode: '19.03.04' },
+                    { name: 'Payung', bpsCode: '19.03.05' },
+                    { name: 'Tukak Sadai', bpsCode: '19.03.06' },
+                    { name: 'Pulaubesar (Pulau Besar)', bpsCode: '19.03.07' },
+                    { name: 'Kepulauan Pongok', bpsCode: '19.03.08' }
+                ]
             }, {
                 name: 'Bangka Tengah',
                 bpscode: '19.04',
-                districts: []
+                districts: [
+                    { name: 'Koba', bpsCode: '19.04.01' },
+                    { name: 'Pangkalan Baru', bpsCode: '19.04.02' },
+                    { name: 'Sungai Selan', bpsCode: '19.04.03' },
+                    { name: 'Simpang Katis', bpsCode: '19.04.04' },
+                    { name: 'Namang', bpsCode: '19.04.05' },
+                    { name: 'Lubuk Besar', bpsCode: '19.04.06' }
+                ]
             }, {
                 name: 'Bangka Barat',
                 bpscode: '19.05',
-                districts: []
+                districts: [
+                    { name: 'Mentok (Muntok)', bpsCode: '19.05.01' },
+                    { name: 'Simpang Teritip', bpsCode: '19.05.02' },
+                    { name: 'Jebus', bpsCode: '19.05.03' },
+                    { name: 'Kelapa', bpsCode: '19.05.04' },
+                    { name: 'Tempilang', bpsCode: '19.05.05' },
+                    { name: 'Parittiga', bpsCode: '19.05.06' }
+                ]
             }, {
                 name: 'Belitung Timur',
                 bpscode: '19.06',
-                districts: []
+                districts: [
+                    { name: 'Manggar', bpsCode: '19.06.01' },
+                    { name: 'Gantung', bpsCode: '19.06.02' },
+                    { name: 'Dendang', bpsCode: '19.06.03' },
+                    { name: 'Kelapa Kampit', bpsCode: '19.06.04' },
+                    { name: 'Damar', bpsCode: '19.06.05' },
+                    { name: 'Simpang Renggiang', bpsCode: '19.06.06' },
+                    { name: 'Simpang Pesak', bpsCode: '19.06.07' }
+                ]
             }, {
                 name: 'Pangkal Pinang',
                 bpscode: '19.71',
-                districts: []
-            },
+                districts: [
+                    { name: 'Bukitintan (Bukit Intan)', bpsCode: '19.71.01' },
+                    { name: 'Taman Sari', bpsCode: '19.71.02' },
+                    { name: 'Pangkal Balam', bpsCode: '19.71.03' },
+                    { name: 'Rangkui', bpsCode: '19.71.04' },
+                    { name: 'Gerunggang', bpsCode: '19.71.05' },
+                    { name: 'Gabek', bpsCode: '19.71.06' },
+                    { name: 'Girimaya', bpsCode: '19.71.07' }
+                ]
+            }
         ]
     },
     BE: {
