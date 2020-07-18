@@ -7893,100 +7893,431 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Kepulauan Selayar',
                 bpscode: '73.01',
-                districts: []
+                districts: [
+                    { name: 'Benteng', bpsCode: '73.01.01' },
+                    { name: 'Bontoharu', bpsCode: '73.01.02' },
+                    { name: 'Bontomatene', bpsCode: '73.01.03' },
+                    { name: 'Bontomanai', bpsCode: '73.01.04' },
+                    { name: 'Bontosikuyu', bpsCode: '73.01.05' },
+                    { name: 'Pasimasunggu (Pasimassunggu)', bpsCode: '73.01.06' },
+                    { name: 'Pasimarannu', bpsCode: '73.01.07' },
+                    { name: 'Taka Bonerate (Takabonerate)', bpsCode: '73.01.08' },
+                    { name: 'Pasilambena', bpsCode: '73.01.09' },
+                    { name: 'Pasimasunggu Timur', bpsCode: '73.01.10' },
+                    { name: 'Buki', bpsCode: '73.01.11' }
+                ]
             }, {
                 name: 'Bulukumba',
                 bpscode: '73.02',
-                districts: []
+                districts: [
+                    { name: 'Gantorang/Gantarang (Gangking)', bpsCode: '73.02.01' },
+                    { name: 'Ujung Bulu', bpsCode: '73.02.02' },
+                    { name: 'Bonto Bahari', bpsCode: '73.02.03' },
+                    { name: 'Bonto Tiro (Bontotiro)', bpsCode: '73.02.04' },
+                    { name: 'Hero Lange Lange (Herlang)', bpsCode: '73.02.05' },
+                    { name: 'Kajang', bpsCode: '73.02.06' },
+                    { name: 'Bulukumba (Bulukumpa)', bpsCode: '73.02.07' },
+                    { name: 'Kindang', bpsCode: '73.02.08' },
+                    { name: 'Ujungloe (Ujung Loe)', bpsCode: '73.02.09' },
+                    { name: 'Rilauale (Rilau Ale)', bpsCode: '73.02.10' }
+                ]
             }, {
                 name: 'Bantaeng',
                 bpscode: '73.03',
-                districts: []
+                districts: [
+                    { name: 'Bissappu', bpsCode: '73.03.01' },
+                    { name: 'Bantaeng', bpsCode: '73.03.02' },
+                    { name: 'Eremerasa', bpsCode: '73.03.03' },
+                    { name: 'Tompo Bulu (Tompobulu)', bpsCode: '73.03.04' },
+                    { name: 'Pajukukang', bpsCode: '73.03.05' },
+                    { name: 'Uluere', bpsCode: '73.03.06' },
+                    { name: 'Gantarang Keke (Gantareng Keke)', bpsCode: '73.03.07' },
+                    { name: 'Sinoa', bpsCode: '73.03.08' }
+                ]
             }, {
                 name: 'Jeneponto',
                 bpscode: '73.04',
-                districts: []
+                districts: [
+                    { name: 'Bangkala', bpsCode: '73.04.01' },
+                    { name: 'Tamalatea', bpsCode: '73.04.02' },
+                    { name: 'Binamu', bpsCode: '73.04.03' },
+                    { name: 'Batang', bpsCode: '73.04.04' },
+                    { name: 'Kelara', bpsCode: '73.04.05' },
+                    { name: 'Bangkala Barat', bpsCode: '73.04.06' },
+                    { name: 'Bontoramba', bpsCode: '73.04.07' },
+                    { name: 'Turatea', bpsCode: '73.04.08' },
+                    { name: 'Arungkeke', bpsCode: '73.04.09' },
+                    { name: 'Rumbia', bpsCode: '73.04.10' },
+                    { name: 'Tarowang', bpsCode: '73.04.11' }
+                ]
             }, {
                 name: 'Takalar',
                 bpscode: '73.05',
-                districts: []
+                districts: [
+                    { name: 'Mappakasunggu', bpsCode: '73.05.01' },
+                    { name: 'Mangarabombang (Mangara Bombang)', bpsCode: '73.05.02' },
+                    { name: 'Polombangkeng Selatan (Polobangkeng)', bpsCode: '73.05.03' },
+                    { name: 'Polombangkeng Utara (Polobangkeng)', bpsCode: '73.05.04' },
+                    { name: 'Galesong Selatan', bpsCode: '73.05.05' },
+                    { name: 'Galesong Utara', bpsCode: '73.05.06' },
+                    { name: 'Pattallassang (Patallassang)', bpsCode: '73.05.07' },
+                    { name: 'Sanrobone', bpsCode: '73.05.08' },
+                    { name: 'Galesong', bpsCode: '73.05.09' }
+                ]
             }, {
                 name: 'Gowa',
                 bpscode: '73.06',
-                districts: []
+                districts: [
+                    { name: 'Bontonompo', bpsCode: '73.06.01' },
+                    { name: 'Bajeng', bpsCode: '73.06.02' },
+                    { name: 'Tompobullu (Tompobulu)', bpsCode: '73.06.03' },
+                    { name: 'Tinggimoncong', bpsCode: '73.06.04' },
+                    { name: 'Parangloe', bpsCode: '73.06.05' },
+                    { name: 'Bontomarannu', bpsCode: '73.06.06' },
+                    { name: 'Palangga (Pallangga)', bpsCode: '73.06.07' },
+                    { name: 'Somba Opu (Upu)', bpsCode: '73.06.08' },
+                    { name: 'Bungaya', bpsCode: '73.06.09' },
+                    { name: 'Tombolopao (Tombolo Pao)', bpsCode: '73.06.10' },
+                    { name: 'Biringbulu', bpsCode: '73.06.11' },
+                    { name: 'Barombong', bpsCode: '73.06.12' },
+                    { name: 'Pattalasang (Pattallassang)', bpsCode: '73.06.13' },
+                    { name: 'Manuju', bpsCode: '73.06.14' },
+                    { name: 'Bontolempangang', bpsCode: '73.06.15' },
+                    { name: 'Bontonompo Selatan', bpsCode: '73.06.16' },
+                    { name: 'Parigi', bpsCode: '73.06.17' },
+                    { name: 'Bajeng Barat', bpsCode: '73.06.18' }
+                ]
             }, {
                 name: 'Sinjai',
                 bpscode: '73.07',
-                districts: []
+                districts: [
+                    { name: 'Sinjai Barat', bpsCode: '73.07.01' },
+                    { name: 'Sinjai Selatan', bpsCode: '73.07.02' },
+                    { name: 'Sinjai Timur', bpsCode: '73.07.03' },
+                    { name: 'Sinjai Tengah', bpsCode: '73.07.04' },
+                    { name: 'Sinjai Utara', bpsCode: '73.07.05' },
+                    { name: 'Bulupoddo', bpsCode: '73.07.06' },
+                    { name: 'Sinjai Borong', bpsCode: '73.07.07' },
+                    { name: 'Tellu Limpoe', bpsCode: '73.07.08' },
+                    { name: 'Pulau Sembilan', bpsCode: '73.07.09' }
+                ]
             }, {
                 name: 'Bone',
                 bpscode: '73.08',
-                districts: []
+                districts: [
+                    { name: 'Bontocani', bpsCode: '73.08.01' },
+                    { name: 'Kahu', bpsCode: '73.08.02' },
+                    { name: 'Kajuara', bpsCode: '73.08.03' },
+                    { name: 'Salomekko', bpsCode: '73.08.04' },
+                    { name: 'Tonra', bpsCode: '73.08.05' },
+                    { name: 'Libureng', bpsCode: '73.08.06' },
+                    { name: 'Mare', bpsCode: '73.08.07' },
+                    { name: 'Sibulue', bpsCode: '73.08.08' },
+                    { name: 'Barebbo', bpsCode: '73.08.09' },
+                    { name: 'Cina', bpsCode: '73.08.10' },
+                    { name: 'Ponre', bpsCode: '73.08.11' },
+                    { name: 'Lappariaja', bpsCode: '73.08.12' },
+                    { name: 'Lamuru', bpsCode: '73.08.13' },
+                    { name: 'Ulaweng', bpsCode: '73.08.14' },
+                    { name: 'Palakka', bpsCode: '73.08.15' },
+                    { name: 'Awangpone', bpsCode: '73.08.16' },
+                    { name: 'Tellu Siattinge', bpsCode: '73.08.17' },
+                    { name: 'Ajangale', bpsCode: '73.08.18' },
+                    { name: 'Dua Boccoe', bpsCode: '73.08.19' },
+                    { name: 'Cenrana', bpsCode: '73.08.20' },
+                    { name: 'Tanete Riattang', bpsCode: '73.08.21' },
+                    { name: 'Tanete Riattang Barat', bpsCode: '73.08.22' },
+                    { name: 'Tanete Riattang Timur', bpsCode: '73.08.23' },
+                    { name: 'Amali', bpsCode: '73.08.24' },
+                    { name: 'Tellulimpoe (Tellu Limpoe)', bpsCode: '73.08.25' },
+                    { name: 'Bengo', bpsCode: '73.08.26' },
+                    { name: 'Patimpeng', bpsCode: '73.08.27' }
+                ]
             }, {
                 name: 'Maros',
                 bpscode: '73.09',
-                districts: []
+                districts: [
+                    { name: 'Mandai', bpsCode: '73.09.01' },
+                    { name: 'Camba', bpsCode: '73.09.02' },
+                    { name: 'Bantimurung', bpsCode: '73.09.03' },
+                    { name: 'Maros Baru', bpsCode: '73.09.04' },
+                    { name: 'Bontoa (Maros Utara)', bpsCode: '73.09.05' },
+                    { name: 'Malllawa (Mallawa)', bpsCode: '73.09.06' },
+                    { name: 'Tanralili', bpsCode: '73.09.07' },
+                    { name: 'Marusu', bpsCode: '73.09.08' },
+                    { name: 'Simbang', bpsCode: '73.09.09' },
+                    { name: 'Cenrana', bpsCode: '73.09.10' },
+                    { name: 'Tompobulu (Tompu Bulu)', bpsCode: '73.09.11' },
+                    { name: 'Lau', bpsCode: '73.09.12' },
+                    { name: 'Moncong Loe (Moncongloe)', bpsCode: '73.09.13' },
+                    { name: 'Turikale', bpsCode: '73.09.14' }
+                ]
             }, {
                 name: 'Pangkajene Kepulauan',
                 bpscode: '73.10',
-                districts: []
+                districts: [
+                    { name: 'Liukang Tangaya', bpsCode: '73.10.01' },
+                    { name: 'Liukang Kalmas (Kalukuang Masalima)', bpsCode: '73.10.02' },
+                    { name: 'Liukang Tupabbiring', bpsCode: '73.10.03' },
+                    { name: 'Pangkajene', bpsCode: '73.10.04' },
+                    { name: 'Balocci', bpsCode: '73.10.05' },
+                    { name: 'Bungoro', bpsCode: '73.10.06' },
+                    { name: 'Labakkang', bpsCode: '73.10.07' },
+                    { name: 'Marang (Ma Rang)', bpsCode: '73.10.08' },
+                    { name: 'Segeri', bpsCode: '73.10.09' },
+                    { name: 'Minasa Tene', bpsCode: '73.10.10' },
+                    { name: 'Mandalle', bpsCode: '73.10.11' },
+                    { name: 'Tondong Tallasa', bpsCode: '73.10.12' },
+                    { name: 'Liukang Tupabbiring Utara', bpsCode: '73.10.13' }
+                ]
             }, {
                 name: 'Barru',
                 bpscode: '73.11',
-                districts: []
+                districts: [
+                    { name: 'Tanete Riaja', bpsCode: '73.11.01' },
+                    { name: 'Tanete Rilau', bpsCode: '73.11.02' },
+                    { name: 'Barru', bpsCode: '73.11.03' },
+                    { name: 'Soppeng Riaja', bpsCode: '73.11.04' },
+                    { name: 'Mallusetasi', bpsCode: '73.11.05' },
+                    { name: 'Pujananting', bpsCode: '73.11.06' },
+                    { name: 'Balusu', bpsCode: '73.11.07' }
+                ]
             }, {
                 name: 'Soppeng',
                 bpscode: '73.12',
-                districts: []
+                districts: [
+                    { name: 'Marioriwawo (Mario Riwawo)', bpsCode: '73.12.01' },
+                    { name: 'Liliraja (Lili Riaja)', bpsCode: '73.12.02' },
+                    { name: 'Lilirilau (Lili Rilau)', bpsCode: '73.12.03' },
+                    { name: 'Lalabata', bpsCode: '73.12.04' },
+                    { name: 'Marioriawa (Mario Riawa)', bpsCode: '73.12.05' },
+                    { name: 'Donri-Donri', bpsCode: '73.12.06' },
+                    { name: 'Ganra', bpsCode: '73.12.07' },
+                    { name: 'Citta', bpsCode: '73.12.08' }
+                ]
             }, {
                 name: 'Wajo',
                 bpscode: '73.13',
-                districts: []
+                districts: [
+                    { name: 'Sabangparu', bpsCode: '73.13.01' },
+                    { name: 'Pammana', bpsCode: '73.13.02' },
+                    { name: 'Takkalalla', bpsCode: '73.13.03' },
+                    { name: 'Sajoanging', bpsCode: '73.13.04' },
+                    { name: 'Majauleng', bpsCode: '73.13.05' },
+                    { name: 'Tempe', bpsCode: '73.13.06' },
+                    { name: 'Belawa', bpsCode: '73.13.07' },
+                    { name: 'Tanasitolo', bpsCode: '73.13.08' },
+                    { name: 'Maniangpajo', bpsCode: '73.13.09' },
+                    { name: 'Pitumpanua', bpsCode: '73.13.10' },
+                    { name: 'Bola', bpsCode: '73.13.11' },
+                    { name: 'Penrang', bpsCode: '73.13.12' },
+                    { name: 'Gilireng', bpsCode: '73.13.13' },
+                    { name: 'Keera', bpsCode: '73.13.14' }
+                ]
             }, {
                 name: 'Sidenreng Rappang',
                 bpscode: '73.14',
-                districts: []
+                districts: [
+                    { name: 'Panca Lautan (Lautang)', bpsCode: '73.14.01' },
+                    { name: 'Tellu Limpoe', bpsCode: '73.14.02' },
+                    { name: 'Watang Pulu', bpsCode: '73.14.03' },
+                    { name: 'Baranti', bpsCode: '73.14.04' },
+                    { name: 'Panca Rijang', bpsCode: '73.14.05' },
+                    { name: 'Kulo', bpsCode: '73.14.06' },
+                    { name: 'Maritengngae', bpsCode: '73.14.07' },
+                    { name: 'Wattang Sidenreng (Watang Sidenreng)', bpsCode: '73.14.08' },
+                    { name: 'Dua Pitue', bpsCode: '73.14.09' },
+                    { name: 'Pitu Riawa', bpsCode: '73.14.10' },
+                    { name: 'Pitu Raise/Riase', bpsCode: '73.14.11' }
+                ]
             }, {
                 name: 'Pinrang',
                 bpscode: '73.15',
-                districts: []
+                districts: [
+                    { name: 'Matirro Sompe (Mattiro Sompe)', bpsCode: '73.15.01' },
+                    { name: 'Suppa', bpsCode: '73.15.02' },
+                    { name: 'Mattiro Bulu', bpsCode: '73.15.03' },
+                    { name: 'Watang Sawito (Watang Sawitto)', bpsCode: '73.15.04' },
+                    { name: 'Patampanua', bpsCode: '73.15.05' },
+                    { name: 'Duampanua', bpsCode: '73.15.06' },
+                    { name: 'Lembang', bpsCode: '73.15.07' },
+                    { name: 'Cempa', bpsCode: '73.15.08' },
+                    { name: 'Tiroang', bpsCode: '73.15.09' },
+                    { name: 'Lansirang (Lanrisang)', bpsCode: '73.15.10' },
+                    { name: 'Paleteang', bpsCode: '73.15.11' },
+                    { name: 'Batu Lappa (Batulappa)', bpsCode: '73.15.12' }
+                ]
             }, {
                 name: 'Enrekang',
                 bpscode: '73.16',
-                districts: []
+                districts: [
+                    { name: 'Maiwa', bpsCode: '73.16.01' },
+                    { name: 'Enrekang', bpsCode: '73.16.02' },
+                    { name: 'Baraka', bpsCode: '73.16.03' },
+                    { name: 'Anggeraja', bpsCode: '73.16.04' },
+                    { name: 'Alla', bpsCode: '73.16.05' },
+                    { name: 'Bungin', bpsCode: '73.16.06' },
+                    { name: 'Cendana', bpsCode: '73.16.07' },
+                    { name: 'Curio', bpsCode: '73.16.08' },
+                    { name: 'Malua', bpsCode: '73.16.09' },
+                    { name: 'Buntu Batu', bpsCode: '73.16.10' },
+                    { name: 'Masalle', bpsCode: '73.16.11' },
+                    { name: 'Baroko', bpsCode: '73.16.12' }
+                ]
             }, {
                 name: 'Luwu',
                 bpscode: '73.17',
-                districts: []
+                districts: [
+                    { name: 'Basse Sangtempe (Bassesang Tempe / Bastem)', bpsCode: '73.17.01' },
+                    { name: 'Larompong', bpsCode: '73.17.02' },
+                    { name: 'Suli', bpsCode: '73.17.03' },
+                    { name: 'Bajo', bpsCode: '73.17.04' },
+                    { name: 'Bua Ponrang (Bupon)', bpsCode: '73.17.05' },
+                    { name: 'Walenrang', bpsCode: '73.17.06' },
+                    { name: 'Belopa', bpsCode: '73.17.07' },
+                    { name: 'Bua', bpsCode: '73.17.08' },
+                    { name: 'Lamasi', bpsCode: '73.17.09' },
+                    { name: 'Larompong Selatan', bpsCode: '73.17.10' },
+                    { name: 'Ponrang', bpsCode: '73.17.11' },
+                    { name: 'Latimojong', bpsCode: '73.17.12' },
+                    { name: 'Kamanre', bpsCode: '73.17.13' },
+                    { name: 'Belopa Utara', bpsCode: '73.17.14' },
+                    { name: 'Walenrang Barat', bpsCode: '73.17.15' },
+                    { name: 'Walenrang Utara', bpsCode: '73.17.16' },
+                    { name: 'Walenrang Timur', bpsCode: '73.17.17' },
+                    { name: 'Lamasi Timur', bpsCode: '73.17.18' },
+                    { name: 'Suli Barat', bpsCode: '73.17.19' },
+                    { name: 'Bajo Barat', bpsCode: '73.17.20' },
+                    { name: 'Ponrang Selatan', bpsCode: '73.17.21' },
+                    { name: 'Basse Sangtempe Utara', bpsCode: '73.17.22' }
+                ]
             }, {
                 name: 'Tana Toraja',
                 bpscode: '73.18',
-                districts: []
+                districts: [
+                    { name: 'Saluputi (Saluputti)', bpsCode: '73.18.01' },
+                    { name: 'Bittuang', bpsCode: '73.18.02' },
+                    { name: 'Bonggakaradeng', bpsCode: '73.18.03' },
+                    { name: 'Makale', bpsCode: '73.18.05' },
+                    { name: 'Simbuang', bpsCode: '73.18.09' },
+                    { name: 'Rantetayo', bpsCode: '73.18.11' },
+                    { name: 'Mengkendek', bpsCode: '73.18.12' },
+                    { name: 'Sangalla (Sanggala)', bpsCode: '73.18.13' },
+                    { name: 'Gandangbatu Sillanan (Gandang Batu Sillanan)', bpsCode: '73.18.19' },
+                    { name: 'Rembon', bpsCode: '73.18.20' },
+                    { name: 'Makale Utara', bpsCode: '73.18.27' },
+                    { name: 'Mappak', bpsCode: '73.18.28' },
+                    { name: 'Makale Selatan', bpsCode: '73.18.29' },
+                    { name: 'Masanda', bpsCode: '73.18.31' },
+                    { name: 'Sangalla Selatan', bpsCode: '73.18.33' },
+                    { name: 'Sangalla Utara', bpsCode: '73.18.34' },
+                    { name: 'Malimbong Balepe', bpsCode: '73.18.35' },
+                    { name: 'Rano', bpsCode: '73.18.37' },
+                    { name: 'Kurra', bpsCode: '73.18.38' }
+                ]
             }, {
                 name: 'Luwu Utara',
                 bpscode: '73.22',
-                districts: []
+                districts: [
+                    { name: 'Malangke', bpsCode: '73.22.01' },
+                    { name: 'Bone-Bone', bpsCode: '73.22.02' },
+                    { name: 'Masamba', bpsCode: '73.22.03' },
+                    { name: 'Sabbang', bpsCode: '73.22.04' },
+                    { name: 'Limbong', bpsCode: '73.22.05' },
+                    { name: 'Sukamaju', bpsCode: '73.22.06' },
+                    { name: 'Seko', bpsCode: '73.22.07' },
+                    { name: 'Malangke Barat', bpsCode: '73.22.08' },
+                    { name: 'Rampi', bpsCode: '73.22.09' },
+                    { name: 'Mappedeceng', bpsCode: '73.22.10' },
+                    { name: 'Baebunta', bpsCode: '73.22.11' },
+                    { name: 'Tana Lili', bpsCode: '73.22.12' }
+                ]
             }, {
                 name: 'Luwu Timur',
                 bpscode: '73.24',
-                districts: []
+                districts: [
+                    { name: 'Mangkutana', bpsCode: '73.24.01' },
+                    { name: 'Nuha', bpsCode: '73.24.02' },
+                    { name: 'Towuti', bpsCode: '73.24.03' },
+                    { name: 'Malili', bpsCode: '73.24.04' },
+                    { name: 'Angkona', bpsCode: '73.24.05' },
+                    { name: 'Wotu', bpsCode: '73.24.06' },
+                    { name: 'Burau', bpsCode: '73.24.07' },
+                    { name: 'Tomoni', bpsCode: '73.24.08' },
+                    { name: 'Tomoni Timur', bpsCode: '73.24.09' },
+                    { name: 'Kalaena', bpsCode: '73.24.10' },
+                    { name: 'Wasuponda', bpsCode: '73.24.11' }
+                ]
             }, {
                 name: 'Toraja Utara',
                 bpscode: '73.26',
-                districts: []
+                districts: [
+                    { name: 'Rantepao', bpsCode: '73.26.01' },
+                    { name: 'Sesean', bpsCode: '73.26.02' },
+                    { name: 'Nanggala', bpsCode: '73.26.03' },
+                    { name: 'Rindingallo', bpsCode: '73.26.04' },
+                    { name: 'Buntao', bpsCode: '73.26.05' },
+                    { name: 'Sa\'dan', bpsCode: '73.26.06' },
+                    { name: 'Sanggalangi', bpsCode: '73.26.07' },
+                    { name: 'Sopai', bpsCode: '73.26.08' },
+                    { name: 'Tikala', bpsCode: '73.26.09' },
+                    { name: 'Balusu', bpsCode: '73.26.10' },
+                    { name: 'Tallunglipu', bpsCode: '73.26.11' },
+                    { name: 'Dende\' Piongan Napo', bpsCode: '73.26.12' },
+                    { name: 'Buntu Pepasan', bpsCode: '73.26.13' },
+                    { name: 'Baruppu', bpsCode: '73.26.14' },
+                    { name: 'Kesu', bpsCode: '73.26.15' },
+                    { name: 'Tondon', bpsCode: '73.26.16' },
+                    { name: 'Bangkelekila', bpsCode: '73.26.17' },
+                    { name: 'Rantebua', bpsCode: '73.26.18' },
+                    { name: 'Sesean Suloara', bpsCode: '73.26.19' },
+                    { name: 'Kapalla Pitu (Kapala Pitu)', bpsCode: '73.26.20' },
+                    { name: 'Awan Rante Karua', bpsCode: '73.26.21' }
+                ]
             }, {
                 name: 'Makassar',
                 bpscode: '73.71',
-                districts: []
+                districts: [
+                    { name: 'Mariso', bpsCode: '73.71.01' },
+                    { name: 'Mamajang', bpsCode: '73.71.02' },
+                    { name: 'Makassar', bpsCode: '73.71.03' },
+                    { name: 'Ujung Pandang', bpsCode: '73.71.04' },
+                    { name: 'Wajo', bpsCode: '73.71.05' },
+                    { name: 'Bontoala', bpsCode: '73.71.06' },
+                    { name: 'Tallo', bpsCode: '73.71.07' },
+                    { name: 'Ujung Tanah', bpsCode: '73.71.08' },
+                    { name: 'Panakkukang', bpsCode: '73.71.09' },
+                    { name: 'Tamalate', bpsCode: '73.71.10' },
+                    { name: 'Biringkanaya (Biring Kanaya)', bpsCode: '73.71.11' },
+                    { name: 'Manggala', bpsCode: '73.71.12' },
+                    { name: 'Rappocini', bpsCode: '73.71.13' },
+                    { name: 'Tamalanrea', bpsCode: '73.71.14' },
+                    { name: 'Kepulauan Sangkarrang', bpsCode: '73.71.15' }
+                ]
             }, {
                 name: 'Parepare',
                 bpscode: '73.72',
-                districts: []
+                districts: [
+                    { name: 'Bacukiki', bpsCode: '73.72.01' },
+                    { name: 'Ujung', bpsCode: '73.72.02' },
+                    { name: 'Soreang', bpsCode: '73.72.03' },
+                    { name: 'Bacukiki Barat', bpsCode: '73.72.04' }
+                ]
             }, {
                 name: 'Palopo',
                 bpscode: '73.73',
-                districts: []
-            },
+                districts: [
+                    { name: 'Wara', bpsCode: '73.73.01' },
+                    { name: 'Wara Utara', bpsCode: '73.73.02' },
+                    { name: 'Wara Selatan', bpsCode: '73.73.03' },
+                    { name: 'Telluwanua', bpsCode: '73.73.04' },
+                    { name: 'Wara Timur', bpsCode: '73.73.05' },
+                    { name: 'Wara Barat', bpsCode: '73.73.06' },
+                    { name: 'Sendana', bpsCode: '73.73.07' },
+                    { name: 'Mungkajang', bpsCode: '73.73.08' },
+                    { name: 'Bara', bpsCode: '73.73.09' }
+                ]
+            }
         ]
     },
     SR: {
