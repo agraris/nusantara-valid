@@ -8561,28 +8561,103 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Mamuju Utara',
                 bpscode: '76.01',
-                districts: []
+                districts: [
+                    { name: 'Bambalamotu', bpsCode: '76.01.01' },
+                    { name: 'Pasangkayu', bpsCode: '76.01.02' },
+                    { name: 'Baras', bpsCode: '76.01.03' },
+                    { name: 'Sarudu', bpsCode: '76.01.04' },
+                    { name: 'Dapurang', bpsCode: '76.01.05' },
+                    { name: 'Duripoku', bpsCode: '76.01.06' },
+                    { name: 'Bulu Taba', bpsCode: '76.01.07' },
+                    { name: 'Tikke Raya', bpsCode: '76.01.08' },
+                    { name: 'Pedongga', bpsCode: '76.01.09' },
+                    { name: 'Bambaira', bpsCode: '76.01.10' },
+                    { name: 'Sarjo', bpsCode: '76.01.11' },
+                    { name: 'Lariang', bpsCode: '76.01.12' }
+                ]
             }, {
                 name: 'Mamuju',
                 bpscode: '76.02',
-                districts: []
+                districts: [
+                    { name: 'Mamuju', bpsCode: '76.02.01' },
+                    { name: 'Tapalang', bpsCode: '76.02.02' },
+                    { name: 'Kalukku', bpsCode: '76.02.03' },
+                    { name: 'Kalumpang', bpsCode: '76.02.04' },
+                    { name: 'Papalang', bpsCode: '76.02.07' },
+                    { name: 'Sampaga', bpsCode: '76.02.08' },
+                    { name: 'Tommo', bpsCode: '76.02.11' },
+                    { name: 'Simboro dan Kepulauan', bpsCode: '76.02.12' },
+                    { name: 'Tapalang Barat', bpsCode: '76.02.13' },
+                    { name: 'Bonehau', bpsCode: '76.02.15' },
+                    { name: 'Kep. Bala Balakang', bpsCode: '76.02.16' }
+                ]
             }, {
                 name: 'Mamasa',
                 bpscode: '76.03',
-                districts: []
+                districts: [
+                    { name: 'Mambi', bpsCode: '76.03.01' },
+                    { name: 'Aralle', bpsCode: '76.03.02' },
+                    { name: 'Mamasa', bpsCode: '76.03.03' },
+                    { name: 'Pana', bpsCode: '76.03.04' },
+                    { name: 'Tabulahan', bpsCode: '76.03.05' },
+                    { name: 'Sumarorong', bpsCode: '76.03.06' },
+                    { name: 'Messawa', bpsCode: '76.03.07' },
+                    { name: 'Sesenapadang', bpsCode: '76.03.08' },
+                    { name: 'Tanduk Kalua', bpsCode: '76.03.09' },
+                    { name: 'Tabang', bpsCode: '76.03.10' },
+                    { name: 'Bambang', bpsCode: '76.03.11' },
+                    { name: 'Balla', bpsCode: '76.03.12' },
+                    { name: 'Nosu', bpsCode: '76.03.13' },
+                    { name: 'Tawalian', bpsCode: '76.03.14' },
+                    { name: 'Rantebulahan Timur', bpsCode: '76.03.15' },
+                    { name: 'Buntumalangka', bpsCode: '76.03.16' },
+                    { name: 'Mehalaan', bpsCode: '76.03.17' }
+                ]
             }, {
                 name: 'Polewali Mandar',
                 bpscode: '76.04',
-                districts: []
+                districts: [
+                    { name: 'Tinambung', bpsCode: '76.04.01' },
+                    { name: 'Campalagian', bpsCode: '76.04.02' },
+                    { name: 'Wonomulyo', bpsCode: '76.04.03' },
+                    { name: 'Polewali', bpsCode: '76.04.04' },
+                    { name: 'Tubbi Taramanu (Tutar/Tutallu)', bpsCode: '76.04.05' },
+                    { name: 'Binuang', bpsCode: '76.04.06' },
+                    { name: 'Tapango', bpsCode: '76.04.07' },
+                    { name: 'Mapilli', bpsCode: '76.04.08' },
+                    { name: 'Matangnga', bpsCode: '76.04.09' },
+                    { name: 'Luyo', bpsCode: '76.04.10' },
+                    { name: 'Limboro', bpsCode: '76.04.11' },
+                    { name: 'Balanipa', bpsCode: '76.04.12' },
+                    { name: 'Anreapi', bpsCode: '76.04.13' },
+                    { name: 'Matakali', bpsCode: '76.04.14' },
+                    { name: 'Alu (Allu)', bpsCode: '76.04.15' },
+                    { name: 'Bulo', bpsCode: '76.04.16' }
+                ]
             }, {
                 name: 'Majene',
                 bpscode: '76.05',
-                districts: []
+                districts: [
+                    { name: 'Banggae', bpsCode: '76.05.01' },
+                    { name: 'Pamboang', bpsCode: '76.05.02' },
+                    { name: 'Sendana', bpsCode: '76.05.03' },
+                    { name: 'Malunda', bpsCode: '76.05.04' },
+                    { name: 'Ulumanda (Ulumunda)', bpsCode: '76.05.05' },
+                    { name: 'Tammerodo Sendana (Tammeredo Sendana)', bpsCode: '76.05.06' },
+                    { name: 'Tubo (Tubo Sendana)', bpsCode: '76.05.07' },
+                    { name: 'Banggae Timur', bpsCode: '76.05.08' }
+                ]
             }, {
                 name: 'Mamuju Tengah',
                 bpscode: '76.06',
-                districts: []
-            },
+                districts: [
+                    { name: 'Tobadak', bpsCode: '76.06.01' },
+                    { name: 'Pangale', bpsCode: '76.06.02' },
+                    { name: 'Budong-Budong', bpsCode: '76.06.03' },
+                    { name: 'Topoyo', bpsCode: '76.06.04' },
+                    { name: 'Karossa', bpsCode: '76.06.05' }
+                ]
+            }
         ]
     },
     SS: {
