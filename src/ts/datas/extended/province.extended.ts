@@ -8916,56 +8916,244 @@ export const PROVINCE_DATA_EXTENSION =
             {
                 name: 'Banggai',
                 bpscode: '72.01',
-                districts: []
+                districts: [
+                    { name: 'Batui', bpsCode: '72.01.01' },
+                    { name: 'Bunta', bpsCode: '72.01.02' },
+                    { name: 'Kintom', bpsCode: '72.01.03' },
+                    { name: 'Luwuk', bpsCode: '72.01.04' },
+                    { name: 'Lamala', bpsCode: '72.01.05' },
+                    { name: 'Balantak', bpsCode: '72.01.06' },
+                    { name: 'Pagimana', bpsCode: '72.01.07' },
+                    { name: 'Bualemo (Boalemo)', bpsCode: '72.01.08' },
+                    { name: 'Toili', bpsCode: '72.01.09' },
+                    { name: 'Masama', bpsCode: '72.01.10' },
+                    { name: 'Luwuk Timur', bpsCode: '72.01.11' },
+                    { name: 'Toili Barat', bpsCode: '72.01.12' },
+                    { name: 'Nuhon', bpsCode: '72.01.13' },
+                    { name: 'Moilong', bpsCode: '72.01.14' },
+                    { name: 'Batui Selatan', bpsCode: '72.01.15' },
+                    { name: 'Lobu', bpsCode: '72.01.16' },
+                    { name: 'Simpang Raya', bpsCode: '72.01.17' },
+                    { name: 'Balantak Selatan', bpsCode: '72.01.18' },
+                    { name: 'Balantak Utara', bpsCode: '72.01.19' },
+                    { name: 'Luwuk Selatan', bpsCode: '72.01.20' },
+                    { name: 'Luwuk Utara', bpsCode: '72.01.21' },
+                    { name: 'Mantoh', bpsCode: '72.01.22' },
+                    { name: 'Nambo', bpsCode: '72.01.23' }
+                ]
             }, {
                 name: 'Poso',
                 bpscode: '72.02',
-                districts: []
+                districts: [
+                    { name: 'Poso Kota', bpsCode: '72.02.01' },
+                    { name: 'Poso Pesisir', bpsCode: '72.02.02' },
+                    { name: 'Lage', bpsCode: '72.02.03' },
+                    { name: 'Pamona Puselemba', bpsCode: '72.02.04' },
+                    { name: 'Pamona Timur', bpsCode: '72.02.05' },
+                    { name: 'Pamona Selatan', bpsCode: '72.02.06' },
+                    { name: 'Lore Utara', bpsCode: '72.02.07' },
+                    { name: 'Lore Tengah', bpsCode: '72.02.08' },
+                    { name: 'Lore Selatan', bpsCode: '72.02.09' },
+                    { name: 'Poso Pesisir Utara', bpsCode: '72.02.18' },
+                    { name: 'Poso Pesisir Selatan', bpsCode: '72.02.19' },
+                    { name: 'Pamona Barat', bpsCode: '72.02.20' },
+                    { name: 'Poso Kota Selatan', bpsCode: '72.02.21' },
+                    { name: 'Poso Kota Utara', bpsCode: '72.02.22' },
+                    { name: 'Lore Barat', bpsCode: '72.02.23' },
+                    { name: 'Lore Timur', bpsCode: '72.02.24' },
+                    { name: 'Lore Piore', bpsCode: '72.02.25' },
+                    { name: 'Pamona Tenggara', bpsCode: '72.02.26' },
+                    { name: 'Pamona Utara', bpsCode: '72.02.27' }
+                ]
             }, {
                 name: 'Donggala',
                 bpscode: '72.03',
-                districts: []
+                districts: [
+                    { name: 'Rio Pakava', bpsCode: '72.03.04' },
+                    { name: 'Dampelas', bpsCode: '72.03.06' },
+                    { name: 'Banawa', bpsCode: '72.03.08' },
+                    { name: 'Labuan', bpsCode: '72.03.09' },
+                    { name: 'Sindue', bpsCode: '72.03.10' },
+                    { name: 'Sirenja', bpsCode: '72.03.11' },
+                    { name: 'Balaesang', bpsCode: '72.03.12' },
+                    { name: 'Sojol', bpsCode: '72.03.14' },
+                    { name: 'Banawa Selatan', bpsCode: '72.03.18' },
+                    { name: 'Tanantovea', bpsCode: '72.03.19' },
+                    { name: 'Pinembani (Panembani)', bpsCode: '72.03.21' },
+                    { name: 'Sindue Tombusabora', bpsCode: '72.03.24' },
+                    { name: 'Sindue Tobata', bpsCode: '72.03.25' },
+                    { name: 'Banawa Tengah', bpsCode: '72.03.27' },
+                    { name: 'Sojol Utara', bpsCode: '72.03.30' },
+                    { name: 'Balaesang Tanjung', bpsCode: '72.03.31' }
+                ]
             }, {
                 name: 'Toli-Toli',
                 bpscode: '72.04',
-                districts: []
+                districts: [
+                    { name: 'Dampal Selatan', bpsCode: '72.04.01' },
+                    { name: 'Dampal Utara', bpsCode: '72.04.02' },
+                    { name: 'Dondo', bpsCode: '72.04.03' },
+                    { name: 'Basidondo', bpsCode: '72.04.04' },
+                    { name: 'Ogodeide', bpsCode: '72.04.05' },
+                    { name: 'Lampasio', bpsCode: '72.04.06' },
+                    { name: 'Baolan', bpsCode: '72.04.07' },
+                    { name: 'Galang', bpsCode: '72.04.08' },
+                    { name: 'Toli-Toli Utara (Tolitoli Utara)', bpsCode: '72.04.09' },
+                    { name: 'Dako Pemean (Dako Pamean)', bpsCode: '72.04.10' }
+                ]
             }, {
                 name: 'Buol',
                 bpscode: '72.05',
-                districts: []
+                districts: [
+                    { name: 'Momunu', bpsCode: '72.05.01' },
+                    { name: 'Lakea (Lipunoto)', bpsCode: '72.05.02' },
+                    { name: 'Bokat', bpsCode: '72.05.03' },
+                    { name: 'Bunobogu', bpsCode: '72.05.04' },
+                    { name: 'Paleleh', bpsCode: '72.05.05' },
+                    { name: 'Biau', bpsCode: '72.05.06' },
+                    { name: 'Tiloan', bpsCode: '72.05.07' },
+                    { name: 'Bukal', bpsCode: '72.05.08' },
+                    { name: 'Gadung', bpsCode: '72.05.09' },
+                    { name: 'Karamat', bpsCode: '72.05.10' },
+                    { name: 'Paleleh Barat', bpsCode: '72.05.11' }
+                ]
             }, {
                 name: 'Morowali',
                 bpscode: '72.06',
-                districts: []
+                districts: [
+                    { name: 'Bungku Tengah', bpsCode: '72.06.05' },
+                    { name: 'Bungku Selatan', bpsCode: '72.06.06' },
+                    { name: 'Menui Kepulauan', bpsCode: '72.06.07' },
+                    { name: 'Bungku Barat', bpsCode: '72.06.08' },
+                    { name: 'Bumi Raya', bpsCode: '72.06.09' },
+                    { name: 'Bahodopi', bpsCode: '72.06.10' },
+                    { name: 'Wita Ponda', bpsCode: '72.06.12' },
+                    { name: 'Bungku Pesisir', bpsCode: '72.06.15' },
+                    { name: 'Bungku Timur', bpsCode: '72.06.18' }
+                ]
             }, {
                 name: 'Banggai Kepulauan',
                 bpscode: '72.07',
-                districts: []
+                districts: [
+                    { name: 'Totikum (Totikung)', bpsCode: '72.07.03' },
+                    { name: 'Tinangkung', bpsCode: '72.07.04' },
+                    { name: 'Liang', bpsCode: '72.07.05' },
+                    { name: 'Bulagi', bpsCode: '72.07.06' },
+                    { name: 'Buko', bpsCode: '72.07.07' },
+                    { name: 'Bulagi Selatan', bpsCode: '72.07.09' },
+                    { name: 'Tinangkung Selatan', bpsCode: '72.07.11' },
+                    { name: 'Totikum Selatan', bpsCode: '72.07.15' },
+                    { name: 'Peling Tengah', bpsCode: '72.07.16' },
+                    { name: 'Bulagi Utara', bpsCode: '72.07.17' },
+                    { name: 'Buko Selatan', bpsCode: '72.07.18' },
+                    { name: 'Tinangkung Utara', bpsCode: '72.07.19' }
+                ]
             }, {
                 name: 'Parigi Moutong',
                 bpscode: '72.08',
-                districts: []
+                districts: [
+                    { name: 'Parigi', bpsCode: '72.08.01' },
+                    { name: 'Ampibabo', bpsCode: '72.08.02' },
+                    { name: 'Tinombo', bpsCode: '72.08.03' },
+                    { name: 'Moutong', bpsCode: '72.08.04' },
+                    { name: 'Tomini', bpsCode: '72.08.05' },
+                    { name: 'Sausu', bpsCode: '72.08.06' },
+                    { name: 'Bolano Lambunu', bpsCode: '72.08.07' },
+                    { name: 'Kasimbar', bpsCode: '72.08.08' },
+                    { name: 'Torue', bpsCode: '72.08.09' },
+                    { name: 'Tinombo Selatan', bpsCode: '72.08.10' },
+                    { name: 'Parigi Selatan', bpsCode: '72.08.11' },
+                    { name: 'Mepanga', bpsCode: '72.08.12' },
+                    { name: 'Toribulu', bpsCode: '72.08.13' },
+                    { name: 'Taopa', bpsCode: '72.08.14' },
+                    { name: 'Balinggi', bpsCode: '72.08.15' },
+                    { name: 'Parigi Barat', bpsCode: '72.08.16' },
+                    { name: 'Siniu', bpsCode: '72.08.17' },
+                    { name: 'Palasa', bpsCode: '72.08.18' },
+                    { name: 'Parigi Utara', bpsCode: '72.08.19' },
+                    { name: 'Parigi Tengah', bpsCode: '72.08.20' },
+                    { name: 'Bolano', bpsCode: '72.08.21' },
+                    { name: 'Ongka Malino', bpsCode: '72.08.22' },
+                    { name: 'Sidoan', bpsCode: '72.08.23' }
+                ]
             }, {
                 name: 'Tojo Una-Una',
                 bpscode: '72.09',
-                districts: []
+                districts: [
+                    { name: 'Una Una', bpsCode: '72.09.01' },
+                    { name: 'Togean', bpsCode: '72.09.02' },
+                    { name: 'Walea Kepulauan', bpsCode: '72.09.03' },
+                    { name: 'Ampana Tete', bpsCode: '72.09.04' },
+                    { name: 'Ampana Kota', bpsCode: '72.09.05' },
+                    { name: 'Ulubongka', bpsCode: '72.09.06' },
+                    { name: 'Tojo Barat', bpsCode: '72.09.07' },
+                    { name: 'Tojo', bpsCode: '72.09.08' },
+                    { name: 'Walea Besar', bpsCode: '72.09.09' },
+                    { name: 'Ratolindo', bpsCode: '72.09.10' },
+                    { name: 'Batudaka', bpsCode: '72.09.11' },
+                    { name: 'Talatako', bpsCode: '72.09.12' }
+                ]
             }, {
                 name: 'Sigi',
                 bpscode: '72.10',
-                districts: []
+                districts: [
+                    { name: 'Sigi Biromaru', bpsCode: '72.10.01' },
+                    { name: 'Palolo', bpsCode: '72.10.02' },
+                    { name: 'Nokilalaki', bpsCode: '72.10.03' },
+                    { name: 'Lindu', bpsCode: '72.10.04' },
+                    { name: 'Kulawi', bpsCode: '72.10.05' },
+                    { name: 'Kulawi Selatan', bpsCode: '72.10.06' },
+                    { name: 'Pipikoro', bpsCode: '72.10.07' },
+                    { name: 'Gumbasa', bpsCode: '72.10.08' },
+                    { name: 'Dolo Selatan', bpsCode: '72.10.09' },
+                    { name: 'Tanambulava', bpsCode: '72.10.10' },
+                    { name: 'Dolo Barat', bpsCode: '72.10.11' },
+                    { name: 'Dolo', bpsCode: '72.10.12' },
+                    { name: 'Kinovaro', bpsCode: '72.10.13' },
+                    { name: 'Marawola', bpsCode: '72.10.14' },
+                    { name: 'Marawola Barat', bpsCode: '72.10.15' }
+                ]
             }, {
                 name: 'Banggai Laut',
                 bpscode: '72.11',
-                districts: []
+                districts: [
+                    { name: 'Banggai', bpsCode: '72.11.01' },
+                    { name: 'Banggai Utara', bpsCode: '72.11.02' },
+                    { name: 'Bokan Kepulauan', bpsCode: '72.11.03' },
+                    { name: 'Bangkurung', bpsCode: '72.11.04' },
+                    { name: 'Labobo', bpsCode: '72.11.05' },
+                    { name: 'Banggai Selatan', bpsCode: '72.11.06' },
+                    { name: 'Banggai Tengah', bpsCode: '72.11.07' }
+                ]
             }, {
                 name: 'Morowali Utara',
                 bpscode: '72.12',
-                districts: []
+                districts: [
+                    { name: 'Petasia', bpsCode: '72.12.01' },
+                    { name: 'Petasia Timur', bpsCode: '72.12.02' },
+                    { name: 'Lembo Raya', bpsCode: '72.12.03' },
+                    { name: 'Lembo', bpsCode: '72.12.04' },
+                    { name: 'Mori Atas', bpsCode: '72.12.05' },
+                    { name: 'Mori Utara', bpsCode: '72.12.06' },
+                    { name: 'Soyo Jaya', bpsCode: '72.12.07' },
+                    { name: 'Bungku Utara', bpsCode: '72.12.08' },
+                    { name: 'Mamosalato', bpsCode: '72.12.09' },
+                    { name: 'Petasia Barat', bpsCode: '72.12.10' }
+                ]
             }, {
                 name: 'Palu',
                 bpscode: '72.71',
-                districts: []
-            },
+                districts: [
+                    { name: 'Palu Timur', bpsCode: '72.71.01' },
+                    { name: 'Palu Barat', bpsCode: '72.71.02' },
+                    { name: 'Palu Selatan', bpsCode: '72.71.03' },
+                    { name: 'Palu Utara', bpsCode: '72.71.04' },
+                    { name: 'Ulujadi', bpsCode: '72.71.05' },
+                    { name: 'Tatanga', bpsCode: '72.71.06' },
+                    { name: 'Tawaeli', bpsCode: '72.71.07' },
+                    { name: 'Mantikulore', bpsCode: '72.71.08' }
+                ]
+            }
         ]
     },
     SU: {
