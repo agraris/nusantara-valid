@@ -40,7 +40,7 @@
     "compile": "npm-run-all clean --parallel compile:*",
     "compile:cjs": "rollup --environment FORMAT:cjs --config rollup.config.js --sourcemap",
     "compile:es": "rollup --environment FORMAT:esm --config rollup.config.js --sourcemap",
-    "compile:umd": "rollup --environment FORMAT:umd --config rollup.config.js --sourcemap",
+    "compile:umd": "rollup --config rollup.config.js --sourcemap",
     "minify": "npm-run-all --parallel minify:*",
     "minify:cjs": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/cjs/nusantara-valid.js.map, includeSources, url=nusantara-valid.min.js.map\" --output dist/cjs/nusantara-valid.min.js dist/cjs/nusantara-valid.js",
     "minify:es": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/esm/nusantara-valid.js.map, includeSources, url=nusantara-valid.min.js.map\" --output dist/esm/nusantara-valid.min.js dist/esm/nusantara-valid.js",

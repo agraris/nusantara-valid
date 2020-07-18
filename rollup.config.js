@@ -3,7 +3,7 @@ import typescript from '@rollup/plugin-typescript'
 
 const path = require('path')
 const pkg = require(path.resolve(__dirname, 'package.json'))
-const format = process.env.FORMAT
+const format = process.env.FORMAT ? process.env.FORMAT : 'umd'
 const copyleft = `/*!
   * Nusantara Valid v${pkg.version}
   * Copyright 2020 - ${pkg.author.name} (${pkg.author.url})
