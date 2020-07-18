@@ -17,7 +17,7 @@ class ProvinceExtended extends Province {
         const REGENCIES = (PROVINCE_DATA_EXTENSION as any)[provinceKey].regencies
         for (const regency of REGENCIES) {
             const newRegency = {
-                key: regency.bpsCode,
+                bpsCode: regency.bpsCode,
                 name: regency.name
             }
             regencies.push(newRegency)

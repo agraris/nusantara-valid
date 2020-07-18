@@ -5,11 +5,11 @@ describe('Province (Extended)', () => {
     describe('getDataRegenciesInProvince()', () => {
         it('should return an array of Regencies data', () => {
             expect(getDataRegenciesInProvince('YO')).to.deep.equal([
-                { key: '34.01', name: 'Kabupaten Kulon Progo' },
-                { key: '34.02', name: 'Kabupaten Bantul' },
-                { key: '34.03', name: 'Kabupaten Gunung Kidul' },
-                { key: '34.04', name: 'Kabupaten Sleman' },
-                { key: '34.71', name: 'Kota Yogyakarta' }
+                { bpsCode: '34.01', name: 'Kabupaten Kulon Progo' },
+                { bpsCode: '34.02', name: 'Kabupaten Bantul' },
+                { bpsCode: '34.03', name: 'Kabupaten Gunung Kidul' },
+                { bpsCode: '34.04', name: 'Kabupaten Sleman' },
+                { bpsCode: '34.71', name: 'Kota Yogyakarta' }
             ])
         })
     })

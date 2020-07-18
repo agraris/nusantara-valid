@@ -68,7 +68,7 @@ export interface IDataProvince {
  * @interface
 **/
 export interface IDataRegency {
-    key: string,
+    bpsCode: string,
     name: string
 }
 
