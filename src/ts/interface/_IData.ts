@@ -63,6 +63,16 @@ export interface IDataProvince {
 }
 
 /**
+ * IDataRegency data interface
+ *
+ * @interface
+**/
+export interface IDataRegency {
+    key: string,
+    name: string
+}
+
+/**
  * IDataTelephoneNumber data interface
  *
  * @interface
