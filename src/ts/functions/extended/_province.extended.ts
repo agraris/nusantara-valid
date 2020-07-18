@@ -1,6 +1,7 @@
-import { IDataProvince, IDataRegency } from "../../interface"
+import { IDataProvince, IDataRegency, IDataDistrict } from "../../interface"
 import { Province } from "../_province"
-import { PROVINCE_EXTENDED_DATA } from '../../datas/extended/province.extended'
+import { PROVINCE_DATA_EXTENSION } from '../../datas/extended/province.extended'
+import { PROVINCE_KEYS, PROVINCE_DATA } from '../../datas/province'
 
 /**
  * Nusantara Valid: _province.extended.ts
@@ -10,10 +11,10 @@ import { PROVINCE_EXTENDED_DATA } from '../../datas/extended/province.extended'
  * @class The ProvinceExtended class
 **/
 class ProvinceExtended extends Province {
-    getDataRegenciesInProvince(provinceKey: string = ''): IDataRegency[] {
+    getDataRegenciesInProvince(provinceKey: string): IDataRegency[] {
         let regencies = [] as IDataRegency[]
 
-        const REGENCIES = (PROVINCE_EXTENDED_DATA as any)[provinceKey].regencies
+        const REGENCIES = (PROVINCE_DATA_EXTENSION as any)[provinceKey].regencies
         for (const regency of REGENCIES) {
             const newRegency = {
                 key: regency.bpsCode,
@@ -23,6 +24,32 @@ class ProvinceExtended extends Province {
         }
 
         return regencies
+    }
+
+    getDataDistrictsInRegency(regencyKey: string): IDataDistrict[] {
+        let provinceKey = ''
+        const bpsCode = regencyKey.split('.')
+        
+        for (const key of PROVINCE_KEYS) {
+            const element = (PROVINCE_DATA as any)[key]
+            if (element.bpsCode == bpsCode[0]) {
+                provinceKey = key
+                break
+            }
+        }
+
+        if (!provinceKey) return []
+
+        const REGENCIES = (PROVINCE_DATA_EXTENSION as any)[provinceKey].regencies
+        let DISTRICTS = []
+
+        for (const element of REGENCIES) {
+            if (element.bpsCode == regencyKey) {
+                DISTRICTS = element.districts
+            }
+        }
+
+        return DISTRICTS as IDataDistrict[]
     }
 }
 
@@ -52,7 +79,7 @@ export function getDataProvinces(): IDataProvince[]{
 }
 
 /**
- * Get all regencies in a specific Province
+ * Get all regencies in a Province
  *
  * Return an array of regencies in a Province
  *
@@ -61,4 +88,16 @@ export function getDataProvinces(): IDataProvince[]{
 **/
 export function getDataRegenciesInProvince(provinceKey: string): IDataRegency[] {
     return prov.getDataRegenciesInProvince(provinceKey) as IDataRegency[]
+}
+
+/**
+ * Get all districts in a Regency
+ *
+ * Return an array of districts in a Regency
+ *
+ * @param {string} regencyKey - Key of the regency
+ * @return {IDataDistrict[]} Array of IDataDistrict object
+**/
+export function getDataDistrictsInRegency(regencyKey: string): IDataDistrict[] {
+    return prov.getDataDistrictsInRegency(regencyKey) as IDataDistrict[]
 }

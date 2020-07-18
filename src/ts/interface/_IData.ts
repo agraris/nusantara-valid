@@ -73,6 +73,16 @@ export interface IDataRegency {
 }
 
 /**
+ * IDataDistrict data interface
+ *
+ * @interface
+**/
+export interface IDataDistrict {
+    bpsCode: string,
+    name: string
+}
+
+/**
  * IDataTelephoneNumber data interface
  *
  * @interface
