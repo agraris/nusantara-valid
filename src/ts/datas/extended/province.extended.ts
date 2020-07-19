@@ -12,7 +12,7 @@ import { MergeRecursive } from '../../helpers/index.extended';
  *
  * List of extended province data of Indonesia like regencies and districts
 **/
-export const PROVINCE_DATA_EXTENSION =
+export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
 {
     '11': {
         regencies: [

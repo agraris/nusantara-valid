@@ -12,7 +12,7 @@ import { range } from '../helpers';
  * List of province data in Indonesia including BPS code, vehicle plate, 
  * telephone numbers, and zip code.
 **/
-export const PROVINCE_DATA =
+export const PROVINCE_DATA : { [key: string]: any } =
 {
     '11': {
         name: 'Aceh',
