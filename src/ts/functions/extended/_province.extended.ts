@@ -12,27 +12,19 @@ import { PROVINCE_KEYS, PROVINCE_DATA } from '../../datas/province'
 **/
 class ProvinceExtended extends Province {
     getDataRegenciesInProvince(provinceKey: string): IDataRegency[] {
-        let regencies = [] as IDataRegency[]
-
-        const REGENCIES = (PROVINCE_DATA_EXTENSION as any)[provinceKey].regencies
-        for (const regency of REGENCIES) {
-            const newRegency = {
-                bpsCode: regency.bpsCode,
-                name: regency.name
-            }
-            regencies.push(newRegency)
-        }
+        const REGENCIES = (PROVINCE_DATA_EXTENSION as any)[provinceKey].regencies as []
+        const regencies = REGENCIES.map(({ bpsCode, name }) => ({ bpsCode, name }))
 
         return regencies
     }
 
     getDataDistrictsInRegency(regencyKey: string): IDataDistrict[] {
         let provinceKey = ''
-        const bpsCode = regencyKey.split('.')
+        const bpsCode = regencyKey.split('.')[0]
         
         for (const key of PROVINCE_KEYS) {
             const element = (PROVINCE_DATA as any)[key]
-            if (element.bpsCode == bpsCode[0]) {
+            if (element.bpsCode == bpsCode) {
                 provinceKey = key
                 break
             }
