@@ -58,7 +58,7 @@ export interface IDataNIP {
  * @interface
 **/
 export interface IDataProvince {
-    key: string,
+    bpsCode: string,
     name: string
 }
 

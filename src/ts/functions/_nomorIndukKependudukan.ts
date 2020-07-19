@@ -86,7 +86,7 @@ class NomorIndukKependudukan implements IValid, IGetData {
             for (const key of PROVINCE_KEYS) {
                 const element = (PROVINCE_DATA as any)[key];
                 if (element.bpsCode == validNIK[1]) {
-                    province.key = key,
+                    province.bpsCode = key,
                     province.name = element.name
                     break
                 }

@@ -48,7 +48,7 @@ class TandaNomorKendaraanBermotor implements IValid, IGetData {
                     index: Number(validTNKB[2]),
                     detailedAreaCode: validTNKB[3],
                     province: {
-                        key: key,
+                        bpsCode: key,
                         name: element.name
                     }
                 }

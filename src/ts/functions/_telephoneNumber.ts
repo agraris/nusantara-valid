@@ -50,7 +50,7 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
             const element = (PROVINCE_DATA as any)[key]
             if (includes(element.tel, pfx)) {
                 data.origin = {
-                    key: key,
+                    bpsCode: key,
                     name: element.name
                 }
                 break
