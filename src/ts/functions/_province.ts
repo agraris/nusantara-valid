@@ -15,12 +15,12 @@ export class Province implements IGetData {
         if (index) {
             province = {
                 bpsCode: index,
-                name: (PROVINCE_DATA as any)[index].name
+                name: PROVINCE_DATA[index].name
             }
         } else {
             province = PROVINCE_KEYS.map((key) => ({
                 bpsCode: key,
-                name: (PROVINCE_DATA as any)[key].name,
+                name: PROVINCE_DATA[key].name,
             }))
         }
 
