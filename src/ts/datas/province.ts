@@ -16,7 +16,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
 {
     '11': {
         name: 'Aceh',
-        bpsCode: 11,
+        bpsCode: '11',
         vehiclePlate: ['BL'],
         tel: range(641, 659).concat([627, 629]),
         zipCode: [
@@ -28,7 +28,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '12': {
         name: 'Sumatra Utara',
-        bpsCode: 12,
+        bpsCode: '12',
         vehiclePlate: ['BB', 'BK'],
         tel: range(620, 639).concat([601]),
         zipCode: [
@@ -40,7 +40,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '13': {
         name: 'Sumatra Barat',
-        bpsCode: 13,
+        bpsCode: '13',
         vehiclePlate: ['BA'],
         tel: range(751, 759),
         zipCode: [
@@ -52,7 +52,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '14': {
         name: 'Riau',
-        bpsCode: 14,
+        bpsCode: '14',
         vehiclePlate: ['BM'],
         tel: range(760, 769).concat([624]),
         zipCode: [
@@ -64,7 +64,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '15': {
         name: 'Jambi',
-        bpsCode: 15,
+        bpsCode: '15',
         vehiclePlate: ['BH'],
         tel: range(740, 748),
         zipCode: [
@@ -76,7 +76,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '16': {
         name: 'Sumatra Selatan',
-        bpsCode: 16,
+        bpsCode: '16',
         vehiclePlate: ['BG'],
         tel: range(711, 714).concat(range(730, 735)).concat([702]),
         zipCode: [
@@ -88,7 +88,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '17': {
         name: 'Bengkulu',
-        bpsCode: 17,
+        bpsCode: '17',
         vehiclePlate: ['BD'],
         tel: range(736, 739).concat([732]),
         zipCode: [
@@ -100,7 +100,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '18': {
         name: 'Lampung',
-        bpsCode: 18,
+        bpsCode: '18',
         vehiclePlate: ['BE'],
         tel: range(721, 729),
         zipCode: [
@@ -112,7 +112,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '19': {
         name: 'Kepulauan Bangka Belitung',
-        bpsCode: 19,
+        bpsCode: '19',
         vehiclePlate: ['BN'],
         tel: range(715, 719),
         zipCode: [
@@ -124,7 +124,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '21': {
         name: 'Kepulauan Riau',
-        bpsCode: 21,
+        bpsCode: '21',
         vehiclePlate: ['BP'],
         tel: range(771, 779),
         zipCode: [
@@ -137,7 +137,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
 
     '31': {
         name: 'Jakarta',
-        bpsCode: 31,
+        bpsCode: '31',
         vehiclePlate: ['B'],
         tel: [21],
         zipCode: [
@@ -149,7 +149,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '32': {
         name: 'Jawa Barat',
-        bpsCode: 32,
+        bpsCode: '32',
         vehiclePlate: ['D', 'E', 'F', 'T', 'Z'],
         tel: range(231, 234).concat(range(260, 267)).concat([22, 251]),
         zipCode: [
@@ -164,7 +164,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '33': {
         name: 'Jawa Tengah',
-        bpsCode: 33,
+        bpsCode: '33',
         vehiclePlate: ['G', 'H', 'K', 'R', 'AA', 'AD'],
         tel: range(275, 299).concat(range(271, 273)).concat([24, 356]),
         zipCode: [
@@ -179,7 +179,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '34': {
         name: 'Yogyakarta',
-        bpsCode: 34,
+        bpsCode: '34',
         vehiclePlate: ['AB'],
         tel: [274],
         zipCode: [
@@ -191,7 +191,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '35': {
         name: 'Jawa Timur',
-        bpsCode: 35,
+        bpsCode: '35',
         vehiclePlate: ['L', 'M', 'N', 'P', 'S', 'W', 'AE', 'AG'],
         tel: range(321, 358).concat([31]),
         zipCode: [
@@ -203,7 +203,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '36': {
         name: 'Banten',
-        bpsCode: 36,
+        bpsCode: '36',
         vehiclePlate: ['A'],
         tel: range(252, 257),
         zipCode: [
@@ -219,7 +219,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
 
     '51': {
         name: 'Bali',
-        bpsCode: 51,
+        bpsCode: '51',
         vehiclePlate: ['DK'],
         tel: range(361, 368),
         zipCode: [
@@ -231,7 +231,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '52': {
         name: 'Nusa Tenggara Barat',
-        bpsCode: 52,
+        bpsCode: '52',
         vehiclePlate: ['DR', 'EA'],
         tel: range(370, 376).concat([364]),
         zipCode: [
@@ -243,7 +243,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '53': {
         name: 'Nusa Tenggara Timur',
-        bpsCode: 53,
+        bpsCode: '53',
         vehiclePlate: ['DH', 'EB', 'ED'],
         tel: range(380, 389),
         zipCode: [
@@ -256,7 +256,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
 
     '61': {
         name: 'Kalimantan Barat',
-        bpsCode: 61,
+        bpsCode: '61',
         vehiclePlate: ['KB'],
         tel: range(564, 568).concat([534]),
         zipCode: [
@@ -268,7 +268,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '62': {
         name: 'Kalimantan Tengah',
-        bpsCode: 62,
+        bpsCode: '62',
         vehiclePlate: ['KH'],
         tel: range(513, 539),
         zipCode: [
@@ -280,7 +280,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '63': {
         name: 'Kalimantan Selatan',
-        bpsCode: 63,
+        bpsCode: '63',
         vehiclePlate: ['DA'],
         tel: range(511, 527),
         zipCode: [
@@ -292,7 +292,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '64': {
         name: 'Kalimantan Timur',
-        bpsCode: 64,
+        bpsCode: '64',
         vehiclePlate: ['KT'],
         tel: range(541, 556),
         zipCode: [
@@ -304,7 +304,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '65': {
         name: 'Kalimantan Utara',
-        bpsCode: 65,
+        bpsCode: '65',
         vehiclePlate: ['KU'],
         tel: range(551, 556),
         zipCode: [
@@ -317,7 +317,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
 
     '71': {
         name: 'Sulawesi Utara',
-        bpsCode: 71,
+        bpsCode: '71',
         vehiclePlate: ['DB', 'DL'],
         tel: range(430, 438),
         zipCode: [
@@ -329,7 +329,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '72': {
         name: 'Sulawesi Tengah',
-        bpsCode: 72,
+        bpsCode: '72',
         vehiclePlate: ['DN'],
         tel: range(445, 465),
         zipCode: [
@@ -341,7 +341,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '73': {
         name: 'Sulawesi Selatan',
-        bpsCode: 73,
+        bpsCode: '73',
         vehiclePlate: ['DD', 'DP', 'DW'],
         tel: range(410, 421).concat(range(471, 485)).concat([423, 427]),
         zipCode: [
@@ -356,7 +356,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '74': {
         name: 'Sulawesi Tenggara',
-        bpsCode: 74,
+        bpsCode: '74',
         vehiclePlate: ['DT'],
         tel: range(401, 408),
         zipCode: [
@@ -368,7 +368,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '75': {
         name: 'Gorontalo',
-        bpsCode: 75,
+        bpsCode: '75',
         vehiclePlate: ['DM'],
         tel: [435, 443],
         zipCode: [
@@ -380,7 +380,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '76': {
         name: 'Sulawesi Barat',
-        bpsCode: 76,
+        bpsCode: '76',
         vehiclePlate: ['DC'],
         tel: [422, 426, 428],
         zipCode: [
@@ -390,10 +390,10 @@ export const PROVINCE_DATA : { [key: string]: any } =
             }
         ]
     },
-    
+
     '81': {
         name: 'Maluku',
-        bpsCode: 81,
+        bpsCode: '81',
         vehiclePlate: ['DE'],
         tel: range(910, 931),
         zipCode: [
@@ -405,7 +405,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '82': {
         name: 'Maluku Utara',
-        bpsCode: 82,
+        bpsCode: '82',
         vehiclePlate: ['DG'],
         tel: range(910, 931),
         zipCode: [
@@ -415,10 +415,10 @@ export const PROVINCE_DATA : { [key: string]: any } =
             }
         ]
     },
-    
+
     '91': {
         name: 'Papua Barat',
-        bpsCode: 91,
+        bpsCode: '91',
         vehiclePlate: ['PB'],
         tel: range(951, 986).concat([901, 902]),
         zipCode: [
@@ -430,7 +430,7 @@ export const PROVINCE_DATA : { [key: string]: any } =
     },
     '92': {
         name: 'Papua',
-        bpsCode: 92,
+        bpsCode: '92',
         vehiclePlate: ['PA'],
         tel: range(951, 986).concat([901, 902]),
         zipCode: [
@@ -449,5 +449,4 @@ export const PROVINCE_DATA : { [key: string]: any } =
 **/
 export const COUNTRY_CODE = 62
 
-export type Province = keyof typeof PROVINCE_DATA;
-export const PROVINCE_KEYS = Object.keys(PROVINCE_DATA) as Province[];
+export const PROVINCE_KEYS = Object.keys(PROVINCE_DATA)
