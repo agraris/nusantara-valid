@@ -77,7 +77,7 @@ describe('TNKB', () => {
                 index: 1234,
                 detailedAreaCode: 'XYZ',
                 province: {
-                    key: 'YO',
+                    bpsCode: '34',
                     name: 'Yogyakarta'
                 }
             })
@@ -86,7 +86,7 @@ describe('TNKB', () => {
                 index: 1,
                 detailedAreaCode: 'A',
                 province: {
-                    key: 'JK',
+                    bpsCode: '31',
                     name: 'Jakarta'
                 }
             })
