@@ -54,15 +54,15 @@ describe('ZIP code', () => {
 
     describe('isValidWithComparison() = true', () => {
         it('when it has known ZIP Code from user specified provinceKey', () => {
-            expect(isValidZIPWithComparison(55564, { provinceKey: 'YO' })).to.be.true;
-            expect(isValidZIPWithComparison('55524', { provinceKey: 'YO' })).to.be.true;
+            expect(isValidZIPWithComparison(55564, { provinceKey: '34' })).to.be.true;
+            expect(isValidZIPWithComparison('55524', { provinceKey: '34' })).to.be.true;
         })
     })
 
     describe('isValidWithComparison() = false', () => {
         it('when ZIP does not exist ZIP range from user specified provinceKey', () => {
-            expect(isValidZIPWithComparison(55564, { provinceKey: 'JK' })).to.be.false; // 55564 is YO (Yogyakarta) ZIP range, not JK
-            expect(isValidZIPWithComparison('55524', { provinceKey: 'JK' })).to.be.false; // 55524 is ZO (Yogyakarta) ZIP range, not JK
+            expect(isValidZIPWithComparison(55564, { provinceKey: '31' })).to.be.false; // 55564 is 34 (Yogyakarta) ZIP range, not 31 (Jakarta)
+            expect(isValidZIPWithComparison('55524', { provinceKey: '31' })).to.be.false; // 55524 is 34 (Yogyakarta) ZIP range, not 31 (Jakarta)
         })
     })
 })
