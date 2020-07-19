@@ -1,7 +1,7 @@
-import { IValid, IGetData, IDataNIK, IDataProvince } from "../interface"
+import { IValid, IGetData, IDataNIK } from "../interface"
 import { NIK_REGEX, NIK_LENGTH } from "../datas/nik"
 import { numbersOnly, correctLength, formatDate, includes } from "../helpers"
-import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province"
+import { PROVINCE_KEYS } from "../datas/province"
 import { getDataProvince } from './_province'
 
 /**
@@ -11,7 +11,7 @@ import { getDataProvince } from './_province'
  *
  * @class The NomorIndukKepemdudukan class
 **/
-class NomorIndukKependudukan implements IValid, IGetData {
+export class NomorIndukKependudukan implements IValid, IGetData {
     isValid(nik: string, provinceKey: string = '', birthday: string = ''): boolean {
         if (!nik || typeof nik !== 'string') return false
 
