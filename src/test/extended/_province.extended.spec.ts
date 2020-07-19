@@ -4,7 +4,7 @@ import { getDataRegenciesInProvince, getDataDistrictsInRegency } from "../../ts/
 describe('Province (Extended)', () => {
     describe('getDataRegenciesInProvince()', () => {
         it('should return an array of Regencies data', () => {
-            expect(getDataRegenciesInProvince('YO')).to.deep.equal([
+            expect(getDataRegenciesInProvince('34')).to.deep.equal([
                 { bpsCode: '34.01', name: 'Kabupaten Kulon Progo' },
                 { bpsCode: '34.02', name: 'Kabupaten Bantul' },
                 { bpsCode: '34.03', name: 'Kabupaten Gunung Kidul' },
