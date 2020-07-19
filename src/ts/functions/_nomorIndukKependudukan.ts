@@ -2,6 +2,7 @@ import { IValid, IGetData, IDataNIK, IDataProvince } from "../interface"
 import { NIK_REGEX, NIK_LENGTH } from "../datas/nik"
 import { numbersOnly, correctLength, formatDate, includes } from "../helpers"
 import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province"
+import { getDataProvince } from './_province'
 
 /**
  * Nusantara Valid: _nomorIndukKependudukan.ts
@@ -11,11 +12,6 @@ import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province"
  * @class The NomorIndukKepemdudukan class
 **/
 class NomorIndukKependudukan implements IValid, IGetData {
-
-    VALID_BPSCODE = PROVINCE_KEYS.reduce(
-        (a, b) => a.concat((PROVINCE_DATA as any)[b].bpsCode), []
-    ) as number[]
-
     isValid(nik: string, provinceKey: string = '', birthday: string = ''): boolean {
         if (!nik || typeof nik !== 'string') return false
 
@@ -26,12 +22,11 @@ class NomorIndukKependudukan implements IValid, IGetData {
         const validLength = correctLength(0, validNIK[0].length, { minLength: NIK_LENGTH })
         const cBirthday = this.reformatBirthday(validNIK[4])
 
-        let validProvince = includes(this.VALID_BPSCODE, parseInt(validNIK[1]))
+        let validProvince = includes(PROVINCE_KEYS, validNIK[1])
         let validBirthday = !isNaN(formatDate('19' + cBirthday).getTime())
 
-        // Comparison
         if (provinceKey) {
-            if ((PROVINCE_DATA as any)[provinceKey].bpsCode != validNIK[1]) {
+            if (provinceKey != validNIK[1]) {
                 validProvince = false
             }
         }
@@ -77,22 +72,11 @@ class NomorIndukKependudukan implements IValid, IGetData {
         data.sex = Number(validNIK[4].substr(0, 2)) > 40 ? 'Female' : 'Male'
 
         const reformatedBirthday = this.reformatBirthday(validNIK[4])
-        const validProvince = includes(this.VALID_BPSCODE, parseInt(validNIK[1]))
+        const validProvince = includes(PROVINCE_KEYS, validNIK[1])
         const validBirthday = !isNaN(formatDate('19' + reformatedBirthday).getTime())
 
         if (validProvince) {
-            let province = {} as IDataProvince
-
-            for (const key of PROVINCE_KEYS) {
-                const element = (PROVINCE_DATA as any)[key];
-                if (element.bpsCode == validNIK[1]) {
-                    province.bpsCode = key,
-                    province.name = element.name
-                    break
-                }
-            }
-
-            data.province = province
+            data.province = getDataProvince(validNIK[1])
         }
 
         if (validBirthday) {
