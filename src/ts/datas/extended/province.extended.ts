@@ -425,7 +425,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Tapanuli Tengah',
-                bpscode: '12.01',
+                bpsCode: '12.01',
                 districts: [
                     { name: 'Barus', bpsCode: '12.01.01' },
                     { name: 'Sorkam', bpsCode: '12.01.02' },
@@ -450,7 +450,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tapanuli Utara',
-                bpscode: '12.02',
+                bpsCode: '12.02',
                 districts: [
                     { name: 'Tarutung', bpsCode: '12.02.01' },
                     { name: 'Siatas Barita', bpsCode: '12.02.02' },
@@ -470,7 +470,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tapanuli Selatan',
-                bpscode: '12.03',
+                bpsCode: '12.03',
                 districts: [
                     { name: 'Angkola Barat', bpsCode: '12.03.01' },
                     { name: 'Batang Toru', bpsCode: '12.03.02' },
@@ -489,7 +489,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Nias',
-                bpscode: '12.04',
+                bpsCode: '12.04',
                 districts: [
                     { name: 'Hiliduho', bpsCode: '12.04.05' },
                     { name: 'Gido', bpsCode: '12.04.06' },
@@ -504,7 +504,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Langkat',
-                bpscode: '12.05',
+                bpsCode: '12.05',
                 districts: [
                     { name: 'Bahorok', bpsCode: '12.05.01' },
                     { name: 'Salapian', bpsCode: '12.05.02' },
@@ -532,7 +532,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Karo',
-                bpscode: '12.06',
+                bpsCode: '12.06',
                 districts: [
                     { name: 'Kabanjahe', bpsCode: '12.06.01' },
                     { name: 'Brastagi (Berastagi)', bpsCode: '12.06.02' },
@@ -554,7 +554,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Deli Serdang',
-                bpscode: '12.07',
+                bpsCode: '12.07',
                 districts: [
                     { name: 'Gunung Meriah', bpsCode: '12.07.01' },
                     { name: 'Tanjung Morawa', bpsCode: '12.07.02' },
@@ -581,7 +581,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Simalungun',
-                bpscode: '12.08',
+                bpsCode: '12.08',
                 districts: [
                     { name: 'Siantar', bpsCode: '12.08.01' },
                     { name: 'Gunung Malela', bpsCode: '12.08.02' },
@@ -618,7 +618,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Asahan',
-                bpscode: '12.09',
+                bpsCode: '12.09',
                 districts: [
                     { name: 'Meranti', bpsCode: '12.09.08' },
                     { name: 'Air Joman', bpsCode: '12.09.09' },
@@ -648,7 +648,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Labuhanbatu',
-                bpscode: '12.10',
+                bpsCode: '12.10',
                 districts: [
                     { name: 'Rantau Utara', bpsCode: '12.10.01' },
                     { name: 'Rantau Selatan', bpsCode: '12.10.02' },
@@ -662,7 +662,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Dairi',
-                bpscode: '12.11',
+                bpsCode: '12.11',
                 districts: [
                     { name: 'Sidikalang', bpsCode: '12.11.01' },
                     { name: 'Sumbul', bpsCode: '12.11.02' },
@@ -682,7 +682,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Toba Samosir',
-                bpscode: '12.12',
+                bpsCode: '12.12',
                 districts: [
                     { name: 'Balige', bpsCode: '12.12.01' },
                     { name: 'Laguboti', bpsCode: '12.12.02' },
@@ -703,7 +703,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mandailing Natal',
-                bpscode: '12.13',
+                bpsCode: '12.13',
                 districts: [
                     { name: 'Panyabungan', bpsCode: '12.13.01' },
                     { name: 'Panyabungan Utara', bpsCode: '12.13.02' },
@@ -731,7 +731,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Nias Selatan',
-                bpscode: '12.14',
+                bpsCode: '12.14',
                 districts: [
                     { name: 'Lolomatua', bpsCode: '12.14.01' },
                     { name: 'Gomo', bpsCode: '12.14.02' },
@@ -771,7 +771,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pakpak Bharat',
-                bpscode: '12.15',
+                bpsCode: '12.15',
                 districts: [
                     { name: 'Sitellu / Sitelu Tali Urang Jehe', bpsCode: '12.15.01' },
                     { name: 'Kerajaan', bpsCode: '12.15.02' },
@@ -784,7 +784,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Humbang Hasundutan',
-                bpscode: '12.16',
+                bpsCode: '12.16',
                 districts: [
                     { name: 'Parlilitan', bpsCode: '12.16.01' },
                     { name: 'Pollung', bpsCode: '12.16.02' },
@@ -799,7 +799,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Samosir',
-                bpscode: '12.17',
+                bpsCode: '12.17',
                 districts: [
                     { name: 'Simanindo', bpsCode: '12.17.01' },
                     { name: 'Onan Runggu', bpsCode: '12.17.02' },
@@ -813,7 +813,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Serdang Bedagai',
-                bpscode: '12.18',
+                bpsCode: '12.18',
                 districts: [
                     { name: 'Pantai Cermin', bpsCode: '12.18.01' },
                     { name: 'Perbaungan', bpsCode: '12.18.02' },
@@ -835,7 +835,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Batu Bara',
-                bpscode: '12.19',
+                bpsCode: '12.19',
                 districts: [
                     { name: 'Medang Deras', bpsCode: '12.19.01' },
                     { name: 'Sei Suka', bpsCode: '12.19.02' },
@@ -847,7 +847,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Padang Lawas Utara',
-                bpscode: '12.20',
+                bpsCode: '12.20',
                 districts: [
                     { name: 'Dolok Sigompulon', bpsCode: '12.20.01' },
                     { name: 'Dolok', bpsCode: '12.20.02' },
@@ -864,7 +864,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Padang Lawas',
-                bpscode: '12.21',
+                bpsCode: '12.21',
                 districts: [
                     { name: 'Sosopan', bpsCode: '12.21.01' },
                     { name: 'Barumun Tengah', bpsCode: '12.21.02' },
@@ -881,7 +881,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Labuhanbatu Selatan',
-                bpscode: '12.22',
+                bpsCode: '12.22',
                 districts: [
                     { name: 'Kotapinang (Kota Pinang)', bpsCode: '12.22.01' },
                     { name: 'Kampung Rakyat', bpsCode: '12.22.02' },
@@ -891,7 +891,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Labuhanbatu Utara',
-                bpscode: '12.23',
+                bpsCode: '12.23',
                 districts: [
                     { name: 'Kualuh Hulu', bpsCode: '12.23.01' },
                     { name: 'Kualuh Leidong', bpsCode: '12.23.02' },
@@ -904,7 +904,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Nias Utara',
-                bpscode: '12.24',
+                bpsCode: '12.24',
                 districts: [
                     { name: 'Lotu', bpsCode: '12.24.01' },
                     { name: 'Sawo', bpsCode: '12.24.02' },
@@ -920,7 +920,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Nias Barat',
-                bpscode: '12.25',
+                bpsCode: '12.25',
                 districts: [
                     { name: 'Lahomi (Gahori)', bpsCode: '12.25.01' },
                     { name: 'Sirombu', bpsCode: '12.25.02' },
@@ -933,7 +933,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Medan',
-                bpscode: '12.71',
+                bpsCode: '12.71',
                 districts: [
                     { name: 'Medan Kota', bpsCode: '12.71.01' },
                     { name: 'Medan Sunggal', bpsCode: '12.71.02' },
@@ -959,7 +959,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pematang Siantar',
-                bpscode: '12.72',
+                bpsCode: '12.72',
                 districts: [
                     { name: 'Siantar Timur', bpsCode: '12.72.01' },
                     { name: 'Siantar Barat', bpsCode: '12.72.02' },
@@ -972,7 +972,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sibolga',
-                bpscode: '12.73',
+                bpsCode: '12.73',
                 districts: [
                     { name: 'Sibolga Utara', bpsCode: '12.73.01' },
                     { name: 'Sibolga Kota', bpsCode: '12.73.02' },
@@ -981,7 +981,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tanjung Balai',
-                bpscode: '12.74',
+                bpsCode: '12.74',
                 districts: [
                     { name: 'Tanjung Balai Selatan', bpsCode: '12.74.01' },
                     { name: 'Tanjung Balai Utara', bpsCode: '12.74.02' },
@@ -992,7 +992,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Binjai',
-                bpscode: '12.75',
+                bpsCode: '12.75',
                 districts: [
                     { name: 'Binjai Utara', bpsCode: '12.75.01' },
                     { name: 'Binjai Kota', bpsCode: '12.75.02' },
@@ -1002,7 +1002,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tebing Tinggi',
-                bpscode: '12.76',
+                bpsCode: '12.76',
                 districts: [
                     { name: 'Padang Hulu', bpsCode: '12.76.01' },
                     { name: 'Rambutan', bpsCode: '12.76.02' },
@@ -1012,7 +1012,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Padang Sidempuan',
-                bpscode: '12.77',
+                bpsCode: '12.77',
                 districts: [
                     { name: 'Padangsidimpuan / Padang Sidempuan Utara', bpsCode: '12.77.01' },
                     { name: 'Padangsidimpuan / Padang Sidempuan Selatan', bpsCode: '12.77.02' },
@@ -1023,7 +1023,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Gunungsitoli',
-                bpscode: '12.78',
+                bpsCode: '12.78',
                 districts: [
                     { name: 'Gunungsitoli', bpsCode: '12.78.01' },
                     { name: 'Gunungsitoli Selatan', bpsCode: '12.78.02' },
@@ -1039,7 +1039,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Pesisir Selatan',
-                bpscode: '13.01',
+                bpsCode: '13.01',
                 districts: [
                     { name: 'Pancung Soal', bpsCode: '13.01.01' },
                     { name: 'Ranah Pesisir', bpsCode: '13.01.02' },
@@ -1059,7 +1059,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Solok',
-                bpscode: '13.02',
+                bpsCode: '13.02',
                 districts: [
                     { name: 'Pantai Cermin', bpsCode: '13.02.03' },
                     { name: 'Lembah Gumanti', bpsCode: '13.02.04' },
@@ -1078,7 +1078,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sijunjung',
-                bpscode: '13.03',
+                bpsCode: '13.03',
                 districts: [
                     { name: 'Tanjung Gadang', bpsCode: '13.03.03' },
                     { name: 'Sijunjung', bpsCode: '13.03.04' },
@@ -1091,7 +1091,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tanah Datar',
-                bpscode: '13.04',
+                bpsCode: '13.04',
                 districts: [
                     { name: 'Sepuluh Koto (X Koto)', bpsCode: '13.04.01' },
                     { name: 'Batipuh', bpsCode: '13.04.02' },
@@ -1110,7 +1110,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Padang Pariaman',
-                bpscode: '13.05',
+                bpsCode: '13.05',
                 districts: [
                     { name: 'Lubuk Alung', bpsCode: '13.05.01' },
                     { name: 'Batang Anai', bpsCode: '13.05.02' },
@@ -1132,7 +1132,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Agam',
-                bpscode: '13.06',
+                bpsCode: '13.06',
                 districts: [
                     { name: 'Tanjung Mutiara', bpsCode: '13.06.01' },
                     { name: 'Lubuk Basung', bpsCode: '13.06.02' },
@@ -1153,7 +1153,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lima Puluh Kota',
-                bpscode: '13.07',
+                bpsCode: '13.07',
                 districts: [
                     { name: 'Suliki', bpsCode: '13.07.01' },
                     { name: 'Guguak (Gugu)', bpsCode: '13.07.02' },
@@ -1171,7 +1171,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pasaman',
-                bpscode: '13.08',
+                bpsCode: '13.08',
                 districts: [
                     { name: 'Bonjol', bpsCode: '13.08.04' },
                     { name: 'Lubuk Sikaping', bpsCode: '13.08.05' },
@@ -1188,7 +1188,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kepulauan Mentawai',
-                bpscode: '13.09',
+                bpsCode: '13.09',
                 districts: [
                     { name: 'Pagai Utara', bpsCode: '13.09.01' },
                     { name: 'Sipora Selatan', bpsCode: '13.09.02' },
@@ -1203,7 +1203,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Dharmasraya',
-                bpscode: '13.10',
+                bpsCode: '13.10',
                 districts: [
                     { name: 'Koto Baru', bpsCode: '13.10.01' },
                     { name: 'Pulau Punjung', bpsCode: '13.10.02' },
@@ -1219,7 +1219,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Solok Selatan',
-                bpscode: '13.11',
+                bpsCode: '13.11',
                 districts: [
                     { name: 'Sangir', bpsCode: '13.11.01' },
                     { name: 'Sungai Pagu', bpsCode: '13.11.02' },
@@ -1231,7 +1231,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pasaman Barat',
-                bpscode: '13.12',
+                bpsCode: '13.12',
                 districts: [
                     { name: 'Sungaiberemas (Sei Beremas)', bpsCode: '13.12.01' },
                     { name: 'Lembah Melintang', bpsCode: '13.12.02' },
@@ -1247,7 +1247,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Padang',
-                bpscode: '13.71',
+                bpsCode: '13.71',
                 districts: [
                     { name: 'Padang Selatan', bpsCode: '13.71.01' },
                     { name: 'Padang Timur', bpsCode: '13.71.02' },
@@ -1263,14 +1263,14 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Solok',
-                bpscode: '13.72',
+                bpsCode: '13.72',
                 districts: [
                     { name: 'Lubuk Sikarah', bpsCode: '13.72.01' },
                     { name: 'Tanjung Harapan', bpsCode: '13.72.02' }
                 ]
             }, {
                 name: 'Sawah Lunto',
-                bpscode: '13.73',
+                bpsCode: '13.73',
                 districts: [
                     { name: 'Lembah Segar', bpsCode: '13.73.01' },
                     { name: 'Barangin', bpsCode: '13.73.02' },
@@ -1279,14 +1279,14 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Padang Panjang',
-                bpscode: '13.74',
+                bpsCode: '13.74',
                 districts: [
                     { name: 'Padang Panjang Timur', bpsCode: '13.74.01' },
                     { name: 'Padang Panjang Barat', bpsCode: '13.74.02' }
                 ]
             }, {
                 name: 'Bukittinggi',
-                bpscode: '13.75',
+                bpsCode: '13.75',
                 districts: [
                     { name: 'Guguk Panjang (Guguak Panjang)', bpsCode: '13.75.01' },
                     { name: 'Mandiangin Koto Selayan', bpsCode: '13.75.02' },
@@ -1294,7 +1294,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Payakumbuh',
-                bpscode: '13.76',
+                bpsCode: '13.76',
                 districts: [
                     { name: 'Payakumbuh Barat', bpsCode: '13.76.01' },
                     { name: 'Payakumbuh Utara', bpsCode: '13.76.02' },
@@ -1304,7 +1304,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pariaman',
-                bpscode: '13.77',
+                bpsCode: '13.77',
                 districts: [
                     { name: 'Pariaman Tengah', bpsCode: '13.77.01' },
                     { name: 'Pariaman Utara', bpsCode: '13.77.02' },
@@ -1318,7 +1318,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Kampar',
-                bpscode: '14.01',
+                bpsCode: '14.01',
                 districts: [
                     { name: 'Bangkinang Kota', bpsCode: '14.01.01' },
                     { name: 'Kampar', bpsCode: '14.01.02' },
@@ -1344,7 +1344,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Indragiri Hulu',
-                bpscode: '14.02',
+                bpsCode: '14.02',
                 districts: [
                     { name: 'Rengat', bpsCode: '14.02.01' },
                     { name: 'Rengat Barat', bpsCode: '14.02.02' },
@@ -1363,7 +1363,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bengkalis',
-                bpscode: '14.03',
+                bpsCode: '14.03',
                 districts: [
                     { name: 'Bengkalis', bpsCode: '14.03.01' },
                     { name: 'Bantan', bpsCode: '14.03.02' },
@@ -1379,7 +1379,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Indragiri Hilir',
-                bpscode: '14.04',
+                bpsCode: '14.04',
                 districts: [
                     { name: 'Reteh', bpsCode: '14.04.01' },
                     { name: 'Enok', bpsCode: '14.04.02' },
@@ -1404,7 +1404,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pelalawan',
-                bpscode: '14.05',
+                bpsCode: '14.05',
                 districts: [
                     { name: 'Ukui', bpsCode: '14.05.01' },
                     { name: 'Pangkalan Kerinci', bpsCode: '14.05.02' },
@@ -1421,7 +1421,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Rokan Hulu',
-                bpscode: '14.06',
+                bpsCode: '14.06',
                 districts: [
                     { name: 'Ujung Batu', bpsCode: '14.06.01' },
                     { name: 'Rokan IV Koto', bpsCode: '14.06.02' },
@@ -1442,7 +1442,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Rokan Hilir',
-                bpscode: '14.07',
+                bpsCode: '14.07',
                 districts: [
                     { name: 'Kubu', bpsCode: '14.07.01' },
                     { name: 'Bangko', bpsCode: '14.07.02' },
@@ -1462,7 +1462,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Siak',
-                bpscode: '14.08',
+                bpsCode: '14.08',
                 districts: [
                     { name: 'Siak', bpsCode: '14.08.01' },
                     { name: 'Sungai Apit', bpsCode: '14.08.02' },
@@ -1481,7 +1481,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kuantan Singingi',
-                bpscode: '14.09',
+                bpsCode: '14.09',
                 districts: [
                     { name: 'Kuantan Mudik', bpsCode: '14.09.01' },
                     { name: 'Kuantan Tengah', bpsCode: '14.09.02' },
@@ -1501,7 +1501,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kepulauan Meranti',
-                bpscode: '14.10',
+                bpsCode: '14.10',
                 districts: [
                     { name: 'Tebing Tinggi', bpsCode: '14.10.01' },
                     { name: 'Rangsang Barat', bpsCode: '14.10.02' },
@@ -1515,7 +1515,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pekanbaru',
-                bpscode: '14.71',
+                bpsCode: '14.71',
                 districts: [
                     { name: 'Sukajadi', bpsCode: '14.71.01' },
                     { name: 'Pekanbaru Kota', bpsCode: '14.71.02' },
@@ -1532,7 +1532,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Dumai',
-                bpscode: '14.72',
+                bpsCode: '14.72',
                 districts: [
                     { name: 'Dumai Barat', bpsCode: '14.72.01' },
                     { name: 'Dumai Timur', bpsCode: '14.72.02' },
@@ -1549,7 +1549,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Kerinci',
-                bpscode: '15.01',
+                bpsCode: '15.01',
                 districts: [
                     { name: 'Gunung Raya', bpsCode: '15.01.01' },
                     { name: 'Danau Kerinci', bpsCode: '15.01.02' },
@@ -1570,7 +1570,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Merangin',
-                bpscode: '15.02',
+                bpsCode: '15.02',
                 districts: [
                     { name: 'Jangkat', bpsCode: '15.02.01' },
                     { name: 'Bangko', bpsCode: '15.02.02' },
@@ -1599,7 +1599,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sarolangun',
-                bpscode: '15.03',
+                bpsCode: '15.03',
                 districts: [
                     { name: 'Batang Asai', bpsCode: '15.03.01' },
                     { name: 'Limun', bpsCode: '15.03.02' },
@@ -1614,7 +1614,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Batang Hari',
-                bpscode: '15.04',
+                bpsCode: '15.04',
                 districts: [
                     { name: 'Mersam', bpsCode: '15.04.01' },
                     { name: 'Muara Tembesi', bpsCode: '15.04.02' },
@@ -1627,7 +1627,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Muaro Jambi',
-                bpscode: '15.05',
+                bpsCode: '15.05',
                 districts: [
                     { name: 'Jambi Luar Kota', bpsCode: '15.05.01' },
                     { name: 'Sekernan', bpsCode: '15.05.02' },
@@ -1643,7 +1643,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tanjung Jabung Barat',
-                bpscode: '15.06',
+                bpsCode: '15.06',
                 districts: [
                     { name: 'Tungkal Ulu', bpsCode: '15.06.01' },
                     { name: 'Tungkal Ilir', bpsCode: '15.06.02' },
@@ -1661,7 +1661,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tanjung Jabung Timur',
-                bpscode: '15.07',
+                bpsCode: '15.07',
                 districts: [
                     { name: 'Muara Sabak Timur', bpsCode: '15.07.01' },
                     { name: 'Nipah Panjang', bpsCode: '15.07.02' },
@@ -1677,7 +1677,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bungo',
-                bpscode: '15.08',
+                bpsCode: '15.08',
                 districts: [
                     { name: 'Tanah Tumbuh', bpsCode: '15.08.01' },
                     { name: 'Rantau Pandan', bpsCode: '15.08.02' },
@@ -1699,7 +1699,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tebo',
-                bpscode: '15.09',
+                bpsCode: '15.09',
                 districts: [
                     { name: 'Tebo Tengah', bpsCode: '15.09.01' },
                     { name: 'Tebo Ilir', bpsCode: '15.09.02' },
@@ -1716,7 +1716,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Jambi',
-                bpscode: '15.71',
+                bpsCode: '15.71',
                 districts: [
                     { name: 'Telanaipura', bpsCode: '15.71.01' },
                     { name: 'Jambi Selatan', bpsCode: '15.71.02' },
@@ -1732,7 +1732,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sungaipenuh',
-                bpscode: '15.72',
+                bpsCode: '15.72',
                 districts: [
                     { name: 'Sungai Penuh', bpsCode: '15.72.01' },
                     { name: 'Pesisir Bukit', bpsCode: '15.72.02' },
@@ -1750,7 +1750,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Ogan Komering Ulu',
-                bpscode: '16.01',
+                bpsCode: '16.01',
                 districts: [
                     { name: 'Sosoh Buay Rayap', bpsCode: '16.01.07' },
                     { name: 'Pengandonan', bpsCode: '16.01.08' },
@@ -1768,7 +1768,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Ogan Komering Ilir',
-                bpscode: '16.02',
+                bpsCode: '16.02',
                 districts: [
                     { name: 'Tanjung Lubuk', bpsCode: '16.02.02' },
                     { name: 'Pedamaran', bpsCode: '16.02.03' },
@@ -1791,7 +1791,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Muara Enim',
-                bpscode: '16.03',
+                bpsCode: '16.03',
                 districts: [
                     { name: 'Tanjung Agung', bpsCode: '16.03.01' },
                     { name: 'Muara Enim', bpsCode: '16.03.02' },
@@ -1816,7 +1816,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lahat',
-                bpscode: '16.04',
+                bpsCode: '16.04',
                 districts: [
                     { name: 'Tanjungsakti Pumu (Tanjung Sakti Pumu)', bpsCode: '16.04.01' },
                     { name: 'Jarai', bpsCode: '16.04.06' },
@@ -1845,7 +1845,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Musi Rawas',
-                bpscode: '16.05',
+                bpsCode: '16.05',
                 districts: [
                     { name: 'Tugumulyo', bpsCode: '16.05.01' },
                     { name: 'Muara Lakitan', bpsCode: '16.05.02' },
@@ -1864,7 +1864,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Musi Banyuasin',
-                bpscode: '16.06',
+                bpsCode: '16.06',
                 districts: [
                     { name: 'Sekayu', bpsCode: '16.06.01' },
                     { name: 'Lais', bpsCode: '16.06.02' },
@@ -1883,7 +1883,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Banyuasin',
-                bpscode: '16.07',
+                bpsCode: '16.07',
                 districts: [
                     { name: 'Banyuasin I', bpsCode: '16.07.01' },
                     { name: 'Banyuasin II', bpsCode: '16.07.02' },
@@ -1907,7 +1907,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Ogan Komering Ulu Timur',
-                bpscode: '16.08',
+                bpsCode: '16.08',
                 districts: [
                     { name: 'Martapura', bpsCode: '16.08.01' },
                     { name: 'Buay Madang', bpsCode: '16.08.02' },
@@ -1932,7 +1932,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Ogan Komering Ulu Selatan',
-                bpscode: '16.09',
+                bpsCode: '16.09',
                 districts: [
                     { name: 'Muara Dua (Muaradua)', bpsCode: '16.09.01' },
                     { name: 'Pulau Beringin', bpsCode: '16.09.02' },
@@ -1956,7 +1956,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Ogan Ilir',
-                bpscode: '16.10',
+                bpsCode: '16.10',
                 districts: [
                     { name: 'Muara Kuang', bpsCode: '16.10.01' },
                     { name: 'Tanjung Batu', bpsCode: '16.10.02' },
@@ -1977,7 +1977,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Empat Lawang',
-                bpscode: '16.11',
+                bpsCode: '16.11',
                 districts: [
                     { name: 'Muara Pinang', bpsCode: '16.11.01' },
                     { name: 'Pendopo', bpsCode: '16.11.02' },
@@ -1992,7 +1992,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Penukal Abab Lematang Ilir',
-                bpscode: '16.12',
+                bpsCode: '16.12',
                 districts: [
                     { name: 'Talang Ubi', bpsCode: '16.12.01' },
                     { name: 'Penukal Utara', bpsCode: '16.12.02' },
@@ -2002,7 +2002,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Musi Rawas Utara',
-                bpscode: '16.13',
+                bpsCode: '16.13',
                 districts: [
                     { name: 'Rupit', bpsCode: '16.13.01' },
                     { name: 'Rawas Ulu', bpsCode: '16.13.02' },
@@ -2014,7 +2014,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Palembang',
-                bpscode: '16.71',
+                bpsCode: '16.71',
                 districts: [
                     { name: 'Ilir Barat II', bpsCode: '16.71.01' },
                     { name: 'Seberang Ulu I', bpsCode: '16.71.02' },
@@ -2037,7 +2037,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pagar Alam',
-                bpscode: '16.72',
+                bpsCode: '16.72',
                 districts: [
                     { name: 'Pagar Alam Utara', bpsCode: '16.72.01' },
                     { name: 'Pagar Alam Selatan', bpsCode: '16.72.02' },
@@ -2047,7 +2047,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lubuk Linggau',
-                bpscode: '16.73',
+                bpsCode: '16.73',
                 districts: [
                     { name: 'Lubuk Linggau Timur Satu (I)', bpsCode: '16.73.01' },
                     { name: 'Lubuk Linggau Barat Satu (I)', bpsCode: '16.73.02' },
@@ -2060,7 +2060,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Prabumulih',
-                bpscode: '16.74',
+                bpsCode: '16.74',
                 districts: [
                     { name: 'Prabumulih Barat', bpsCode: '16.74.01' },
                     { name: 'Prabumulih Timur', bpsCode: '16.74.02' },
@@ -2076,7 +2076,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Bengkulu Selatan',
-                bpscode: '17.01',
+                bpsCode: '17.01',
                 districts: [
                     { name: 'Kedurang', bpsCode: '17.01.01' },
                     { name: 'Seginim', bpsCode: '17.01.02' },
@@ -2092,7 +2092,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Rejang Lebong',
-                bpscode: '17.02',
+                bpsCode: '17.02',
                 districts: [
                     { name: 'Kota Padang', bpsCode: '17.02.06' },
                     { name: 'Padang Ulak Tanding', bpsCode: '17.02.07' },
@@ -2112,7 +2112,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bengkulu Utara',
-                bpscode: '17.03',
+                bpsCode: '17.03',
                 districts: [
                     { name: 'Enggano', bpsCode: '17.03.01' },
                     { name: 'Kerkap', bpsCode: '17.03.06' },
@@ -2136,7 +2136,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kaur',
-                bpscode: '17.04',
+                bpsCode: '17.04',
                 districts: [
                     { name: 'Kinal', bpsCode: '17.04.01' },
                     { name: 'Tanjung Kemuning', bpsCode: '17.04.02' },
@@ -2156,7 +2156,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Seluma',
-                bpscode: '17.05',
+                bpsCode: '17.05',
                 districts: [
                     { name: 'Sukaraja', bpsCode: '17.05.01' },
                     { name: 'Seluma', bpsCode: '17.05.02' },
@@ -2175,7 +2175,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Muko Muko',
-                bpscode: '17.06',
+                bpsCode: '17.06',
                 districts: [
                     { name: 'Lubuk Pinang', bpsCode: '17.06.01' },
                     { name: 'Kota Mukomuko (Mukomuko Utara)', bpsCode: '17.06.02' },
@@ -2195,7 +2195,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lebong',
-                bpscode: '17.07',
+                bpsCode: '17.07',
                 districts: [
                     { name: 'Lebong Utara', bpsCode: '17.07.01' },
                     { name: 'Lebong Atas', bpsCode: '17.07.02' },
@@ -2212,7 +2212,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kepahiang',
-                bpscode: '17.08',
+                bpsCode: '17.08',
                 districts: [
                     { name: 'Bermani Ilir', bpsCode: '17.08.01' },
                     { name: 'Ujan Mas', bpsCode: '17.08.02' },
@@ -2225,7 +2225,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bengkulu Tengah',
-                bpscode: '17.09',
+                bpsCode: '17.09',
                 districts: [
                     { name: 'Karang Tinggi', bpsCode: '17.09.01' },
                     { name: 'Talang Empat', bpsCode: '17.09.02' },
@@ -2240,7 +2240,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bengkulu',
-                bpscode: '17.71',
+                bpsCode: '17.71',
                 districts: [
                     { name: 'Selebar', bpsCode: '17.71.01' },
                     { name: 'Gading Cempaka', bpsCode: '17.71.02' },
@@ -2259,7 +2259,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Lampung Selatan',
-                bpscode: '18.01',
+                bpsCode: '18.01',
                 districts: [
                     { name: 'Natar', bpsCode: '18.01.04' },
                     { name: 'Tanjung Bintang', bpsCode: '18.01.05' },
@@ -2281,7 +2281,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lampung Tengah',
-                bpscode: '18.02',
+                bpsCode: '18.02',
                 districts: [
                     { name: 'Kalirejo', bpsCode: '18.02.01' },
                     { name: 'Bangun Rejo', bpsCode: '18.02.02' },
@@ -2314,7 +2314,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lampung Utara',
-                bpscode: '18.03',
+                bpsCode: '18.03',
                 districts: [
                     { name: 'Bukit Kemuning', bpsCode: '18.03.01' },
                     { name: 'Kotabumi', bpsCode: '18.03.02' },
@@ -2342,7 +2342,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lampung Barat',
-                bpscode: '18.04',
+                bpsCode: '18.04',
                 districts: [
                     { name: 'Balik Bukit', bpsCode: '18.04.04' },
                     { name: 'Sumber Jaya', bpsCode: '18.04.05' },
@@ -2362,7 +2362,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tulang Bawang',
-                bpscode: '18.05',
+                bpsCode: '18.05',
                 districts: [
                     { name: 'Menggala', bpsCode: '18.05.02' },
                     { name: 'Gedung Aji', bpsCode: '18.05.06' },
@@ -2382,7 +2382,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tanggamus',
-                bpscode: '18.06',
+                bpsCode: '18.06',
                 districts: [
                     { name: 'Kota Agung (Kota Agung Pusat)', bpsCode: '18.06.01' },
                     { name: 'Talang Padang', bpsCode: '18.06.02' },
@@ -2407,7 +2407,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lampung Timur',
-                bpscode: '18.07',
+                bpsCode: '18.07',
                 districts: [
                     { name: 'Sukadana', bpsCode: '18.07.01' },
                     { name: 'Labuhan Maringgai', bpsCode: '18.07.02' },
@@ -2436,7 +2436,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Way Kanan',
-                bpscode: '18.08',
+                bpsCode: '18.08',
                 districts: [
                     { name: 'Blambangan Umpu', bpsCode: '18.08.01' },
                     { name: 'Kasui', bpsCode: '18.08.02' },
@@ -2455,7 +2455,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pesawaran',
-                bpscode: '18.09',
+                bpsCode: '18.09',
                 districts: [
                     { name: 'Gedong Tataan', bpsCode: '18.09.01' },
                     { name: 'Negeri Katon', bpsCode: '18.09.02' },
@@ -2471,7 +2471,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pringsewu',
-                bpscode: '18.10',
+                bpsCode: '18.10',
                 districts: [
                     { name: 'Pringsewu', bpsCode: '18.10.01' },
                     { name: 'Gading Rejo', bpsCode: '18.10.02' },
@@ -2485,7 +2485,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mesuji',
-                bpscode: '18.11',
+                bpsCode: '18.11',
                 districts: [
                     { name: 'Mesuji', bpsCode: '18.11.01' },
                     { name: 'Mesuji Timur', bpsCode: '18.11.02' },
@@ -2497,7 +2497,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tulang Bawang Barat',
-                bpscode: '18.12',
+                bpsCode: '18.12',
                 districts: [
                     { name: 'Tulang Bawang Tengah', bpsCode: '18.12.01' },
                     { name: 'Tumijajar', bpsCode: '18.12.02' },
@@ -2511,7 +2511,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pesisir Barat',
-                bpscode: '18.13',
+                bpsCode: '18.13',
                 districts: [
                     { name: 'Pesisir Tengah', bpsCode: '18.13.01' },
                     { name: 'Pesisir Selatan', bpsCode: '18.13.02' },
@@ -2527,7 +2527,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bandar Lampung',
-                bpscode: '18.71',
+                bpsCode: '18.71',
                 districts: [
                     { name: 'Kedaton', bpsCode: '18.71.01' },
                     { name: 'Sukarame', bpsCode: '18.71.02' },
@@ -2552,7 +2552,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Metro',
-                bpscode: '18.72',
+                bpsCode: '18.72',
                 districts: [
                     { name: 'Metro Pusat', bpsCode: '18.72.01' },
                     { name: 'Metro Utara', bpsCode: '18.72.02' },
@@ -2567,7 +2567,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Bangka',
-                bpscode: '19.01',
+                bpsCode: '19.01',
                 districts: [
                     { name: 'Sungailiat (Sungai Liat)', bpsCode: '19.01.01' },
                     { name: 'Belinyu', bpsCode: '19.01.02' },
@@ -2580,7 +2580,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Belitung',
-                bpscode: '19.02',
+                bpsCode: '19.02',
                 districts: [
                     { name: 'Tanjung Pandan', bpsCode: '19.02.01' },
                     { name: 'Membalong', bpsCode: '19.02.02' },
@@ -2590,7 +2590,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bangka Selatan',
-                bpscode: '19.03',
+                bpsCode: '19.03',
                 districts: [
                     { name: 'Toboali', bpsCode: '19.03.01' },
                     { name: 'Lepar Pongok', bpsCode: '19.03.02' },
@@ -2603,7 +2603,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bangka Tengah',
-                bpscode: '19.04',
+                bpsCode: '19.04',
                 districts: [
                     { name: 'Koba', bpsCode: '19.04.01' },
                     { name: 'Pangkalan Baru', bpsCode: '19.04.02' },
@@ -2614,7 +2614,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bangka Barat',
-                bpscode: '19.05',
+                bpsCode: '19.05',
                 districts: [
                     { name: 'Mentok (Muntok)', bpsCode: '19.05.01' },
                     { name: 'Simpang Teritip', bpsCode: '19.05.02' },
@@ -2625,7 +2625,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Belitung Timur',
-                bpscode: '19.06',
+                bpsCode: '19.06',
                 districts: [
                     { name: 'Manggar', bpsCode: '19.06.01' },
                     { name: 'Gantung', bpsCode: '19.06.02' },
@@ -2637,7 +2637,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pangkal Pinang',
-                bpscode: '19.71',
+                bpsCode: '19.71',
                 districts: [
                     { name: 'Bukitintan (Bukit Intan)', bpsCode: '19.71.01' },
                     { name: 'Taman Sari', bpsCode: '19.71.02' },
@@ -2654,7 +2654,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Bintan',
-                bpscode: '21.01',
+                bpsCode: '21.01',
                 districts: [
                     { name: 'Gunung Kijang', bpsCode: '21.01.04' },
                     { name: 'Bintan Timur', bpsCode: '21.01.06' },
@@ -2669,7 +2669,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Karimun',
-                bpscode: '21.02',
+                bpsCode: '21.02',
                 districts: [
                     { name: 'Moro', bpsCode: '21.02.01' },
                     { name: 'Kundur', bpsCode: '21.02.02' },
@@ -2686,7 +2686,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Natuna',
-                bpscode: '21.03',
+                bpsCode: '21.03',
                 districts: [
                     { name: 'Midai', bpsCode: '21.03.04' },
                     { name: 'Bunguran Barat', bpsCode: '21.03.05' },
@@ -2706,7 +2706,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lingga',
-                bpscode: '21.04',
+                bpsCode: '21.04',
                 districts: [
                     { name: 'Singkep', bpsCode: '21.04.01' },
                     { name: 'Lingga', bpsCode: '21.04.02' },
@@ -2721,7 +2721,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kepulauan Anambas',
-                bpscode: '21.05',
+                bpsCode: '21.05',
                 districts: [
                     { name: 'Siantan', bpsCode: '21.05.01' },
                     { name: 'Palmatak', bpsCode: '21.05.02' },
@@ -2733,7 +2733,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Batam',
-                bpscode: '21.71',
+                bpsCode: '21.71',
                 districts: [
                     { name: 'Belakang Padang', bpsCode: '21.71.01' },
                     { name: 'Batu Ampar', bpsCode: '21.71.02' },
@@ -2750,7 +2750,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tanjung Pinang',
-                bpscode: '21.72',
+                bpsCode: '21.72',
                 districts: [
                     { name: 'Tanjung Pinang Barat', bpsCode: '21.72.01' },
                     { name: 'Tanjung Pinang Timur', bpsCode: '21.72.02' },
@@ -2765,14 +2765,14 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Kepulauan Seribu',
-                bpscode: '31.01',
+                bpsCode: '31.01',
                 districts: [
                     { name: 'Kepulauan Seribu Utara', bpsCode: '31.01.01' },
                     { name: 'Kepulauan Seribu Selatan', bpsCode: '31.01.02' }
                 ]
             }, {
                 name: 'Jakarta Pusat',
-                bpscode: '31.71',
+                bpsCode: '31.71',
                 districts: [
                     { name: 'Gambir', bpsCode: '31.71.01' },
                     { name: 'Sawah Besar', bpsCode: '31.71.02' },
@@ -2785,7 +2785,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Jakarta Utara',
-                bpscode: '31.72',
+                bpsCode: '31.72',
                 districts: [
                     { name: 'Penjaringan', bpsCode: '31.72.01' },
                     { name: 'Tanjung Priok', bpsCode: '31.72.02' },
@@ -2796,7 +2796,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Jakarta Barat',
-                bpscode: '31.73',
+                bpsCode: '31.73',
                 districts: [
                     { name: 'Cengkareng', bpsCode: '31.73.01' },
                     { name: 'Grogol Petamburan', bpsCode: '31.73.02' },
@@ -2809,7 +2809,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Jakarta Selatan',
-                bpscode: '31.74',
+                bpsCode: '31.74',
                 districts: [
                     { name: 'Tebet', bpsCode: '31.74.01' },
                     { name: 'Setiabudi (Setia Budi)', bpsCode: '31.74.02' },
@@ -2824,7 +2824,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Jakarta Timur',
-                bpscode: '31.75',
+                bpsCode: '31.75',
                 districts: [
                     { name: 'Matraman', bpsCode: '31.75.01' },
                     { name: 'Pulogadung (Pulo Gadung)', bpsCode: '31.75.02' },
@@ -2844,7 +2844,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Bogor',
-                bpscode: '32.01',
+                bpsCode: '32.01',
                 districts: [
                     { name: 'Cibinong', bpsCode: '32.01.01' },
                     { name: 'Gunung Putri', bpsCode: '32.01.02' },
@@ -2889,7 +2889,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sukabumi',
-                bpscode: '32.02',
+                bpsCode: '32.02',
                 districts: [
                     { name: 'Palabuhanratu (Pelabuhanratu)', bpsCode: '32.02.01' },
                     { name: 'Simpenan', bpsCode: '32.02.02' },
@@ -2941,7 +2941,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Cianjur',
-                bpscode: '32.03',
+                bpsCode: '32.03',
                 districts: [
                     { name: 'Cianjur', bpsCode: '32.03.01' },
                     { name: 'Warungkondang', bpsCode: '32.03.02' },
@@ -2978,7 +2978,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bandung',
-                bpscode: '32.04',
+                bpsCode: '32.04',
                 districts: [
                     { name: 'Cileunyi', bpsCode: '32.04.05' },
                     { name: 'Cimenyan (Cimeunyan)', bpsCode: '32.04.06' },
@@ -3014,7 +3014,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Garut',
-                bpscode: '32.05',
+                bpsCode: '32.05',
                 districts: [
                     { name: 'Garut Kota', bpsCode: '32.05.01' },
                     { name: 'Karangpawitan', bpsCode: '32.05.02' },
@@ -3061,7 +3061,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tasikmalaya',
-                bpscode: '32.06',
+                bpsCode: '32.06',
                 districts: [
                     { name: 'Cipatujah', bpsCode: '32.06.01' },
                     { name: 'Karangnunggal', bpsCode: '32.06.02' },
@@ -3105,7 +3105,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Ciamis',
-                bpscode: '32.07',
+                bpsCode: '32.07',
                 districts: [
                     { name: 'Ciamis', bpsCode: '32.07.01' },
                     { name: 'Cikoneng', bpsCode: '32.07.02' },
@@ -3137,7 +3137,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kuningan',
-                bpscode: '32.08',
+                bpsCode: '32.08',
                 districts: [
                     { name: 'Kadugede', bpsCode: '32.08.01' },
                     { name: 'Ciniru', bpsCode: '32.08.02' },
@@ -3174,7 +3174,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Cirebon',
-                bpscode: '32.09',
+                bpsCode: '32.09',
                 districts: [
                     { name: 'Waled', bpsCode: '32.09.01' },
                     { name: 'Ciledug', bpsCode: '32.09.02' },
@@ -3219,7 +3219,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Majalengka',
-                bpscode: '32.10',
+                bpsCode: '32.10',
                 districts: [
                     { name: 'Lemahsugih', bpsCode: '32.10.01' },
                     { name: 'Bantarujeg', bpsCode: '32.10.02' },
@@ -3250,7 +3250,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sumedang',
-                bpscode: '32.11',
+                bpsCode: '32.11',
                 districts: [
                     { name: 'Wado', bpsCode: '32.11.01' },
                     { name: 'Jatinunggal', bpsCode: '32.11.02' },
@@ -3281,7 +3281,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Indramayu',
-                bpscode: '32.12',
+                bpsCode: '32.12',
                 districts: [
                     { name: 'Haurgeulis', bpsCode: '32.12.01' },
                     { name: 'Kroya', bpsCode: '32.12.02' },
@@ -3317,7 +3317,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Subang',
-                bpscode: '32.13',
+                bpsCode: '32.13',
                 districts: [
                     { name: 'Sagalaherang', bpsCode: '32.13.01' },
                     { name: 'Cisalak', bpsCode: '32.13.02' },
@@ -3352,7 +3352,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Purwakarta',
-                bpscode: '32.14',
+                bpsCode: '32.14',
                 districts: [
                     { name: 'Purwakarta', bpsCode: '32.14.01' },
                     { name: 'Campaka', bpsCode: '32.14.02' },
@@ -3374,7 +3374,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Karawang',
-                bpscode: '32.15',
+                bpsCode: '32.15',
                 districts: [
                     { name: 'Karawang Barat', bpsCode: '32.15.01' },
                     { name: 'Pangkalan', bpsCode: '32.15.02' },
@@ -3409,7 +3409,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bekasi',
-                bpscode: '32.16',
+                bpsCode: '32.16',
                 districts: [
                     { name: 'Tarumajaya', bpsCode: '32.16.01' },
                     { name: 'Babelan', bpsCode: '32.16.02' },
@@ -3437,7 +3437,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bandung Barat',
-                bpscode: '32.17',
+                bpsCode: '32.17',
                 districts: [
                     { name: 'Lembang', bpsCode: '32.17.01' },
                     { name: 'Parongpong', bpsCode: '32.17.02' },
@@ -3458,7 +3458,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pangandaran',
-                bpscode: '32.18',
+                bpsCode: '32.18',
                 districts: [
                     { name: 'Parigi', bpsCode: '32.18.01' },
                     { name: 'Cijulang', bpsCode: '32.18.02' },
@@ -3473,7 +3473,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bogor',
-                bpscode: '32.71',
+                bpsCode: '32.71',
                 districts: [
                     { name: 'Bogor Selatan', bpsCode: '32.71.01' },
                     { name: 'Bogor Timur', bpsCode: '32.71.02' },
@@ -3484,7 +3484,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sukabumi',
-                bpscode: '32.72',
+                bpsCode: '32.72',
                 districts: [
                     { name: 'Gunungpuyuh (Gunung Puyuh)', bpsCode: '32.72.01' },
                     { name: 'Cikole', bpsCode: '32.72.02' },
@@ -3496,7 +3496,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bandung',
-                bpscode: '32.73',
+                bpsCode: '32.73',
                 districts: [
                     { name: 'Sukasari', bpsCode: '32.73.01' },
                     { name: 'Coblong', bpsCode: '32.73.02' },
@@ -3531,7 +3531,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Cirebon',
-                bpscode: '32.74',
+                bpsCode: '32.74',
                 districts: [
                     { name: 'Kejaksan', bpsCode: '32.74.01' },
                     { name: 'Lemah Wungkuk (Lemahwungkuk)', bpsCode: '32.74.02' },
@@ -3541,7 +3541,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bekasi',
-                bpscode: '32.75',
+                bpsCode: '32.75',
                 districts: [
                     { name: 'Bekasi Timur', bpsCode: '32.75.01' },
                     { name: 'Bekasi Barat', bpsCode: '32.75.02' },
@@ -3558,7 +3558,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Depok',
-                bpscode: '32.76',
+                bpsCode: '32.76',
                 districts: [
                     { name: 'Pancoran Mas', bpsCode: '32.76.01' },
                     { name: 'Cimanggis', bpsCode: '32.76.02' },
@@ -3574,7 +3574,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Cimahi',
-                bpscode: '32.77',
+                bpsCode: '32.77',
                 districts: [
                     { name: 'Cimahi Selatan', bpsCode: '32.77.01' },
                     { name: 'Cimahi Tengah', bpsCode: '32.77.02' },
@@ -3582,7 +3582,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tasikmalaya',
-                bpscode: '32.78',
+                bpsCode: '32.78',
                 districts: [
                     { name: 'Cihideung', bpsCode: '32.78.01' },
                     { name: 'Cipedes', bpsCode: '32.78.02' },
@@ -3597,7 +3597,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Banjar',
-                bpscode: '32.79',
+                bpsCode: '32.79',
                 districts: [
                     { name: 'Banjar', bpsCode: '32.79.01' },
                     { name: 'Pataruman', bpsCode: '32.79.02' },
@@ -3611,7 +3611,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Cilacap',
-                bpscode: '33.01',
+                bpsCode: '33.01',
                 districts: [
                     { name: 'Kedungreja', bpsCode: '33.01.01' },
                     { name: 'Kesugihan', bpsCode: '33.01.02' },
@@ -3640,7 +3640,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Banyumas',
-                bpscode: '33.02',
+                bpsCode: '33.02',
                 districts: [
                     { name: 'Lumbir', bpsCode: '33.02.01' },
                     { name: 'Wangon', bpsCode: '33.02.02' },
@@ -3672,7 +3672,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Purbalingga',
-                bpscode: '33.03',
+                bpsCode: '33.03',
                 districts: [
                     { name: 'Kemangkon', bpsCode: '33.03.01' },
                     { name: 'Bukateja', bpsCode: '33.03.02' },
@@ -3695,7 +3695,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Banjarnegara',
-                bpscode: '33.04',
+                bpsCode: '33.04',
                 districts: [
                     { name: 'Susukan', bpsCode: '33.04.01' },
                     { name: 'Purworeja Klampok (Purworejo Klampok)', bpsCode: '33.04.02' },
@@ -3720,7 +3720,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kebumen',
-                bpscode: '33.05',
+                bpsCode: '33.05',
                 districts: [
                     { name: 'Ayah', bpsCode: '33.05.01' },
                     { name: 'Buayan', bpsCode: '33.05.02' },
@@ -3751,7 +3751,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Purworejo',
-                bpscode: '33.06',
+                bpsCode: '33.06',
                 districts: [
                     { name: 'Grabag', bpsCode: '33.06.01' },
                     { name: 'Ngombol', bpsCode: '33.06.02' },
@@ -3772,7 +3772,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Wonosobo',
-                bpscode: '33.07',
+                bpsCode: '33.07',
                 districts: [
                     { name: 'Wadaslintang', bpsCode: '33.07.01' },
                     { name: 'Kepil', bpsCode: '33.07.02' },
@@ -3792,7 +3792,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Magelang',
-                bpscode: '33.08',
+                bpsCode: '33.08',
                 districts: [
                     { name: 'Salaman', bpsCode: '33.08.01' },
                     { name: 'Borobudur', bpsCode: '33.08.02' },
@@ -3818,7 +3818,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Boyolali',
-                bpscode: '33.09',
+                bpsCode: '33.09',
                 districts: [
                     { name: 'Selo', bpsCode: '33.09.01' },
                     { name: 'Ampel', bpsCode: '33.09.02' },
@@ -3842,7 +3842,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Klaten',
-                bpscode: '33.10',
+                bpsCode: '33.10',
                 districts: [
                     { name: 'Prambanan', bpsCode: '33.10.01' },
                     { name: 'Gantiwarno', bpsCode: '33.10.02' },
@@ -3873,7 +3873,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sukoharjo',
-                bpscode: '33.11',
+                bpsCode: '33.11',
                 districts: [
                     { name: 'Weru', bpsCode: '33.11.01' },
                     { name: 'Bulu', bpsCode: '33.11.02' },
@@ -3890,7 +3890,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Wonogiri',
-                bpscode: '33.12',
+                bpsCode: '33.12',
                 districts: [
                     { name: 'Pracimantoro', bpsCode: '33.12.01' },
                     { name: 'Giritontro', bpsCode: '33.12.02' },
@@ -3920,7 +3920,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Karanganyar',
-                bpscode: '33.13',
+                bpsCode: '33.13',
                 districts: [
                     { name: 'Jatipuro', bpsCode: '33.13.01' },
                     { name: 'Jatiyoso', bpsCode: '33.13.02' },
@@ -3942,7 +3942,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sragen',
-                bpscode: '33.14',
+                bpsCode: '33.14',
                 districts: [
                     { name: 'Kalijambe', bpsCode: '33.14.01' },
                     { name: 'Plupuh', bpsCode: '33.14.02' },
@@ -3967,7 +3967,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Grobogan',
-                bpscode: '33.15',
+                bpsCode: '33.15',
                 districts: [
                     { name: 'Kedungjati', bpsCode: '33.15.01' },
                     { name: 'Karangrayung', bpsCode: '33.15.02' },
@@ -3991,7 +3991,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Blora',
-                bpscode: '33.16',
+                bpsCode: '33.16',
                 districts: [
                     { name: 'Jati', bpsCode: '33.16.01' },
                     { name: 'Randublatung', bpsCode: '33.16.02' },
@@ -4012,7 +4012,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Rembang',
-                bpscode: '33.17',
+                bpsCode: '33.17',
                 districts: [
                     { name: 'Sumber', bpsCode: '33.17.01' },
                     { name: 'Bulu', bpsCode: '33.17.02' },
@@ -4031,7 +4031,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pati',
-                bpscode: '33.18',
+                bpsCode: '33.18',
                 districts: [
                     { name: 'Sukolilo', bpsCode: '33.18.01' },
                     { name: 'Kayen', bpsCode: '33.18.02' },
@@ -4057,7 +4057,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kudus',
-                bpscode: '33.19',
+                bpsCode: '33.19',
                 districts: [
                     { name: 'Kaliwungu', bpsCode: '33.19.01' },
                     { name: 'Kota Kudus (Kudus Kota)', bpsCode: '33.19.02' },
@@ -4071,7 +4071,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Jepara',
-                bpscode: '33.20',
+                bpsCode: '33.20',
                 districts: [
                     { name: 'Kedung', bpsCode: '33.20.01' },
                     { name: 'Pecangaan', bpsCode: '33.20.02' },
@@ -4092,7 +4092,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Demak',
-                bpscode: '33.21',
+                bpsCode: '33.21',
                 districts: [
                     { name: 'Mranggen', bpsCode: '33.21.01' },
                     { name: 'Karangawen', bpsCode: '33.21.02' },
@@ -4111,7 +4111,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Semarang',
-                bpscode: '33.22',
+                bpsCode: '33.22',
                 districts: [
                     { name: 'Getasan', bpsCode: '33.22.01' },
                     { name: 'Tengaran', bpsCode: '33.22.02' },
@@ -4135,7 +4135,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Temanggung',
-                bpscode: '33.23',
+                bpsCode: '33.23',
                 districts: [
                     { name: 'Bulu', bpsCode: '33.23.01' },
                     { name: 'Tembarak', bpsCode: '33.23.02' },
@@ -4160,7 +4160,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kendal',
-                bpscode: '33.24',
+                bpsCode: '33.24',
                 districts: [
                     { name: 'Plantungan', bpsCode: '33.24.01' },
                     { name: 'Pageruyung (Pagerruyung)', bpsCode: '33.24.02' },
@@ -4185,7 +4185,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Batang',
-                bpscode: '33.25',
+                bpsCode: '33.25',
                 districts: [
                     { name: 'Wonotunggal', bpsCode: '33.25.01' },
                     { name: 'Bandar', bpsCode: '33.25.02' },
@@ -4205,7 +4205,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pekalongan',
-                bpscode: '33.26',
+                bpsCode: '33.26',
                 districts: [
                     { name: 'Kandangserang', bpsCode: '33.26.01' },
                     { name: 'Paninggaran', bpsCode: '33.26.02' },
@@ -4229,7 +4229,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pemalang',
-                bpscode: '33.27',
+                bpsCode: '33.27',
                 districts: [
                     { name: 'Moga', bpsCode: '33.27.01' },
                     { name: 'Pulosari', bpsCode: '33.27.02' },
@@ -4248,7 +4248,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tegal',
-                bpscode: '33.28',
+                bpsCode: '33.28',
                 districts: [
                     { name: 'Margasari', bpsCode: '33.28.01' },
                     { name: 'Bumijawa', bpsCode: '33.28.02' },
@@ -4271,7 +4271,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Brebes',
-                bpscode: '33.29',
+                bpsCode: '33.29',
                 districts: [
                     { name: 'Salem', bpsCode: '33.29.01' },
                     { name: 'Bantarkawung', bpsCode: '33.29.02' },
@@ -4293,7 +4293,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Magelang',
-                bpscode: '33.71',
+                bpsCode: '33.71',
                 districts: [
                     { name: 'Magelang Selatan', bpsCode: '33.71.01' },
                     { name: 'Magelang Utara', bpsCode: '33.71.02' },
@@ -4301,7 +4301,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Surakarta',
-                bpscode: '33.72',
+                bpsCode: '33.72',
                 districts: [
                     { name: 'Laweyan', bpsCode: '33.72.01' },
                     { name: 'Serengan', bpsCode: '33.72.02' },
@@ -4311,7 +4311,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Salatiga',
-                bpscode: '33.73',
+                bpsCode: '33.73',
                 districts: [
                     { name: 'Sidorejo', bpsCode: '33.73.01' },
                     { name: 'Tingkir', bpsCode: '33.73.02' },
@@ -4320,7 +4320,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Semarang',
-                bpscode: '33.74',
+                bpsCode: '33.74',
                 districts: [
                     { name: 'Semarang Tengah', bpsCode: '33.74.01' },
                     { name: 'Semarang Utara', bpsCode: '33.74.02' },
@@ -4341,7 +4341,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pekalongan',
-                bpscode: '33.75',
+                bpsCode: '33.75',
                 districts: [
                     { name: 'Pekalongan Barat', bpsCode: '33.75.01' },
                     { name: 'Pekalongan Timur', bpsCode: '33.75.02' },
@@ -4350,7 +4350,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tegal',
-                bpscode: '33.76',
+                bpsCode: '33.76',
                 districts: [
                     { name: 'Tegal Barat', bpsCode: '33.76.01' },
                     { name: 'Tegal Timur', bpsCode: '33.76.02' },
@@ -4472,7 +4472,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Pacitan',
-                bpscode: '35.01',
+                bpsCode: '35.01',
                 districts: [
                     { name: 'Donorojo', bpsCode: '35.01.01' },
                     { name: 'Pringkuku', bpsCode: '35.01.02' },
@@ -4489,7 +4489,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Ponorogo',
-                bpscode: '35.02',
+                bpsCode: '35.02',
                 districts: [
                     { name: 'Slahung', bpsCode: '35.02.01' },
                     { name: 'Ngrayun', bpsCode: '35.02.02' },
@@ -4515,7 +4515,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Trenggalek',
-                bpscode: '35.03',
+                bpsCode: '35.03',
                 districts: [
                     { name: 'Panggul', bpsCode: '35.03.01' },
                     { name: 'Munjungan', bpsCode: '35.03.02' },
@@ -4534,7 +4534,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tulungagung',
-                bpscode: '35.04',
+                bpsCode: '35.04',
                 districts: [
                     { name: 'Tulungagung', bpsCode: '35.04.01' },
                     { name: 'Boyolangu', bpsCode: '35.04.02' },
@@ -4558,7 +4558,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Blitar',
-                bpscode: '35.05',
+                bpsCode: '35.05',
                 districts: [
                     { name: 'Wonodadi', bpsCode: '35.05.01' },
                     { name: 'Udanawu', bpsCode: '35.05.02' },
@@ -4585,7 +4585,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kediri',
-                bpscode: '35.06',
+                bpsCode: '35.06',
                 districts: [
                     { name: 'Semen', bpsCode: '35.06.01' },
                     { name: 'Mojo', bpsCode: '35.06.02' },
@@ -4616,7 +4616,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Malang',
-                bpscode: '35.07',
+                bpsCode: '35.07',
                 districts: [
                     { name: 'Donomulyo', bpsCode: '35.07.01' },
                     { name: 'Pagak', bpsCode: '35.07.02' },
@@ -4654,7 +4654,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lumajang',
-                bpscode: '35.08',
+                bpsCode: '35.08',
                 districts: [
                     { name: 'Tempursari', bpsCode: '35.08.01' },
                     { name: 'Pronojiwo', bpsCode: '35.08.02' },
@@ -4680,7 +4680,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Jember',
-                bpscode: '35.09',
+                bpsCode: '35.09',
                 districts: [
                     { name: 'Jombang', bpsCode: '35.09.01' },
                     { name: 'Kencong', bpsCode: '35.09.02' },
@@ -4716,7 +4716,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Banyuwangi',
-                bpscode: '35.10',
+                bpsCode: '35.10',
                 districts: [
                     { name: 'Pesanggaran', bpsCode: '35.10.01' },
                     { name: 'Bangorejo', bpsCode: '35.10.02' },
@@ -4746,7 +4746,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bondowoso',
-                bpscode: '35.11',
+                bpsCode: '35.11',
                 districts: [
                     { name: 'Maesan', bpsCode: '35.11.01' },
                     { name: 'Tamanan', bpsCode: '35.11.02' },
@@ -4774,7 +4774,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Situbondo',
-                bpscode: '35.12',
+                bpsCode: '35.12',
                 districts: [
                     { name: 'Jatibanteng', bpsCode: '35.12.01' },
                     { name: 'Besuki', bpsCode: '35.12.02' },
@@ -4796,7 +4796,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Probolinggo',
-                bpscode: '35.13',
+                bpsCode: '35.13',
                 districts: [
                     { name: 'Sukapura', bpsCode: '35.13.01' },
                     { name: 'Sumber', bpsCode: '35.13.02' },
@@ -4825,7 +4825,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pasuruan',
-                bpscode: '35.14',
+                bpsCode: '35.14',
                 districts: [
                     { name: 'Purwodadi', bpsCode: '35.14.01' },
                     { name: 'Tutur', bpsCode: '35.14.02' },
@@ -4854,7 +4854,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sidoarjo',
-                bpscode: '35.15',
+                bpsCode: '35.15',
                 districts: [
                     { name: 'Tarik', bpsCode: '35.15.01' },
                     { name: 'Prambon', bpsCode: '35.15.02' },
@@ -4877,7 +4877,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mojokerto',
-                bpscode: '35.16',
+                bpsCode: '35.16',
                 districts: [
                     { name: 'Jatirejo', bpsCode: '35.16.01' },
                     { name: 'Gondang', bpsCode: '35.16.02' },
@@ -4900,7 +4900,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Jombang',
-                bpscode: '35.17',
+                bpsCode: '35.17',
                 districts: [
                     { name: 'Perak', bpsCode: '35.17.01' },
                     { name: 'Gudo', bpsCode: '35.17.02' },
@@ -4926,7 +4926,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Nganjuk',
-                bpscode: '35.18',
+                bpsCode: '35.18',
                 districts: [
                     { name: 'Sawahan', bpsCode: '35.18.01' },
                     { name: 'Ngetos', bpsCode: '35.18.02' },
@@ -4951,7 +4951,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Madiun',
-                bpscode: '35.19',
+                bpsCode: '35.19',
                 districts: [
                     { name: 'Kebon Sari (Kebonsari)', bpsCode: '35.19.01' },
                     { name: 'Dolopo', bpsCode: '35.19.02' },
@@ -4971,7 +4971,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Magetan',
-                bpscode: '35.20',
+                bpsCode: '35.20',
                 districts: [
                     { name: 'Poncol', bpsCode: '35.20.01' },
                     { name: 'Parang', bpsCode: '35.20.02' },
@@ -4994,7 +4994,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Ngawi',
-                bpscode: '35.21',
+                bpsCode: '35.21',
                 districts: [
                     { name: 'Sine', bpsCode: '35.21.01' },
                     { name: 'Ngrambe', bpsCode: '35.21.02' },
@@ -5018,7 +5018,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bojonegoro',
-                bpscode: '35.22',
+                bpsCode: '35.22',
                 districts: [
                     { name: 'Ngraho', bpsCode: '35.22.01' },
                     { name: 'Tambakrejo', bpsCode: '35.22.02' },
@@ -5051,7 +5051,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tuban',
-                bpscode: '35.23',
+                bpsCode: '35.23',
                 districts: [
                     { name: 'Kenduruan', bpsCode: '35.23.01' },
                     { name: 'Jatirogo', bpsCode: '35.23.02' },
@@ -5076,7 +5076,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lamongan',
-                bpscode: '35.24',
+                bpsCode: '35.24',
                 districts: [
                     { name: 'Sukorame', bpsCode: '35.24.01' },
                     { name: 'Bluluk', bpsCode: '35.24.02' },
@@ -5108,7 +5108,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Gresik',
-                bpscode: '35.25',
+                bpsCode: '35.25',
                 districts: [
                     { name: 'Dukun', bpsCode: '35.25.01' },
                     { name: 'Balongpanggang (Balong Panggang)', bpsCode: '35.25.02' },
@@ -5131,7 +5131,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bangkalan',
-                bpscode: '35.26',
+                bpsCode: '35.26',
                 districts: [
                     { name: 'Bangkalan', bpsCode: '35.26.01' },
                     { name: 'Socah', bpsCode: '35.26.02' },
@@ -5154,7 +5154,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sampang',
-                bpscode: '35.27',
+                bpsCode: '35.27',
                 districts: [
                     { name: 'Sreseh', bpsCode: '35.27.01' },
                     { name: 'Torjun', bpsCode: '35.27.02' },
@@ -5173,7 +5173,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pamekasan',
-                bpscode: '35.28',
+                bpsCode: '35.28',
                 districts: [
                     { name: 'Tlanakan', bpsCode: '35.28.01' },
                     { name: 'Pademawu', bpsCode: '35.28.02' },
@@ -5191,7 +5191,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sumenep',
-                bpscode: '35.29',
+                bpsCode: '35.29',
                 districts: [
                     { name: 'Kota Sumenep', bpsCode: '35.29.01' },
                     { name: 'Kalianget', bpsCode: '35.29.02' },
@@ -5223,7 +5223,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kediri',
-                bpscode: '35.71',
+                bpsCode: '35.71',
                 districts: [
                     { name: 'Mojoroto', bpsCode: '35.71.01' },
                     { name: 'Kota (Kediri Kota)', bpsCode: '35.71.02' },
@@ -5231,7 +5231,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Blitar',
-                bpscode: '35.72',
+                bpsCode: '35.72',
                 districts: [
                     { name: 'Kepanjenkidul (Kepanjen Kidul)', bpsCode: '35.72.01' },
                     { name: 'Sukorejo', bpsCode: '35.72.02' },
@@ -5239,7 +5239,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Malang',
-                bpscode: '35.73',
+                bpsCode: '35.73',
                 districts: [
                     { name: 'Blimbing', bpsCode: '35.73.01' },
                     { name: 'Klojen', bpsCode: '35.73.02' },
@@ -5249,7 +5249,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Probolinggo',
-                bpscode: '35.74',
+                bpsCode: '35.74',
                 districts: [
                     { name: 'Kademangan', bpsCode: '35.74.01' },
                     { name: 'Wonoasih', bpsCode: '35.74.02' },
@@ -5259,7 +5259,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pasuruan',
-                bpscode: '35.75',
+                bpsCode: '35.75',
                 districts: [
                     { name: 'Gadingrejo', bpsCode: '35.75.01' },
                     { name: 'Purworejo', bpsCode: '35.75.02' },
@@ -5268,7 +5268,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mojokerto',
-                bpscode: '35.76',
+                bpsCode: '35.76',
                 districts: [
                     { name: 'Prajuritkulon (Prajurit Kulon)', bpsCode: '35.76.01' },
                     { name: 'Magersari', bpsCode: '35.76.02' },
@@ -5276,7 +5276,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Madiun',
-                bpscode: '35.77',
+                bpsCode: '35.77',
                 districts: [
                     { name: 'Kartoharjo', bpsCode: '35.77.01' },
                     { name: 'Manguharjo', bpsCode: '35.77.02' },
@@ -5284,7 +5284,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Surabaya',
-                bpscode: '35.78',
+                bpsCode: '35.78',
                 districts: [
                     { name: 'Karangpilang', bpsCode: '35.78.01' },
                     { name: 'Wonocolo', bpsCode: '35.78.02' },
@@ -5320,7 +5320,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Batu',
-                bpscode: '35.79',
+                bpsCode: '35.79',
                 districts: [
                     { name: 'Batu', bpsCode: '35.79.01' },
                     { name: 'Bumiaji', bpsCode: '35.79.02' },
@@ -5333,7 +5333,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Pandeglang',
-                bpscode: '36.01',
+                bpsCode: '36.01',
                 districts: [
                     { name: 'Sumur', bpsCode: '36.01.01' },
                     { name: 'Cimanggu', bpsCode: '36.01.02' },
@@ -5373,7 +5373,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lebak',
-                bpscode: '36.02',
+                bpsCode: '36.02',
                 districts: [
                     { name: 'Malingping', bpsCode: '36.02.01' },
                     { name: 'Panggarangan', bpsCode: '36.02.02' },
@@ -5406,7 +5406,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tangerang',
-                bpscode: '36.03',
+                bpsCode: '36.03',
                 districts: [
                     { name: 'Balaraja', bpsCode: '36.03.01' },
                     { name: 'Jayanti', bpsCode: '36.03.02' },
@@ -5440,7 +5440,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Serang',
-                bpscode: '36.04',
+                bpsCode: '36.04',
                 districts: [
                     { name: 'Kramatwatu', bpsCode: '36.04.05' },
                     { name: 'Waringinkurung (Waringin Kurung)', bpsCode: '36.04.06' },
@@ -5474,7 +5474,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tangerang',
-                bpscode: '36.71',
+                bpsCode: '36.71',
                 districts: [
                     { name: 'Tangerang', bpsCode: '36.71.01' },
                     { name: 'Jatiuwung', bpsCode: '36.71.02' },
@@ -5492,7 +5492,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Cilegon',
-                bpscode: '36.72',
+                bpsCode: '36.72',
                 districts: [
                     { name: 'Cibeber', bpsCode: '36.72.01' },
                     { name: 'Cilegon', bpsCode: '36.72.02' },
@@ -5505,7 +5505,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Serang',
-                bpscode: '36.73',
+                bpsCode: '36.73',
                 districts: [
                     { name: 'Serang', bpsCode: '36.73.01' },
                     { name: 'Kasemen', bpsCode: '36.73.02' },
@@ -5516,7 +5516,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tangerang Selatan',
-                bpscode: '36.74',
+                bpsCode: '36.74',
                 districts: [
                     { name: 'Serpong', bpsCode: '36.74.01' },
                     { name: 'Serpong Utara', bpsCode: '36.74.02' },
@@ -5534,7 +5534,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Jembrana',
-                bpscode: '51.01',
+                bpsCode: '51.01',
                 districts: [
                     { name: 'Negara', bpsCode: '51.01.01' },
                     { name: 'Mendoyo', bpsCode: '51.01.02' },
@@ -5544,7 +5544,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tabanan',
-                bpscode: '51.02',
+                bpsCode: '51.02',
                 districts: [
                     { name: 'Selemadeg', bpsCode: '51.02.01' },
                     { name: 'Salamadeg Timur (Salemadeg Timur)', bpsCode: '51.02.02' },
@@ -5559,7 +5559,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Badung',
-                bpscode: '51.03',
+                bpsCode: '51.03',
                 districts: [
                     { name: 'Kuta', bpsCode: '51.03.01' },
                     { name: 'Mengwi', bpsCode: '51.03.02' },
@@ -5570,7 +5570,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Gianyar',
-                bpscode: '51.04',
+                bpsCode: '51.04',
                 districts: [
                     { name: 'Sukawati', bpsCode: '51.04.01' },
                     { name: 'Belah Batuh (Blahbatuh)', bpsCode: '51.04.02' },
@@ -5582,7 +5582,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Klungkung',
-                bpscode: '51.05',
+                bpsCode: '51.05',
                 districts: [
                     { name: 'Nusa Penida (Nusapenida)', bpsCode: '51.05.01' },
                     { name: 'Banjarangkan', bpsCode: '51.05.02' },
@@ -5591,7 +5591,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bangli',
-                bpscode: '51.06',
+                bpsCode: '51.06',
                 districts: [
                     { name: 'Susut', bpsCode: '51.06.01' },
                     { name: 'Bangli', bpsCode: '51.06.02' },
@@ -5600,7 +5600,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Karangasem',
-                bpscode: '51.07',
+                bpsCode: '51.07',
                 districts: [
                     { name: 'Rendang', bpsCode: '51.07.01' },
                     { name: 'Sidemen', bpsCode: '51.07.02' },
@@ -5613,7 +5613,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Buleleng',
-                bpscode: '51.08',
+                bpsCode: '51.08',
                 districts: [
                     { name: 'Gerokgak', bpsCode: '51.08.01' },
                     { name: 'Seririt', bpsCode: '51.08.02' },
@@ -5627,7 +5627,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Denpasar',
-                bpscode: '51.71',
+                bpsCode: '51.71',
                 districts: [
                     { name: 'Denpasar Selatan', bpsCode: '51.71.01' },
                     { name: 'Denpasar Timur', bpsCode: '51.71.02' },
@@ -5641,7 +5641,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Lombok Barat',
-                bpscode: '52.01',
+                bpsCode: '52.01',
                 districts: [
                     { name: 'Gerung', bpsCode: '52.01.01' },
                     { name: 'Kediri', bpsCode: '52.01.02' },
@@ -5656,7 +5656,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lombok Tengah',
-                bpscode: '52.02',
+                bpsCode: '52.02',
                 districts: [
                     { name: 'Praya', bpsCode: '52.02.01' },
                     { name: 'Jonggat', bpsCode: '52.02.02' },
@@ -5673,7 +5673,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lombok Timur',
-                bpscode: '52.03',
+                bpsCode: '52.03',
                 districts: [
                     { name: 'Keruak', bpsCode: '52.03.01' },
                     { name: 'Sakra', bpsCode: '52.03.02' },
@@ -5698,7 +5698,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sumbawa',
-                bpscode: '52.04',
+                bpsCode: '52.04',
                 districts: [
                     { name: 'Lunyuk', bpsCode: '52.04.02' },
                     { name: 'Alas', bpsCode: '52.04.05' },
@@ -5727,7 +5727,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Dompu',
-                bpscode: '52.05',
+                bpsCode: '52.05',
                 districts: [
                     { name: 'Dompu', bpsCode: '52.05.01' },
                     { name: 'Kempo', bpsCode: '52.05.02' },
@@ -5740,7 +5740,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bima',
-                bpscode: '52.06',
+                bpsCode: '52.06',
                 districts: [
                     { name: 'Monta', bpsCode: '52.06.01' },
                     { name: 'Bolo', bpsCode: '52.06.02' },
@@ -5763,7 +5763,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sumbawa Barat',
-                bpscode: '52.07',
+                bpsCode: '52.07',
                 districts: [
                     { name: 'Jereweh', bpsCode: '52.07.01' },
                     { name: 'Taliwang', bpsCode: '52.07.02' },
@@ -5776,7 +5776,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lombok Utara',
-                bpscode: '52.08',
+                bpsCode: '52.08',
                 districts: [
                     { name: 'Tanjung', bpsCode: '52.08.01' },
                     { name: 'Gangga', bpsCode: '52.08.02' },
@@ -5786,7 +5786,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mataram',
-                bpscode: '52.71',
+                bpsCode: '52.71',
                 districts: [
                     { name: 'Ampenan', bpsCode: '52.71.01' },
                     { name: 'Mataram', bpsCode: '52.71.02' },
@@ -5797,7 +5797,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bima',
-                bpscode: '52.72',
+                bpsCode: '52.72',
                 districts: [
                     { name: 'Rasanae Barat', bpsCode: '52.72.01' },
                     { name: 'Rasanae Timur', bpsCode: '52.72.02' },
@@ -5812,7 +5812,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Kupang',
-                bpscode: '53.01',
+                bpsCode: '53.01',
                 districts: [
                     { name: 'Semau', bpsCode: '53.01.04' },
                     { name: 'Kupang Barat', bpsCode: '53.01.05' },
@@ -5841,7 +5841,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Timor Tengah Selatan',
-                bpscode: '53.02',
+                bpsCode: '53.02',
                 districts: [
                     { name: 'Kota Soe', bpsCode: '53.02.01' },
                     { name: 'Mollo Selatan', bpsCode: '53.02.02' },
@@ -5878,7 +5878,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Timor Tengah Utara',
-                bpscode: '53.03',
+                bpsCode: '53.03',
                 districts: [
                     { name: 'Miomafo Timur', bpsCode: '53.03.01' },
                     { name: 'Miomafo Barat', bpsCode: '53.03.02' },
@@ -5907,7 +5907,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Belu',
-                bpscode: '53.04',
+                bpsCode: '53.04',
                 districts: [
                     { name: 'Lamaknen', bpsCode: '53.04.01' },
                     { name: 'Tasifeto Timur', bpsCode: '53.04.02' },
@@ -5924,7 +5924,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Alor',
-                bpscode: '53.05',
+                bpsCode: '53.05',
                 districts: [
                     { name: 'Teluk Mutiara', bpsCode: '53.05.01' },
                     { name: 'Alor Barat Laut', bpsCode: '53.05.02' },
@@ -5946,7 +5946,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Flores Timur',
-                bpscode: '53.06',
+                bpsCode: '53.06',
                 districts: [
                     { name: 'Wulanggitang', bpsCode: '53.06.01' },
                     { name: 'Titehena', bpsCode: '53.06.02' },
@@ -5970,7 +5970,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sikka',
-                bpscode: '53.07',
+                bpsCode: '53.07',
                 districts: [
                     { name: 'Paga', bpsCode: '53.07.01' },
                     { name: 'Mego', bpsCode: '53.07.02' },
@@ -5996,7 +5996,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Ende',
-                bpscode: '53.08',
+                bpsCode: '53.08',
                 districts: [
                     { name: 'Nangapanda', bpsCode: '53.08.01' },
                     { name: 'Pulau Ende', bpsCode: '53.08.02' },
@@ -6022,7 +6022,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Ngada',
-                bpscode: '53.09',
+                bpsCode: '53.09',
                 districts: [
                     { name: 'Aimere', bpsCode: '53.09.01' },
                     { name: 'Golewa', bpsCode: '53.09.02' },
@@ -6039,7 +6039,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Manggarai',
-                bpscode: '53.10',
+                bpsCode: '53.10',
                 districts: [
                     { name: 'Wae Rii', bpsCode: '53.10.01' },
                     { name: 'Ruteng', bpsCode: '53.10.03' },
@@ -6056,7 +6056,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sumba Timur',
-                bpscode: '53.11',
+                bpsCode: '53.11',
                 districts: [
                     { name: 'Kota Waingapu', bpsCode: '53.11.01' },
                     { name: 'Haharu', bpsCode: '53.11.02' },
@@ -6083,7 +6083,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sumba Barat',
-                bpscode: '53.12',
+                bpsCode: '53.12',
                 districts: [
                     { name: 'Tana Righu', bpsCode: '53.12.04' },
                     { name: 'Loli', bpsCode: '53.12.10' },
@@ -6094,7 +6094,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lembata',
-                bpscode: '53.13',
+                bpsCode: '53.13',
                 districts: [
                     { name: 'Naga Wutung', bpsCode: '53.13.01' },
                     { name: 'Atadei', bpsCode: '53.13.02' },
@@ -6108,7 +6108,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Rote Ndao',
-                bpscode: '53.14',
+                bpsCode: '53.14',
                 districts: [
                     { name: 'Rote Barat Daya', bpsCode: '53.14.01' },
                     { name: 'Rote Barat Laut', bpsCode: '53.14.02' },
@@ -6123,7 +6123,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Manggarai Barat',
-                bpscode: '53.15',
+                bpsCode: '53.15',
                 districts: [
                     { name: 'Macang Pacar', bpsCode: '53.15.01' },
                     { name: 'Kuwus', bpsCode: '53.15.02' },
@@ -6140,7 +6140,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Nagekeo',
-                bpscode: '53.16',
+                bpsCode: '53.16',
                 districts: [
                     { name: 'Aesesa', bpsCode: '53.16.01' },
                     { name: 'Nangaroro', bpsCode: '53.16.02' },
@@ -6152,7 +6152,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sumba Tengah',
-                bpscode: '53.17',
+                bpsCode: '53.17',
                 districts: [
                     { name: 'Katiku Tana', bpsCode: '53.17.01' },
                     { name: 'Umbu Ratu Nggay Barat', bpsCode: '53.17.02' },
@@ -6162,7 +6162,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sumba Barat Daya',
-                bpscode: '53.18',
+                bpsCode: '53.18',
                 districts: [
                     { name: 'Loura', bpsCode: '53.18.01' },
                     { name: 'Wewewa Utara', bpsCode: '53.18.02' },
@@ -6178,7 +6178,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Manggarai Timur',
-                bpscode: '53.19',
+                bpsCode: '53.19',
                 districts: [
                     { name: 'Borong', bpsCode: '53.19.01' },
                     { name: 'Poco Ranaka', bpsCode: '53.19.02' },
@@ -6192,7 +6192,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sabu Raijua',
-                bpscode: '53.20',
+                bpsCode: '53.20',
                 districts: [
                     { name: 'Sabu Barat', bpsCode: '53.20.01' },
                     { name: 'Sabu Tengah', bpsCode: '53.20.02' },
@@ -6203,7 +6203,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Malaka',
-                bpscode: '53.21',
+                bpsCode: '53.21',
                 districts: [
                     { name: 'Malaka Tengah', bpsCode: '53.21.01' },
                     { name: 'Malaka Barat', bpsCode: '53.21.02' },
@@ -6220,7 +6220,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kupang',
-                bpscode: '53.71',
+                bpsCode: '53.71',
                 districts: [
                     { name: 'Alak', bpsCode: '53.71.01' },
                     { name: 'Maulafa', bpsCode: '53.71.02' },
@@ -6237,7 +6237,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Sambas',
-                bpscode: '61.01',
+                bpsCode: '61.01',
                 districts: [
                     { name: 'Sambas', bpsCode: '61.01.01' },
                     { name: 'Teluk Keramat', bpsCode: '61.01.02' },
@@ -6261,7 +6261,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mempawah',
-                bpscode: '61.02',
+                bpsCode: '61.02',
                 districts: [
                     { name: 'Mempawah Hilir', bpsCode: '61.02.01' },
                     { name: 'Toho', bpsCode: '61.02.06' },
@@ -6275,7 +6275,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sanggau',
-                bpscode: '61.03',
+                bpsCode: '61.03',
                 districts: [
                     { name: 'Kapuas (Sanggau Kapuas)', bpsCode: '61.03.01' },
                     { name: 'Mukok', bpsCode: '61.03.02' },
@@ -6295,7 +6295,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Ketapang',
-                bpscode: '61.04',
+                bpsCode: '61.04',
                 districts: [
                     { name: 'Matan Hilir Utara', bpsCode: '61.04.01' },
                     { name: 'Marau', bpsCode: '61.04.02' },
@@ -6320,7 +6320,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sintang',
-                bpscode: '61.05',
+                bpsCode: '61.05',
                 districts: [
                     { name: 'Sintang', bpsCode: '61.05.01' },
                     { name: 'Tempunak', bpsCode: '61.05.02' },
@@ -6339,7 +6339,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kapuas Hulu',
-                bpscode: '61.06',
+                bpsCode: '61.06',
                 districts: [
                     { name: 'Putussibau Utara', bpsCode: '61.06.01' },
                     { name: 'Bika', bpsCode: '61.06.02' },
@@ -6367,7 +6367,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bengkayang',
-                bpscode: '61.07',
+                bpsCode: '61.07',
                 districts: [
                     { name: 'Sungai Raya', bpsCode: '61.07.01' },
                     { name: 'Samalantan', bpsCode: '61.07.02' },
@@ -6389,7 +6389,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Landak',
-                bpscode: '61.08',
+                bpsCode: '61.08',
                 districts: [
                     { name: 'Ngabang', bpsCode: '61.08.01' },
                     { name: 'Mempawah Hulu', bpsCode: '61.08.02' },
@@ -6407,7 +6407,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sekadau',
-                bpscode: '61.09',
+                bpsCode: '61.09',
                 districts: [
                     { name: 'Sekadau Hilir', bpsCode: '61.09.01' },
                     { name: 'Sekadau Hulu', bpsCode: '61.09.02' },
@@ -6419,7 +6419,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Melawi',
-                bpscode: '61.10',
+                bpsCode: '61.10',
                 districts: [
                     { name: 'Belimbing', bpsCode: '61.10.01' },
                     { name: 'Nanga Pinoh', bpsCode: '61.10.02' },
@@ -6435,7 +6435,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kayong Utara',
-                bpscode: '61.11',
+                bpsCode: '61.11',
                 districts: [
                     { name: 'Sukadana', bpsCode: '61.11.01' },
                     { name: 'Simpang Hilir', bpsCode: '61.11.02' },
@@ -6446,7 +6446,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kubu Raya',
-                bpscode: '61.12',
+                bpsCode: '61.12',
                 districts: [
                     { name: 'Sungai Raya', bpsCode: '61.12.01' },
                     { name: 'Kuala Mandor B', bpsCode: '61.12.02' },
@@ -6460,7 +6460,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pontianak',
-                bpscode: '61.71',
+                bpsCode: '61.71',
                 districts: [
                     { name: 'Pontianak Selatan', bpsCode: '61.71.01' },
                     { name: 'Pontianak Timur', bpsCode: '61.71.02' },
@@ -6471,7 +6471,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Singkawang',
-                bpscode: '61.72',
+                bpsCode: '61.72',
                 districts: [
                     { name: 'Singkawang Tengah', bpsCode: '61.72.01' },
                     { name: 'Singkawang Barat', bpsCode: '61.72.02' },
@@ -6486,7 +6486,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Kotawaringin Barat',
-                bpscode: '62.01',
+                bpsCode: '62.01',
                 districts: [
                     { name: 'Kumai', bpsCode: '62.01.01' },
                     { name: 'Arut Selatan', bpsCode: '62.01.02' },
@@ -6497,7 +6497,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kotawaringin Timur',
-                bpscode: '62.02',
+                bpsCode: '62.02',
                 districts: [
                     { name: 'Kota Besi', bpsCode: '62.02.01' },
                     { name: 'Cempaga', bpsCode: '62.02.02' },
@@ -6519,7 +6519,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kapuas',
-                bpscode: '62.03',
+                bpsCode: '62.03',
                 districts: [
                     { name: 'Selat', bpsCode: '62.03.01' },
                     { name: 'Kapuas Hilir', bpsCode: '62.03.02' },
@@ -6541,7 +6541,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Barito Selatan',
-                bpscode: '62.04',
+                bpsCode: '62.04',
                 districts: [
                     { name: 'Jenamas', bpsCode: '62.04.01' },
                     { name: 'Dusun Hilir', bpsCode: '62.04.02' },
@@ -6552,7 +6552,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Barito Utara',
-                bpscode: '62.05',
+                bpsCode: '62.05',
                 districts: [
                     { name: 'Montallat (Montalat)', bpsCode: '62.05.01' },
                     { name: 'Gunung Timang', bpsCode: '62.05.02' },
@@ -6566,7 +6566,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Katingan',
-                bpscode: '62.06',
+                bpsCode: '62.06',
                 districts: [
                     { name: 'Kamipang', bpsCode: '62.06.01' },
                     { name: 'Katingan Hilir', bpsCode: '62.06.02' },
@@ -6584,7 +6584,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Seruyan',
-                bpscode: '62.07',
+                bpsCode: '62.07',
                 districts: [
                     { name: 'Seruyan Hilir', bpsCode: '62.07.01' },
                     { name: 'Seruyan Tengah', bpsCode: '62.07.02' },
@@ -6599,7 +6599,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sukamara',
-                bpscode: '62.08',
+                bpsCode: '62.08',
                 districts: [
                     { name: 'Sukamara', bpsCode: '62.08.01' },
                     { name: 'Jelai', bpsCode: '62.08.02' },
@@ -6609,7 +6609,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lamandau',
-                bpscode: '62.09',
+                bpsCode: '62.09',
                 districts: [
                     { name: 'Lamandau', bpsCode: '62.09.01' },
                     { name: 'Delang', bpsCode: '62.09.02' },
@@ -6622,7 +6622,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Gunung Mas',
-                bpscode: '62.10',
+                bpsCode: '62.10',
                 districts: [
                     { name: 'Sepang (Sepang Simin)', bpsCode: '62.10.01' },
                     { name: 'Kurun', bpsCode: '62.10.02' },
@@ -6639,7 +6639,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pulang Pisau',
-                bpscode: '62.11',
+                bpsCode: '62.11',
                 districts: [
                     { name: 'Pandih Batu', bpsCode: '62.11.01' },
                     { name: 'Kahayan Kuala', bpsCode: '62.11.02' },
@@ -6652,7 +6652,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Murung Raya',
-                bpscode: '62.12',
+                bpsCode: '62.12',
                 districts: [
                     { name: 'Murung', bpsCode: '62.12.01' },
                     { name: 'Tanah Siang', bpsCode: '62.12.02' },
@@ -6667,7 +6667,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Barito Timur',
-                bpscode: '62.13',
+                bpsCode: '62.13',
                 districts: [
                     { name: 'Dusun Timur', bpsCode: '62.13.01' },
                     { name: 'Banua Lima', bpsCode: '62.13.02' },
@@ -6682,7 +6682,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Palangka Raya',
-                bpscode: '62.71',
+                bpsCode: '62.71',
                 districts: [
                     { name: 'Pahandut', bpsCode: '62.71.01' },
                     { name: 'Bukit Batu', bpsCode: '62.71.02' },
@@ -6697,7 +6697,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Tanah Laut',
-                bpscode: '63.01',
+                bpsCode: '63.01',
                 districts: [
                     { name: 'Takisung', bpsCode: '63.01.01' },
                     { name: 'Jorong', bpsCode: '63.01.02' },
@@ -6713,7 +6713,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kotabaru',
-                bpscode: '63.02',
+                bpsCode: '63.02',
                 districts: [
                     { name: 'Pulau Sembilan (Pulausembilan)', bpsCode: '63.02.01' },
                     { name: 'Pulau Laut / Pulaulaut Barat', bpsCode: '63.02.02' },
@@ -6739,7 +6739,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Banjar',
-                bpscode: '63.03',
+                bpsCode: '63.03',
                 districts: [
                     { name: 'Aluh-Aluh', bpsCode: '63.03.01' },
                     { name: 'Kertak Hanyar', bpsCode: '63.03.02' },
@@ -6764,7 +6764,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Barito Kuala',
-                bpscode: '63.04',
+                bpsCode: '63.04',
                 districts: [
                     { name: 'Tabunganen', bpsCode: '63.04.01' },
                     { name: 'Tamban', bpsCode: '63.04.02' },
@@ -6786,7 +6786,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tapin',
-                bpscode: '63.05',
+                bpsCode: '63.05',
                 districts: [
                     { name: 'Binuang', bpsCode: '63.05.01' },
                     { name: 'Tapin Selatan', bpsCode: '63.05.02' },
@@ -6803,7 +6803,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Hulu Sungai Selatan',
-                bpscode: '63.06',
+                bpsCode: '63.06',
                 districts: [
                     { name: 'Sungai Raya', bpsCode: '63.06.01' },
                     { name: 'Padang Batung', bpsCode: '63.06.02' },
@@ -6819,7 +6819,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Hulu Sungai Tengah',
-                bpscode: '63.07',
+                bpsCode: '63.07',
                 districts: [
                     { name: 'Haruyan', bpsCode: '63.07.01' },
                     { name: 'Batu Benawa', bpsCode: '63.07.02' },
@@ -6835,7 +6835,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Hulu Sungai Utara',
-                bpscode: '63.08',
+                bpsCode: '63.08',
                 districts: [
                     { name: 'Danau Panggang', bpsCode: '63.08.01' },
                     { name: 'Babirik', bpsCode: '63.08.02' },
@@ -6850,7 +6850,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tabalong',
-                bpscode: '63.09',
+                bpsCode: '63.09',
                 districts: [
                     { name: 'Banua Lawas', bpsCode: '63.09.01' },
                     { name: 'Kelua (Klua)', bpsCode: '63.09.02' },
@@ -6867,7 +6867,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tanah Bumbu',
-                bpscode: '63.10',
+                bpsCode: '63.10',
                 districts: [
                     { name: 'Batu Licin (Batulicin)', bpsCode: '63.10.01' },
                     { name: 'Kusan Hilir', bpsCode: '63.10.02' },
@@ -6882,7 +6882,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Balangan',
-                bpscode: '63.11',
+                bpsCode: '63.11',
                 districts: [
                     { name: 'Juai', bpsCode: '63.11.01' },
                     { name: 'Halong', bpsCode: '63.11.02' },
@@ -6895,7 +6895,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Banjarmasin',
-                bpscode: '63.71',
+                bpsCode: '63.71',
                 districts: [
                     { name: 'Banjarmasin Selatan', bpsCode: '63.71.01' },
                     { name: 'Banjarmasin Timur', bpsCode: '63.71.02' },
@@ -6905,7 +6905,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Banjarbaru',
-                bpscode: '63.72',
+                bpsCode: '63.72',
                 districts: [
                     { name: 'Landasan Ulin', bpsCode: '63.72.02' },
                     { name: 'Cempaka', bpsCode: '63.72.03' },
@@ -6920,7 +6920,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Paser',
-                bpscode: '64.01',
+                bpsCode: '64.01',
                 districts: [
                     { name: 'Batu Sopang', bpsCode: '64.01.01' },
                     { name: 'Tanjung Harapan', bpsCode: '64.01.02' },
@@ -6935,7 +6935,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kutai Kartanegara',
-                bpscode: '64.02',
+                bpsCode: '64.02',
                 districts: [
                     { name: 'Muara Muntai', bpsCode: '64.02.01' },
                     { name: 'Loa Kulu', bpsCode: '64.02.02' },
@@ -6958,7 +6958,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Berau',
-                bpscode: '64.03',
+                bpsCode: '64.03',
                 districts: [
                     { name: 'Kelay', bpsCode: '64.03.01' },
                     { name: 'Talisayan', bpsCode: '64.03.02' },
@@ -6976,7 +6976,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kutai Barat',
-                bpscode: '64.07',
+                bpsCode: '64.07',
                 districts: [
                     { name: 'Long Iram', bpsCode: '64.07.05' },
                     { name: 'Melak', bpsCode: '64.07.06' },
@@ -6997,7 +6997,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kutai Timur',
-                bpscode: '64.08',
+                bpsCode: '64.08',
                 districts: [
                     { name: 'Muara Ancalong', bpsCode: '64.08.01' },
                     { name: 'Muara Wahau', bpsCode: '64.08.02' },
@@ -7020,7 +7020,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Penajam Paser Utara',
-                bpscode: '64.09',
+                bpsCode: '64.09',
                 districts: [
                     { name: 'Penajam', bpsCode: '64.09.01' },
                     { name: 'Waru', bpsCode: '64.09.02' },
@@ -7029,7 +7029,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mahakam Ulu',
-                bpscode: '64.11',
+                bpsCode: '64.11',
                 districts: [
                     { name: 'Long Bagun', bpsCode: '64.11.01' },
                     { name: 'Long Hubung', bpsCode: '64.11.02' },
@@ -7039,7 +7039,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Balikpapan',
-                bpscode: '64.71',
+                bpsCode: '64.71',
                 districts: [
                     { name: 'Balikpapan Timur', bpsCode: '64.71.01' },
                     { name: 'Balikpapan Barat', bpsCode: '64.71.02' },
@@ -7050,7 +7050,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Samarinda',
-                bpscode: '64.72',
+                bpsCode: '64.72',
                 districts: [
                     { name: 'Palaran', bpsCode: '64.72.01' },
                     { name: 'Samarinda Seberang', bpsCode: '64.72.02' },
@@ -7065,7 +7065,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bontang',
-                bpscode: '64.74',
+                bpsCode: '64.74',
                 districts: [
                     { name: 'Bontang Utara', bpsCode: '64.74.01' },
                     { name: 'Bontang Selatan', bpsCode: '64.74.02' },
@@ -7078,7 +7078,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Bulungan',
-                bpscode: '65.01',
+                bpsCode: '65.01',
                 districts: [
                     { name: 'Tanjung Palas', bpsCode: '65.01.01' },
                     { name: 'Tanjung Palas Barat', bpsCode: '65.01.02' },
@@ -7093,7 +7093,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Malinau',
-                bpscode: '65.02',
+                bpsCode: '65.02',
                 districts: [
                     { name: 'Mentarang', bpsCode: '65.02.01' },
                     { name: 'Malinau Kota', bpsCode: '65.02.02' },
@@ -7113,7 +7113,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Nunukan',
-                bpscode: '65.03',
+                bpsCode: '65.03',
                 districts: [
                     { name: 'Sebatik', bpsCode: '65.03.01' },
                     { name: 'Nunukan', bpsCode: '65.03.02' },
@@ -7137,7 +7137,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tana Tidung',
-                bpscode: '65.04',
+                bpsCode: '65.04',
                 districts: [
                     { name: 'Sesayap', bpsCode: '65.04.01' },
                     { name: 'Sesayap Hilir', bpsCode: '65.04.02' },
@@ -7147,7 +7147,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tarakan',
-                bpscode: '65.71',
+                bpsCode: '65.71',
                 districts: [
                     { name: 'Tarakan Barat', bpsCode: '65.71.01' },
                     { name: 'Tarakan Tengah', bpsCode: '65.71.02' },
@@ -7162,7 +7162,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Bolaang Mongondow',
-                bpscode: '71.01',
+                bpsCode: '71.01',
                 districts: [
                     { name: 'Sang Tombolang', bpsCode: '71.01.05' },
                     { name: 'Dumoga Barat', bpsCode: '71.01.09' },
@@ -7182,7 +7182,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Minahasa',
-                bpscode: '71.02',
+                bpsCode: '71.02',
                 districts: [
                     { name: 'Tondano Barat', bpsCode: '71.02.01' },
                     { name: 'Tondano Timur', bpsCode: '71.02.02' },
@@ -7212,7 +7212,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kepulauan Sangihe',
-                bpscode: '71.03',
+                bpsCode: '71.03',
                 districts: [
                     { name: 'Tabukan Utara', bpsCode: '71.03.08' },
                     { name: 'Nusa Tabukan', bpsCode: '71.03.09' },
@@ -7232,7 +7232,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kepulauan Talaud',
-                bpscode: '71.04',
+                bpsCode: '71.04',
                 districts: [
                     { name: 'Lirung', bpsCode: '71.04.01' },
                     { name: 'Beo', bpsCode: '71.04.02' },
@@ -7256,7 +7256,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Minahasa Selatan',
-                bpscode: '71.05',
+                bpsCode: '71.05',
                 districts: [
                     { name: 'Modoinding', bpsCode: '71.05.01' },
                     { name: 'Tompaso Baru', bpsCode: '71.05.02' },
@@ -7278,7 +7278,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Minahasa Utara',
-                bpscode: '71.06',
+                bpsCode: '71.06',
                 districts: [
                     { name: 'Kema', bpsCode: '71.06.01' },
                     { name: 'Kauditan', bpsCode: '71.06.02' },
@@ -7293,7 +7293,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Minahasa Tenggara',
-                bpscode: '71.07',
+                bpsCode: '71.07',
                 districts: [
                     { name: 'Ratahan', bpsCode: '71.07.01' },
                     { name: 'Pusomaen', bpsCode: '71.07.02' },
@@ -7310,7 +7310,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bolaang Mongondow Utara',
-                bpscode: '71.08',
+                bpsCode: '71.08',
                 districts: [
                     { name: 'Sangkub', bpsCode: '71.08.01' },
                     { name: 'Bintauna', bpsCode: '71.08.02' },
@@ -7321,7 +7321,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kepulauan Siau Tagulandang Biaro (Sitaro)',
-                bpscode: '71.09',
+                bpsCode: '71.09',
                 districts: [
                     { name: 'Siau Timur', bpsCode: '71.09.01' },
                     { name: 'Siau Barat', bpsCode: '71.09.02' },
@@ -7336,7 +7336,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bolaang Mongondow Timur',
-                bpscode: '71.10',
+                bpsCode: '71.10',
                 districts: [
                     { name: 'Tutuyan', bpsCode: '71.10.01' },
                     { name: 'Kotabunan', bpsCode: '71.10.02' },
@@ -7348,7 +7348,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bolaang Mongondow Selatan',
-                bpscode: '71.11',
+                bpsCode: '71.11',
                 districts: [
                     { name: 'Bolaang Uki', bpsCode: '71.11.01' },
                     { name: 'Posigadan', bpsCode: '71.11.02' },
@@ -7360,7 +7360,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Manado',
-                bpscode: '71.71',
+                bpsCode: '71.71',
                 districts: [
                     { name: 'Bunaken', bpsCode: '71.71.01' },
                     { name: 'Tuminiting', bpsCode: '71.71.02' },
@@ -7376,7 +7376,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bitung',
-                bpscode: '71.72',
+                bpsCode: '71.72',
                 districts: [
                     { name: 'Lembeh Selatan (Bitung Selatan)', bpsCode: '71.72.01' },
                     { name: 'Madidir (Bitung Tengah)', bpsCode: '71.72.02' },
@@ -7389,7 +7389,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tomohon',
-                bpscode: '71.73',
+                bpsCode: '71.73',
                 districts: [
                     { name: 'Tomohon Selatan', bpsCode: '71.73.01' },
                     { name: 'Tomohon Tengah', bpsCode: '71.73.02' },
@@ -7399,7 +7399,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kotamobagu',
-                bpscode: '71.74',
+                bpsCode: '71.74',
                 districts: [
                     { name: 'Kotamobagu Utara', bpsCode: '71.74.01' },
                     { name: 'Kotamobagu Timur', bpsCode: '71.74.02' },
@@ -7413,7 +7413,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Banggai',
-                bpscode: '72.01',
+                bpsCode: '72.01',
                 districts: [
                     { name: 'Batui', bpsCode: '72.01.01' },
                     { name: 'Bunta', bpsCode: '72.01.02' },
@@ -7441,7 +7441,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Poso',
-                bpscode: '72.02',
+                bpsCode: '72.02',
                 districts: [
                     { name: 'Poso Kota', bpsCode: '72.02.01' },
                     { name: 'Poso Pesisir', bpsCode: '72.02.02' },
@@ -7465,7 +7465,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Donggala',
-                bpscode: '72.03',
+                bpsCode: '72.03',
                 districts: [
                     { name: 'Rio Pakava', bpsCode: '72.03.04' },
                     { name: 'Dampelas', bpsCode: '72.03.06' },
@@ -7486,7 +7486,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Toli-Toli',
-                bpscode: '72.04',
+                bpsCode: '72.04',
                 districts: [
                     { name: 'Dampal Selatan', bpsCode: '72.04.01' },
                     { name: 'Dampal Utara', bpsCode: '72.04.02' },
@@ -7501,7 +7501,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Buol',
-                bpscode: '72.05',
+                bpsCode: '72.05',
                 districts: [
                     { name: 'Momunu', bpsCode: '72.05.01' },
                     { name: 'Lakea (Lipunoto)', bpsCode: '72.05.02' },
@@ -7517,7 +7517,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Morowali',
-                bpscode: '72.06',
+                bpsCode: '72.06',
                 districts: [
                     { name: 'Bungku Tengah', bpsCode: '72.06.05' },
                     { name: 'Bungku Selatan', bpsCode: '72.06.06' },
@@ -7531,7 +7531,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Banggai Kepulauan',
-                bpscode: '72.07',
+                bpsCode: '72.07',
                 districts: [
                     { name: 'Totikum (Totikung)', bpsCode: '72.07.03' },
                     { name: 'Tinangkung', bpsCode: '72.07.04' },
@@ -7548,7 +7548,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Parigi Moutong',
-                bpscode: '72.08',
+                bpsCode: '72.08',
                 districts: [
                     { name: 'Parigi', bpsCode: '72.08.01' },
                     { name: 'Ampibabo', bpsCode: '72.08.02' },
@@ -7576,7 +7576,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tojo Una-Una',
-                bpscode: '72.09',
+                bpsCode: '72.09',
                 districts: [
                     { name: 'Una Una', bpsCode: '72.09.01' },
                     { name: 'Togean', bpsCode: '72.09.02' },
@@ -7593,7 +7593,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sigi',
-                bpscode: '72.10',
+                bpsCode: '72.10',
                 districts: [
                     { name: 'Sigi Biromaru', bpsCode: '72.10.01' },
                     { name: 'Palolo', bpsCode: '72.10.02' },
@@ -7613,7 +7613,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Banggai Laut',
-                bpscode: '72.11',
+                bpsCode: '72.11',
                 districts: [
                     { name: 'Banggai', bpsCode: '72.11.01' },
                     { name: 'Banggai Utara', bpsCode: '72.11.02' },
@@ -7625,7 +7625,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Morowali Utara',
-                bpscode: '72.12',
+                bpsCode: '72.12',
                 districts: [
                     { name: 'Petasia', bpsCode: '72.12.01' },
                     { name: 'Petasia Timur', bpsCode: '72.12.02' },
@@ -7640,7 +7640,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Palu',
-                bpscode: '72.71',
+                bpsCode: '72.71',
                 districts: [
                     { name: 'Palu Timur', bpsCode: '72.71.01' },
                     { name: 'Palu Barat', bpsCode: '72.71.02' },
@@ -7658,7 +7658,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Kepulauan Selayar',
-                bpscode: '73.01',
+                bpsCode: '73.01',
                 districts: [
                     { name: 'Benteng', bpsCode: '73.01.01' },
                     { name: 'Bontoharu', bpsCode: '73.01.02' },
@@ -7674,7 +7674,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bulukumba',
-                bpscode: '73.02',
+                bpsCode: '73.02',
                 districts: [
                     { name: 'Gantorang/Gantarang (Gangking)', bpsCode: '73.02.01' },
                     { name: 'Ujung Bulu', bpsCode: '73.02.02' },
@@ -7689,7 +7689,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bantaeng',
-                bpscode: '73.03',
+                bpsCode: '73.03',
                 districts: [
                     { name: 'Bissappu', bpsCode: '73.03.01' },
                     { name: 'Bantaeng', bpsCode: '73.03.02' },
@@ -7702,7 +7702,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Jeneponto',
-                bpscode: '73.04',
+                bpsCode: '73.04',
                 districts: [
                     { name: 'Bangkala', bpsCode: '73.04.01' },
                     { name: 'Tamalatea', bpsCode: '73.04.02' },
@@ -7718,7 +7718,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Takalar',
-                bpscode: '73.05',
+                bpsCode: '73.05',
                 districts: [
                     { name: 'Mappakasunggu', bpsCode: '73.05.01' },
                     { name: 'Mangarabombang (Mangara Bombang)', bpsCode: '73.05.02' },
@@ -7732,7 +7732,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Gowa',
-                bpscode: '73.06',
+                bpsCode: '73.06',
                 districts: [
                     { name: 'Bontonompo', bpsCode: '73.06.01' },
                     { name: 'Bajeng', bpsCode: '73.06.02' },
@@ -7755,7 +7755,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sinjai',
-                bpscode: '73.07',
+                bpsCode: '73.07',
                 districts: [
                     { name: 'Sinjai Barat', bpsCode: '73.07.01' },
                     { name: 'Sinjai Selatan', bpsCode: '73.07.02' },
@@ -7769,7 +7769,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bone',
-                bpscode: '73.08',
+                bpsCode: '73.08',
                 districts: [
                     { name: 'Bontocani', bpsCode: '73.08.01' },
                     { name: 'Kahu', bpsCode: '73.08.02' },
@@ -7801,7 +7801,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Maros',
-                bpscode: '73.09',
+                bpsCode: '73.09',
                 districts: [
                     { name: 'Mandai', bpsCode: '73.09.01' },
                     { name: 'Camba', bpsCode: '73.09.02' },
@@ -7820,7 +7820,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pangkajene Kepulauan',
-                bpscode: '73.10',
+                bpsCode: '73.10',
                 districts: [
                     { name: 'Liukang Tangaya', bpsCode: '73.10.01' },
                     { name: 'Liukang Kalmas (Kalukuang Masalima)', bpsCode: '73.10.02' },
@@ -7838,7 +7838,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Barru',
-                bpscode: '73.11',
+                bpsCode: '73.11',
                 districts: [
                     { name: 'Tanete Riaja', bpsCode: '73.11.01' },
                     { name: 'Tanete Rilau', bpsCode: '73.11.02' },
@@ -7850,7 +7850,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Soppeng',
-                bpscode: '73.12',
+                bpsCode: '73.12',
                 districts: [
                     { name: 'Marioriwawo (Mario Riwawo)', bpsCode: '73.12.01' },
                     { name: 'Liliraja (Lili Riaja)', bpsCode: '73.12.02' },
@@ -7863,7 +7863,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Wajo',
-                bpscode: '73.13',
+                bpsCode: '73.13',
                 districts: [
                     { name: 'Sabangparu', bpsCode: '73.13.01' },
                     { name: 'Pammana', bpsCode: '73.13.02' },
@@ -7882,7 +7882,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sidenreng Rappang',
-                bpscode: '73.14',
+                bpsCode: '73.14',
                 districts: [
                     { name: 'Panca Lautan (Lautang)', bpsCode: '73.14.01' },
                     { name: 'Tellu Limpoe', bpsCode: '73.14.02' },
@@ -7898,7 +7898,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pinrang',
-                bpscode: '73.15',
+                bpsCode: '73.15',
                 districts: [
                     { name: 'Matirro Sompe (Mattiro Sompe)', bpsCode: '73.15.01' },
                     { name: 'Suppa', bpsCode: '73.15.02' },
@@ -7915,7 +7915,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Enrekang',
-                bpscode: '73.16',
+                bpsCode: '73.16',
                 districts: [
                     { name: 'Maiwa', bpsCode: '73.16.01' },
                     { name: 'Enrekang', bpsCode: '73.16.02' },
@@ -7932,7 +7932,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Luwu',
-                bpscode: '73.17',
+                bpsCode: '73.17',
                 districts: [
                     { name: 'Basse Sangtempe (Bassesang Tempe / Bastem)', bpsCode: '73.17.01' },
                     { name: 'Larompong', bpsCode: '73.17.02' },
@@ -7959,7 +7959,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tana Toraja',
-                bpscode: '73.18',
+                bpsCode: '73.18',
                 districts: [
                     { name: 'Saluputi (Saluputti)', bpsCode: '73.18.01' },
                     { name: 'Bittuang', bpsCode: '73.18.02' },
@@ -7983,7 +7983,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Luwu Utara',
-                bpscode: '73.22',
+                bpsCode: '73.22',
                 districts: [
                     { name: 'Malangke', bpsCode: '73.22.01' },
                     { name: 'Bone-Bone', bpsCode: '73.22.02' },
@@ -8000,7 +8000,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Luwu Timur',
-                bpscode: '73.24',
+                bpsCode: '73.24',
                 districts: [
                     { name: 'Mangkutana', bpsCode: '73.24.01' },
                     { name: 'Nuha', bpsCode: '73.24.02' },
@@ -8016,7 +8016,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Toraja Utara',
-                bpscode: '73.26',
+                bpsCode: '73.26',
                 districts: [
                     { name: 'Rantepao', bpsCode: '73.26.01' },
                     { name: 'Sesean', bpsCode: '73.26.02' },
@@ -8042,7 +8042,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Makassar',
-                bpscode: '73.71',
+                bpsCode: '73.71',
                 districts: [
                     { name: 'Mariso', bpsCode: '73.71.01' },
                     { name: 'Mamajang', bpsCode: '73.71.02' },
@@ -8062,7 +8062,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Parepare',
-                bpscode: '73.72',
+                bpsCode: '73.72',
                 districts: [
                     { name: 'Bacukiki', bpsCode: '73.72.01' },
                     { name: 'Ujung', bpsCode: '73.72.02' },
@@ -8071,7 +8071,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Palopo',
-                bpscode: '73.73',
+                bpsCode: '73.73',
                 districts: [
                     { name: 'Wara', bpsCode: '73.73.01' },
                     { name: 'Wara Utara', bpsCode: '73.73.02' },
@@ -8090,7 +8090,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Kolaka',
-                bpscode: '74.01',
+                bpsCode: '74.01',
                 districts: [
                     { name: 'Wundulako', bpsCode: '74.01.01' },
                     { name: 'Kolaka', bpsCode: '74.01.04' },
@@ -8107,7 +8107,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Konawe',
-                bpscode: '74.02',
+                bpsCode: '74.02',
                 districts: [
                     { name: 'Lambuya', bpsCode: '74.02.01' },
                     { name: 'Unaaha', bpsCode: '74.02.02' },
@@ -8139,7 +8139,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Muna',
-                bpscode: '74.03',
+                bpsCode: '74.03',
                 districts: [
                     { name: 'Napabalano', bpsCode: '74.03.06' },
                     { name: 'Maligano', bpsCode: '74.03.07' },
@@ -8166,7 +8166,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Buton',
-                bpscode: '74.04',
+                bpsCode: '74.04',
                 districts: [
                     { name: 'Pasarwajo (Pasar Wajo)', bpsCode: '74.04.11' },
                     { name: 'Kapontori', bpsCode: '74.04.22' },
@@ -8178,7 +8178,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Konawe Selatan',
-                bpscode: '74.05',
+                bpsCode: '74.05',
                 districts: [
                     { name: 'Tinanggea', bpsCode: '74.05.01' },
                     { name: 'Angata', bpsCode: '74.05.02' },
@@ -8208,7 +8208,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bombana',
-                bpscode: '74.06',
+                bpsCode: '74.06',
                 districts: [
                     { name: 'Poleang', bpsCode: '74.06.01' },
                     { name: 'Poleang Timur', bpsCode: '74.06.02' },
@@ -8235,7 +8235,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Wakatobi',
-                bpscode: '74.07',
+                bpsCode: '74.07',
                 districts: [
                     { name: 'Wangi Wangi', bpsCode: '74.07.01' },
                     { name: 'Kaledupa', bpsCode: '74.07.02' },
@@ -8248,7 +8248,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kolaka Utara',
-                bpscode: '74.08',
+                bpsCode: '74.08',
                 districts: [
                     { name: 'Lasusua', bpsCode: '74.08.01' },
                     { name: 'Pakue', bpsCode: '74.08.02' },
@@ -8268,7 +8268,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Konawe Utara',
-                bpscode: '74.09',
+                bpsCode: '74.09',
                 districts: [
                     { name: 'Asera', bpsCode: '74.09.01' },
                     { name: 'Wiwirano', bpsCode: '74.09.02' },
@@ -8286,7 +8286,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Buton Utara',
-                bpscode: '74.10',
+                bpsCode: '74.10',
                 districts: [
                     { name: 'Kulisusu (Kalingsusu/Kalisusu)', bpsCode: '74.10.01' },
                     { name: 'Kambowa', bpsCode: '74.10.02' },
@@ -8297,7 +8297,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kolaka Timur',
-                bpscode: '74.11',
+                bpsCode: '74.11',
                 districts: [
                     { name: 'Tirawuta', bpsCode: '74.11.01' },
                     { name: 'Loea', bpsCode: '74.11.02' },
@@ -8314,7 +8314,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Konawe Kepulauan',
-                bpscode: '74.12',
+                bpsCode: '74.12',
                 districts: [
                     { name: 'Wawonii Barat', bpsCode: '74.12.01' },
                     { name: 'Wawonii Utara', bpsCode: '74.12.02' },
@@ -8326,7 +8326,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Muna Barat',
-                bpscode: '74.13',
+                bpsCode: '74.13',
                 districts: [
                     { name: 'Sawerigadi', bpsCode: '74.13.01' },
                     { name: 'Barangka', bpsCode: '74.13.02' },
@@ -8342,7 +8342,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Buton Tengah',
-                bpscode: '74.14',
+                bpsCode: '74.14',
                 districts: [
                     { name: 'Lakudo', bpsCode: '74.14.01' },
                     { name: 'Mawasangka Timur', bpsCode: '74.14.02' },
@@ -8354,7 +8354,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Buton Selatan',
-                bpscode: '74.15',
+                bpsCode: '74.15',
                 districts: [
                     { name: 'Batauga', bpsCode: '74.15.01' },
                     { name: 'Sampolawa', bpsCode: '74.15.02' },
@@ -8366,7 +8366,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kendari',
-                bpscode: '74.71',
+                bpsCode: '74.71',
                 districts: [
                     { name: 'Mandonga', bpsCode: '74.71.01' },
                     { name: 'Kendari', bpsCode: '74.71.02' },
@@ -8381,7 +8381,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bau-Bau',
-                bpscode: '74.72',
+                bpsCode: '74.72',
                 districts: [
                     { name: 'Betoambari', bpsCode: '74.72.01' },
                     { name: 'Wolio', bpsCode: '74.72.02' },
@@ -8399,7 +8399,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Gorontalo',
-                bpscode: '75.01',
+                bpsCode: '75.01',
                 districts: [
                     { name: 'Limboto', bpsCode: '75.01.01' },
                     { name: 'Telaga', bpsCode: '75.01.02' },
@@ -8423,7 +8423,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Boalemo',
-                bpscode: '75.02',
+                bpsCode: '75.02',
                 districts: [
                     { name: 'Paguyaman', bpsCode: '75.02.01' },
                     { name: 'Wonosari', bpsCode: '75.02.02' },
@@ -8435,7 +8435,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Bone Bolango',
-                bpscode: '75.03',
+                bpsCode: '75.03',
                 districts: [
                     { name: 'Tapa', bpsCode: '75.03.01' },
                     { name: 'Kabila', bpsCode: '75.03.02' },
@@ -8458,7 +8458,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pohuwato',
-                bpscode: '75.04',
+                bpsCode: '75.04',
                 districts: [
                     { name: 'Popayato', bpsCode: '75.04.01' },
                     { name: 'Lemito', bpsCode: '75.04.02' },
@@ -8476,7 +8476,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Gorontalo Utara',
-                bpscode: '75.05',
+                bpsCode: '75.05',
                 districts: [
                     { name: 'Atinggola', bpsCode: '75.05.01' },
                     { name: 'Kwandang', bpsCode: '75.05.02' },
@@ -8492,7 +8492,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Gorontalo',
-                bpscode: '75.71',
+                bpsCode: '75.71',
                 districts: [
                     { name: 'Kota Barat', bpsCode: '75.71.01' },
                     { name: 'Kota Selatan', bpsCode: '75.71.02' },
@@ -8511,7 +8511,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Mamuju Utara',
-                bpscode: '76.01',
+                bpsCode: '76.01',
                 districts: [
                     { name: 'Bambalamotu', bpsCode: '76.01.01' },
                     { name: 'Pasangkayu', bpsCode: '76.01.02' },
@@ -8528,7 +8528,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mamuju',
-                bpscode: '76.02',
+                bpsCode: '76.02',
                 districts: [
                     { name: 'Mamuju', bpsCode: '76.02.01' },
                     { name: 'Tapalang', bpsCode: '76.02.02' },
@@ -8544,7 +8544,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mamasa',
-                bpscode: '76.03',
+                bpsCode: '76.03',
                 districts: [
                     { name: 'Mambi', bpsCode: '76.03.01' },
                     { name: 'Aralle', bpsCode: '76.03.02' },
@@ -8566,7 +8566,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Polewali Mandar',
-                bpscode: '76.04',
+                bpsCode: '76.04',
                 districts: [
                     { name: 'Tinambung', bpsCode: '76.04.01' },
                     { name: 'Campalagian', bpsCode: '76.04.02' },
@@ -8587,7 +8587,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Majene',
-                bpscode: '76.05',
+                bpsCode: '76.05',
                 districts: [
                     { name: 'Banggae', bpsCode: '76.05.01' },
                     { name: 'Pamboang', bpsCode: '76.05.02' },
@@ -8600,7 +8600,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mamuju Tengah',
-                bpscode: '76.06',
+                bpsCode: '76.06',
                 districts: [
                     { name: 'Tobadak', bpsCode: '76.06.01' },
                     { name: 'Pangale', bpsCode: '76.06.02' },
@@ -8616,7 +8616,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Maluku Tengah',
-                bpscode: '81.01',
+                bpsCode: '81.01',
                 districts: [
                     { name: 'Amahai', bpsCode: '81.01.01' },
                     { name: 'Teon Nila Serua', bpsCode: '81.01.02' },
@@ -8639,7 +8639,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Maluku Tenggara',
-                bpscode: '81.02',
+                bpsCode: '81.02',
                 districts: [
                     { name: 'Kei Kecil', bpsCode: '81.02.01' },
                     { name: 'Kei Besar', bpsCode: '81.02.03' },
@@ -8655,7 +8655,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Maluku Tenggara Barat',
-                bpscode: '81.03',
+                bpsCode: '81.03',
                 districts: [
                     { name: 'Tanimbar Selatan', bpsCode: '81.03.01' },
                     { name: 'Selaru', bpsCode: '81.03.02' },
@@ -8670,7 +8670,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Buru',
-                bpscode: '81.04',
+                bpsCode: '81.04',
                 districts: [
                     { name: 'Namlea', bpsCode: '81.04.01' },
                     { name: 'Air Buaya (Airbuaya)', bpsCode: '81.04.02' },
@@ -8685,7 +8685,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Seram Bagian Timur',
-                bpscode: '81.05',
+                bpsCode: '81.05',
                 districts: [
                     { name: 'Bula', bpsCode: '81.05.01' },
                     { name: 'Seram Timur', bpsCode: '81.05.02' },
@@ -8705,7 +8705,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Seram Bagian Barat',
-                bpscode: '81.06',
+                bpsCode: '81.06',
                 districts: [
                     { name: 'Kairatu', bpsCode: '81.06.01' },
                     { name: 'Seram Barat', bpsCode: '81.06.02' },
@@ -8721,7 +8721,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kepulauan Aru',
-                bpscode: '81.07',
+                bpsCode: '81.07',
                 districts: [
                     { name: 'Pulau-Pulau Aru', bpsCode: '81.07.01' },
                     { name: 'Aru Selatan', bpsCode: '81.07.02' },
@@ -8736,7 +8736,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Maluku Barat Daya',
-                bpscode: '81.08',
+                bpsCode: '81.08',
                 districts: [
                     { name: 'Moa Lakor', bpsCode: '81.08.01' },
                     { name: 'Damer', bpsCode: '81.08.02' },
@@ -8758,7 +8758,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Buru Selatan',
-                bpscode: '81.09',
+                bpsCode: '81.09',
                 districts: [
                     { name: 'Namrole', bpsCode: '81.09.01' },
                     { name: 'Waesama', bpsCode: '81.09.02' },
@@ -8769,7 +8769,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Ambon',
-                bpscode: '81.71',
+                bpsCode: '81.71',
                 districts: [
                     { name: 'Nusaniwe (Nusanive)', bpsCode: '81.71.01' },
                     { name: 'Sirimau', bpsCode: '81.71.02' },
@@ -8779,7 +8779,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tual',
-                bpscode: '81.72',
+                bpsCode: '81.72',
                 districts: [
                     { name: 'Pulau Dullah Utara', bpsCode: '81.72.01' },
                     { name: 'Pulau Dullah Selatan', bpsCode: '81.72.02' },
@@ -8794,7 +8794,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Halmahera Barat',
-                bpscode: '82.01',
+                bpsCode: '82.01',
                 districts: [
                     { name: 'Jailolo', bpsCode: '82.01.01' },
                     { name: 'Loloda', bpsCode: '82.01.02' },
@@ -8807,7 +8807,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Halmahera Tengah',
-                bpscode: '82.02',
+                bpsCode: '82.02',
                 districts: [
                     { name: 'Weda', bpsCode: '82.02.01' },
                     { name: 'Patani', bpsCode: '82.02.02' },
@@ -8822,7 +8822,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Halmahera Utara',
-                bpscode: '82.03',
+                bpsCode: '82.03',
                 districts: [
                     { name: 'Galela', bpsCode: '82.03.04' },
                     { name: 'Tobelo', bpsCode: '82.03.05' },
@@ -8844,7 +8844,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Halmahera Selatan',
-                bpscode: '82.04',
+                bpsCode: '82.04',
                 districts: [
                     { name: 'Pulau Makian', bpsCode: '82.04.01' },
                     { name: 'Kayoa', bpsCode: '82.04.02' },
@@ -8879,7 +8879,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kepulauan Sula',
-                bpscode: '82.05',
+                bpsCode: '82.05',
                 districts: [
                     { name: 'Mangoli Timur', bpsCode: '82.05.01' },
                     { name: 'Sanana', bpsCode: '82.05.02' },
@@ -8896,7 +8896,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Halmahera Timur',
-                bpscode: '82.06',
+                bpsCode: '82.06',
                 districts: [
                     { name: 'Wasile', bpsCode: '82.06.01' },
                     { name: 'Maba', bpsCode: '82.06.02' },
@@ -8911,7 +8911,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pulau Morotai',
-                bpscode: '82.07',
+                bpsCode: '82.07',
                 districts: [
                     { name: 'Morotai Selatan', bpsCode: '82.07.01' },
                     { name: 'Morotai Selatan Barat', bpsCode: '82.07.02' },
@@ -8921,7 +8921,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pulau Taliabu',
-                bpscode: '82.08',
+                bpsCode: '82.08',
                 districts: [
                     { name: 'Taliabu Barat', bpsCode: '82.08.01' },
                     { name: 'Taliabu Barat Laut', bpsCode: '82.08.02' },
@@ -8934,7 +8934,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Ternate',
-                bpscode: '82.71',
+                bpsCode: '82.71',
                 districts: [
                     { name: 'Pulau Ternate', bpsCode: '82.71.01' },
                     { name: 'Kota Ternate Selatan', bpsCode: '82.71.02' },
@@ -8946,7 +8946,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tidore Kepulauan',
-                bpscode: '82.72',
+                bpsCode: '82.72',
                 districts: [
                     { name: 'Tidore', bpsCode: '82.72.01' },
                     { name: 'Oba Utara', bpsCode: '82.72.02' },
@@ -8965,7 +8965,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Merauke',
-                bpscode: '91.01',
+                bpsCode: '91.01',
                 districts: [
                     { name: 'Merauke', bpsCode: '91.01.01' },
                     { name: 'Muting', bpsCode: '91.01.02' },
@@ -8990,7 +8990,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Jayawijaya',
-                bpscode: '91.02',
+                bpsCode: '91.02',
                 districts: [
                     { name: 'Wamena', bpsCode: '91.02.01' },
                     { name: 'Kurulu', bpsCode: '91.02.03' },
@@ -9035,7 +9035,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Jayapura',
-                bpscode: '91.03',
+                bpsCode: '91.03',
                 districts: [
                     { name: 'Sentani', bpsCode: '91.03.01' },
                     { name: 'Sentani Timur', bpsCode: '91.03.02' },
@@ -9059,7 +9059,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Nabire',
-                bpscode: '91.04',
+                bpsCode: '91.04',
                 districts: [
                     { name: 'Nabire', bpsCode: '91.04.01' },
                     { name: 'Napan', bpsCode: '91.04.02' },
@@ -9079,7 +9079,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kepulauan Yapen',
-                bpscode: '91.05',
+                bpsCode: '91.05',
                 districts: [
                     { name: 'Yapen Selatan', bpsCode: '91.05.01' },
                     { name: 'Yapen Barat', bpsCode: '91.05.02' },
@@ -9100,7 +9100,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Biak Numfor',
-                bpscode: '91.06',
+                bpsCode: '91.06',
                 districts: [
                     { name: 'Biak Kota', bpsCode: '91.06.01' },
                     { name: 'Biak Utara', bpsCode: '91.06.02' },
@@ -9124,7 +9124,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Puncak Jaya',
-                bpscode: '91.07',
+                bpsCode: '91.07',
                 districts: [
                     { name: 'Mulia', bpsCode: '91.07.01' },
                     { name: 'Ilu', bpsCode: '91.07.03' },
@@ -9155,7 +9155,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Paniai',
-                bpscode: '91.08',
+                bpsCode: '91.08',
                 districts: [
                     { name: 'Paniai Timur', bpsCode: '91.08.01' },
                     { name: 'Paniai Barat', bpsCode: '91.08.02' },
@@ -9183,7 +9183,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mimika',
-                bpscode: '91.09',
+                bpsCode: '91.09',
                 districts: [
                     { name: 'Mimika Baru', bpsCode: '91.09.01' },
                     { name: 'Agimuga', bpsCode: '91.09.02' },
@@ -9206,7 +9206,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sarmi',
-                bpscode: '91.10',
+                bpsCode: '91.10',
                 districts: [
                     { name: 'Sarmi', bpsCode: '91.10.01' },
                     { name: 'Tor Atas', bpsCode: '91.10.02' },
@@ -9221,7 +9221,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Keerom',
-                bpscode: '91.11',
+                bpsCode: '91.11',
                 districts: [
                     { name: 'Waris', bpsCode: '91.11.01' },
                     { name: 'Arso', bpsCode: '91.11.02' },
@@ -9237,7 +9237,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pegunungan Bintang',
-                bpscode: '91.12',
+                bpsCode: '91.12',
                 districts: [
                     { name: 'Oksibil', bpsCode: '91.12.01' },
                     { name: 'Kiwirok', bpsCode: '91.12.02' },
@@ -9276,7 +9276,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Yahukimo',
-                bpscode: '91.13',
+                bpsCode: '91.13',
                 districts: [
                     { name: 'Kurima', bpsCode: '91.13.01' },
                     { name: 'Anggruk', bpsCode: '91.13.02' },
@@ -9332,7 +9332,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tolikara',
-                bpscode: '91.14',
+                bpsCode: '91.14',
                 districts: [
                     { name: 'Karubaga', bpsCode: '91.14.01' },
                     { name: 'Bokondini', bpsCode: '91.14.02' },
@@ -9383,7 +9383,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Waropen',
-                bpscode: '91.15',
+                bpsCode: '91.15',
                 districts: [
                     { name: 'Waropen Bawah', bpsCode: '91.15.01' },
                     { name: 'Masirei', bpsCode: '91.15.03' },
@@ -9399,7 +9399,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Boven Digoel',
-                bpscode: '91.16',
+                bpsCode: '91.16',
                 districts: [
                     { name: 'Mandobo', bpsCode: '91.16.01' },
                     { name: 'Mindiptana', bpsCode: '91.16.02' },
@@ -9424,7 +9424,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mappi',
-                bpscode: '91.17',
+                bpsCode: '91.17',
                 districts: [
                     { name: 'Obaa', bpsCode: '91.17.01' },
                     { name: 'Mambioman Bapai', bpsCode: '91.17.02' },
@@ -9444,7 +9444,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Asmat',
-                bpscode: '91.18',
+                bpsCode: '91.18',
                 districts: [
                     { name: 'Agats', bpsCode: '91.18.01' },
                     { name: 'Atsy / Atsj', bpsCode: '91.18.02' },
@@ -9468,7 +9468,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Supiori',
-                bpscode: '91.19',
+                bpsCode: '91.19',
                 districts: [
                     { name: 'Supiori Selatan', bpsCode: '91.19.01' },
                     { name: 'Supiori Utara', bpsCode: '91.19.02' },
@@ -9478,7 +9478,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mamberamo Raya',
-                bpscode: '91.20',
+                bpsCode: '91.20',
                 districts: [
                     { name: 'Mamberamo Tengah', bpsCode: '91.20.01' },
                     { name: 'Mamberamo Hulu', bpsCode: '91.20.02' },
@@ -9491,7 +9491,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Mamberamo Tengah',
-                bpscode: '91.21',
+                bpsCode: '91.21',
                 districts: [
                     { name: 'Kobagma (Kobakma)', bpsCode: '91.21.01' },
                     { name: 'Kelila', bpsCode: '91.21.02' },
@@ -9501,7 +9501,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Yalimo',
-                bpscode: '91.22',
+                bpsCode: '91.22',
                 districts: [
                     { name: 'Elelim', bpsCode: '91.22.01' },
                     { name: 'Apalapsili', bpsCode: '91.22.02' },
@@ -9511,7 +9511,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Lanny Jaya',
-                bpscode: '91.23',
+                bpsCode: '91.23',
                 districts: [
                     { name: 'Tiom', bpsCode: '91.23.01' },
                     { name: 'Pirime', bpsCode: '91.23.02' },
@@ -9555,7 +9555,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Nduga',
-                bpscode: '91.24',
+                bpsCode: '91.24',
                 districts: [
                     { name: 'Kenyam', bpsCode: '91.24.01' },
                     { name: 'Mapenduma', bpsCode: '91.24.02' },
@@ -9592,7 +9592,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Puncak',
-                bpscode: '91.25',
+                bpsCode: '91.25',
                 districts: [
                     { name: 'Ilaga', bpsCode: '91.25.01' },
                     { name: 'Wangbe', bpsCode: '91.25.02' },
@@ -9622,7 +9622,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Dogiyai',
-                bpscode: '91.26',
+                bpsCode: '91.26',
                 districts: [
                     { name: 'Kamu', bpsCode: '91.26.01' },
                     { name: 'Mapia', bpsCode: '91.26.02' },
@@ -9637,7 +9637,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Intan Jaya',
-                bpscode: '91.27',
+                bpsCode: '91.27',
                 districts: [
                     { name: 'Sugapa', bpsCode: '91.27.01' },
                     { name: 'Homeyo', bpsCode: '91.27.02' },
@@ -9650,7 +9650,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Deiyai',
-                bpscode: '91.28',
+                bpsCode: '91.28',
                 districts: [
                     { name: 'Tigi', bpsCode: '91.28.01' },
                     { name: 'Tigi Timur', bpsCode: '91.28.02' },
@@ -9660,7 +9660,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Jayapura',
-                bpscode: '91.71',
+                bpsCode: '91.71',
                 districts: [
                     { name: 'Jayapura Utara', bpsCode: '91.71.01' },
                     { name: 'Jayapura Selatan', bpsCode: '91.71.02' },
@@ -9675,7 +9675,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         regencies: [
             {
                 name: 'Sorong',
-                bpscode: '92.01',
+                bpsCode: '92.01',
                 districts: [
                     { name: 'Makbon', bpsCode: '92.01.01' },
                     { name: 'Beraur', bpsCode: '92.01.04' },
@@ -9710,7 +9710,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Manokwari',
-                bpscode: '92.02',
+                bpsCode: '92.02',
                 districts: [
                     { name: 'Warmare', bpsCode: '92.02.03' },
                     { name: 'Prafi', bpsCode: '92.02.04' },
@@ -9724,7 +9724,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Fakfak',
-                bpscode: '92.03',
+                bpsCode: '92.03',
                 districts: [
                     { name: 'Fak-Fak (Fakfak)', bpsCode: '92.03.01' },
                     { name: 'Fak-Fak Barat (Fakfak Barat)', bpsCode: '92.03.02' },
@@ -9746,7 +9746,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sorong Selatan',
-                bpscode: '92.04',
+                bpsCode: '92.04',
                 districts: [
                     { name: 'Teminabuan', bpsCode: '92.04.01' },
                     { name: 'Inanwatan', bpsCode: '92.04.04' },
@@ -9766,7 +9766,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Raja Ampat',
-                bpscode: '92.05',
+                bpsCode: '92.05',
                 districts: [
                     { name: 'Misool (Misool Utara)', bpsCode: '92.05.01' },
                     { name: 'Waigeo Utara', bpsCode: '92.05.02' },
@@ -9795,7 +9795,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Teluk Bintuni',
-                bpscode: '92.06',
+                bpsCode: '92.06',
                 districts: [
                     { name: 'Bintuni', bpsCode: '92.06.01' },
                     { name: 'Merdey', bpsCode: '92.06.02' },
@@ -9824,7 +9824,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Teluk Wondama',
-                bpscode: '92.07',
+                bpsCode: '92.07',
                 districts: [
                     { name: 'Wasior', bpsCode: '92.07.01' },
                     { name: 'Windesi', bpsCode: '92.07.02' },
@@ -9842,7 +9842,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Kaimana',
-                bpscode: '92.08',
+                bpsCode: '92.08',
                 districts: [
                     { name: 'Kaimana', bpsCode: '92.08.01' },
                     { name: 'Buruway', bpsCode: '92.08.02' },
@@ -9854,7 +9854,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Tambrauw',
-                bpscode: '92.09',
+                bpsCode: '92.09',
                 districts: [
                     { name: 'Fef', bpsCode: '92.09.01' },
                     { name: 'Miyah', bpsCode: '92.09.02' },
@@ -9888,7 +9888,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Maybrat',
-                bpscode: '92.10',
+                bpsCode: '92.10',
                 districts: [
                     { name: 'Aifat', bpsCode: '92.10.01' },
                     { name: 'Aifat Utara', bpsCode: '92.10.02' },
@@ -9917,7 +9917,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Manokwari Selatan',
-                bpscode: '92.11',
+                bpsCode: '92.11',
                 districts: [
                     { name: 'Ransiki', bpsCode: '92.11.01' },
                     { name: 'Oransbari', bpsCode: '92.11.02' },
@@ -9928,7 +9928,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Pegunungan Arfak',
-                bpscode: '92.12',
+                bpsCode: '92.12',
                 districts: [
                     { name: 'Anggi', bpsCode: '92.12.01' },
                     { name: 'Anggi Gida', bpsCode: '92.12.02' },
@@ -9943,7 +9943,7 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
                 ]
             }, {
                 name: 'Sorong',
-                bpscode: '92.71',
+                bpsCode: '92.71',
                 districts: [
                     { name: 'Sorong', bpsCode: '92.71.01' },
                     { name: 'Sorong Timur', bpsCode: '92.71.02' },
