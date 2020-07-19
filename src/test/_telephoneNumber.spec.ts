@@ -48,14 +48,14 @@ describe('Telephone number', () => {
             expect(getDataTelephoneNumber('(0274)123456')).to.deep.equal({
                 "number": "0274-123456",
                 "origin": {
-                    "key": "YO",
+                    "bpsCode": "34",
                     "name": "Yogyakarta"
                 }
             })
             expect(getDataTelephoneNumber('021123456')).to.deep.equal({
                 "number": "021-123456",
                 "origin": {
-                    "key": "JK",
+                    "bpsCode": "31",
                     "name": "Jakarta"
                 }
             })
