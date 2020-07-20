@@ -12,8 +12,8 @@ import { BANK_DATA, BANK_KEYS } from "../datas/bank"
 class ATMNumber implements IValid {
 
     VALID_ATMNUMBER_LENGTH = BANK_KEYS.reduce(
-        (pref, curr) => includes(pref, (BANK_DATA as any)[curr].digits) ? pref : pref.concat((BANK_DATA as any)[curr].digits), []
-    ) as number[]
+        (pref, curr) => includes(pref, BANK_DATA[curr].digits) ? pref : pref.concat(BANK_DATA[curr].digits), []
+    )
 
     isValid(atm: string, bank: string = ''): boolean {
         if (!atm || typeof atm !== 'string') return false
@@ -23,7 +23,7 @@ class ATMNumber implements IValid {
         let matchLength = correctLength(2, numOnly.length, { collection: this.VALID_ATMNUMBER_LENGTH })
 
         if (bank)
-            matchLength = correctLength(0, numOnly.length, { minLength: (BANK_DATA as any)[bank].digits } )
+            matchLength = correctLength(0, numOnly.length, { minLength: BANK_DATA[bank].digits } )
 
         return matchLength
     }

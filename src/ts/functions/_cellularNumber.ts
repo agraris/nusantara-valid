@@ -13,7 +13,7 @@ import { COUNTRY_CODE } from '../datas/province'
 class CellularNumber implements IValid, IGetData, IFormat {
 
     CELLULAR_PROVIDER_PREFIXES = CELLULAR_PROVIDER_KEYS.reduce(
-        (a, b) => a.concat((CELLULAR_PROVIDER_DATA as any)[b].prefix), []
+        (a, b) => a.concat(CELLULAR_PROVIDER_DATA[b].prefix), []
     ) as number[]
 
     isValid(mobile: string, providerKey: string = ''): boolean {
@@ -25,7 +25,7 @@ class CellularNumber implements IValid, IGetData, IFormat {
         const validLength = correctLength(1, cleanCellularNumber.length, { minLength: CELLULAR_MIN_LENGTH, maxLength: CELLULAR_MAX_LENGTH })        
 
         if (providerKey)
-            prefixCollection = (CELLULAR_PROVIDER_DATA as any)[providerKey].prefix
+            prefixCollection = CELLULAR_PROVIDER_DATA[providerKey].prefix
         else
             prefixCollection = this.CELLULAR_PROVIDER_PREFIXES
         
@@ -45,7 +45,7 @@ class CellularNumber implements IValid, IGetData, IFormat {
         const pfx = Number(cleanPhoneNumbers(mobile, { cellular: true, countryCode: COUNTRY_CODE }).substr(0, 3))
         
         for (const key of CELLULAR_PROVIDER_KEYS) {
-            const cellProvider = (CELLULAR_PROVIDER_DATA as any)[key]
+            const cellProvider = CELLULAR_PROVIDER_DATA[key]
             if (includes(cellProvider.prefix, pfx)) {
                 data.provider = {
                     key: key,

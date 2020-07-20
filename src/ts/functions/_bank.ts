@@ -15,12 +15,12 @@ class Bank implements IGetData {
         if (index) {
             bank = {
                 key: index,
-                name: (BANK_DATA as any)[index].name
+                name: BANK_DATA[index].name
             }
         } else {
             bank = BANK_KEYS.map((key) => ({
                 key,
-                name: (BANK_DATA as any)[key].name,
+                name: BANK_DATA[key].name,
             }))
         }
 

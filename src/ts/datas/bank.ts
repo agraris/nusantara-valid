@@ -10,7 +10,7 @@
  * List of bank in Indonesia including BPS code, vehicle plate, 
  * telephone numbers, and zip code.
 **/
-export const BANK_DATA =
+export const BANK_DATA : { [key: string]: any } =
 {
     BCAK: {
         name: 'Bank Central Asia',
@@ -140,5 +140,4 @@ export const BANK_DATA =
     
 }
 
-export type Bank = keyof typeof BANK_DATA;
-export const BANK_KEYS = Object.keys(BANK_DATA) as Bank[];
+export const BANK_KEYS = Object.keys(BANK_DATA);

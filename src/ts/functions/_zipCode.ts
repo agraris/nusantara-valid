@@ -12,7 +12,7 @@ import { correctLength } from '../helpers'
 class ZIPCode implements IValid {
 
     ZIP_RANGE = PROVINCE_KEYS.reduce(
-        (a, b) => a.concat((PROVINCE_DATA as any)[b].zipCode), []
+        (a, b) => a.concat(PROVINCE_DATA[b].zipCode), []
     ) as object[]
 
     isValid(zip: string | number, provinceKey: string = ''): boolean {
@@ -24,7 +24,7 @@ class ZIPCode implements IValid {
         const validLength = correctLength(0, zip.length, { minLength: 5 })
 
         if (provinceKey)
-            zipArray = (PROVINCE_DATA as any)[provinceKey].zipCode
+            zipArray = PROVINCE_DATA[provinceKey].zipCode
         
         return validLength 
             && this.isValidZIPCode(zip, zipArray)

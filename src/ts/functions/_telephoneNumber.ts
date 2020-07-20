@@ -12,7 +12,7 @@ import { cleanPhoneNumbers, includes } from "../helpers";
 class TelephoneNumber implements IValid, IFormat, IGetData {
 
     VALID_TELEPHONE_AREACODE = PROVINCE_KEYS.reduce(
-        (a, b) => a.concat((PROVINCE_DATA as any)[b].tel), []
+        (a, b) => a.concat(PROVINCE_DATA[b].tel), []
     ) as number[]
 
     isValid(tel: string): boolean {
@@ -47,7 +47,7 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
         const pfx = this.isValidCellularPrefix(cleanTelNumber)
 
         for (const key of PROVINCE_KEYS) {
-            const element = (PROVINCE_DATA as any)[key]
+            const element = PROVINCE_DATA[key]
             if (includes(element.tel, pfx)) {
                 data.origin = {
                     bpsCode: key,

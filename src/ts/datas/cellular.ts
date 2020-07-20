@@ -11,7 +11,7 @@ import { range } from '../helpers';
  *
  * List cellular provider in Indonesia
 **/
-export const CELLULAR_PROVIDER_DATA =
+export const CELLULAR_PROVIDER_DATA : { [key: string]: any } =
 {
     TELKOMSEL: {
         name: 'Telkomsel',
@@ -61,5 +61,4 @@ export const CELLULAR_MAX_LENGTH = 12;
 **/
 export const CELLULAR_HYPEN_INDEXES = [2, 6]
 
-export type CellularProvider = keyof typeof CELLULAR_PROVIDER_DATA;
-export const CELLULAR_PROVIDER_KEYS = Object.keys(CELLULAR_PROVIDER_DATA) as CellularProvider[];
+export const CELLULAR_PROVIDER_KEYS = Object.keys(CELLULAR_PROVIDER_DATA);
