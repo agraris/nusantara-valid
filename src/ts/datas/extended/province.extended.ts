@@ -3,10 +3,6 @@
  *
  * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
 **/
-
-import { PROVINCE_DATA } from '../province';
-import { MergeRecursive } from '../../helpers/index.extended';
-
 /**
  * PROVINCE_EXTENDED_DATA
  *
@@ -9960,5 +9956,3 @@ export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
         ]
     },
 };
-
-export const PROVINCE_EXTENDED_DATA = MergeRecursive(PROVINCE_DATA, PROVINCE_DATA_EXTENSION);

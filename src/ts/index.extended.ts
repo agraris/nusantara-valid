@@ -3,5 +3,5 @@
  *
  * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
 **/
-export * from './helpers/index.extended'
+export * from './helpers'
 export * from './functions/index.extended'
