@@ -41,6 +41,20 @@ export interface IDataNIK {
 }
 
 /**
+ * IDataNIKExtended data interface
+ *
+ * @interface
+**/
+export interface IDataNIKExtended {
+    nik: string,
+    birthday: Date,
+    sex: string,
+    province: IDataProvince,
+    regency: IDataRegency,
+    district: IDataDistrict
+}
+
+/**
  * IDataNIP data interface
  *
  * @interface

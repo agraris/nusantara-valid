@@ -1,17 +1,17 @@
-import { IDataNIK } from "../../interface"
+import { IDataNIKExtended } from "../../interface"
 import { NIK_REGEX } from "../../datas/nik"
 import { numbersOnly, includes } from "../../helpers"
 import { NomorIndukKependudukan } from '../_nomorIndukKependudukan'
 import { getDataRegenciesInProvince, getDataDistrictsInRegency } from './_province.extended'
 
 /**
- * Nusantara Valid: _nomorIndukKependudukan.ts
+ * Nusantara Valid: _nomorIndukKependudukan.extended.ts
  *
  * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
  *
- * @class The NomorIndukKepemdudukan class
+ * @class The NomorIndukKepemdudukanExtended class
 **/
-export class NomorIndukKependudukanExtended extends NomorIndukKependudukan {
+class NomorIndukKependudukanExtended extends NomorIndukKependudukan {
     isValid(nik: string, provinceKey: string = '', birthday: string = ''): boolean {
         if (!super.isValid(nik, provinceKey, birthday)) return false
 
@@ -19,28 +19,50 @@ export class NomorIndukKependudukanExtended extends NomorIndukKependudukan {
 
         if (!validNIK) return false
 
-        let validRegency = false
-        let validDistrict = false
-
         const provinceBPSCode = validNIK[1]
         const regencyBPSCode = provinceBPSCode + '.' + validNIK[2]
         const REGENCIES = getDataRegenciesInProvince(provinceBPSCode)
         const regenciesBPSCodes = REGENCIES.map(({ bpsCode }) => bpsCode)
-        validRegency = includes(regenciesBPSCodes, regencyBPSCode)
+        const validRegency = includes(regenciesBPSCodes, regencyBPSCode)
 
         const districtBPSCode = regencyBPSCode + '.' + validNIK[3]
         const DISTRICTS = getDataDistrictsInRegency(regencyBPSCode)
         const districtsBPSCode = DISTRICTS.map(({ bpsCode }) => bpsCode)
-        validDistrict = includes(districtsBPSCode, districtBPSCode)
+        const validDistrict = includes(districtsBPSCode, districtBPSCode)
 
         return validRegency && validDistrict
+    }
+
+    getData(nik: string): IDataNIKExtended {       
+        const data = super.getData(nik) as IDataNIKExtended
+
+        const provinceBPSCode = nik.substr(0, 2)
+        const REGENCIES = getDataRegenciesInProvince(provinceBPSCode)
+        const regencyBPSCode = provinceBPSCode + '.' + nik.substr(2, 2)
+
+        for (const regency of REGENCIES) {
+            if (regency.bpsCode == regencyBPSCode) {
+                data.regency = regency
+            }
+        }
+
+        const districtBPSCode = regencyBPSCode + '.' + nik.substr(4, 2)
+        const DISTRICTS = getDataDistrictsInRegency(regencyBPSCode)
+
+        for (const district of DISTRICTS) {
+            if (district.bpsCode == districtBPSCode) {
+                data.district = district
+            }
+        }
+
+        return data
     }
 }
 
 const theNIK = new NomorIndukKependudukanExtended()
 
 /**
- * NIK validation without any comparison with user provided data.
+ * NIK Extended validation without any comparison with user provided data.
  * 
  * It check if the NIK's bps code is included / exist in VALID_BPSCODE, check if the NIK's has valid birthday
  * and if the NIK has the correct length.
@@ -69,13 +91,13 @@ export function isValidNIKWithComparison(nik: string, comparison: { provinceKey?
 }
 
 /**
- * NIK data retreiver.
+ * NIK Extended data retreiver.
  *
- * Return a set of NIK object data from user provided nik
+ * Return a set of NIK Extended object data from user provided nik
  *
  * @param {string} nik - The NIK
- * @return {object} The NIK data
+ * @return {object} The NIK Extended data
 **/
-export function getDataNIK(nik: string): IDataNIK {
+export function getDataNIK(nik: string): IDataNIKExtended {
     return theNIK.getData(nik)
 }
