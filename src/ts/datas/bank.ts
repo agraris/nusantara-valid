@@ -4,6 +4,8 @@
  * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
 **/
 
+import { includes } from '../helpers';
+
 /**
  * BANK_DATA
  *
@@ -140,4 +142,18 @@ export const BANK_DATA : { [key: string]: any } =
     
 }
 
+/**
+ * BANK_KEYS
+ *
+ * List of bank object keys.
+**/
 export const BANK_KEYS = Object.keys(BANK_DATA);
+
+/**
+ * BANK_NUMBER_LENGTHS
+ *
+ * List of bank's number (ATM number) length.
+**/
+export const BANK_NUMBER_LENGTHS = BANK_KEYS.reduce(
+    (pref, curr) => includes(pref, BANK_DATA[curr].digits) ? pref : pref.concat(BANK_DATA[curr].digits), []
+)
