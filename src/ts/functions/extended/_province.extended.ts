@@ -1,7 +1,6 @@
 import { IDataProvince, IDataRegency, IDataDistrict } from "../../interface"
 import { Province } from "../_province"
 import { PROVINCE_DATA_EXTENSION } from '../../datas/extended/province.extended'
-import { PROVINCE_KEYS, PROVINCE_DATA } from '../../datas/province'
 
 /**
  * Nusantara Valid: _province.extended.ts
