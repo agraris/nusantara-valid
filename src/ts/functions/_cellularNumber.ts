@@ -1,6 +1,6 @@
 import { IValid, IGetData, IFormat, IDataCellularNumber } from '../interface'
 import { cleanPhoneNumbers, correctLength, includes } from '../helpers'
-import { CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH, CELLULAR_HYPEN_INDEXES, CELLULAR_PROVIDER_DATA, CELLULAR_PROVIDER_KEYS } from '../datas/cellular'
+import { CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH, CELLULAR_HYPEN_INDEXES, CELLULAR_PROVIDER_DATA, CELLULAR_PROVIDER_KEYS, CELLULAR_PROVIDER_PREFIXES } from '../datas/cellular'
 import { COUNTRY_CODE } from '../datas/province'
 
 /**
@@ -11,30 +11,16 @@ import { COUNTRY_CODE } from '../datas/province'
  * @class The CellularNumber class
 **/
 class CellularNumber implements IValid, IGetData, IFormat {
-
-    CELLULAR_PROVIDER_PREFIXES = CELLULAR_PROVIDER_KEYS.reduce(
-        (a, b) => a.concat(CELLULAR_PROVIDER_DATA[b].prefix), []
-    ) as number[]
-
     isValid(mobile: string, providerKey: string = ''): boolean {
         if (!mobile || typeof mobile !== 'string') return false
 
-        let prefixCollection
-
         const cleanCellularNumber = cleanPhoneNumbers(mobile, { cellular: true, countryCode: COUNTRY_CODE})
-        const validLength = correctLength(1, cleanCellularNumber.length, { minLength: CELLULAR_MIN_LENGTH, maxLength: CELLULAR_MAX_LENGTH })        
-
-        if (providerKey)
-            prefixCollection = CELLULAR_PROVIDER_DATA[providerKey].prefix
-        else
-            prefixCollection = this.CELLULAR_PROVIDER_PREFIXES
         
-        return validLength 
-            && this.isValidCellularProviderPrefix(Number(cleanCellularNumber.substr(0, 3)), prefixCollection)
-    }
-
-    isValidCellularProviderPrefix(prefix: number, prefixCollection: number[]): boolean {
-        return includes(prefixCollection, prefix)
+        let prefixCollection
+        providerKey ? prefixCollection = CELLULAR_PROVIDER_DATA[providerKey].prefix : prefixCollection = CELLULAR_PROVIDER_PREFIXES
+        
+        return correctLength(1, cleanCellularNumber.length, { minLength: CELLULAR_MIN_LENGTH, maxLength: CELLULAR_MAX_LENGTH }) 
+            && includes(prefixCollection, Number(cleanCellularNumber.substr(0, 3)))
     }
 
     getData(mobile: string): IDataCellularNumber {

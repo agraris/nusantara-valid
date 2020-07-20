@@ -61,4 +61,18 @@ export const CELLULAR_MAX_LENGTH = 12;
 **/
 export const CELLULAR_HYPEN_INDEXES = [2, 6]
 
+/**
+ * CELLULAR_PROVIDER_KEYS
+ *
+ * List of cellular provider object keys.
+**/
 export const CELLULAR_PROVIDER_KEYS = Object.keys(CELLULAR_PROVIDER_DATA);
+
+/**
+ * CELLULAR_PROVIDER_PREFIXES
+ *
+ * List of cellular provider prefixes.
+**/
+export const CELLULAR_PROVIDER_PREFIXES = CELLULAR_PROVIDER_KEYS.reduce(
+    (a, b) => a.concat(CELLULAR_PROVIDER_DATA[b].prefix), []
+)
