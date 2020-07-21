@@ -1,6 +1,6 @@
 import { IValid } from "../interface"
-import { numbersOnly, correctLength, includes } from "../helpers"
-import { BANK_DATA, BANK_KEYS } from "../datas/bank"
+import { numbersOnly, correctLength } from "../helpers"
+import { BANK_DATA, BANK_NUMBER_LENGTHS } from "../datas/bank"
 
 /**
  * Nusantara Valid: _atmNumber.ts
@@ -10,22 +10,12 @@ import { BANK_DATA, BANK_KEYS } from "../datas/bank"
  * @class The ATMNumber class
 **/
 class ATMNumber implements IValid {
-
-    VALID_ATMNUMBER_LENGTH = BANK_KEYS.reduce(
-        (pref, curr) => includes(pref, (BANK_DATA as any)[curr].digits) ? pref : pref.concat((BANK_DATA as any)[curr].digits), []
-    ) as number[]
-
     isValid(atm: string, bank: string = ''): boolean {
         if (!atm || typeof atm !== 'string') return false
 
         const numOnly = numbersOnly(atm)
 
-        let matchLength = correctLength(2, numOnly.length, { collection: this.VALID_ATMNUMBER_LENGTH })
-
-        if (bank)
-            matchLength = correctLength(0, numOnly.length, { minLength: (BANK_DATA as any)[bank].digits } )
-
-        return matchLength
+        return bank ? correctLength(0, numOnly.length, { minLength: BANK_DATA[bank].digits }) : correctLength(2, numOnly.length, { collection: BANK_NUMBER_LENGTHS })
     }
 }
 

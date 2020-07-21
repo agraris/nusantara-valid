@@ -15,12 +15,12 @@ class CellularProvider implements IGetData {
         if (index) {
             providers = {
                 key: index,
-                name: (CELLULAR_PROVIDER_DATA as any)[index].name
+                name: CELLULAR_PROVIDER_DATA[index].name
             }
         } else {
             providers = CELLULAR_PROVIDER_KEYS.map((key) => ({
                 key,
-                name: (CELLULAR_PROVIDER_DATA as any)[key].name,
+                name: CELLULAR_PROVIDER_DATA[key].name,
             }))
         }
 

@@ -1,4 +1,6 @@
 
+</br>
+</br>
 <p align="center">
     <img src="https://magicjar.github.io/assets/images/portfolios/nusantara-valid-logo.svg" alt="Nusantara Valid logo" width=72 height=72>
   <h1 align="center" style="font-weight: bold">Nusantara Valid</h1>
@@ -12,6 +14,7 @@ Nusantara Valid is a data validator to validate any Indonesian specific civil da
 - [Getting started](#getting-started)
 - [Usage](#usage)
 - [API](#api)
+- [API (Extended Only)](#api-extended-only)
 - [License](#license)
 
 ## **What it can do?**
@@ -404,6 +407,37 @@ isValidZIPWithComparison('55264', { provinceKey: 'YO' });
 // true
 isValidZIPWithComparison(55264, { provinceKey: 'YO' });
 // true
+```
+</details></td></tr></tbody></table>
+
+## **API (Extended Only)**
+
+<table><tbody><tr><td><details><summary><b>Province</b>
+
+``` javascript
+getDataRegenciesInProvince(provinceBPSCode: string);
+
+getDataDistrictsInRegency(regencyBPSCode: string);
+```
+</summary>
+
+Result:
+``` javascript
+getDataRegenciesInProvince('31'); // Regencies and City (Kabupaten dan Kota) in Jakarta
+// [
+//   { bpsCode: '31.01', name: 'Kepulauan Seribu' },
+//   { bpsCode: '31.71', name: 'Jakarta Pusat' },
+//   { bpsCode: '31.72', name: 'Jakarta Utara' },
+//   ...
+// ]
+
+getDataDistrictsInRegency('31.71'); // Districts (Kecamatan) in Jakarta Pusat
+// [
+//   { name: 'Gambir', bpsCode: '31.71.01' },
+//   { name: 'Sawah Besar', bpsCode: '31.71.02' },
+//   { name: 'Kemayoran', bpsCode: '31.71.03' },
+//   ...
+// ]
 ```
 </details></td></tr></tbody></table>
 

@@ -8,6 +8,10 @@ describe('Bank', () => {
                 key: 'BCAK',
                 name: 'Bank Central Asia'
             })
+            expect(getDataBank('MUAM')).to.deep.equal({
+                key: 'MUAM',
+                name: 'Bank Muamalat'
+            })
         })
 
         it('should return an array of Banks data', () => {

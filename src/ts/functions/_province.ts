@@ -8,19 +8,19 @@ import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province";
  *
  * @class The Province class
 **/
-class Province implements IGetData {
+export class Province implements IGetData {
     getData(index: string = ''): IDataProvince | IDataProvince[] {
         let province
 
         if (index) {
             province = {
-                key: index,
-                name: (PROVINCE_DATA as any)[index].name
+                bpsCode: index,
+                name: PROVINCE_DATA[index].name
             }
         } else {
             province = PROVINCE_KEYS.map((key) => ({
-                key,
-                name: (PROVINCE_DATA as any)[key].name,
+                bpsCode: key,
+                name: PROVINCE_DATA[key].name,
             }))
         }
 

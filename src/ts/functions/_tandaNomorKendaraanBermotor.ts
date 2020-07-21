@@ -13,7 +13,7 @@ import { includes } from '../helpers'
 class TandaNomorKendaraanBermotor implements IValid, IGetData {
 
     VALID_TNKB_AREACODE = PROVINCE_KEYS.reduce(
-        (a, b) => a.concat((PROVINCE_DATA as any)[b].vehiclePlate), []
+        (a, b) => a.concat(PROVINCE_DATA[b].vehiclePlate), []
     ) as string[]
 
     isValid(tnkb: string) : boolean {
@@ -41,14 +41,14 @@ class TandaNomorKendaraanBermotor implements IValid, IGetData {
         if (!validTNKB) return data
 
         for (const key of PROVINCE_KEYS) {
-            const element = (PROVINCE_DATA as any)[key]
+            const element = PROVINCE_DATA[key]
             if (includes(element.vehiclePlate, validTNKB[1])) {
                 data = {
                     areaCode: validTNKB[1],
                     index: Number(validTNKB[2]),
                     detailedAreaCode: validTNKB[3],
                     province: {
-                        key: key,
+                        bpsCode: key,
                         name: element.name
                     }
                 }

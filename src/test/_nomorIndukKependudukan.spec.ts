@@ -72,11 +72,11 @@ describe('NIK', () => {
 
     describe('isValidNIKWithComparison() = true', () => {
         it('if it has valid comparison with provinceKey and birthday', () => {
-            expect(isValidNIKWithComparison('3404021011880001', { provinceKey: 'YO', birthday: '1988-11-10' })).to.be.true // 10-11-88 => 1988-11-10 -> Man
+            expect(isValidNIKWithComparison('3404021011880001', { provinceKey: '34', birthday: '1988-11-10' })).to.be.true // 10-11-88 => 1988-11-10 -> Man
         })
 
         it('if it has valid comparison with provinceKey only', () => {
-            expect(isValidNIKWithComparison('3101012012990002', { provinceKey: 'JK' })).to.be.true // 20-12-99 => 1999-12-20 -> Man
+            expect(isValidNIKWithComparison('3101012012990002', { provinceKey: '31' })).to.be.true // 20-12-99 => 1999-12-20 -> Man
         })
 
         it('if it has valid comparison with birthday only', () => {
@@ -90,11 +90,11 @@ describe('NIK', () => {
 
     describe('isValidNIKWithComparison() = false', () => {
         it('if it has unmatch NIK\'s bps code and PROVINCE_DATA[provinceKey].bpsCode but has same NIK\'s birthday and user provided birthday', () => {
-            expect(isValidNIKWithComparison('3404021011880001', { provinceKey: 'JK', birthday: '19881110' })).to.be.false // BPS code JK = 31 compared NIK = 34
+            expect(isValidNIKWithComparison('3404021011880001', { provinceKey: '31', birthday: '19881110' })).to.be.false // BPS code JK = 31 compared NIK = 34
         })
 
         it('if it has unmatch comparison between NIK\'s bps code and PROVINCE_DATA[provinceKey].bpsCode', () => {
-            expect(isValidNIKWithComparison('3101012012990002', { provinceKey: 'YO' })).to.be.false // provinceKey 'YO' has bpsCode of 34 but NIK's bpsCode is 31
+            expect(isValidNIKWithComparison('3101012012990002', { provinceKey: '34' })).to.be.false // provinceKey 'YO' has bpsCode of 34 but NIK's bpsCode is 31
         })
 
         it('if it has unmatch comparison between NIK\'s birthday with user provided birthday', () => {
@@ -109,7 +109,7 @@ describe('NIK', () => {
                 birthday: new Date('1988-11-10'),
                 sex: 'Female',
                 province: {
-                    key: 'YO',
+                    bpsCode: '34',
                     name: 'Yogyakarta'
                 }
             })
@@ -118,7 +118,7 @@ describe('NIK', () => {
                 birthday: new Date('2006-12-20'),
                 sex: 'Male',
                 province: {
-                    key: 'JK',
+                    bpsCode: '31',
                     name: 'Jakarta'
                 }
             })
