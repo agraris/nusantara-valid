@@ -12,6 +12,7 @@ Nusantara Valid is a data validator to validate any Indonesian specific civil da
 
 - [What it can do?](#what-it-can-do)
 - [Getting started](#getting-started)
+- [What's included](#whats-included)
 - [Usage](#usage)
 - [API](#api)
 - [API (Extended Only)](#api-extended-only)
@@ -29,7 +30,7 @@ Nusantara Valid is a data validator to validate any Indonesian specific civil da
 - NPWP (Nomor Pokok Wajib Pajak)
 - TNKB (Tanda Nomor Kendaraan Bermotor)
 - Telephon Number
-- Zip Code
+- ZIP Code (Kode Pos)
 
 ## **Getting started**
 
@@ -43,14 +44,52 @@ There are some ways to import the package
     
     `npm install nusantara-valid`
 
-- or CDN from [jsDelivr](https://www.jsdelivr.com)
+- CDN from [jsDelivr](https://www.jsdelivr.com)
 
     [https://cdn.jsdelivr.net/npm/nusantara-valid@0.2.0/dist/umd/nusantara-valid.min.js](https://cdn.jsdelivr.net/npm/nusantara-valid@0.2.0/dist/umd/nusantara-valid.min.js)
+
+## **What's included**
 
 The package includes multiple formats to support different build process.
 - **/cjs/nusantara-valid.js** - CommonJS module.
 - **/esm/nusantara-valid.js** - ES module.
 - **/umd/nusantara-valid.js** - UMD module. Can be used in browser with `script` tag
+
+We provide compiled JS (`nusantara-valid.js`), as well as compiled and minified JS (`nusantara-valid.min.js`) in each module. Extended JS files (`nusantara-valid.extended.js` and minified `nusantara-valid.extended.min.js`) include additional PROVINCE_DATA such as regencies and districts also some additional verification process.
+
+### Folder structure
+
+```
+nusantara-valid/
+└── dist/
+    ├── cjs/
+    │   ├── nusantara-valid.extended.js
+    │   ├── nusantara-valid.extended.js.map
+    │   ├── nusantara-valid.extended.min.js
+    │   ├── nusantara-valid.extended.min.js.map
+    │   ├── nusantara-valid.js
+    │   ├── nusantara-valid.js.map
+    │   ├── nusantara-valid.min.js
+    │   └── nusantara-valid.min.js.map
+    ├── esm/
+    │   ├── nusantara-valid.extended.js
+    │   ├── nusantara-valid.extended.js.map
+    │   ├── nusantara-valid.extended.min.js
+    │   ├── nusantara-valid.extended.min.js.map
+    │   ├── nusantara-valid.js
+    │   ├── nusantara-valid.js.map
+    │   ├── nusantara-valid.min.js
+    │   └── nusantara-valid.min.js.map
+    └── umd/
+        ├── nusantara-valid.extended.js
+        ├── nusantara-valid.extended.js.map
+        ├── nusantara-valid.extended.min.js
+        ├── nusantara-valid.extended.min.js.map
+        ├── nusantara-valid.js
+        ├── nusantara-valid.js.map
+        ├── nusantara-valid.min.js
+        └── nusantara-valid.min.js.map
+```
 
 ## **Usage**
 
@@ -443,6 +482,6 @@ getDataDistrictsInRegency('31.71'); // Districts (Kecamatan) in Jakarta Pusat
 
 ## **License**
 
-Copyright (c) 2020 - Fajar Setya Budi
+Copyright (c) 2020 - Fajar Setya Budi.
 
 Nusantara Valid released under the [MIT License](https://github.com/magicjar/nusantara-valid/blob/master/LICENSE).
