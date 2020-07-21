@@ -9,40 +9,39 @@ import { includes } from '../helpers';
 /**
  * BANK_DATA
  *
- * List of bank in Indonesia including BPS code, vehicle plate, 
- * telephone numbers, and zip code.
+ * List of bank in Indonesia.
 **/
 export const BANK_DATA : { [key: string]: any } =
 {
     BCAK: {
         name: 'Bank Central Asia',
         digits: 10,
-        dotIndex: []
+        dotIndex: [2, 5]
     },
     BCAS: {
         name: 'Bank Central Asia Syariah',
         digits: 10,
-        dotIndex: []
+        dotIndex: [2, 5]
     },
     BNIK: {
         name: 'Bank Negara Indonesia',
         digits: 10,
-        dotIndex: []
+        dotIndex: [2, 5]
     },
     BNIS: {
         name: 'Bank Negara Indonesia Syariah',
         digits: 10,
-        dotIndex: []
+        dotIndex: [2, 5]
     },
     BRIK: {
         name: 'Bank Rakyat Indonesia',
         digits: 15,
-        dotIndex: []
+        dotIndex: [2, 5, 8, 11]
     },
     BRIS: {
         name: 'Bank Rakyat Indonesia Syariah',
         digits: 10,
-        dotIndex: []
+        dotIndex: [2, 5]
     },
     BTNK: {
         name: 'Bank Tabungan Negara',
@@ -97,12 +96,12 @@ export const BANK_DATA : { [key: string]: any } =
     MDRK: {
         name: 'Bank Mandiri',
         digits: 13,
-        dotIndex: []
+        dotIndex: [2, 5, 8]
     },
     MDRS: {
         name: 'Bank Mandiri Syariah',
         digits: 10,
-        dotIndex: []
+        dotIndex: [2, 5]
     },
     MGAK: {
         name: 'Bank Mega',
