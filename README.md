@@ -1,4 +1,7 @@
-
+[![npm version](https://img.shields.io/npm/v/nusantara-valid.svg)](https://www.npmjs.com/package/nusantara-valid)
+[![JS gzip size](https://img.badgesize.io/magicjar/nusantara-valid/master/dist/umd/nusantara-valid.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/magicjar/nusantara-valid/tree/master/dist/umd/nusantara-valid.min.js)
+[![Extended JS gzip size](https://img.badgesize.io/magicjar/nusantara-valid/master/dist/umd/nusantara-valid.extended.min.js?compression=gzip&label=Extended%20JS%20gzip%20size)](https://github.com/magicjar/nusantara-valid/tree/master/dist/umd/nusantara-valid.extended.min.js)
+[![Code license](https://img.shields.io/github/license/magicjar/nusantara-valid)](#license)
 </br>
 </br>
 <p align="center">
