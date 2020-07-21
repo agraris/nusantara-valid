@@ -16,7 +16,7 @@ let outName = "nusantara-valid"
 
 if (extended) {
     inName = "index.extended"
-    outName = "nusantara-valid.ext"
+    outName = "nusantara-valid.extended"
 }
 
 export default {
