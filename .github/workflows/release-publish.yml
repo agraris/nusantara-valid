@@ -29,6 +29,12 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: Nusantara Valid ${{ github.ref }}
 
+      # Checkout the tag
+      # - name: Checkout tag
+      #   uses: actions/checkout@v2
+      #   with:
+      #     ref: tags/${{ github.ref }}
+
       # Step to publish to npmjs.org
       # - name: Run publish
       #   run: npm publish --access public
