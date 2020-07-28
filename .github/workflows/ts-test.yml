@@ -3,12 +3,11 @@ on: [push, pull_request]
 
 jobs:
   run:
-    name: Node ${{ matrix.node }} on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
+    name: Node ${{ matrix.node }} on Ubuntu latest
+    runs-on: ubuntu-latest
     
     strategy:
       matrix:
-        os: ubuntu-latest
         node: [12]
 
     steps:
