@@ -26,10 +26,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/magicjar/nusantara-valid.git"
+    "url": "https://github.com/agraris/nusantara-valid.git"
   },
   "bugs": {
-    "url": "https://github.com/magicjar/nusantara-valid/issues"
+    "url": "https://github.com/agraris/nusantara-valid/issues"
   },
   "files": [
     "dist/",
