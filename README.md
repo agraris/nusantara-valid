@@ -49,7 +49,7 @@ There are some ways to import the package
 
 - CDN from [jsDelivr](https://www.jsdelivr.com)
 
-    [https://cdn.jsdelivr.net/npm/nusantara-valid@0.2.0/dist/umd/nusantara-valid.min.js](https://cdn.jsdelivr.net/npm/nusantara-valid@0.2.0/dist/umd/nusantara-valid.min.js)
+    [https://cdn.jsdelivr.net/npm/nusantara-valid@0.3.0/dist/umd/nusantara-valid.min.js](https://cdn.jsdelivr.net/npm/nusantara-valid@0.3.0/dist/umd/nusantara-valid.min.js)
 
 ## **What's included**
 
@@ -119,7 +119,7 @@ import NusantaraValid from './node_modules/nusantara-valid/dist/esm/nusantara-va
 **CDN**
 
 ``` html
-<script src="https://cdn.jsdelivr.net/npm/nusantara-valid@0.2.0/dist/umd/nusantara-valid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nusantara-valid@0.3.0/dist/umd/nusantara-valid.min.js"></script>
 ```
 
 ## **API**
