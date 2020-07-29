@@ -1,9 +1,6 @@
 name: Create Release & Publish to NPM
 on:
   workflow_dispatch:
-    inputs:
-      tags:
-        description: 'Release tag'
   # push:
   #   tags:
   #     - 'v*'
@@ -41,7 +38,7 @@ jobs:
       - name: Checkout tag
         run: |
           git fetch --all --tags --prune
-          git checkout tags/${{ github.event.inputs.tags }}
+          git checkout $(git describe --tags $(git rev-list --tags --max-count=1))
 
       # Step to publish to npmjs.org
       # - name: Run publish
