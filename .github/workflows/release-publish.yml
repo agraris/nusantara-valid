@@ -1,9 +1,8 @@
 name: Create Release & Publish to NPM
 on:
-  workflow_dispatch:
-  # push:
-  #   tags:
-  #     - 'v*'
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   release:
@@ -13,16 +12,15 @@ jobs:
     steps:
       - name: Clone repo
         uses: actions/checkout@v2
-      
-      # Step to create GitHub release
-      # - name: Create release
-      #   id: create_release
-      #   uses: actions/create-release@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     tag_name: ${{ github.ref }}
-      #     release_name: Nusantara Valid ${{ github.ref }}
+
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Nusantara Valid ${{ github.ref }}
 
   publish:
     name: Publish
@@ -38,14 +36,12 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
 
-      # Checkout the tag
       - name: Checkout tag
         run: |
           git fetch --all --tags --prune
           git checkout $(git describe --tags $(git rev-list --tags --max-count=1))
 
-      # Step to publish to npmjs.org
-      # - name: Run publish
-      #   run: npm publish --access public
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Run publish
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
