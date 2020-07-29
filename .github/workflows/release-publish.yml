@@ -1,6 +1,9 @@
 name: Create Release & Publish to NPM
 on:
   workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Release tag'
   # push:
   #   tags:
   #     - 'v*'
@@ -14,15 +17,15 @@ jobs:
       - name: Clone repo
         uses: actions/checkout@v2
         
-      - name: Test
+      - name: Log (Tag)
         run: |
-          echo "Tags: ${{ github.ref }}"
+          echo "Tags: ${{ github.event.inputs.tags }}"
 
-      # - name: Set up Node.js
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: 12
-      #     registry-url: https://registry.npmjs.org/
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
 
       # Step to create GitHub release
       # - name: Create release
@@ -35,10 +38,10 @@ jobs:
       #     release_name: Nusantara Valid ${{ github.ref }}
 
       # Checkout the tag
-      # - name: Checkout tag
-      #   uses: actions/checkout@v2
-      #   with:
-      #     ref: tags/${{ github.ref }}
+      - name: Checkout tag
+        run: |
+          git fetch --all --tags --prune
+          git checkout tags/${{ github.event.inputs.tags }}
 
       # Step to publish to npmjs.org
       # - name: Run publish
