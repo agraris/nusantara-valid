@@ -5,64 +5,64 @@
 </br>
 </br>
 <p align="center">
-    <img src="https://magicjar.github.io/assets/images/portfolios/nusantara-valid-logo.svg" alt="Nusantara Valid logo" width=72 height=72>
+    <img src="https://magicjar.github.io/assets/images/portfolios/nusantara-valid-logo.svg" alt="Logo Nusantara Valid" width=72 height=72>
   <h1 align="center" style="font-weight: bold">Nusantara Valid</h1>
 </p>
 
-Nusantara Valid is a data validator to validate any Indonesian specific civil data such as nik, nip, and many more.
+Nusantara valid adalah validator data untuk memvalidasi data sipil Indonesia seperti NIK (Nomor Induk Kewarganegaraan), NIP (Nomor Induk Pegawai Negeri Sipil), dan lain-lain.
 
-*Baca petunjuk berbahasa [Indonesia](README_id.md)*
+*Read in [English](README.md)*
 
-## **Table of contents**
+## **Daftar isi**
 
-- [What it can do?](#what-it-can-do)
-- [Getting started](#getting-started)
-- [What's included](#whats-included)
-- [Usage](#usage)
+- [Apa yang dapat divalidasi?](#apa-yang-dapat-divalidasi)
+- [Cara memulai](#cara-memulai)
+- [Isi paket](#isi-paket)
+- [Penggunaan](#penggunaan)
 - [API](#api)
-- [API (Extended Only)](#api-extended-only)
-- [License](#license)
+- [API (Versi *Extended*)](#api-versi-extended)
+- [Lisensi](#lisensi)
 
-## **What it can do?**
+## **Apa yang dapat divalidasi?**
 
-- ATM Number (Nomor Rekening)
-- Cellular Number / Mobile Number
-- Credit Card Number
+- Nomor ATM (Nomor Rekening)
+- Nomor Seluler
+- Nomor Kartu Kredit
 - E-Mail
 - NIK (Nomor Induk Kependudukan)
 - NIP (Nomor Induk Pegawai Negeri Sipil)
 - NISN (Nomor Induk Siswa Nasional)
 - NPWP (Nomor Pokok Wajib Pajak)
 - TNKB (Tanda Nomor Kendaraan Bermotor)
-- Telephon Number
-- ZIP Code (Kode Pos)
+- Nomor Telepon
+- Kode Pos
 
-## **Getting started**
+## **Cara memulai**
 
-There are some ways to import the package
-- [Download the latest release.](https://github.com/agraris/nusantara-valid/releases)
-- Clone the repo:
+Ada beberapa cara untuk meng-*import* paket
+- [Unduk rilisan terbaru.](https://github.com/agraris/nusantara-valid/releases)
+- *Clone* repositori:
 
     `git clone https://github.com/agraris/nusantara-valid.git`
     
-- Install with [npm](https://www.npmjs.com/):
+- *Install* menggunakan [npm](https://www.npmjs.com/):
     
     `npm install nusantara-valid`
 
-- CDN from [jsDelivr](https://www.jsdelivr.com)
+- *CDN* dari [jsDelivr](https://www.jsdelivr.com)
 
     [https://cdn.jsdelivr.net/npm/nusantara-valid@0.3.0/dist/umd/nusantara-valid.min.js](https://cdn.jsdelivr.net/npm/nusantara-valid@0.3.0/dist/umd/nusantara-valid.min.js)
 
-## **What's included**
+## **Isi paket**
 
-The package includes multiple formats to support different build process.
-- **/cjs/nusantara-valid.js** - CommonJS module.
-- **/esm/nusantara-valid.js** - ES module.
-- **/umd/nusantara-valid.js** - UMD module. Can be used in browser with `script` tag
+Paket berisi beberapa format untuk mendukung beberapa proses.
+- **/cjs/nusantara-valid.js** - Modul CommonJS.
+- **/esm/nusantara-valid.js** - Modul ES.
+- **/umd/nusantara-valid.js** - Modul UMD. Dapat digunagan di *browser* menggunakan *tag `script`*
 
-We provide compiled JS (`nusantara-valid.js`), as well as compiled and minified JS (`nusantara-valid.min.js`) in each module. Extended JS files (`nusantara-valid.extended.js` and minified `nusantara-valid.extended.min.js`) include additional PROVINCE_DATA such as regencies and districts also some additional verification process.
+Kami menyediakan *Javascript* yang sudah di-*compile* (`nusantara-valid.js`), serta versi *mini* (`nusantara-valid.min.js`) disetiap jenis modul. Versi *Extended* (`nusantara-valid.extended.js` and versi *mini* `nusantara-valid.extended.min.js`) berisi tambahan PROVINCE_DATA seperti kabupaten dan kecamatan juga beberapa tambahan API.
 
-### Folder structure
+### Struktur *folder*
 
 ```
 nusantara-valid/
@@ -96,23 +96,23 @@ nusantara-valid/
         └── nusantara-valid.min.js.map
 ```
 
-## **Usage**
+## **Penggunaan**
 
-### CommonJS module way (`require()`)
+### Cara modul CommonJS (`require()`)
 
 ``` javascript
 const NusantaraValid = require('nusantara-valid')
 ```
 
-### ES module way (`import`)
+### Cara modul ES (`import`)
 
 ``` javascript
 import NusantaraValid from './node_modules/nusantara-valid/dist/esm/nusantara-valid.js'
 ```
 
-### Good-old-browser-way (`<script></script>`)
+### Cara *tag script* (`<script></script>`)
 
-**Local**
+**Lokal**
 
 ``` html
 <script src="../dist/umd/nusantara-valid.min.js"></script>
@@ -126,7 +126,7 @@ import NusantaraValid from './node_modules/nusantara-valid/dist/esm/nusantara-va
 
 ## **API**
 
-<table><tbody><tr><td><details><summary><b>ATM Number (Nomor Rekening)</b>
+<table><tbody><tr><td><details><summary><b>Nomor ATM (Nomor Rekening)</b>
 
 ``` javascript
 isValidATMNumber(atm: string);
@@ -169,7 +169,7 @@ getDataBanks();
 ```
 </details></td></tr></tbody></table>
 
-<table><tbody><tr><td><details><summary><b>Cellular Number (Nomor HP)</b>
+<table><tbody><tr><td><details><summary><b>Nomor Seluler</b>
 
 ``` javascript
 isValidCellularNumber(cel: string);
@@ -206,7 +206,7 @@ formatCellularNumber('085612341234', true);
 ```
 </details></td></tr></tbody></table>
 
-<table><tbody><tr><td><details><summary><b>Cellular Provider</b>
+<table><tbody><tr><td><details><summary><b>Penyedia Layanan Seluler</b>
 
 ``` javascript
 getDataCellularProvider(key: string);
@@ -230,7 +230,7 @@ getDataCellularProviders();
 ```
 </details></td></tr></tbody></table>
 
-<table><tbody><tr><td><details><summary><b>Credit Card Number</b>
+<table><tbody><tr><td><details><summary><b>Nomor Kartu Kredit</b>
 
 ``` javascript
 isValidCCNumber(cc: string);
@@ -348,7 +348,7 @@ formatNPWP('091231231123123');
 ```
 </details></td></tr></tbody></table>
 
-<table><tbody><tr><td><details><summary><b>Province</b>
+<table><tbody><tr><td><details><summary><b>Provinsi</b>
 
 ``` javascript
 getDataProvince(key: string);
@@ -399,7 +399,7 @@ getDataTNKB('AB1234XYZ');
 ```
 </details></td></tr></tbody></table>
 
-<table><tbody><tr><td><details><summary><b>Telephone Number (Nomor Telefon)</b>
+<table><tbody><tr><td><details><summary><b>Nomor Telepon</b>
 
 ``` javascript
 isValidTelephoneNumber(tel: string);
@@ -431,7 +431,7 @@ formatTelephoneNumber('0274123123', true);
 ```
 </details></td></tr></tbody></table>
 
-<table><tbody><tr><td><details><summary><b>ZIP Code (Kode POS)</b>
+<table><tbody><tr><td><details><summary><b>Kode Pos</b>
 
 ``` javascript
 isValidZIP(zip: string | number);
@@ -454,9 +454,9 @@ isValidZIPWithComparison(55264, { provinceKey: 'YO' });
 ```
 </details></td></tr></tbody></table>
 
-## **API (Extended Only)**
+## **API (Versi *Extended*)**
 
-<table><tbody><tr><td><details><summary><b>Province</b>
+<table><tbody><tr><td><details><summary><b>Provinsi</b>
 
 ``` javascript
 getDataRegenciesInProvince(provinceBPSCode: string);
@@ -485,8 +485,8 @@ getDataDistrictsInRegency('31.71'); // Districts (Kecamatan) in Jakarta Pusat
 ```
 </details></td></tr></tbody></table>
 
-## **License**
+## **Lisensi**
 
-Copyright (c) 2020 - Fajar Setya Budi.
+Hak cipta (c) 2020 - Fajar Setya Budi.
 
-Nusantara Valid released under the [MIT License](https://github.com/agraris/nusantara-valid/blob/master/LICENSE).
+Nusantara Valid dirilis menggunakan [lisensi MIT](https://github.com/agraris/nusantara-valid/blob/master/LICENSE).
