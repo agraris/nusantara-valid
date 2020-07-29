@@ -1,7 +1,7 @@
 [![npm version](https://img.shields.io/npm/v/nusantara-valid.svg)](https://www.npmjs.com/package/nusantara-valid)
-[![JS gzip size](https://img.badgesize.io/magicjar/nusantara-valid/master/dist/umd/nusantara-valid.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/magicjar/nusantara-valid/tree/master/dist/umd/nusantara-valid.min.js)
-[![Extended JS gzip size](https://img.badgesize.io/magicjar/nusantara-valid/master/dist/umd/nusantara-valid.extended.min.js?compression=gzip&label=Extended%20JS%20gzip%20size)](https://github.com/magicjar/nusantara-valid/tree/master/dist/umd/nusantara-valid.extended.min.js)
-[![Code license](https://img.shields.io/github/license/magicjar/nusantara-valid)](#license)
+[![JS gzip size](https://img.badgesize.io/agraris/nusantara-valid/master/dist/umd/nusantara-valid.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/agraris/nusantara-valid/tree/master/dist/umd/nusantara-valid.min.js)
+[![Extended JS gzip size](https://img.badgesize.io/agraris/nusantara-valid/master/dist/umd/nusantara-valid.extended.min.js?compression=gzip&label=Extended%20JS%20gzip%20size)](https://github.com/agraris/nusantara-valid/tree/master/dist/umd/nusantara-valid.extended.min.js)
+[![Code license](https://img.shields.io/github/license/agraris/nusantara-valid)](#license)
 </br>
 </br>
 <p align="center">
@@ -38,10 +38,10 @@ Nusantara Valid is a data validator to validate any Indonesian specific civil da
 ## **Getting started**
 
 There are some ways to import the package
-- [Download the latest release.](https://github.com/magicjar/nusantara-valid/releases)
+- [Download the latest release.](https://github.com/agraris/nusantara-valid/releases)
 - Clone the repo:
 
-    `git clone https://github.com/magicjar/nusantara-valid.git`
+    `git clone https://github.com/agraris/nusantara-valid.git`
     
 - Install with [npm](https://www.npmjs.com/):
     
@@ -487,4 +487,4 @@ getDataDistrictsInRegency('31.71'); // Districts (Kecamatan) in Jakarta Pusat
 
 Copyright (c) 2020 - Fajar Setya Budi.
 
-Nusantara Valid released under the [MIT License](https://github.com/magicjar/nusantara-valid/blob/master/LICENSE).
+Nusantara Valid released under the [MIT License](https://github.com/agraris/nusantara-valid/blob/master/LICENSE).

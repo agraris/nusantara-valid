@@ -4,7 +4,7 @@ import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province";
 /**
  * Nusantara Valid: _province.ts
  *
- * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/agraris/nusantara-valid/blob/master/LICENSE)
  *
  * @class The Province class
 **/

@@ -4,7 +4,7 @@ import { BANK_DATA, BANK_KEYS } from "../datas/bank"
 /**
  * Nusantara Valid: _bank.ts
  *
- * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/agraris/nusantara-valid/blob/master/LICENSE)
  *
  * @class The Bank class
 **/

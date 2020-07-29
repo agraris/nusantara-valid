@@ -8,8 +8,8 @@ const extended = process.env.EXTENDED
 const copyleft = `/*!
   * Nusantara Valid v${pkg.version}
   * Copyright 2020 - ${pkg.author.name} (${pkg.author.url})
-  * Contributors (https://github.com/magicjar/nusantara-valid/graphs/contributors)
-  * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+  * Contributors (https://github.com/agraris/nusantara-valid/graphs/contributors)
+  * Licensed under MIT (https://github.com/agraris/nusantara-valid/blob/master/LICENSE)
   */`
 let inName = "index"
 let outName = "nusantara-valid"

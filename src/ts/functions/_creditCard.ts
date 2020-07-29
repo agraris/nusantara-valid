@@ -5,7 +5,7 @@ import { CC_LENGTH, CC_VALID_MII, CC_SPACE_INDEXES } from "../datas/creditCard"
 /**
  * Nusantara Valid: _creditCard.ts
  *
- * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/agraris/nusantara-valid/blob/master/LICENSE)
  *
  * @class The CreditCard class
 **/

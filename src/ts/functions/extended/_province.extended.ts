@@ -5,7 +5,7 @@ import { PROVINCE_DATA_EXTENSION } from '../../datas/extended/province.extended'
 /**
  * Nusantara Valid: _province.extended.ts
  *
- * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/agraris/nusantara-valid/blob/master/LICENSE)
  *
  * @class The ProvinceExtended class
 **/

@@ -1,7 +1,7 @@
 /**
  * Nusantara Valid: functions/index.ts
  *
- * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/agraris/nusantara-valid/blob/master/LICENSE)
 **/
 export * from './_atmNumber'
 export * from './_bank'

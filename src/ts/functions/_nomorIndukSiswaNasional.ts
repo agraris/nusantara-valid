@@ -5,7 +5,7 @@ import { numbersOnly, correctLength } from "../helpers"
 /**
  * Nusantara Valid: _nomorIndukSiswaNasional.ts
  *
- * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/agraris/nusantara-valid/blob/master/LICENSE)
  *
  * @class The NomorIndukSiswaNasional class
 **/

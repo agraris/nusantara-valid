@@ -7,7 +7,7 @@ import { getDataProvince } from './_province'
 /**
  * Nusantara Valid: _nomorIndukKependudukan.ts
  *
- * Licensed under MIT (https://github.com/magicjar/nusantara-valid/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/agraris/nusantara-valid/blob/master/LICENSE)
  *
  * @class The NomorIndukKepemdudukan class
 **/
