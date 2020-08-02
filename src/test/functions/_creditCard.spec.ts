@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { isValidCCNumber as isValid, formatCCNumber as format } from "../ts/functions/index"
+import { isValidCCNumber as isValid, formatCCNumber as format } from "../../ts/functions/index"
 
 describe('Credit Card number', () => {
 

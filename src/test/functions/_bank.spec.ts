@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { getDataBank, getDataBanks } from "../ts/functions"
+import { getDataBank, getDataBanks } from "../../ts/functions"
 
 describe('Bank', () => {
     describe('getData()', () => {

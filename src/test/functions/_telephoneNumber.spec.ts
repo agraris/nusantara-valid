@@ -1,6 +1,6 @@
 import { expect } from "chai"
-import { isValidTelephoneNumber as isValid, formatTelephoneNumber as format, getDataTelephoneNumber } from "../ts/functions/index"
-import { COUNTRY_CODE } from "../ts/datas/province";
+import { isValidTelephoneNumber as isValid, formatTelephoneNumber as format, getDataTelephoneNumber } from "../../ts/functions/index"
+import { COUNTRY_CODE } from "../../ts/datas/province";
 
 describe('Telephone number', () => {
 

@@ -47,18 +47,16 @@ export class NomorIndukKependudukan implements IValid, IGetData {
     reformatBirthday(birthday: string): string {
         const newBirthday = /(\d{2})(\d{2})(\d{2})/.exec(birthday)
 
-        if (newBirthday) {
-            let cDD = newBirthday[1]
-            const cMM = newBirthday[2]
-            const cYY = newBirthday[3]
+        if (!newBirthday) return ''
 
-            if (Number(cDD) > 40) // Check if it is a man of woman
-                cDD = (Number(cDD) - 40).toString()
+        let cDD = newBirthday[1]
+        const cMM = newBirthday[2]
+        const cYY = newBirthday[3]
 
-            return cYY + '' + cMM + '' + cDD
-        }
+        if (Number(cDD) > 40) // Check if it is a man of woman
+            cDD = (Number(cDD) - 40).toString()
 
-        return ''
+        return cYY + '' + cMM + '' + cDD
     }
 
     getData(nik: string): IDataNIK {

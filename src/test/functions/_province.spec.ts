@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { getDataProvince, getDataProvinces } from "../ts/functions"
+import { getDataProvince, getDataProvinces } from "../../ts/functions"
 
 describe('Province', () => {
     describe('getDataProvince()', () => {
@@ -50,5 +50,4 @@ describe('Province', () => {
             ])
         })
     })
-
 })

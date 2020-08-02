@@ -1,7 +1,7 @@
 import { expect } from "chai"
-import { isValidCellularNumber as isValid, getDataCellularNumber as getData, formatCellularNumber as format, isValidCellularNumberWithComparison } from "../ts/functions/index"
-import { CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from "../ts/datas/cellular"
-import { COUNTRY_CODE } from "../ts/datas/province"
+import { isValidCellularNumber as isValid, getDataCellularNumber as getData, formatCellularNumber as format, isValidCellularNumberWithComparison } from "../../ts/functions/index"
+import { CELLULAR_MIN_LENGTH, CELLULAR_MAX_LENGTH } from "../../ts/datas/cellular"
+import { COUNTRY_CODE } from "../../ts/datas/province"
 
 describe('Cellular number', () => {
 

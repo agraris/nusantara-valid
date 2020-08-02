@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { isValidZIP, isValidZIPWithComparison } from "../ts/functions/index"
+import { isValidZIP, isValidZIPWithComparison } from "../../ts/functions/index"
 
 describe('ZIP code', () => {
     it('cannot be empty', () => {
@@ -56,6 +56,7 @@ describe('ZIP code', () => {
         it('when it has known ZIP Code from user specified provinceKey', () => {
             expect(isValidZIPWithComparison(55564, { provinceKey: '34' })).to.be.true;
             expect(isValidZIPWithComparison('55524', { provinceKey: '34' })).to.be.true;
+            expect(isValidZIPWithComparison('55524', {})).to.be.true;
         })
     })
 

@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { isValidTNKB as isValid, getDataTNKB as getData } from "../ts/functions"
+import { isValidTNKB as isValid, getDataTNKB as getData } from "../../ts/functions"
 
 describe('TNKB', () => {
     it('cannot be empty', () => {
@@ -81,6 +81,7 @@ describe('TNKB', () => {
                     name: 'Yogyakarta'
                 }
             })
+
             expect(getData('B1A')).to.deep.equal({
                 areaCode: 'B',
                 index: 1,
@@ -90,6 +91,8 @@ describe('TNKB', () => {
                     name: 'Jakarta'
                 }
             })
+
+            expect(getData('B1')).to.deep.equal({}) // Invalid TNKB
         })
     })
 })

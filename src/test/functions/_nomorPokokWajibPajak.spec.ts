@@ -1,6 +1,6 @@
 import { expect } from "chai"
-import { isValidNPWP as isValid, formatNPWP as format } from "../ts/functions/index"
-import { NPWP_LENGTH } from "../ts/datas/npwp"
+import { isValidNPWP as isValid, formatNPWP as format } from "../../ts/functions/index"
+import { NPWP_LENGTH } from "../../ts/datas/npwp"
 
 describe('VRN', () => {
     it('cannot be empty', () => {

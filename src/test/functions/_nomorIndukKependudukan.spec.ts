@@ -1,6 +1,7 @@
 import { expect } from "chai"
-import { isValidNIK, isValidNIKWithComparison, getDataNIK } from "../ts/functions"
-import { NIK_LENGTH } from "../ts/datas/nik"
+import { isValidNIK, isValidNIKWithComparison, getDataNIK } from "../../ts/functions"
+import { NomorIndukKependudukan } from "../../ts/functions/_nomorIndukKependudukan"
+import { NIK_LENGTH } from "../../ts/datas/nik"
 
 describe('NIK', () => {
     it('cannot be empty', () => {
@@ -57,6 +58,7 @@ describe('NIK', () => {
         it('if it does not meet the total NIP length of ' + NIK_LENGTH + ' digit', () => {
             expect(isValidNIK('34040210118800001')).to.be.false // Have 17 digits
             expect(isValidNIK('310101201299002')).to.be.false // Have 15 digits
+            expect(isValidNIK('310101')).to.be.false // Have 6 digits
         })
 
         it('if it has invalid/unknown Province code (BPS code)', () => {
@@ -100,6 +102,10 @@ describe('NIK', () => {
         it('if it has unmatch comparison between NIK\'s birthday with user provided birthday', () => {
             expect(isValidNIKWithComparison('3404025011880001', { birthday: '1999-11-10' })).to.be.false // User born in 99 but NIK's born in 88
         })
+
+        it('if it compared with invalid birthday', () => {
+            expect(isValidNIKWithComparison('3404025011880001', { birthday: 'AAAA-BB-CC' })).to.be.false // AAAA-BB-CC is invalid birthday
+        })
     })
 
     describe('getDataNIK()', () => {
@@ -113,6 +119,7 @@ describe('NIK', () => {
                     name: 'Yogyakarta'
                 }
             })
+
             expect(getDataNIK('3101012012060002')).to.deep.equal({
                 nik: '3101012012060002',
                 birthday: new Date('2006-12-20'),
@@ -122,7 +129,30 @@ describe('NIK', () => {
                     name: 'Jakarta'
                 }
             })
-            expect(getDataNIK('310101201299002')).to.deep.equal({}) // NIK is invalid
+
+            expect(getDataNIK('390101201299')).to.deep.equal({}) // Invalid NIK
+
+            expect(getDataNIK('3901012012990002')).to.deep.equal({
+                "birthday": new Date('1999-12-20'),
+                "nik": "3901012012990002",
+                "sex": "Male",
+            }) // Invalid province code
+
+            expect(getDataNIK('3101013212060002')).to.deep.equal({
+                nik: '3101013212060002',
+                sex: 'Male',
+                province: {
+                    bpsCode: '31',
+                    name: 'Jakarta'
+                }
+            }) // Invalid birthday
+        })
+    })
+
+    describe('NIK classes', () => {
+        it('reformatBirthday() failed', () => {
+            const nik = new NomorIndukKependudukan()
+            expect(nik.reformatBirthday('0812')).to.be.empty
         })
     })
 })

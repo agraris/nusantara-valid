@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { getDataCellularProvider, getDataCellularProviders } from "../ts/functions"
+import { getDataCellularProvider, getDataCellularProviders } from "../../ts/functions"
 
 describe('Cellular Provider', () => {
     describe('getDataCellularProvider()', () => {
