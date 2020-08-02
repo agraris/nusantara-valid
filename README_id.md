@@ -284,7 +284,7 @@ Result:
 isValidNIK('3101011212930001');
 // true
 
-isValidNIKWithComparison('3101011212930001', { provinceKey: 'JK', birthday: '1993-12-12' });
+isValidNIKWithComparison('3101011212930001', { provinceKey: '31', birthday: '1993-12-12' });
 // true
 
 getDataNIK('3101011212930001');
@@ -293,7 +293,7 @@ getDataNIK('3101011212930001');
 //     birthday: 2006-12-20T00:00:00.000Z,
 //     sex: 'Male',
 //     province: {
-//         key: 'JK',
+//         key: '31',
 //         name: 'Jakarta'
 //     }
 // }
@@ -360,14 +360,14 @@ getDataProvinces();
 
 Result:
 ``` javascript
-getDataProvince('YO');
-// { key: 'YO', name: 'Yogyakarta' }
+getDataProvince('34');
+// { key: '34', name: 'Yogyakarta' }
 
 getDataProvinces();
 // [
-//     { key: 'AC', name: 'Aceh' },
-//     { key: 'BA', name: 'Bali' },
-//     { key: 'BB', name: 'Kepulauan Bangka Belitung' },
+//     { bpsCode: '11', name: 'Aceh' },
+//     { bpsCode: '12', name: 'Sumatra Utara' },
+//     { bpsCode: '13', name: 'Sumatra Barat' },
 //     ...
 // ]
 ```
@@ -393,7 +393,7 @@ getDataTNKB('AB1234XYZ');
 //     index: 1234,
 //     detailedAreaCode: 'XYZ',
 //     province: {
-//         key: 'YO',
+//         key: '34',
 //         name: 'Yogyakarta'
 //     }
 // }
@@ -420,7 +420,7 @@ getDataTelephoneNumber('0274123123');
 // {
 //     "number": "0274-123123",
 //     "origin": {
-//         "key": "YO",
+//         "key": "34",
 //         "name": "Yogyakarta"
 //     }
 // }
@@ -448,9 +448,9 @@ isValidZIP('55264');
 isValidZIP(55264);
 // true
 
-isValidZIPWithComparison('55264', { provinceKey: 'YO' });
+isValidZIPWithComparison('55264', { provinceKey: '34' });
 // true
-isValidZIPWithComparison(55264, { provinceKey: 'YO' });
+isValidZIPWithComparison(55264, { provinceKey: '34' });
 // true
 ```
 </details></td></tr></tbody></table>
