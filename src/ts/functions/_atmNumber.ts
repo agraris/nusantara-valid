@@ -42,6 +42,7 @@ export function isValidATMNumber(atm: string): boolean {
  * @param {string} key - The bank key
  * @return {boolean} Is valid or not
 **/
-export function isValidATMNumberWithComparison(atm: string, key: string = ''): boolean {
+export function isValidATMNumberWithComparison(atm: string, key: string): boolean {
+    if (!key) return false
     return theATM.isValid(atm, key)
 }

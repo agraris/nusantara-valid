@@ -56,5 +56,9 @@ describe('ATM number', () => {
         it('has different length with the specified bank', () => {
             expect(isValidATMNumberWithComparison('123.0005.123.000', 'BCAK')).to.be.false; // BCAK has 10 digit number but the ATM number has 13 digits
         })
+
+        it('has empty bank code', () => {
+            expect(isValidATMNumberWithComparison('123.0005.123.000', '')).to.be.false;
+        })
     })
 })
