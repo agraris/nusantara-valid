@@ -1,5 +1,4 @@
 import { IDataNIKExtended } from "../../interface"
-import { NIK_REGEX } from "../../datas/nik"
 import { numbersOnly, includes } from "../../helpers"
 import { NomorIndukKependudukan } from '../_nomorIndukKependudukan'
 import { getDataRegenciesInProvince, getDataDistrictsInRegency } from './_province.extended'
@@ -15,17 +14,15 @@ class NomorIndukKependudukanExtended extends NomorIndukKependudukan {
     isValid(nik: string, provinceKey: string = '', birthday: string = ''): boolean {
         if (!super.isValid(nik, provinceKey, birthday)) return false
 
-        const validNIK = NIK_REGEX.exec(numbersOnly(nik))
+        const newNIK = numbersOnly(nik)
 
-        if (!validNIK) return false
-
-        const provinceBPSCode = validNIK[1]
-        const regencyBPSCode = provinceBPSCode + '.' + validNIK[2]
+        const provinceBPSCode = newNIK.substr(0, 2)
+        const regencyBPSCode = provinceBPSCode + '.' + newNIK.substr(2, 2)
         const REGENCIES = getDataRegenciesInProvince(provinceBPSCode)
         const regenciesBPSCodes = REGENCIES.map(({ bpsCode }) => bpsCode)
         const validRegency = includes(regenciesBPSCodes, regencyBPSCode)
 
-        const districtBPSCode = regencyBPSCode + '.' + validNIK[3]
+        const districtBPSCode = regencyBPSCode + '.' + newNIK.substr(4, 2)
         const DISTRICTS = getDataDistrictsInRegency(regencyBPSCode)
         const districtsBPSCode = DISTRICTS.map(({ bpsCode }) => bpsCode)
         const validDistrict = includes(districtsBPSCode, districtBPSCode)
