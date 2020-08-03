@@ -56,7 +56,7 @@
     "minify-ext:es": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/esm/nusantara-valid.extended.js.map, includeSources, url=nusantara-valid.extended.min.js.map\" --output dist/esm/nusantara-valid.extended.min.js dist/esm/nusantara-valid.extended.js",
     "minify-ext:umd": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/umd/nusantara-valid.extended.js.map, includeSources, url=nusantara-valid.extended.min.js.map\" --output dist/umd/nusantara-valid.extended.min.js dist/umd/nusantara-valid.extended.js",
     "pre-release": "npm-run-all clean compile-all minify-all",
-    "test": "nyc --reporters=lcov,text --clean mocha --require ts-node/register src/test/**/*"
+    "test": "nyc --reporter=lcov --clean mocha --require ts-node/register src/test/**/*"
   },
   "devDependencies": {
     "@babel/core": "^7.11.0",
