@@ -11,6 +11,7 @@ import { range } from '../helpers';
  *
  * List cellular provider in Indonesia
 **/
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const CELLULAR_PROVIDER_DATA : { [key: string]: any } =
 {
     TELKOMSEL: {

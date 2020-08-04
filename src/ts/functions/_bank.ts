@@ -9,7 +9,7 @@ import { BANK_DATA, BANK_KEYS } from "../datas/bank"
  * @class The Bank class
 **/
 class Bank implements IGetData {
-    getData(index: string = ''): IDataBank | IDataBank[] {
+    getData(index = ''): IDataBank | IDataBank[] {
         let bank
 
         if (index) {

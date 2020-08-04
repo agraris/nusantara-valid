@@ -13,9 +13,9 @@ class ZIPCode implements IValid {
 
     ZIP_RANGES = PROVINCE_KEYS.reduce(
         (a, b) => a.concat(PROVINCE_DATA[b].zipCode), []
-    ) as object[]
+    )
 
-    isValid(zip: string | number, provinceKey: string = ''): boolean {
+    isValid(zip: string | number, provinceKey = ''): boolean {
         if (!zip) return false
 
         let zipArray
@@ -28,8 +28,9 @@ class ZIPCode implements IValid {
             && this.isValidZIPCode(zip, zipArray)
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     isValidZIPCode(zip: string, zipRange: any[]): boolean {
-        for (let val of zipRange) {
+        for (const val of zipRange) {
             if (val.from <= zip && val.to >= zip) {
                 return true
             } 

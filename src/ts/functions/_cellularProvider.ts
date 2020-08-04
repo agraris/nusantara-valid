@@ -9,7 +9,7 @@ import { CELLULAR_PROVIDER_KEYS, CELLULAR_PROVIDER_DATA } from '../datas/cellula
  * @class The CellularProvider class
 **/
 class CellularProvider implements IGetData {
-    getData(index: string = ''): IDataCellularProvider | IDataCellularProvider[] {
+    getData(index = ''): IDataCellularProvider | IDataCellularProvider[] {
         let providers
 
         if (index) {

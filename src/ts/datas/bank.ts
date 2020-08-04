@@ -11,7 +11,8 @@ import { includes } from '../helpers';
  *
  * List of bank in Indonesia.
 **/
-export const BANK_DATA : { [key: string]: any } =
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const BANK_DATA : { [key: string]: any } = // 
 {
     BCAK: {
         name: 'Bank Central Asia',

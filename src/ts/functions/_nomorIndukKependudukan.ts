@@ -12,7 +12,7 @@ import { getDataProvince } from './_province'
  * @class The NomorIndukKepemdudukan class
 **/
 export class NomorIndukKependudukan implements IValid, IGetData {
-    isValid(nik: string, provinceKey: string = '', birthday: string = ''): boolean {
+    isValid(nik: string, provinceKey = '', birthday = ''): boolean {
         if (!nik || typeof nik !== 'string') return false
 
         const validNIK = NIK_REGEX.exec(numbersOnly(nik))
@@ -62,7 +62,7 @@ export class NomorIndukKependudukan implements IValid, IGetData {
     getData(nik: string): IDataNIK {
         const validNIK = NIK_REGEX.exec(numbersOnly(nik))
 
-        let data = {} as IDataNIK
+        const data = {} as IDataNIK
 
         if (!validNIK) return data
 
@@ -119,7 +119,7 @@ export function isValidNIK(nik: string): boolean {
  * @return {boolean} Is valid or not
 **/
 export function isValidNIKWithComparison(nik: string, comparison: { provinceKey?: string, birthday?: string }): boolean {
-    let { provinceKey = '', birthday = '' } = comparison
+    const { provinceKey = '', birthday = '' } = comparison
 
     return theNIK.isValid(nik, provinceKey, birthday)
 }

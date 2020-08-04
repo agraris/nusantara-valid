@@ -22,7 +22,7 @@ class NomorIndukPegawaiNegeriSipil implements IValid, IGetData {
     }
 
     getData(nip: string): IDataNIP {
-        let data = {} as IDataNIP
+        const data = {} as IDataNIP
 
         const validNIP = NIP_REGEX.exec(numbersOnly(nip))
 

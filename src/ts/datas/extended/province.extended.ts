@@ -8,6 +8,7 @@
  *
  * List of extended province data of Indonesia like regencies and districts
 **/
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const PROVINCE_DATA_EXTENSION : { [key: string]: any } =
 {
     '11': {

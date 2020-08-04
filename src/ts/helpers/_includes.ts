@@ -5,6 +5,7 @@
  * @param {any} theElement The element we search.
  * @return {boolean} True or false
 **/
-export function includes(searchElement: any[], theElement: any): boolean {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function includes(searchElement: any[], theElement: string | number): boolean {
     return searchElement.indexOf(theElement) > -1
 }

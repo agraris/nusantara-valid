@@ -27,7 +27,7 @@ class NomorPokokWajibPajak implements IValid, IFormat {
     }
 
     format(npwp: string): string {
-        let newNPWP = numbersOnly(npwp)
+        const newNPWP = numbersOnly(npwp)
 
         return newNPWP
             .slice(0, NPWP_LENGTH)

@@ -38,7 +38,7 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
     }
     
     getData(tel: string): IDataTelephoneNumber {
-        let data = {} as IDataTelephoneNumber
+        const data = {} as IDataTelephoneNumber
 
         const cleanTelNumber = cleanPhoneNumbers(tel)
 
@@ -60,18 +60,18 @@ class TelephoneNumber implements IValid, IFormat, IGetData {
         return data
     }
 
-    format(tel: string, int:boolean = false): string {
+    format(tel: string, int = false): string {
         const cleanTelNumber = cleanPhoneNumbers(tel)
         const pfx = this.isValidCellularPrefix(cleanTelNumber).toString()
 
-        let TEL_HYPEN_INDEX = [] as any
+        let TEL_HYPEN_INDEX = [] as Array<number>
 
         if (pfx.length === 2)
             TEL_HYPEN_INDEX = [1]
         else
             TEL_HYPEN_INDEX = [2]
 
-        let formatedNumber = cleanTelNumber
+        const formatedNumber = cleanTelNumber
             .slice(0, cleanTelNumber.length)
             .split('')
             .reduce((a, b, index) => {
@@ -123,6 +123,6 @@ export function getDataTelephoneNumber(number: string): IDataTelephoneNumber {
  * @param {boolean} int - Local calling format (leading zero) or international calling format (leading country code)
  * @return {string} Formated number
 **/
-export function formatTelephoneNumber(number: string, int:boolean = false): string {
+export function formatTelephoneNumber(number: string, int = false): string {
     return telNumber.format(number, int)
 }

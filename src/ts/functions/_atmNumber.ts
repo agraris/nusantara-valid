@@ -10,7 +10,7 @@ import { BANK_DATA, BANK_NUMBER_LENGTHS } from "../datas/bank"
  * @class The ATMNumber class
 **/
 class ATMNumber implements IValid {
-    isValid(atm: string, bank: string = ''): boolean {
+    isValid(atm: string, bank = ''): boolean {
         if (!atm || typeof atm !== 'string') return false
 
         const numOnly = numbersOnly(atm)

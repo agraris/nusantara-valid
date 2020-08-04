@@ -24,7 +24,7 @@ class CreditCard implements IValid, IFormat {
     }
 
     format(cc: string): string {
-        let newCC = numbersOnly(cc)
+        const newCC = numbersOnly(cc)
 
         return newCC
             .slice(0, CC_LENGTH)

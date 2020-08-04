@@ -12,6 +12,7 @@ import { range } from '../helpers';
  * List of province data in Indonesia including BPS code, vehicle plate, 
  * telephone numbers, and zip code.
 **/
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const PROVINCE_DATA : { [key: string]: any } =
 {
     '11': {

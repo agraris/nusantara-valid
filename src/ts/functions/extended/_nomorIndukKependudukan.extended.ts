@@ -11,7 +11,7 @@ import { getDataRegenciesInProvince, getDataDistrictsInRegency } from './_provin
  * @class The NomorIndukKepemdudukanExtended class
 **/
 class NomorIndukKependudukanExtended extends NomorIndukKependudukan {
-    isValid(nik: string, provinceKey: string = '', birthday: string = ''): boolean {
+    isValid(nik: string, provinceKey = '', birthday = ''): boolean {
         if (!super.isValid(nik, provinceKey, birthday)) return false
 
         const newNIK = numbersOnly(nik)
@@ -82,7 +82,7 @@ export function isValidNIK(nik: string): boolean {
  * @return {boolean} Is valid or not
 **/
 export function isValidNIKWithComparison(nik: string, comparison: { provinceKey?: string, birthday?: string }): boolean {
-    let { provinceKey = '', birthday = '' } = comparison
+    const { provinceKey = '', birthday = '' } = comparison
 
     return theNIK.isValid(nik, provinceKey, birthday)
 }

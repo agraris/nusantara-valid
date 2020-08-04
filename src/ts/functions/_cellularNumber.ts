@@ -11,7 +11,7 @@ import { COUNTRY_CODE } from '../datas/province'
  * @class The CellularNumber class
 **/
 class CellularNumber implements IValid, IGetData, IFormat {
-    isValid(mobile: string, providerKey: string = ''): boolean {
+    isValid(mobile: string, providerKey = ''): boolean {
         if (!mobile || typeof mobile !== 'string') return false
 
         const cleanCellularNumber = cleanPhoneNumbers(mobile, { cellular: true, countryCode: COUNTRY_CODE})
@@ -24,7 +24,7 @@ class CellularNumber implements IValid, IGetData, IFormat {
     }
 
     getData(mobile: string): IDataCellularNumber {
-        let data = {} as IDataCellularNumber
+        const data = {} as IDataCellularNumber
 
         data.number = this.format(mobile)
 
@@ -44,10 +44,10 @@ class CellularNumber implements IValid, IGetData, IFormat {
         return data
     }
 
-    format(input: string, int: boolean = false): string {
+    format(input: string, int = false): string {
         const cleanCelNumber = cleanPhoneNumbers(input, { cellular: true, countryCode: COUNTRY_CODE })
 
-        let formatedNumber = cleanCelNumber
+        const formatedNumber = cleanCelNumber
             .slice(0, cleanCelNumber.length)
             .split('')
             .reduce((a, b, index) => {
@@ -112,6 +112,6 @@ export function getDataCellularNumber(number: string): IDataCellularNumber {
  * @param {boolean} int - Local calling format (leading zero) or international calling format (leading country code)
  * @return {string} Formated number
 **/
-export function formatCellularNumber(number: string, int: boolean = false): string {
+export function formatCellularNumber(number: string, int = false): string {
     return cellularNumber.format(number, int)
 }

@@ -9,7 +9,7 @@ import { PROVINCE_DATA, PROVINCE_KEYS } from "../datas/province";
  * @class The Province class
 **/
 export class Province implements IGetData {
-    getData(index: string = ''): IDataProvince | IDataProvince[] {
+    getData(index = ''): IDataProvince | IDataProvince[] {
         let province
 
         if (index) {
