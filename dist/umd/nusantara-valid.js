@@ -7,7 +7,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define(['exports'], factory) :
-    (global = global || self, factory(global.NusantaraValid = {}));
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.NusantaraValid = {}));
 }(this, (function (exports) { 'use strict';
 
     /**
@@ -75,6 +75,7 @@
      * @param {any} theElement The element we search.
      * @return {boolean} True or false
     **/
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function includes(searchElement, theElement) {
         return searchElement.indexOf(theElement) > -1;
     }
@@ -103,6 +104,7 @@
      *
      * List of bank in Indonesia.
     **/
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     var BANK_DATA = {
         BCAK: {
             name: 'Bank Central Asia',
@@ -284,7 +286,8 @@
      * @return {boolean} Is valid or not
     **/
     function isValidATMNumberWithComparison(atm, key) {
-        if (key === void 0) { key = ''; }
+        if (!key)
+            return false;
         return theATM.isValid(atm, key);
     }
 
@@ -350,6 +353,7 @@
      *
      * List cellular provider in Indonesia
     **/
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     var CELLULAR_PROVIDER_DATA = {
         TELKOMSEL: {
             name: 'Telkomsel',
@@ -419,6 +423,7 @@
      * List of province data in Indonesia including BPS code, vehicle plate,
      * telephone numbers, and zip code.
     **/
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     var PROVINCE_DATA = {
         '11': {
             name: 'Aceh',
@@ -1266,15 +1271,14 @@
         // Reformat DDMMYY into YYMMDD
         NomorIndukKependudukan.prototype.reformatBirthday = function (birthday) {
             var newBirthday = /(\d{2})(\d{2})(\d{2})/.exec(birthday);
-            if (newBirthday) {
-                var cDD = newBirthday[1];
-                var cMM = newBirthday[2];
-                var cYY = newBirthday[3];
-                if (Number(cDD) > 40) // Check if it is a man of woman
-                    cDD = (Number(cDD) - 40).toString();
-                return cYY + '' + cMM + '' + cDD;
-            }
-            return '';
+            if (!newBirthday)
+                return '';
+            var cDD = newBirthday[1];
+            var cMM = newBirthday[2];
+            var cYY = newBirthday[3];
+            if (Number(cDD) > 40) // Check if it is a man of woman
+                cDD = (('0') + (Number(cDD) - 40).toString()).slice(-2);
+            return cYY + '' + cMM + '' + cDD;
         };
         NomorIndukKependudukan.prototype.getData = function (nik) {
             var validNIK = NIK_REGEX.exec(numbersOnly(nik));
@@ -1815,6 +1819,7 @@
                 && correctLength(0, zip.length, { minLength: 5 })
                 && this.isValidZIPCode(zip, zipArray);
         };
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ZIPCode.prototype.isValidZIPCode = function (zip, zipRange) {
             for (var _i = 0, zipRange_1 = zipRange; _i < zipRange_1.length; _i++) {
                 var val = zipRange_1[_i];
