@@ -77,6 +77,10 @@ describe('NIK', () => {
             expect(isValidNIKWithComparison('3404021011880001', { provinceKey: '34', birthday: '1988-11-10' })).to.be.true // 10-11-88 => 1988-11-10 -> Man
         })
 
+        it('it still valid if the birth-date has single digit date (1 to 9)', () => {
+            expect(isValidNIKWithComparison('3273064203890007', { provinceKey: '32', birthday: '1989-03-02' })).to.be.true
+        })
+
         it('if it has valid comparison with provinceKey only', () => {
             expect(isValidNIKWithComparison('3101012012990002', { provinceKey: '31' })).to.be.true // 20-12-99 => 1999-12-20 -> Man
         })

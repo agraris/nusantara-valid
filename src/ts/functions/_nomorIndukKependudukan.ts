@@ -38,8 +38,8 @@ export class NomorIndukKependudukan implements IValid, IGetData {
             }
         }
 
-        return validLength 
-            && validProvince 
+        return validLength
+            && validProvince
             && validBirthday
     }
 
@@ -54,7 +54,7 @@ export class NomorIndukKependudukan implements IValid, IGetData {
         const cYY = newBirthday[3]
 
         if (Number(cDD) > 40) // Check if it is a man of woman
-            cDD = (Number(cDD) - 40).toString()
+            cDD = (('0') + (Number(cDD) - 40).toString()).slice(-2)
 
         return cYY + '' + cMM + '' + cDD
     }
