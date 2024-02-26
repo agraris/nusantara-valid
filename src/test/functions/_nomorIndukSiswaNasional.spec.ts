@@ -42,7 +42,7 @@ describe('NISN', () => {
 
         it('if it still inside student periode of ' + NISN_AGE_VALIDITY + ' years', () => {
             expect(isValid('0061231234')).to.be.true // Birth year => 2006
-            expect(isValid('00041231234')).to.be.true // Birth year => 2004
+            expect(isValid('0041231234')).to.be.true // Birth year => 2004
         })
     })
 
