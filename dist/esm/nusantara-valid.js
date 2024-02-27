@@ -1,5 +1,5 @@
 /*!
-  * Nusantara Valid v0.4.0
+  * Nusantara Valid v0.4.1
   * Copyright 2020 - Fajar Setya Budi (https://magicjar.github.io)
   * Contributors (https://github.com/agraris/nusantara-valid/graphs/contributors)
   * Licensed under MIT (https://github.com/agraris/nusantara-valid/blob/master/LICENSE)
@@ -1517,8 +1517,8 @@ var NPWP_LENGTH = 15;
 **/
 var NPWP_TAX_IDENTITIES = [
     '01', '02', '21', '31', '00', '20', '04', '05', '06', '07', '08', '09', '24', '25', '26',
-    '31', '34', '35', '36', '47', '48', '49', '57', '58', '67', '77', '78', '79', '87', '88',
-    '89', '97'
+    '31', '34', '35', '36', '41', '47', '48', '49', '57', '58', '64', '65', '67', '71', '77', '78', '79', '87', '88',
+    '89', '91', '97'
 ];
 /**
  * NPWP_DOT_INDEXES
