@@ -15,8 +15,8 @@ class NomorIndukSiswaNasional implements IValid {
 
         const validNISN = NISN_REGEX.exec(numbersOnly(nisn))
 
-        return validNISN !== null 
-            && this.isValidPeriod(validNISN[1]) 
+        return validNISN !== null
+            && this.isValidPeriod(validNISN[1])
             && correctLength(0, validNISN[0].length, { minLength: NISN_LENGTH })
     }
 
@@ -27,7 +27,7 @@ class NomorIndukSiswaNasional implements IValid {
 
         if (birthYear > thisYear)
             birthYear = birthYear - 1000
-        
+
         return birthYear < endYear ? false : true
     }
 }

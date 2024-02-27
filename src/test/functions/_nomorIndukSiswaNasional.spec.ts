@@ -3,6 +3,10 @@ import { isValidNISN as isValid } from "../../ts/functions/index"
 import { NISN_LENGTH, NISN_AGE_VALIDITY } from "../../ts/datas/nisn"
 
 describe('NISN', () => {
+    var currentYear = new Date().getFullYear();
+    var twentyOneYearsAgo = currentYear - 21;
+    var tenYearsAgo = currentYear - 10;
+
     it('cannot be empty', () => {
         expect(isValid('')).to.be.false
     })
@@ -35,14 +39,14 @@ describe('NISN', () => {
     })
 
     describe('is valid', () => {
-        it('if it contains ' + NISN_LENGTH + ' digit numbers', () => {
-            expect(isValid('0061231234')).to.be.true // Birth year => 2006
-            expect(isValid('9991231234')).to.be.true // Birth year => 1999
+        it('if it match with NISN length of ' + NISN_LENGTH + ' digit numbers', () => {
+            expect(isValid(twentyOneYearsAgo.toString().substring(1) + '1231234')).to.be.true // Birth year => 20 years ago
+            expect(isValid(tenYearsAgo.toString().substring(1) + '1231234')).to.be.true // Birth year => 10 years ago
         })
 
         it('if it still inside student periode of ' + NISN_AGE_VALIDITY + ' years', () => {
-            expect(isValid('0061231234')).to.be.true // Birth year => 2006
-            expect(isValid('9991231234')).to.be.true // Birth year => 1999
+            expect(isValid(twentyOneYearsAgo.toString().substring(1) + '1231234')).to.be.true // Birth year => 20 years ago
+            expect(isValid(tenYearsAgo.toString().substring(1) + '1231234')).to.be.true // Birth year => 10 years ago
         })
     })
 
