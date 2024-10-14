@@ -9,9 +9,13 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node: [20]
+
     steps:
       - name: Clone repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Create release
         id: create_release
@@ -28,12 +32,12 @@ jobs:
     
     steps:
       - name: Clone repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
-          node-version: 12
+          node-version: ${{ matrix.node }}
           registry-url: https://registry.npmjs.org/
 
       - name: Checkout tag
@@ -42,6 +46,7 @@ jobs:
           git checkout $(git describe --tags $(git rev-list --tags --max-count=1))
 
       - name: Run publish
-        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm publish --access public || { echo "Publishing failed"; exit 1; }
