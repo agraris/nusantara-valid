@@ -1,5 +1,5 @@
 /*!
-  * Nusantara Valid v0.4.1
+  * Nusantara Valid v0.4.2
   * Copyright 2020 - Fajar Setya Budi (https://magicjar.github.io)
   * Contributors (https://github.com/agraris/nusantara-valid/graphs/contributors)
   * Licensed under MIT (https://github.com/agraris/nusantara-valid/blob/master/LICENSE)
@@ -8,7 +8,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define(['exports'], factory) :
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.NusantaraValid = {}));
-}(this, (function (exports) { 'use strict';
+})(this, (function (exports) { 'use strict';
 
     /**
      * Strip all non number characters
@@ -1156,7 +1156,7 @@
         return theEmail.isValid(email);
     }
 
-    /*! *****************************************************************************
+    /******************************************************************************
     Copyright (c) Microsoft Corporation.
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -1170,20 +1170,27 @@
     OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
     PERFORMANCE OF THIS SOFTWARE.
     ***************************************************************************** */
-    /* global Reflect, Promise */
+    /* global Reflect, Promise, SuppressedError, Symbol, Iterator */
 
     var extendStatics = function(d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
 
     function __extends(d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     }
+
+    typeof SuppressedError === "function" ? SuppressedError : function (error, suppressed, message) {
+        var e = new Error(message);
+        return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
+    };
 
     /**
      * Nusantara Valid: nik.ts
@@ -1237,7 +1244,7 @@
         };
         return Province;
     }());
-    var prov = new Province();
+    var prov$1 = new Province();
     /**
      * Get specific province data with IDataProvince object structure
      *
@@ -1246,8 +1253,8 @@
      * @param {string} provinceKey - Array key of the province
      * @return {IDataProvince} IDataProvince object
     **/
-    function getDataProvince(provinceKey) {
-        return prov.getData(provinceKey);
+    function getDataProvince$1(provinceKey) {
+        return prov$1.getData(provinceKey);
     }
 
     /**
@@ -1310,7 +1317,7 @@
             var validProvince = includes(PROVINCE_KEYS, validNIK[1]);
             var validBirthday = !isNaN(formatDate('19' + reformatedBirthday).getTime());
             if (validProvince) {
-                data.province = getDataProvince(validNIK[1]);
+                data.province = getDataProvince$1(validNIK[1]);
             }
             if (validBirthday) {
                 var currentYear = new Date().getFullYear();
@@ -11313,7 +11320,7 @@
         };
         return ProvinceExtended;
     }(Province));
-    var prov$1 = new ProvinceExtended();
+    var prov = new ProvinceExtended();
     /**
      * Get specific province data with IDataProvince object structure
      *
@@ -11322,8 +11329,8 @@
      * @param {string} provinceKey - Array key of the province
      * @return {IDataProvince} IDataProvince object
     **/
-    function getDataProvince$1(provinceKey) {
-        return prov$1.getData(provinceKey);
+    function getDataProvince(provinceKey) {
+        return prov.getData(provinceKey);
     }
     /**
      * Get all province data with IDataProvince object structure
@@ -11333,7 +11340,7 @@
      * @return {IDataProvince[]} Array of IDataProvince object
     **/
     function getDataProvinces() {
-        return prov$1.getData();
+        return prov.getData();
     }
     /**
      * Get all regencies in a Province
@@ -11344,7 +11351,7 @@
      * @return {IDataRegency[]} Array of IDataRegency object
     **/
     function getDataRegenciesInProvince(provinceKey) {
-        return prov$1.getDataRegenciesInProvince(provinceKey);
+        return prov.getDataRegenciesInProvince(provinceKey);
     }
     /**
      * Get all districts in a Regency
@@ -11355,7 +11362,7 @@
      * @return {IDataDistrict[]} Array of IDataDistrict object
     **/
     function getDataDistrictsInRegency(regencyKey) {
-        return prov$1.getDataDistrictsInRegency(regencyKey);
+        return prov.getDataDistrictsInRegency(regencyKey);
     }
 
     /**
@@ -11982,7 +11989,7 @@
     exports.getDataDistrictsInRegency = getDataDistrictsInRegency;
     exports.getDataNIK = getDataNIK;
     exports.getDataNIP = getDataNIP;
-    exports.getDataProvince = getDataProvince$1;
+    exports.getDataProvince = getDataProvince;
     exports.getDataProvinces = getDataProvinces;
     exports.getDataRegenciesInProvince = getDataRegenciesInProvince;
     exports.getDataTNKB = getDataTNKB;
@@ -12008,5 +12015,5 @@
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));
 //# sourceMappingURL=nusantara-valid.extended.js.map

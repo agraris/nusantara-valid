@@ -1,5 +1,5 @@
 /*!
-  * Nusantara Valid v0.4.1
+  * Nusantara Valid v0.4.2
   * Copyright 2020 - Fajar Setya Budi (https://magicjar.github.io)
   * Contributors (https://github.com/agraris/nusantara-valid/graphs/contributors)
   * Licensed under MIT (https://github.com/agraris/nusantara-valid/blob/master/LICENSE)

@@ -1,5 +1,5 @@
 /*!
-  * Nusantara Valid v0.4.1
+  * Nusantara Valid v0.4.2
   * Copyright 2020 - Fajar Setya Budi (https://magicjar.github.io)
   * Contributors (https://github.com/agraris/nusantara-valid/graphs/contributors)
   * Licensed under MIT (https://github.com/agraris/nusantara-valid/blob/master/LICENSE)
@@ -8,7 +8,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define(['exports'], factory) :
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.NusantaraValid = {}));
-}(this, (function (exports) { 'use strict';
+})(this, (function (exports) { 'use strict';
 
     /**
      * Strip all non number characters
@@ -1896,5 +1896,5 @@
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));
 //# sourceMappingURL=nusantara-valid.js.map
