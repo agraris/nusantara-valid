@@ -28,13 +28,21 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci || { echo "NPM install failed. Check logs."; exit 1; }
 
       - name: Run compile
         run: npm run compile-all
 
       - name: Run test
         run: npm run test
+
+      - name: Upload npm debug log
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-debug-logs
+          path: ~/.npm/_logs/*.log
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
